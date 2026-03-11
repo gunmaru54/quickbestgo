@@ -1,0 +1,123 @@
+'use client';
+
+import React, { useState, useCallback } from 'react';
+import { Copy, Check, RefreshCw } from 'lucide-react';
+
+interface PasswordGeneratorProps {
+  dict: {
+    label_length: string;
+    label_uppercase: string;
+    label_numbers: string;
+    label_symbols: string;
+    btn_generate: string;
+    tooltip_copy: string;
+  }
+}
+
+const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
+  const [length, setLength] = useState<number>(16);
+  const [includeUppercase, setIncludeUppercase] = useState<boolean>(true);
+  const [includeNumbers, setIncludeNumbers] = useState<boolean>(true);
+  const [includeSymbols, setIncludeSymbols] = useState<boolean>(true);
+  const [password, setPassword] = useState<string>('');
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const generatePassword = useCallback(() => {
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numbers = '0123456789';
+    const symbols = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+
+    let chars = lowercase;
+    if (includeUppercase) chars += uppercase;
+    if (includeNumbers) chars += numbers;
+    if (includeSymbols) chars += symbols;
+
+    let generatedPassword = '';
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * chars.length);
+      generatedPassword += chars[randomIndex];
+    }
+    setPassword(generatedPassword);
+    setCopied(false);
+  }, [length, includeUppercase, includeNumbers, includeSymbols]);
+
+  const copyToClipboard = () => {
+    if (!password) return;
+    navigator.clipboard.writeText(password);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Initial generation
+  React.useEffect(() => {
+    generatePassword();
+  }, [generatePassword]);
+
+  return (
+    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+      <div className="space-y-6">
+        <div className="relative group">
+          <div className="w-full px-4 py-5 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-2xl text-center font-mono text-xl md:text-2xl break-all min-h-[4rem] flex items-center justify-center pr-12 text-gray-900 dark:text-gray-100">
+            {password}
+          </div>
+          <button
+            onClick={copyToClipboard}
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-2 hover:bg-white dark:hover:bg-gray-700 rounded-lg transition-colors text-blue-600 dark:text-blue-400"
+            title={dict.tooltip_copy}
+          >
+            {copied ? <Check size={20} /> : <Copy size={20} />}
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <div className="flex justify-between text-sm font-semibold text-gray-700 dark:text-gray-300">
+              <span>{dict.label_length}</span>
+              <span>{length}</span>
+            </div>
+            <input
+              type="range"
+              min="8"
+              max="50"
+              value={length}
+              onChange={(e) => setLength(Number(e.target.value))}
+              className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 gap-3">
+            {[
+              { label: dict.label_uppercase, state: includeUppercase, setState: setIncludeUppercase },
+              { label: dict.label_numbers, state: includeNumbers, setState: setIncludeNumbers },
+              { label: dict.label_symbols, state: includeSymbols, setState: setIncludeSymbols },
+            ].map((option) => (
+              <label 
+                key={option.label}
+                className="flex items-center justify-between p-4 border dark:border-gray-700 rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+              >
+                <span className="font-medium text-gray-700 dark:text-gray-300">{option.label}</span>
+                <input
+                  type="checkbox"
+                  checked={option.state}
+                  onChange={(e) => option.setState(e.target.checked)}
+                  className="w-6 h-6 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 text-blue-600 focus:ring-blue-500"
+                />
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={generatePassword}
+          className="w-full py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+        >
+          <RefreshCw size={20} />
+          {dict.btn_generate}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PasswordGenerator;

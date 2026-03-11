@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "tools": "Herramientas"
+  },
+  "home": {
+    "title": "Herramientas de Utilidad Rápidas y Sencillas",
+    "description": "Herramientas rápidas, gratuitas y compatibles con dispositivos móviles para sus necesidades diarias. No se requiere registro.",
+    "about_title": "Acerca de QuickTools",
+    "about_p1": "QuickTools es un sitio web global que proporciona diversas herramientas de utilidad que se necesitan con frecuencia en la vida diaria. Nuestro objetivo es proporcionar a los usuarios una experiencia rápida, intuitiva y optimizada para móviles.",
+    "about_p2": "Todas las herramientas están disponibles directamente en su navegador sin ningún registro o instalación, y sus datos se procesan solo dentro de su navegador para mayor privacidad."
+  },
+  "tools": {
+    "random_number_generator": {
+      "name": "Generador de Números Aleatorios",
+      "description": "Genere números aleatorios dentro de un rango personalizado.",
+      "category": "Herramientas Aleatorias"
+    },
+    "password_generator": {
+      "name": "Generador de Contraseñas",
+      "description": "Cree contraseñas seguras y personalizables.",
+      "category": "Herramientas Aleatorias"
+    },
+    "coin_flip": {
+      "name": "Lanzamiento de Moneda",
+      "description": "Lance una moneda digital para obtener cara o cruz.",
+      "category": "Herramientas Aleatorias"
+    },
+    "wheel_spinner": {
+      "name": "Ruleta de la Suerte",
+      "description": "Gire una rueda personalizada para elegir un ganador al azar.",
+      "category": "Herramientas Aleatorias"
+    },
+    "age_calculator": {
+      "name": "Calculadora de Edad",
+      "description": "Calcule su edad exacta en años, meses y días.",
+      "category": "Calculadoras"
+    }
+  },
+  "random_number_generator": {
+    "title": "Generador de Números Aleatorios",
+    "meta_title": "Generador de Números Aleatorios - QuickTools",
+    "meta_description": "Genere un número aleatorio dentro de su rango personalizado de forma rápida y sencilla. Herramienta online gratuita.",
+    "about_title": "¿Qué es un Generador de Números Aleatorios?",
+    "about_p1": "El Generador de Números Aleatorios de QuickTools es una herramienta que genera de forma rápida y precisa números aleatorios entre un valor mínimo y máximo especificado por el usuario.",
+    "about_p2": "Esta herramienta se puede utilizar para diversos fines, como la selección simple de números, cálculos de probabilidad complejos, generación de eventos aleatorios en juegos o sorteos de premios.",
+    "about_p3": "Nuestro generador de números aleatorios refleja el rango introducido por el usuario de inmediato y está diseñado para almacenar el historial de los números generados hasta los últimos 5 para que pueda consultar fácilmente los resultados anteriores.",
+    "label_min": "Mínimo",
+    "label_max": "Máximo",
+    "btn_generate": "Generar Número Aleatorio",
+    "label_result": "Resultado",
+    "label_history": "Últimos 5 Resultados",
+    "error_min_max": "El máximo debe ser mayor que el mínimo"
+  },
+  "password_generator": {
+    "title": "Generador de Contraseñas",
+    "meta_title": "Generador de Contraseñas - QuickTools",
+    "meta_description": "Cree contraseñas seguras y personalizables con nuestra herramienta gratuita en línea. Elija la longitud y los tipos de caracteres.",
+    "about_title": "Generador de Contraseñas Fuertes",
+    "about_p1": "En una era donde la seguridad digital es más importante que nunca, una contraseña segura es la primera línea de defensa para proteger su información personal. El Generador de Contraseñas de QuickTools maximiza la seguridad de su cuenta generando contraseñas impredecibles y complejas en segundos.",
+    "about_p2": "Nuestra herramienta ofrece opciones para seleccionar libremente si incluir letras mayúsculas, números y símbolos especiales, y puede establecer la longitud deseada desde 8 hasta 50 caracteres.",
+    "about_p3": "Dado que toda la generación de contraseñas se realiza en el motor de su navegador local, no hay preocupación de que la contraseña generada se registre en el servidor o se filtre a través de la red.",
+    "label_length": "Longitud de la Contraseña",
+    "label_uppercase": "Incluir Mayúsculas",
+    "label_numbers": "Incluir Números",
+    "label_symbols": "Incluir Símbolos",
+    "btn_generate": "Generar Contraseña",
+    "tooltip_copy": "Copiar al portapapeles"
+  },
+  "age_calculator": {
+    "title": "Calculadora de Edad",
+    "meta_title": "Calculadora de Edad - QuickTools",
+    "meta_description": "Calcule su edad exacta en años, meses y días con nuestra herramienta gratuita en línea. Solo introduzca su fecha de nacimiento.",
+    "about_title": "¿Cómo funciona la Calculadora de Edad?",
+    "about_p1": "La Calculadora de Edad de QuickTools es una herramienta que le permite calcular su edad exacta en años, meses y días con solo introducir su fecha de nacimiento.",
+    "about_p2": "La calculadora tiene en cuenta el diferente número de días de los meses y los años bisiestos para proporcionar resultados muy precisos.",
+    "about_p3": "Sus datos no se envían a ningún servidor; el cálculo se realiza íntegramente en su navegador.",
+    "label_birthdate": "Seleccionar Fecha de Nacimiento",
+    "btn_calculate": "Calcular Edad",
+    "label_years": "Años",
+    "label_months": "Meses",
+    "label_days": "Días",
+    "tooltip_reset": "Restablecer"
+  },
+  "coin_flip": {
+    "title": "Lanzamiento de Moneda",
+    "meta_title": "Lanzamiento de Moneda - Cara o Cruz - QuickTools",
+    "meta_description": "Lance una moneda digital para obtener cara o cruz con nuestra herramienta gratuita en línea. Perfecto para decisiones rápidas.",
+    "about_title": "¿Cómo usar la herramienta de Lanzamiento de Moneda?",
+    "about_p1": "El Lanzamiento de Moneda de QuickTools es una herramienta digital sencilla que le permite lanzar una moneda y obtener un resultado aleatorio de Cara o Cruz.",
+    "about_p2": "Esta herramienta es perfecta para tomar decisiones rápidas, resolver apuestas o como elemento aleatorio en juegos cuando no tienes una moneda física a mano.",
+    "about_p3": "Los resultados se generan utilizando un generador de números aleatorios criptográficamente seguro en su navegador, garantizando la imparcialidad y la imprevisibilidad.",
+    "label_heads": "CARA",
+    "label_tails": "CRUZ",
+    "label_flip": "LANZAR",
+    "btn_flipping": "Lanzando...",
+    "btn_flip": "Lanzar Moneda",
+    "label_history": "Historial (Últimos 10)"
+  },
+  "wheel_spinner": {
+    "title": "Ruleta de la Suerte",
+    "meta_title": "Ruleta de la Suerte - Selector de Nombres Aleatorio - QuickTools",
+    "meta_description": "Gire una rueda personalizada para elegir un ganador al azar o tomar una decisión rápida con nuestra herramienta gratuita en línea.",
+    "about_title": "¿Cómo usar la Ruleta de la Suerte?",
+    "about_p1": "La Ruleta de la Suerte de QuickTools es una forma divertida e interactiva de hacer una selección aleatoria de una lista de opciones.",
+    "about_p2": "Simplemente introduzca sus opciones, una por línea, y gire la rueda para elegir un ganador al azar. ¡Es genial para aulas, sorteos o decidir qué cenar!",
+    "about_p3": "Como todas nuestras herramientas, se ejecuta íntegramente en su navegador y no almacena ninguna de sus entradas en nuestros servidores.",
+    "label_enter_options": "Introduzca Opciones (una por línea)",
+    "placeholder_options": "Opción 1\nOpción 2\nOpción 3",
+    "btn_spinning": "Girando...",
+    "btn_spin": "Girar Rueda",
+    "label_winner": "El Ganador es",
+    "error_min_options": "Por favor, introduzca al menos 2 opciones."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Herramientas de Utilidad Rápidas, Sencillas y Gratuitas."
+  },
+  "meta": {
+    "title": "QuickTools - Herramientas de Utilidad Rápidas y Sencillas",
+    "description": "Una colección de herramientas de utilidad en línea sencillas, rápidas y gratuitas. Generador de números aleatorios, generador de contraseñas, calculadora de edad y más."
+  }
+}
