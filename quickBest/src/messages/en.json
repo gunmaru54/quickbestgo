@@ -35,7 +35,25 @@
       "name": "Age Calculator",
       "description": "Calculate your exact age in years, months, and days.",
       "category": "Calculators"
+    },
+    "qr_code_generator": {
+      "name": "QR Code Generator",
+      "description": "Create a custom QR code for any text or URL.",
+      "category": "Utilities"
     }
+  },
+  "qr_code_generator": {
+    "title": "QR Code Generator",
+    "meta_title": "QR Code Generator - Create QR Codes Online - QuickTools",
+    "meta_description": "Create high-quality QR codes for any text, URL, or contact information with our free online tool. Download as PNG.",
+    "about_title": "How to use the QR Code Generator?",
+    "about_p1": "QuickTools' QR Code Generator allows you to instantly create QR codes for any text or URL you provide. Simply enter your content, and the QR code will be generated in real-time.",
+    "about_p2": "You can use these QR codes for sharing website links, text messages, or any other information that can be scanned by a smartphone camera. It's a fast and efficient way to bridge physical and digital content.",
+    "about_p3": "Your data is processed locally in your browser, ensuring that your information is never sent to our servers. Once generated, you can download the QR code as a PNG file for use in your projects.",
+    "label_enter_text": "Enter Text or URL",
+    "placeholder_text": "https://example.com",
+    "btn_download": "Download QR Code",
+    "label_qr_code": "Your QR Code"
   },
   "random_number_generator": {
     "title": "Random Number Generator",

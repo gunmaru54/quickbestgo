@@ -33,11 +33,29 @@
     },
     "age_calculator": {
       "name": "Calculadora de Idade",
-      "description": "Calcule a sua idade exata em anos, meses e dias.",
+      "description": "Calcule sua idade exata em anos, meses e dias.",
       "category": "Calculadoras"
+    },
+    "qr_code_generator": {
+      "name": "Gerador de Código QR",
+      "description": "Crie um código QR personalizado para qualquer texto ou URL.",
+      "category": "Utilidades"
     }
-  },
-  "random_number_generator": {
+    },
+    "qr_code_generator": {
+    "title": "Gerador de Código QR",
+    "meta_title": "Gerador de Código QR - Criar Códigos QR Online - QuickTools",
+    "meta_description": "Crie códigos QR de alta qualidade para qualquer texto, URL ou informação de contato com nossa ferramenta online gratuita. Baixe como PNG.",
+    "about_title": "Como usar o Gerador de Código QR?",
+    "about_p1": "O Gerador de Código QR do QuickTools permite que você crie instantaneamente códigos QR para qualquer texto ou URL fornecido. Basta inserir seu conteúdo e o código QR será gerado em tempo real.",
+    "about_p2": "Você pode usar esses códigos QR para compartilhar links de sites, mensagens de texto ou qualquer outra informação que possa ser digitalizada pela câmera de um smartphone. É uma maneira rápida e eficiente de conectar conteúdo físico e digital.",
+    "about_p3": "Seus dados são processados localmente no seu navegador, garantindo que suas informações nunca sejam enviadas aos nossos servidores. Depois de gerado, você pode baixar o código QR como um arquivo PNG para usar em seus projetos.",
+    "label_enter_text": "Digite Texto ou URL",
+    "placeholder_text": "https://exemplo.com",
+    "btn_download": "Baixar Código QR",
+    "label_qr_code": "Seu Código QR"
+    },
+    "random_number_generator": {
     "title": "Gerador de Números Aleatórios",
     "meta_title": "Gerador de Números Aleatórios - QuickTools",
     "meta_description": "Gere um número aleatório dentro do seu intervalo personalizado de forma rápida e fácil. Ferramenta online gratuita.",

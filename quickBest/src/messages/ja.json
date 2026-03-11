@@ -35,7 +35,25 @@
       "name": "年齢計算機",
       "description": "年、月、日で正確な年齢を計算します。",
       "category": "計算機"
+    },
+    "qr_code_generator": {
+      "name": "QRコード作成",
+      "description": "任意のテキストやURLに対してカスタムQRコードを作成します。",
+      "category": "ユーティリティ"
     }
+  },
+  "qr_code_generator": {
+    "title": "QRコード作成",
+    "meta_title": "QRコード作成 - オンラインでQRコードを作成 - QuickTools",
+    "meta_description": "無料のオンラインツールを使用して、テキスト、URL、または連絡先情報の高品質なQRコードを作成します。PNGとしてダウンロード可能です。",
+    "about_title": "QRコード作成ツールの使い方は？",
+    "about_p1": "QuickToolsのQRコード作成ツールを使用すると、提供したテキストやURLのQRコードを即座に作成できます。コンテンツを入力するだけで、リアルタイムでQRコードが生成されます。",
+    "about_p2": "これらのQRコードは、ウェブサイトのリンク、テキストメッセージ、またはスマートフォンのカメラでスキャンできるその他の情報を共有するために使用できます。物理的なコンテンツとデジタルコンテンツをつなぐ高速で効率的な方法です。",
+    "about_p3": "データはブラウザ内でローカルに処理されるため、情報がサーバーに送信されることはありません。生成されたQRコードは、プロジェクトで使用するためにPNGファイルとしてダウンロードできます。",
+    "label_enter_text": "テキストまたはURLを入力",
+    "placeholder_text": "https://example.com",
+    "btn_download": "QRコードをダウンロード",
+    "label_qr_code": "作成されたQRコード"
   },
   "random_number_generator": {
     "title": "乱数生成器",

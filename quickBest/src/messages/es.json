@@ -33,11 +33,29 @@
     },
     "age_calculator": {
       "name": "Calculadora de Edad",
-      "description": "Calcule su edad exacta en años, meses y días.",
+      "description": "Calcula tu edad exacta en años, meses y días.",
       "category": "Calculadoras"
+    },
+    "qr_code_generator": {
+      "name": "Generador de Código QR",
+      "description": "Crea un código QR personalizado para cualquier texto o URL.",
+      "category": "Utilidades"
     }
-  },
-  "random_number_generator": {
+    },
+    "qr_code_generator": {
+    "title": "Generador de Código QR",
+    "meta_title": "Generador de Código QR - Crear Códigos QR Online - QuickTools",
+    "meta_description": "Crea códigos QR de alta calidad para cualquier texto, URL o información de contacto con nuestra herramienta gratuita en línea. Descarga como PNG.",
+    "about_title": "¿Cómo usar el Generador de Código QR?",
+    "about_p1": "El Generador de Código QR de QuickTools te permite crear instantáneamente códigos QR para cualquier texto o URL que proporciones. Simplemente ingresa tu contenido y el código QR se generará en tiempo real.",
+    "about_p2": "Puedes usar estos códigos QR para compartir enlaces de sitios web, mensajes de texto o cualquier otra información que pueda ser escaneada por la cámara de un teléfono inteligente. Es una forma rápida y eficiente de conectar contenido físico y digital.",
+    "about_p3": "Tus datos se procesan localmente en tu navegador, lo que garantiza que tu información nunca se envíe a nuestros servidores. Una vez generado, puedes descargar el código QR como un archivo PNG para usarlo en tus proyectos.",
+    "label_enter_text": "Ingrese Texto o URL",
+    "placeholder_text": "https://ejemplo.com",
+    "btn_download": "Descargar Código QR",
+    "label_qr_code": "Tu Código QR"
+    },
+    "random_number_generator": {
     "title": "Generador de Números Aleatorios",
     "meta_title": "Generador de Números Aleatorios - QuickTools",
     "meta_description": "Genere un número aleatorio dentro de su rango personalizado de forma rápida y sencilla. Herramienta online gratuita.",

@@ -4,7 +4,8 @@ import {
   Lock, 
   Calendar, 
   CircleDot, 
-  RotateCw 
+  RotateCw,
+  QrCode
 } from 'lucide-react';
 import { getDictionary, Locale } from '@/lib/i18n';
 import { Metadata } from 'next';
@@ -64,6 +65,13 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
       href: `/${lang}/age-calculator`,
       icon: Calendar,
       category: dict.tools.age_calculator.category,
+    },
+    {
+      name: dict.tools.qr_code_generator.name,
+      description: dict.tools.qr_code_generator.description,
+      href: `/${lang}/qr-code-generator`,
+      icon: QrCode,
+      category: dict.tools.qr_code_generator.category,
     },
   ];
 
