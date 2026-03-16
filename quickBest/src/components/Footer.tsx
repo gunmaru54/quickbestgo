@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { getDictionary, Locale } from '@/lib/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -11,7 +11,7 @@ const Footer = async ({ lang }: { lang: string }) => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold mb-4 text-gray-900 dark:text-white">QuickTools</h3>
+            <h3 className="font-bold mb-4 text-gray-900 dark:text-white">QuickBest</h3>
             <p className="text-gray-500 dark:text-gray-400 text-sm">
               {dict.footer.tagline}
             </p>
@@ -39,7 +39,7 @@ const Footer = async ({ lang }: { lang: string }) => {
           </div>
         </div>
         <div className="border-t dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 dark:text-gray-500">
-          <p>© {currentYear} QuickTools. {dict.footer.rights}</p>
+          <p>© {currentYear} QuickBest. {dict.footer.rights}</p>
           <div className="flex items-center gap-4">
             <span className="text-gray-500 dark:text-gray-400 font-medium">Language:</span>
             <LanguageSwitcher currentLang={lang} />

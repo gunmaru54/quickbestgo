@@ -41,10 +41,15 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
       <select
         value={currentLang}
         onChange={handleLanguageChange}
-        className="text-sm font-medium text-gray-700 dark:text-gray-200 bg-transparent outline-none cursor-pointer pr-1"
+        className="text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 outline-none cursor-pointer pr-1"
+        style={{ colorScheme: 'light dark' }}
       >
         {locales.map((locale) => (
-          <option key={locale} value={locale}>
+          <option 
+            key={locale} 
+            value={locale}
+            className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+          >
             {languageNames[locale]}
           </option>
         ))}

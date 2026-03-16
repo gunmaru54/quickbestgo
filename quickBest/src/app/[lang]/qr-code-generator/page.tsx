@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import QRCodeGenerator from '@/components/tools/QRCodeGenerator';
 import { getDictionary, Locale } from '@/lib/i18n';
 
@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   const dict = await getDictionary(lang);
   
   return {
-    title: dict?.qr_code_generator?.meta_title || "QR Code Generator - QuickTools",
+    title: dict?.qr_code_generator?.meta_title || "QR Code Generator - QuickBest",
     description: dict?.qr_code_generator?.meta_description || "Create high-quality QR codes for any text, URL, or contact information.",
     alternates: {
       languages: {

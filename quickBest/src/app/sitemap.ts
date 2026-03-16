@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 import { locales } from '@/lib/i18n'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://quicktools.example.com' // Replace with actual domain
+  const baseUrl = 'https://quickbest.example.com' // Replace with actual domain
   
   const tools = [
     '',

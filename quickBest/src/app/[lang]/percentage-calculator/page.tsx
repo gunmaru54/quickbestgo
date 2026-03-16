@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import PercentageCalculator from '@/components/tools/PercentageCalculator';
 import { getDictionary, Locale } from '@/lib/i18n';
 
@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   const dict = await getDictionary(lang);
   
   return {
-    title: dict?.percentage_calculator?.meta_title || "Percentage Calculator - QuickTools",
+    title: dict?.percentage_calculator?.meta_title || "Percentage Calculator - QuickBest",
     description: dict?.percentage_calculator?.meta_description || "Calculate percentages quickly with our free online tool.",
     alternates: {
       languages: {
@@ -26,7 +26,7 @@ export default async function PercentageCalculatorPage({ params: { lang } }: { p
   const pcDict = dict?.percentage_calculator || {
     title: "Percentage Calculator",
     about_title: "How to use the Percentage Calculator?",
-    about_p1: "QuickTools' Percentage Calculator now supports three modes: percent of a number, increase by percent, and decrease by percent.",
+    about_p1: "QuickBest's Percentage Calculator now supports three modes: percent of a number, increase by percent, and decrease by percent.",
     about_p2: "예: '200의 15%' → 30, '200에서 15% 증가' → 230, '200에서 15% 감소' → 170",
     about_p3: "모든 계산은 브라우저에서 즉시 수행됩니다.",
     title_mode1: "퍼센트 구하기",

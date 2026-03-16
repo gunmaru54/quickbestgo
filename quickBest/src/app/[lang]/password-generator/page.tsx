@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import PasswordGenerator from '@/components/tools/PasswordGenerator';
 import { getDictionary, Locale } from '@/lib/i18n';
 
@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   const dict = await getDictionary(lang);
   
   return {
-    title: dict?.password_generator?.meta_title || "Password Generator - QuickTools",
+    title: dict?.password_generator?.meta_title || "Password Generator - QuickBest",
     description: dict?.password_generator?.meta_description || "Create secure and customizable passwords with our free online tool.",
     alternates: {
       languages: {

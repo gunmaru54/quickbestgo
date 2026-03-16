@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const siteConfig = {
-  name: "QuickTools",
+  name: "QuickBest",
   description: "Global utility tools for everyday needs. Fast, simple, and mobile-friendly.",
-  url: "https://quicktools.example.com",
+  url: "https://quickbest.example.com",
 };
 
 export function constructMetadata({
@@ -34,7 +34,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@quicktools",
+      creator: "@quickbest",
     },
     icons: {
       icon: "/favicon.ico",
