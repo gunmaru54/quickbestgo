@@ -2,6 +2,16 @@
 import PercentageCalculator from '@/components/tools/PercentageCalculator';
 import { getDictionary, Locale } from '@/lib/i18n';
 
+export async function generateStaticParams() {
+  return [
+    { lang: 'ko' },
+    { lang: 'en' },
+    { lang: 'es' },
+    { lang: 'ja' },
+    { lang: 'pt' },
+  ];
+}
+
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
   

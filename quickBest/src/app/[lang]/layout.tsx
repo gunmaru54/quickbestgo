@@ -3,6 +3,16 @@ import Footer from "@/components/Footer";
 import { Locale } from "@/lib/i18n";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
+export async function generateStaticParams() {
+  return [
+    { lang: 'ko' },
+    { lang: 'en' },
+    { lang: 'es' },
+    { lang: 'ja' },
+    { lang: 'pt' },
+  ];
+}
+
 export default function LocaleLayout({
   children,
   params,

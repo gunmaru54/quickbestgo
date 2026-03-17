@@ -19,6 +19,16 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   };
 }
 
+export async function generateStaticParams() {
+  return [
+    { lang: 'ko' },
+    { lang: 'en' },
+    { lang: 'es' },
+    { lang: 'ja' },
+    { lang: 'pt' },
+  ];
+}
+
 export default async function WheelSpinnerPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
 

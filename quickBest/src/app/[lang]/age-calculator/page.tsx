@@ -2,6 +2,16 @@ import { Metadata } from 'next';
 import AgeCalculator from '@/components/tools/AgeCalculator';
 import { getDictionary, Locale } from '@/lib/i18n';
 
+export async function generateStaticParams() {
+  return [
+    { lang: 'ko' },
+    { lang: 'en' },
+    { lang: 'es' },
+    { lang: 'ja' },
+    { lang: 'pt' },
+  ];
+}
+
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
   return {
@@ -30,7 +40,7 @@ export default async function AgeCalculatorPage({ params: { lang } }: { params: 
         </h1>
         
         <div className="mb-12">
-          <AgeCalculator dict={dict.age_calculator} />
+          <AgeCalculator dict={dict.age_calculator} lang={lang} />
         </div>
 
         <article className="prose dark:prose-invert max-w-none bg-gray-50 dark:bg-[#1a1a1a] p-8 rounded-3xl border dark:border-gray-800 transition-colors duration-300">

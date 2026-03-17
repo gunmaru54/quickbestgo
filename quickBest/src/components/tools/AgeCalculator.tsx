@@ -17,10 +17,11 @@ interface AgeCalculatorProps {
     label_months: string;
     label_days: string;
     tooltip_reset: string;
-  }
+  };
+  lang: string;
 }
 
-const AgeCalculator = ({ dict }: AgeCalculatorProps) => {
+const AgeCalculator = ({ dict, lang }: AgeCalculatorProps) => {
   const [birthDate, setBirthDate] = useState<string>('');
   const [result, setResult] = useState<AgeResult | null>(null);
 
@@ -60,6 +61,7 @@ const AgeCalculator = ({ dict }: AgeCalculatorProps) => {
           <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_birthdate}</label>
           <input
             type="date"
+            lang={lang}
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
             className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
