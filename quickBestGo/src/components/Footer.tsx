@@ -1,11 +1,11 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { getDictionary, Locale } from '@/lib/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Footer = async ({ lang }: { lang: string }) => {
   const currentYear = new Date().getFullYear();
   const dict = await getDictionary(lang as Locale);
-  
+
   return (
     <footer className="bg-gray-50 dark:bg-[#0a0a0a] border-t dark:border-gray-800 py-12 transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -29,12 +29,17 @@ const Footer = async ({ lang }: { lang: string }) => {
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-900 dark:text-gray-100">{dict.tools.age_calculator.category}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li><Link href={`/${lang}/age-calculator`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.tools.age_calculator.name}</Link></li>
+              <li><Link href={`/${lang}/percentage-calculator`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.tools.percentage_calculator.name}</Link></li>
+              <li><Link href={`/${lang}/qr-code-generator`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.tools.qr_code_generator.name}</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-900 dark:text-gray-100">Site</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li><Link href={`/${lang}`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.home}</Link></li>
+              <li><Link href={`/${lang}/about`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.about}</Link></li>
+              <li><Link href={`/${lang}/contact`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.contact}</Link></li>
+              <li><Link href={`/${lang}/privacy-policy`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.privacy_policy}</Link></li>
             </ul>
           </div>
         </div>
@@ -51,4 +56,3 @@ const Footer = async ({ lang }: { lang: string }) => {
 };
 
 export default Footer;
-

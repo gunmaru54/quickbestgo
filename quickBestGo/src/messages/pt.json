@@ -1,7 +1,10 @@
-﻿{
+{
   "navigation": {
     "home": "Início",
-    "tools": "Ferramentas"
+    "tools": "Ferramentas",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "privacy_policy": "Política de Privacidade"
   },
   "home": {
     "title": "Ferramentas Utilitárias Rápidas e Simples",
@@ -161,6 +164,51 @@
   "meta": {
     "title": "QuickBestGo - Ferramentas Utilitárias Rápidas e Simples",
     "description": "Uma coleção de ferramentas utilitárias online simples, rápidas e gratuitas. Gerador de números aleatórios, gerador de passwords, calculadora de idade e muito mais."
+  },
+  "about_page": {
+    "meta_title": "Sobre Nós - QuickBestGo",
+    "meta_description": "Conheça a missão do QuickBestGo e as nossas ferramentas utilitárias gratuitas para todos.",
+    "title": "Sobre o QuickBestGo",
+    "mission_title": "A Nossa Missão",
+    "mission_p1": "O QuickBestGo foi criado com um objetivo simples: fornecer ferramentas utilitárias online rápidas, gratuitas e fáceis de usar para todos, sem registo, sem instalação e sem comprometer a sua privacidade.",
+    "mission_p2": "Acreditamos que as ferramentas digitais do dia a dia devem ser acessíveis a todos, em qualquer lugar. Por isso, todas as nossas ferramentas funcionam diretamente no seu navegador e suportam vários idiomas.",
+    "tools_title": "As Nossas Ferramentas",
+    "tools_p1": "Atualmente oferecemos 7 ferramentas utilitárias gratuitas: Gerador de Números Aleatórios, Gerador de Passwords, Lançamento de Moeda, Roda da Sorte, Calculadora de Idade, Gerador de Código QR e Calculadora de Percentagem.",
+    "privacy_title": "A Sua Privacidade é Importante",
+    "privacy_p1": "Todos os cálculos e operações são realizados localmente no seu navegador. Não recolhemos, armazenamos nem transmitimos nenhum dos dados que introduz nas nossas ferramentas."
+  },
+  "contact_page": {
+    "meta_title": "Contacto - QuickBestGo",
+    "meta_description": "Contacte a equipa QuickBestGo para questões, feedback ou sugestões.",
+    "title": "Contacto",
+    "subtitle": "Tem uma pergunta, sugestão ou feedback? Adoraríamos ouvi-lo.",
+    "email_title": "Envie-nos um Email",
+    "email": "contact@quickbestgo.com",
+    "response_title": "Tempo de Resposta",
+    "response_time": "Normalmente respondemos dentro de 1 a 3 dias úteis.",
+    "feedback_title": "Feedback e Sugestões",
+    "feedback_p1": "Estamos sempre à procura de melhorar o QuickBestGo. Se tiver ideias para novas ferramentas ou melhorias às existentes, por favor contacte-nos."
+  },
+  "privacy_policy_page": {
+    "meta_title": "Política de Privacidade - QuickBestGo",
+    "meta_description": "Leia a política de privacidade do QuickBestGo para entender como tratamos os seus dados.",
+    "title": "Política de Privacidade",
+    "last_updated": "Última atualização: 19 de março de 2026",
+    "intro": "No QuickBestGo, estamos comprometidos em proteger a sua privacidade. Esta Política de Privacidade explica como recolhemos, usamos e protegemos as suas informações quando utiliza o nosso website em https://quickbestgo.com.",
+    "s1_title": "1. Informações que Recolhemos",
+    "s1_content": "O QuickBestGo não recolhe nem armazena informações pessoais através das nossas ferramentas. Todas as operações são realizadas completamente dentro do seu navegador. Os dados que introduz não são transmitidos para os nossos servidores.",
+    "s2_title": "2. Cookies e Análise",
+    "s2_content": "Podemos usar cookies e tecnologias de rastreio semelhantes para analisar o tráfego do website. Usamos o Google Analytics para entender como os visitantes interagem com o nosso site. Pode optar por não participar instalando o complemento de exclusão do navegador do Google Analytics.",
+    "s3_title": "3. Publicidade de Terceiros",
+    "s3_content": "Usamos o Google AdSense para exibir anúncios no nosso website. O Google AdSense usa cookies para exibir anúncios com base nas suas visitas anteriores. Pode optar por não receber publicidade personalizada em https://www.google.com/settings/ads.",
+    "s4_title": "4. Links de Terceiros",
+    "s4_content": "O nosso website pode conter links para websites de terceiros. Não somos responsáveis pelas práticas de privacidade ou conteúdo desses sites.",
+    "s5_title": "5. Privacidade de Crianças",
+    "s5_content": "Os nossos serviços não são dirigidos a crianças com menos de 13 anos. Não recolhemos intencionalmente informações pessoais de crianças com menos de 13 anos.",
+    "s6_title": "6. Alterações a Esta Política",
+    "s6_content": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Iremos notificá-lo sobre quaisquer alterações publicando a nova versão nesta página.",
+    "contact_title": "7. Contacto",
+    "contact_content": "Se tiver alguma questão sobre esta Política de Privacidade, contacte-nos em: contact@quickbestgo.com"
   }
 }
 
