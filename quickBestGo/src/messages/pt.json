@@ -1,0 +1,166 @@
+﻿{
+  "navigation": {
+    "home": "Início",
+    "tools": "Ferramentas"
+  },
+  "home": {
+    "title": "Ferramentas Utilitárias Rápidas e Simples",
+    "description": "Ferramentas rápidas, gratuitas e otimizadas para dispositivos móveis para as suas necessidades diárias. Sem necessidade de registo.",
+    "about_title": "Sobre a QuickBestGo",
+    "about_p1": "O QuickBestGo é um website global que fornece várias ferramentas utilitárias que são frequentemente necessárias na vida quotidiana. O nosso objetivo é proporcionar aos utilizadores uma experiência rápida, intuitiva e otimizada para dispositivos móveis.",
+    "about_p2": "Todas as ferramentas estão disponíveis diretamente no seu navegador sem qualquer registo ou instalação, e os seus dados são processados apenas no seu navegador para garantir a privacidade."
+  },
+  "tools": {
+    "random_number_generator": {
+      "name": "Gerador de Números Aleatórios",
+      "description": "Gere números aleatórios dentro de um intervalo personalizado.",
+      "category": "Ferramentas Aleatórias"
+    },
+    "password_generator": {
+      "name": "Gerador de Passwords",
+      "description": "Crie passwords seguras e personalizáveis.",
+      "category": "Ferramentas Aleatórias"
+    },
+    "coin_flip": {
+      "name": "Lançamento de Moeda",
+      "description": "Lance uma moeda digital para obter cara ou coroa.",
+      "category": "Ferramentas Aleatórias"
+    },
+    "wheel_spinner": {
+      "name": "Roda da Sorte",
+      "description": "Gire uma roda personalizada para escolher um vencedor aleatório.",
+      "category": "Ferramentas Aleatórias"
+    },
+    "age_calculator": {
+      "name": "Calculadora de Idade",
+      "description": "Calcule sua idade exata em anos, meses e dias.",
+      "category": "Calculadoras"
+    },
+    "qr_code_generator": {
+      "name": "Gerador de Código QR",
+      "description": "Crie um código QR personalizado para qualquer texto ou URL.",
+      "category": "Utilidades"
+    },
+    "percentage_calculator": {
+      "name": "Calculadora de Percentagem",
+      "description": "Calcule percentagens para vários cenários.",
+      "category": "Calculadoras"
+    }
+    },
+    "percentage_calculator": {
+    "title": "Calculadora de Percentagem",
+    "meta_title": "Calculadora de Percentagem - Ferramenta Online Gratuita - QuickBestGo",
+    "meta_description": "Calcule percentagens rapidamente com a nossa ferramenta online gratuita. Suporte para percentagem de, variação percentual e muito mais.",
+    "about_title": "Como usar a Calculadora de Percentagem?",
+    "about_p1": "A Calculadora de Percentagem do QuickBestGo é uma ferramenta versátil concebida para lidar com cálculos comuns relacionados com percentagens. Quer precise de encontrar a percentagem de um número, determinar que percentagem um número representa de outro, ou calcular aumentos e diminuições percentuais, esta ferramenta ajuda-o.",
+    "about_p2": "A calculadora agora oferece três modos: porcentagem de um número, aumento por porcentagem e diminuição por porcentagem. Digite seus valores e veja o resultado instantaneamente.",
+    "about_p3": "Exemplos: 15% de 200 = 30, 200 aumentado em 15% = 230, 200 diminuído em 15% = 170.",
+    "title_mode1": "Porcentagem de",
+    "title_mode2": "Aumento %",
+    "title_mode3": "Diminuição %",
+    "example_mode1": "Exemplo: 15% de 200 = 30",
+    "example_mode2": "Exemplo: 200 + 15% = 230",
+    "example_mode3": "Exemplo: 200 - 15% = 170",
+    "label_percent": "%",
+    "label_of": "de",
+    "label_result": "Resultado"
+    },
+    "qr_code_generator": {
+    "title": "Gerador de Código QR",
+    "meta_title": "Gerador de Código QR - Criar Códigos QR Online - QuickBestGo",
+    "meta_description": "Crie códigos QR de alta qualidade para qualquer texto, URL ou informação de contato com nossa ferramenta online gratuita. Baixe como PNG.",
+    "about_title": "Como usar o Gerador de Código QR?",
+    "about_p1": "O Gerador de Código QR do QuickBestGo permite que você crie instantaneamente códigos QR para qualquer texto ou URL fornecido. Basta inserir seu conteúdo e o código QR será gerado em tempo real.",
+    "about_p2": "Você pode usar esses códigos QR para compartilhar links de sites, mensagens de texto ou qualquer outra informação que possa ser digitalizada pela câmera de um smartphone. É uma maneira rápida e eficiente de conectar conteúdo físico e digital.",
+    "about_p3": "Seus dados são processados localmente no seu navegador, garantindo que suas informações nunca sejam enviadas aos nossos servidores. Depois de gerado, você pode baixar o código QR como um arquivo PNG para usar em seus projetos.",
+    "label_enter_text": "Digite Texto ou URL",
+    "placeholder_text": "https://exemplo.com",
+    "btn_download": "Baixar Código QR",
+    "label_qr_code": "Seu Código QR",
+    "error_dangerous_url": "Este esquema de URL não é permitido por razões de segurança."
+    },
+    "random_number_generator": {
+    "title": "Gerador de Números Aleatórios",
+    "meta_title": "Gerador de Números Aleatórios - QuickBestGo",
+    "meta_description": "Gere um número aleatório dentro do seu intervalo personalizado de forma rápida e fácil. Ferramenta online gratuita.",
+    "about_title": "O que é um Gerador de Números Aleatórios?",
+    "about_p1": "O Gerador de Números Aleatórios da QuickBestGo é uma ferramenta que gera rápida e precisamente números aleatórios entre um valor mínimo e máximo especificado pelo utilizador.",
+    "about_p2": "Esta ferramenta pode ser utilizada para vários fins, tais como seleção simples de números, cálculos de probabilidade complexos, geração de eventos aleatórios em jogos ou sorteios de prémios.",
+    "about_p3": "O nosso gerador de números aleatórios reflete o intervalo introduzido pelo utilizador imediatamente e está concebido para armazenar o histórico dos números gerados até aos últimos 5 para que possa verificar facilmente os resultados anteriores.",
+    "label_min": "Mínimo",
+    "label_max": "Máximo",
+    "btn_generate": "Gerar Número Aleatório",
+    "label_result": "Resultado",
+    "label_history": "Últimos 5 Resultados",
+    "error_min_max": "O máximo deve ser maior que o mínimo"
+  },
+  "password_generator": {
+    "title": "Gerador de Passwords",
+    "meta_title": "Gerador de Passwords - QuickBestGo",
+    "meta_description": "Crie passwords seguras e personalizáveis com a nossa ferramenta online gratuita. Escolha o comprimento e os tipos de caracteres.",
+    "about_title": "Gerador de Passwords Fortes",
+    "about_p1": "Numa era em que a segurança digital é mais importante do que nunca, uma password segura é a primeira linha de defesa para proteger a sua informação pessoal. O Gerador de Passwords da QuickBestGo maximiza a segurança da sua conta gerando passwords imprevisíveis e complexas em segundos.",
+    "about_p2": "A nossa ferramenta oferece opções para selecionar livremente se deseja incluir letras maiúsculas, números e símbolos especiais, e pode definir o comprimento desejado de 8 a 50 caracteres.",
+    "about_p3": "Uma vez que toda a geração de passwords é realizada no motor do seu navegador local, não há preocupação de que a password gerada seja registada no servidor ou filtrada através da rede.",
+    "label_length": "Comprimento da Password",
+    "label_uppercase": "Incluir Maiúsculas",
+    "label_numbers": "Incluir Números",
+    "label_symbols": "Incluir Símbolos",
+    "btn_generate": "Gerar Password",
+    "tooltip_copy": "Copiar para a área de transferência"
+  },
+  "age_calculator": {
+    "title": "Calculadora de Idade",
+    "meta_title": "Calculadora de Idade - QuickBestGo",
+    "meta_description": "Calcule a sua idade exata em anos, meses e dias com a nossa ferramenta online gratuita. Basta introduzir a sua data de nascimento.",
+    "about_title": "Como funciona a Calculadora de Idade?",
+    "about_p1": "A Calculadora de Idade da QuickBestGo é uma ferramenta que lhe permite calcular a sua idade exata em anos, meses e dias, bastando introduzir a sua data de nascimento.",
+    "about_p2": "A calculadora tem em conta o diferente número de dias nos meses e os anos bissextos para fornecer resultados altamente precisos.",
+    "about_p3": "Os seus dados não são enviados para nenhum servidor; o cálculo acontece inteiramente no seu navegador.",
+    "label_birthdate": "Selecionar Data de Nascimento",
+    "btn_calculate": "Calcular Idade",
+    "label_years": "Anos",
+    "label_months": "Meses",
+    "label_days": "Dias",
+    "tooltip_reset": "Repor"
+  },
+  "coin_flip": {
+    "title": "Lançamento de Moeda",
+    "meta_title": "Lançamento de Moeda - Cara ou Coroa - QuickBestGo",
+    "meta_description": "Lance uma moeda digital para obter cara ou coroa com a nossa ferramenta online gratuita. Perfeito para decisões rápidas.",
+    "about_title": "Como usar a ferramenta de Lançamento de Moeda?",
+    "about_p1": "O Lançamento de Moeda da QuickBestGo é uma ferramenta digital simples que lhe permite lançar uma moeda e obter um resultado aleatório de Cara ou Coroa.",
+    "about_p2": "Esta ferramenta é perfeita para tomar decisões rápidas, resolver apostas ou como um elemento aleatório em jogos quando não tem uma moeda física à mão.",
+    "about_p3": "Os resultados são gerados utilizando um gerador de números aleatórios criptograficamente seguro no seu navegador, garantindo justiça e imprevisibilidade.",
+    "label_heads": "CARA",
+    "label_tails": "COROA",
+    "label_flip": "LANÇAR",
+    "btn_flipping": "A lançar...",
+    "btn_flip": "Lançar Moeda",
+    "label_history": "Histórico (Últimos 10)"
+  },
+  "wheel_spinner": {
+    "title": "Roda da Sorte",
+    "meta_title": "Roda da Sorte - Seletor de Nomes Aleatório - QuickBestGo",
+    "meta_description": "Gire uma roda personalizada para escolher um vencedor aleatório ou tomar uma decisão rápida com a nossa ferramenta online gratuita.",
+    "about_title": "Como usar a Roda da Sorte?",
+    "about_p1": "A Roda da Sorte da QuickBestGo é uma forma divertida e interativa de fazer uma seleção aleatória a partir de uma lista de opções.",
+    "about_p2": "Basta introduzir as suas escolhas, uma por linha, e girar a roda para escolher um vencedor aleatório. É ótimo para salas de aula, passatempos ou decidir o que jantar!",
+    "about_p3": "Como todas as nossas ferramentas, funciona inteiramente no seu navegador e não armazena nenhuma das suas entradas nos nossos servidores.",
+    "label_enter_options": "Introduza as Opções (uma por linha)",
+    "placeholder_options": "Opção 1\nOpção 2\nOpção 3",
+    "btn_spinning": "A girar...",
+    "btn_spin": "Girar Roda",
+    "label_winner": "O Vencedor é",
+    "error_min_options": "Por favor, introduza pelo menos 2 opções."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "tagline": "Ferramentas Utilitárias Rápidas, Simples e Gratuitas."
+  },
+  "meta": {
+    "title": "QuickBestGo - Ferramentas Utilitárias Rápidas e Simples",
+    "description": "Uma coleção de ferramentas utilitárias online simples, rápidas e gratuitas. Gerador de números aleatórios, gerador de passwords, calculadora de idade e muito mais."
+  }
+}
+

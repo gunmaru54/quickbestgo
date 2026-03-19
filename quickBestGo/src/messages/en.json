@@ -1,0 +1,166 @@
+﻿{
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools"
+  },
+  "home": {
+    "title": "Quick & Simple Utility Tools",
+    "description": "Fast, free, and mobile-friendly tools for your everyday needs. No signup required.",
+    "about_title": "About QuickBestGo",
+    "about_p1": "QuickBestGo is a global website providing various utility tools that are frequently needed in daily life. Our goal is to provide users with a fast, intuitive, and mobile-optimized experience.",
+    "about_p2": "All tools are available directly in your browser without any registration or installation, and your data is processed only within your browser for privacy."
+  },
+  "tools": {
+    "random_number_generator": {
+      "name": "Random Number Generator",
+      "description": "Generate random numbers within a custom range.",
+      "category": "Random Tools"
+    },
+    "password_generator": {
+      "name": "Password Generator",
+      "description": "Create secure and customizable passwords.",
+      "category": "Random Tools"
+    },
+    "coin_flip": {
+      "name": "Coin Flip",
+      "description": "Flip a digital coin for heads or tails.",
+      "category": "Random Tools"
+    },
+    "wheel_spinner": {
+      "name": "Wheel Spinner",
+      "description": "Spin a custom wheel to pick a random winner.",
+      "category": "Random Tools"
+    },
+    "age_calculator": {
+      "name": "Age Calculator",
+      "description": "Calculate your exact age in years, months, and days.",
+      "category": "Calculators"
+    },
+    "qr_code_generator": {
+      "name": "QR Code Generator",
+      "description": "Create a custom QR code for any text or URL.",
+      "category": "Utilities"
+    },
+    "percentage_calculator": {
+      "name": "Percentage Calculator",
+      "description": "Calculate percentages for various scenarios.",
+      "category": "Calculators"
+    }
+  },
+  "percentage_calculator": {
+    "title": "Percentage Calculator",
+    "meta_title": "Percentage Calculator - Free Online Tool - QuickBestGo",
+    "meta_description": "Calculate percentages quickly with our free online tool. Support for percentage of, percentage change, and more.",
+    "about_title": "How to use the Percentage Calculator?",
+    "about_p1": "QuickBestGo's Percentage Calculator is a versatile tool designed to handle common percentage-related calculations. Whether you need to find a percentage of a number, determine what percentage one number is of another, or calculate percentage increases and decreases, this tool has you covered.",
+    "about_p2": "The calculator now provides three modes: percent of a number, increase by percent, and decrease by percent. Enter your values and see results instantly.",
+    "about_p3": "Examples: 15% of 200 = 30, 200 increased by 15% = 230, 200 decreased by 15% = 170.",
+    "title_mode1": "Percent of",
+    "title_mode2": "Increase by Percent",
+    "title_mode3": "Decrease by Percent",
+    "example_mode1": "Example: 15% of 200 = 30",
+    "example_mode2": "Example: 200 + 15% = 230",
+    "example_mode3": "Example: 200 - 15% = 170",
+    "label_percent": "%",
+    "label_of": "of",
+    "label_result": "Result"
+  },
+  "qr_code_generator": {
+    "title": "QR Code Generator",
+    "meta_title": "QR Code Generator - Create QR Codes Online - QuickBestGo",
+    "meta_description": "Create high-quality QR codes for any text, URL, or contact information with our free online tool. Download as PNG.",
+    "about_title": "How to use the QR Code Generator?",
+    "about_p1": "QuickBestGo's QR Code Generator allows you to instantly create QR codes for any text or URL you provide. Simply enter your content, and the QR code will be generated in real-time.",
+    "about_p2": "You can use these QR codes for sharing website links, text messages, or any other information that can be scanned by a smartphone camera. It's a fast and efficient way to bridge physical and digital content.",
+    "about_p3": "Your data is processed locally in your browser, ensuring that your information is never sent to our servers. Once generated, you can download the QR code as a PNG file for use in your projects.",
+    "label_enter_text": "Enter Text or URL",
+    "placeholder_text": "https://example.com",
+    "btn_download": "Download QR Code",
+    "label_qr_code": "Your QR Code",
+    "error_dangerous_url": "This URL scheme is not allowed for security reasons."
+  },
+  "random_number_generator": {
+    "title": "Random Number Generator",
+    "meta_title": "Random Number Generator - QuickBestGo",
+    "meta_description": "Generate a random number within your custom range quickly and easily. Free online tool for random selection, gaming, and more.",
+    "about_title": "What is a Random Number Generator?",
+    "about_p1": "QuickBestGo's Random Number Generator is a tool that quickly and accurately generates random numbers between a minimum and maximum value specified by the user.",
+    "about_p2": "This tool can be used for various purposes, such as simple number selection, complex probability calculations, random event generation in games, or random number drawing for prize draws.",
+    "about_p3": "Our random number generator reflects the range entered by the user immediately and is designed to store the history of the generated numbers up to the latest 5 so that you can easily check previous results.",
+    "label_min": "Minimum",
+    "label_max": "Maximum",
+    "btn_generate": "Generate Random Number",
+    "label_result": "Result",
+    "label_history": "Last 5 Results",
+    "error_min_max": "Maximum must be greater than Minimum"
+  },
+  "password_generator": {
+    "title": "Password Generator",
+    "meta_title": "Password Generator - QuickBestGo",
+    "meta_description": "Create secure and customizable passwords with our free online tool. Choose length and character types for maximum security.",
+    "about_title": "Strong Password Generator",
+    "about_p1": "In an era where digital security is more important than ever, a secure password is the first line of defense to protect your personal information. QuickBestGo's Password Generator maximizes your account security by generating unpredictable and complex passwords in seconds.",
+    "about_p2": "Our tool provides options to freely select whether to include uppercase letters, numbers, and special symbols, and you can set the desired length from 8 to up to 50 characters.",
+    "about_p3": "Since all password generation is performed in your local browser engine, there is no worry that the generated password will be recorded on the server or leaked through the network.",
+    "label_length": "Password Length",
+    "label_uppercase": "Include Uppercase",
+    "label_numbers": "Include Numbers",
+    "label_symbols": "Include Symbols",
+    "btn_generate": "Generate Password",
+    "tooltip_copy": "Copy to clipboard"
+  },
+  "age_calculator": {
+    "title": "Age Calculator",
+    "meta_title": "Age Calculator - QuickBestGo",
+    "meta_description": "Calculate your exact age in years, months, and days with our free online tool. Just enter your birth date.",
+    "about_title": "How does the Age Calculator work?",
+    "about_p1": "QuickBestGo's Age Calculator is a tool that allows you to calculate your exact age in years, months, and days by simply entering your date of birth.",
+    "about_p2": "The calculator takes into account the different number of days in months and leap years to provide highly accurate results.",
+    "about_p3": "Your data is not sent to any server; the calculation happens entirely in your browser.",
+    "label_birthdate": "Select Birth Date",
+    "btn_calculate": "Calculate Age",
+    "label_years": "Years",
+    "label_months": "Months",
+    "label_days": "Days",
+    "tooltip_reset": "Reset"
+  },
+  "coin_flip": {
+    "title": "Coin Flip",
+    "meta_title": "Coin Flip - Heads or Tails - QuickBestGo",
+    "meta_description": "Flip a digital coin for heads or tails with our free online tool. Perfect for quick decision making and games.",
+    "about_title": "How to use the Coin Flip tool?",
+    "about_p1": "QuickBestGo's Coin Flip is a simple digital tool that allows you to flip a coin and get a random result of Heads or Tails.",
+    "about_p2": "This tool is perfect for making quick decisions, settling bets, or as a random element in games when you don't have a physical coin on hand.",
+    "about_p3": "The results are generated using a cryptographically secure random number generator in your browser, ensuring fairness and unpredictability.",
+    "label_heads": "HEADS",
+    "label_tails": "TAILS",
+    "label_flip": "FLIP",
+    "btn_flipping": "Flipping...",
+    "btn_flip": "Flip Coin",
+    "label_history": "History (Last 10)"
+  },
+  "wheel_spinner": {
+    "title": "Wheel Spinner",
+    "meta_title": "Wheel Spinner - Random Name Picker - QuickBestGo",
+    "meta_description": "Spin a custom wheel to pick a random winner or make a quick decision with our free online tool. Enter your own options.",
+    "about_title": "How to use the Wheel Spinner?",
+    "about_p1": "QuickBestGo's Wheel Spinner is a fun and interactive way to make a random selection from a list of options.",
+    "about_p2": "Simply enter your choices, one per line, and spin the wheel to pick a random winner. It's great for classrooms, giveaways, or deciding what to have for dinner!",
+    "about_p3": "Like all our tools, it runs entirely in your browser and doesn't store any of your inputs on our servers.",
+    "label_enter_options": "Enter Options (one per line)",
+    "placeholder_options": "Option 1\nOption 2\nOption 3",
+    "btn_spinning": "Spinning...",
+    "btn_spin": "Spin Wheel",
+    "label_winner": "The Winner is",
+    "error_min_options": "Please enter at least 2 options."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Fast, Simple, and Free Utility Tools."
+  },
+  "meta": {
+    "title": "QuickBestGo - Fast & Simple Utility Tools",
+    "description": "A collection of simple, fast, and free online utility tools. Random number generator, password generator, age calculator, and more."
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/gunma/QuickBestGo/quickBestGo -name security* -o -name *headers* -o -name *csp* -o -name vercel.json)",
+      "Bash(npx tsc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm run:*)",
+      "Bash(ls /c/Users/gunma/QuickBestGo/quickBestGo/src/app/[lang]/)",
+      "Bash(git -C /c/Users/gunma/QuickBestGo diff HEAD~1 HEAD --name-only)",
+      "Bash(git:*)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(netstat -ano)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(npm audit:*)"
+    ]
+  },
+  "spinnerTipsEnabled": true
+}
