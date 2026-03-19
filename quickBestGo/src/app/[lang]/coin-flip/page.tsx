@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import CoinFlip from '@/components/tools/CoinFlip';
 import { getDictionary, Locale } from '@/lib/i18n';
+import { constructMetadata, generateWebApplicationSchema } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return [
@@ -14,31 +15,35 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
-  return {
+  return constructMetadata({
     title: dict.coin_flip.meta_title,
     description: dict.coin_flip.meta_description,
-    alternates: {
-      languages: {
-        'ko': `/ko/coin-flip`,
-        'en': `/en/coin-flip`,
-        'es': `/es/coin-flip`,
-        'pt': `/pt/coin-flip`,
-        'ja': `/ja/coin-flip`,
-      }
-    }
-  };
+    lang,
+    slug: 'coin-flip',
+  });
 }
 
 export default async function CoinFlipPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
+  const schemas = generateWebApplicationSchema({
+    name: dict.coin_flip.title,
+    description: dict.coin_flip.meta_description,
+    lang,
+    slug: 'coin-flip',
+    category: 'EntertainmentApplication',
+  });
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+      />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-black text-center text-gray-900 dark:text-white mb-8">
           {dict.coin_flip.title}
         </h1>
-        
+
         <div className="mb-12">
           <CoinFlip dict={dict.coin_flip} />
         </div>

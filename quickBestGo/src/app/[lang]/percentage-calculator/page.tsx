@@ -1,6 +1,7 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 import PercentageCalculator from '@/components/tools/PercentageCalculator';
 import { getDictionary, Locale } from '@/lib/i18n';
+import { constructMetadata, generateWebApplicationSchema } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return [
@@ -14,49 +15,54 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
-  
-  return {
-    title: dict?.percentage_calculator?.meta_title || "Percentage Calculator - QuickBestGo",
+  return constructMetadata({
+    title: dict?.percentage_calculator?.meta_title || "Percentage Calculator - Free Online Tool - QuickBestGo",
     description: dict?.percentage_calculator?.meta_description || "Calculate percentages quickly with our free online tool.",
-    alternates: {
-      languages: {
-        'ko': `/ko/percentage-calculator`,
-        'en': `/en/percentage-calculator`,
-        'es': `/es/percentage-calculator`,
-        'pt': `/pt/percentage-calculator`,
-        'ja': `/ja/percentage-calculator`,
-      }
-    }
-  };
+    lang,
+    slug: 'percentage-calculator',
+  });
 }
 
 export default async function PercentageCalculatorPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
-  
+
   const pcDict = dict?.percentage_calculator || {
     title: "Percentage Calculator",
+    meta_description: "Calculate percentages quickly with our free online tool.",
     about_title: "How to use the Percentage Calculator?",
-    about_p1: "QuickBestGo's Percentage Calculator now supports three modes: percent of a number, increase by percent, and decrease by percent.",
-    about_p2: "예: '200의 15%' → 30, '200에서 15% 증가' → 230, '200에서 15% 감소' → 170",
-    about_p3: "모든 계산은 브라우저에서 즉시 수행됩니다.",
-    title_mode1: "퍼센트 구하기",
-    title_mode2: "증가 계산",
-    title_mode3: "감소 계산",
-    example_mode1: "예: 200의 15%는 30",
-    example_mode2: "예: 200에서 15% 증가하면 230",
-    example_mode3: "예: 200에서 15% 감소하면 170",
+    about_p1: "",
+    about_p2: "",
+    about_p3: "",
+    title_mode1: "Percent of",
+    title_mode2: "Increase by Percent",
+    title_mode3: "Decrease by Percent",
+    example_mode1: "Example: 15% of 200 = 30",
+    example_mode2: "Example: 200 + 15% = 230",
+    example_mode3: "Example: 200 - 15% = 170",
     label_percent: "%",
-    label_of: "의",
-    label_result: "결과"
+    label_of: "of",
+    label_result: "Result",
   };
+
+  const schemas = generateWebApplicationSchema({
+    name: pcDict.title,
+    description: pcDict.meta_description,
+    lang,
+    slug: 'percentage-calculator',
+    category: 'UtilityApplication',
+  });
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+      />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-black text-center text-gray-900 dark:text-white mb-8">
           {pcDict.title}
         </h1>
-        
+
         <div className="mb-12">
           <PercentageCalculator dict={pcDict} lang={lang} />
         </div>
@@ -71,4 +77,3 @@ export default async function PercentageCalculatorPage({ params: { lang } }: { p
     </div>
   );
 }
-

@@ -1,15 +1,16 @@
 import Link from 'next/link';
-import { 
-  Hash, 
-  Lock, 
-  Calendar, 
-  CircleDot, 
+import {
+  Hash,
+  Lock,
+  Calendar,
+  CircleDot,
   RotateCw,
   QrCode,
   Percent
 } from 'lucide-react';
 import { getDictionary, Locale } from '@/lib/i18n';
 import { Metadata } from 'next';
+import { siteConfig, getLanguageAlternates, getOgLocale, generateWebSiteSchema } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return [
@@ -23,23 +24,46 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
+  const canonicalUrl = `${siteConfig.url}/${lang}/`;
+
   return {
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
-      languages: {
-        'ko': '/ko',
-        'en': '/en',
-        'es': '/es',
-        'pt': '/pt',
-        'ja': '/ja',
-      }
-    }
+      canonical: canonicalUrl,
+      languages: getLanguageAlternates(''),
+    },
+    openGraph: {
+      title: dict.meta.title,
+      description: dict.meta.description,
+      url: canonicalUrl,
+      siteName: siteConfig.name,
+      locale: getOgLocale(lang),
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dict.meta.title,
+      description: dict.meta.description,
+      creator: '@quickbestgo',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': -1,
+        'max-image-preview': 'large',
+        'max-video-preview': -1,
+      },
+    },
   };
 }
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
+  const schema = generateWebSiteSchema(lang, dict.meta.description);
 
   const tools = [
     {
@@ -95,6 +119,11 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
           {dict.home.title}
@@ -106,8 +135,8 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {tools.map((tool) => (
-          <Link 
-            key={tool.href} 
+          <Link
+            key={tool.href}
             href={tool.href}
             className="group p-6 bg-white dark:bg-[#1a1a1a] border dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-500 transition-all"
           >
@@ -124,7 +153,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           </Link>
         ))}
       </div>
-      
+
       <div className="mt-20 prose dark:prose-invert max-w-none border-t dark:border-gray-800 pt-12">
         <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{dict.home.about_title}</h2>
         <p>{dict.home.about_p1}</p>

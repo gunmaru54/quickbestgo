@@ -1,11 +1,32 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata = {
+  metadataBase: new URL(siteConfig.url),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    siteName: siteConfig.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@quickbestgo",
   },
 };
 

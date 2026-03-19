@@ -1,6 +1,7 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 import PasswordGenerator from '@/components/tools/PasswordGenerator';
 import { getDictionary, Locale } from '@/lib/i18n';
+import { constructMetadata, generateWebApplicationSchema } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return [
@@ -14,28 +15,20 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
-  
-  return {
-    title: dict?.password_generator?.meta_title || "Password Generator - QuickBestGo",
-    description: dict?.password_generator?.meta_description || "Create secure and customizable passwords with our free online tool.",
-    alternates: {
-      languages: {
-        'ko': `/ko/password-generator`,
-        'en': `/en/password-generator`,
-        'es': `/es/password-generator`,
-        'pt': `/pt/password-generator`,
-        'ja': `/ja/password-generator`,
-      }
-    }
-  };
+  return constructMetadata({
+    title: dict.password_generator.meta_title,
+    description: dict.password_generator.meta_description,
+    lang,
+    slug: 'password-generator',
+  });
 }
 
 export default async function PasswordGeneratorPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
-  
-  // Fallback structure in case dictionary is missing specific keys
+
   const pgDict = dict?.password_generator || {
     title: "Password Generator",
+    meta_description: "Create secure and customizable passwords with our free online tool.",
     about_title: "Strong Password Generator",
     about_p1: "",
     about_p2: "",
@@ -45,16 +38,28 @@ export default async function PasswordGeneratorPage({ params: { lang } }: { para
     label_numbers: "Include Numbers",
     label_symbols: "Include Symbols",
     btn_generate: "Generate Password",
-    tooltip_copy: "Copy to clipboard"
+    tooltip_copy: "Copy to clipboard",
   };
+
+  const schemas = generateWebApplicationSchema({
+    name: pgDict.title,
+    description: pgDict.meta_description,
+    lang,
+    slug: 'password-generator',
+    category: 'SecurityApplication',
+  });
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+      />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-black text-center text-gray-900 dark:text-white mb-8">
           {pgDict.title}
         </h1>
-        
+
         <div className="mb-12">
           <PasswordGenerator dict={pgDict} />
         </div>
@@ -69,4 +74,3 @@ export default async function PasswordGeneratorPage({ params: { lang } }: { para
     </div>
   );
 }
-
