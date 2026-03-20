@@ -12,6 +12,7 @@
     "@formatjs/intl-localematcher": "^0.8.1",
     "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
+    "geist": "^1.7.0",
     "lucide-react": "^0.577.0",
     "negotiator": "^1.0.0",
     "next": "14.2.35",
