@@ -48,6 +48,11 @@
       "name": "パーセント計算機",
       "description": "様々なシナリオのパーセンテージを計算します。",
       "category": "計算機"
+    },
+    "bmi_calculator": {
+      "name": "BMI計算機",
+      "description": "メートル法またはヤードポンド法でBMIを計算します。",
+      "category": "健康"
     }
   },
   "percentage_calculator": {
@@ -156,6 +161,34 @@
     "btn_spin": "ホイールを回す",
     "label_winner": "当選者は",
     "error_min_options": "2つ以上のオプションを入力してください。"
+  },
+  "bmi_calculator": {
+    "title": "BMI計算機",
+    "meta_title": "BMI計算機 - 無料の体格指数ツール - QuickBestGo",
+    "meta_description": "無料のオンラインBMI計算機で体格指数を即座に計算。メートル法（cm/kg）とヤード・ポンド法（ft/lb）の両方に対応。",
+    "about_title": "BMIとは何か、どのように計算されるのか？",
+    "about_p1": "体格指数（BMI）は、身長と体重から計算される単純な数値です。健康問題につながる可能性のある体重カテゴリーを特定するためのスクリーニングツールとして広く使用されています。計算式はBMI = 体重(kg) / 身長(m)²です。",
+    "about_p2": "WHOが定義するBMIカテゴリー：低体重は18.5未満、普通体重は18.5〜24.9、過体重は25〜29.9、肥満は30以上。",
+    "about_p3": "BMIは有用なスクリーニングツールですが、体脂肪や全体的な健康状態を直接測定するものではありません。包括的な健康評価のためには医療専門家に相談してください。",
+    "label_unit_metric": "メートル法",
+    "label_unit_imperial": "ヤード法",
+    "label_height": "身長",
+    "label_height_cm": "身長 (cm)",
+    "label_height_ft": "フィート",
+    "label_height_in": "インチ",
+    "label_weight": "体重",
+    "label_weight_kg": "体重 (kg)",
+    "label_weight_lb": "体重 (lb)",
+    "btn_calculate": "BMIを計算",
+    "tooltip_reset": "リセット",
+    "result_bmi": "BMI",
+    "result_category": "カテゴリー",
+    "result_underweight": "低体重",
+    "result_normal": "普通",
+    "result_overweight": "過体重",
+    "result_obese": "肥満",
+    "result_range_label": "BMI範囲",
+    "error_invalid": "有効な身長と体重の値を入力してください。"
   },
   "footer": {
     "rights": "無断複写・転載を禁じます。",

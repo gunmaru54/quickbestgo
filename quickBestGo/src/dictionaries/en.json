@@ -48,6 +48,11 @@
       "name": "Percentage Calculator",
       "description": "Calculate percentages for various scenarios.",
       "category": "Calculators"
+    },
+    "bmi_calculator": {
+      "name": "BMI Calculator",
+      "description": "Calculate your Body Mass Index with metric or imperial units.",
+      "category": "Health"
     }
   },
   "percentage_calculator": {
@@ -156,6 +161,34 @@
     "btn_spin": "Spin Wheel",
     "label_winner": "The Winner is",
     "error_min_options": "Please enter at least 2 options."
+  },
+  "bmi_calculator": {
+    "title": "BMI Calculator",
+    "meta_title": "BMI Calculator - Free Body Mass Index Tool - QuickBestGo",
+    "meta_description": "Calculate your Body Mass Index (BMI) instantly with our free online tool. Supports both metric (cm/kg) and imperial (ft/lb) units.",
+    "about_title": "What is BMI and how is it calculated?",
+    "about_p1": "Body Mass Index (BMI) is a simple numerical value calculated from a person's height and weight. It is widely used as a screening tool to identify weight categories that may lead to health problems. The formula is: BMI = weight (kg) / height (m)².",
+    "about_p2": "BMI categories are defined by the World Health Organization (WHO): Underweight is below 18.5, Normal weight is 18.5–24.9, Overweight is 25–29.9, and Obese is 30 or above. These ranges apply to most adults aged 18–65.",
+    "about_p3": "BMI is a useful screening tool but does not directly measure body fat or overall health. Factors such as muscle mass, age, sex, and ethnicity can affect the interpretation. Always consult a healthcare professional for a comprehensive health assessment.",
+    "label_unit_metric": "Metric",
+    "label_unit_imperial": "Imperial",
+    "label_height": "Height",
+    "label_height_cm": "Height (cm)",
+    "label_height_ft": "Feet",
+    "label_height_in": "Inches",
+    "label_weight": "Weight",
+    "label_weight_kg": "Weight (kg)",
+    "label_weight_lb": "Weight (lb)",
+    "btn_calculate": "Calculate BMI",
+    "tooltip_reset": "Reset",
+    "result_bmi": "BMI",
+    "result_category": "Category",
+    "result_underweight": "Underweight",
+    "result_normal": "Normal",
+    "result_overweight": "Overweight",
+    "result_obese": "Obese",
+    "result_range_label": "BMI Range",
+    "error_invalid": "Please enter valid height and weight values."
   },
   "footer": {
     "rights": "All rights reserved.",

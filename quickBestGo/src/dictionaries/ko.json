@@ -48,6 +48,11 @@
       "name": "퍼센트 계산기",
       "description": "다양한 상황에 대한 퍼센트를 계산합니다.",
       "category": "계산기"
+    },
+    "bmi_calculator": {
+      "name": "BMI 계산기",
+      "description": "체질량지수(BMI)를 미터법 또는 야드파운드법으로 계산합니다.",
+      "category": "건강"
     }
   },
   "percentage_calculator": {
@@ -156,6 +161,34 @@
     "btn_spin": "룰렛 돌리기",
     "label_winner": "당첨자는",
     "error_min_options": "최소 2개 이상의 옵션을 입력해주세요."
+  },
+  "bmi_calculator": {
+    "title": "BMI 계산기",
+    "meta_title": "BMI 계산기 - 무료 체질량지수 계산 도구 - QuickBestGo",
+    "meta_description": "무료 온라인 BMI 계산기로 체질량지수를 즉시 계산하세요. 미터법(cm/kg) 및 야드파운드법(ft/lb)을 지원합니다.",
+    "about_title": "BMI란 무엇이며 어떻게 계산되나요?",
+    "about_p1": "체질량지수(BMI)는 키와 몸무게로 계산되는 간단한 수치입니다. 건강 문제로 이어질 수 있는 체중 범주를 파악하는 선별 도구로 널리 사용됩니다. 계산 공식은 BMI = 체중(kg) / 키(m)² 입니다.",
+    "about_p2": "세계보건기구(WHO)의 BMI 범주는 다음과 같습니다: 저체중 18.5 미만, 정상 18.5~24.9, 과체중 25~29.9, 비만 30 이상. 이 범위는 18~65세 성인 대부분에게 적용됩니다.",
+    "about_p3": "BMI는 유용한 선별 도구이지만 체지방이나 전반적인 건강 상태를 직접 측정하지는 않습니다. 근육량, 나이, 성별, 민족 등의 요소가 해석에 영향을 줄 수 있습니다. 종합적인 건강 평가를 위해서는 의료 전문가와 상담하세요.",
+    "label_unit_metric": "미터법",
+    "label_unit_imperial": "야드파운드법",
+    "label_height": "키",
+    "label_height_cm": "키 (cm)",
+    "label_height_ft": "피트",
+    "label_height_in": "인치",
+    "label_weight": "체중",
+    "label_weight_kg": "체중 (kg)",
+    "label_weight_lb": "체중 (lb)",
+    "btn_calculate": "BMI 계산",
+    "tooltip_reset": "초기화",
+    "result_bmi": "BMI",
+    "result_category": "범주",
+    "result_underweight": "저체중",
+    "result_normal": "정상",
+    "result_overweight": "과체중",
+    "result_obese": "비만",
+    "result_range_label": "BMI 범위",
+    "error_invalid": "올바른 키와 체중 값을 입력해 주세요."
   },
   "footer": {
     "rights": "모든 권리 보유.",

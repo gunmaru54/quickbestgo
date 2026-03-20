@@ -48,6 +48,11 @@
       "name": "Calculadora de Percentagem",
       "description": "Calcule percentagens para vários cenários.",
       "category": "Calculadoras"
+    },
+    "bmi_calculator": {
+      "name": "Calculadora de IMC",
+      "description": "Calcule o seu Índice de Massa Corporal em unidades métricas ou imperiais.",
+      "category": "Saúde"
     }
     },
     "percentage_calculator": {
@@ -156,6 +161,34 @@
     "btn_spin": "Girar Roda",
     "label_winner": "O Vencedor é",
     "error_min_options": "Por favor, introduza pelo menos 2 opções."
+  },
+  "bmi_calculator": {
+    "title": "Calculadora de IMC",
+    "meta_title": "Calculadora de IMC - Ferramenta Gratuita de Índice de Massa Corporal - QuickBestGo",
+    "meta_description": "Calcule o seu Índice de Massa Corporal (IMC) instantaneamente com a nossa ferramenta gratuita. Suporta unidades métricas (cm/kg) e imperiais (ft/lb).",
+    "about_title": "O que é o IMC e como é calculado?",
+    "about_p1": "O Índice de Massa Corporal (IMC) é um valor numérico calculado a partir da altura e do peso de uma pessoa. É amplamente utilizado como ferramenta de rastreio para identificar categorias de peso. A fórmula é: IMC = peso (kg) / altura (m)².",
+    "about_p2": "As categorias de IMC definidas pela OMS são: Abaixo do peso menos de 18.5, Peso normal 18.5–24.9, Sobrepeso 25–29.9, e Obeso 30 ou mais.",
+    "about_p3": "O IMC é uma ferramenta de rastreio útil, mas não mede diretamente a gordura corporal ou a saúde geral. Consulte sempre um profissional de saúde para uma avaliação completa.",
+    "label_unit_metric": "Métrico",
+    "label_unit_imperial": "Imperial",
+    "label_height": "Altura",
+    "label_height_cm": "Altura (cm)",
+    "label_height_ft": "Pés",
+    "label_height_in": "Polegadas",
+    "label_weight": "Peso",
+    "label_weight_kg": "Peso (kg)",
+    "label_weight_lb": "Peso (lb)",
+    "btn_calculate": "Calcular IMC",
+    "tooltip_reset": "Redefinir",
+    "result_bmi": "IMC",
+    "result_category": "Categoria",
+    "result_underweight": "Abaixo do peso",
+    "result_normal": "Normal",
+    "result_overweight": "Sobrepeso",
+    "result_obese": "Obeso",
+    "result_range_label": "Intervalo de IMC",
+    "error_invalid": "Por favor, insira valores válidos de altura e peso."
   },
   "footer": {
     "rights": "Todos os direitos reservados.",

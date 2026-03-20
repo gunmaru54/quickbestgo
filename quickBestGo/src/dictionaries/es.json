@@ -48,6 +48,11 @@
       "name": "Calculadora de Porcentaje",
       "description": "Calcula porcentajes para varios escenarios.",
       "category": "Calculadoras"
+    },
+    "bmi_calculator": {
+      "name": "Calculadora de IMC",
+      "description": "Calcula tu Índice de Masa Corporal con unidades métricas o imperiales.",
+      "category": "Salud"
     }
     },
     "percentage_calculator": {
@@ -156,6 +161,34 @@
     "btn_spin": "Girar Rueda",
     "label_winner": "El Ganador es",
     "error_min_options": "Por favor, introduzca al menos 2 opciones."
+  },
+  "bmi_calculator": {
+    "title": "Calculadora de IMC",
+    "meta_title": "Calculadora de IMC - Herramienta Gratuita de Índice de Masa Corporal - QuickBestGo",
+    "meta_description": "Calcula tu Índice de Masa Corporal (IMC) al instante con nuestra herramienta gratuita. Compatible con unidades métricas (cm/kg) e imperiales (ft/lb).",
+    "about_title": "¿Qué es el IMC y cómo se calcula?",
+    "about_p1": "El Índice de Masa Corporal (IMC) es un valor numérico calculado a partir de la altura y el peso de una persona. Se utiliza ampliamente como herramienta de detección para identificar categorías de peso. La fórmula es: IMC = peso (kg) / altura (m)².",
+    "about_p2": "Las categorías de IMC definidas por la OMS son: Bajo peso menos de 18.5, Peso normal 18.5–24.9, Sobrepeso 25–29.9, y Obeso 30 o más.",
+    "about_p3": "El IMC es una herramienta de detección útil, pero no mide directamente la grasa corporal ni la salud general. Consulte siempre a un profesional de la salud para una evaluación completa.",
+    "label_unit_metric": "Métrico",
+    "label_unit_imperial": "Imperial",
+    "label_height": "Altura",
+    "label_height_cm": "Altura (cm)",
+    "label_height_ft": "Pies",
+    "label_height_in": "Pulgadas",
+    "label_weight": "Peso",
+    "label_weight_kg": "Peso (kg)",
+    "label_weight_lb": "Peso (lb)",
+    "btn_calculate": "Calcular IMC",
+    "tooltip_reset": "Restablecer",
+    "result_bmi": "IMC",
+    "result_category": "Categoría",
+    "result_underweight": "Bajo peso",
+    "result_normal": "Normal",
+    "result_overweight": "Sobrepeso",
+    "result_obese": "Obeso",
+    "result_range_label": "Rango de IMC",
+    "error_invalid": "Por favor, ingrese valores válidos de altura y peso."
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
