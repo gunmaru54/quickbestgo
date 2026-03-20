@@ -1,36 +1,22 @@
-import { MetadataRoute } from 'next'
-import { locales } from '@/lib/i18n'
+import { MetadataRoute } from 'next';
+import { locales } from '@/lib/i18n';
+import { siteConfig } from '@/lib/seo';
+import { TOOLS } from '@/lib/tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://quickbestgo.com'
-
-  const tools = [
-    '',
-    '/random-number-generator',
-    '/password-generator',
-    '/age-calculator',
-    '/coin-flip',
-    '/wheel-spinner',
-    '/qr-code-generator',
-    '/percentage-calculator',
-  ]
-
-  const entries: MetadataRoute.Sitemap = []
+  const slugs = ['', ...TOOLS.map((t) => `/${t.slug}`)];
+  const entries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
-    tools.forEach((tool) => {
-      const url = tool
-        ? `${baseUrl}/${locale}${tool}/`
-        : `${baseUrl}/${locale}/`
-
+    slugs.forEach((slug) => {
       entries.push({
-        url,
+        url: slug ? `${siteConfig.url}/${locale}${slug}/` : `${siteConfig.url}/${locale}/`,
         lastModified: new Date('2026-03-19'),
         changeFrequency: 'monthly',
-        priority: tool === '' ? 1.0 : 0.8,
-      })
-    })
-  })
+        priority: slug === '' ? 1.0 : 0.8,
+      });
+    });
+  });
 
-  return entries
+  return entries;
 }

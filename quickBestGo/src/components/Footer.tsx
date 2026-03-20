@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { getDictionary, Locale } from '@/lib/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Footer = async ({ lang }: { lang: string }) => {
+const Footer = async ({ lang }: { lang: Locale }) => {
   const currentYear = new Date().getFullYear();
-  const dict = await getDictionary(lang as Locale);
+  const dict = await getDictionary(lang);
 
   return (
     <footer className="bg-gray-50 dark:bg-[#0a0a0a] border-t dark:border-gray-800 py-12 transition-colors duration-300">

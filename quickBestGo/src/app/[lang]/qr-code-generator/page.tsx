@@ -1,75 +1,27 @@
 import { Metadata } from 'next';
 import QRCodeGenerator from '@/components/tools/QRCodeGenerator';
-import { getDictionary, Locale } from '@/lib/i18n';
+import ToolPageTemplate from '@/components/ToolPageTemplate';
+import { getDictionary, getStaticParams, Locale } from '@/lib/i18n';
 import { constructMetadata, generateWebApplicationSchema } from '@/lib/seo';
 
-export async function generateStaticParams() {
-  return [
-    { lang: 'ko' },
-    { lang: 'en' },
-    { lang: 'es' },
-    { lang: 'ja' },
-    { lang: 'pt' },
-  ];
-}
+export { getStaticParams as generateStaticParams };
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(lang);
-  return constructMetadata({
-    title: dict?.qr_code_generator?.meta_title || "QR Code Generator - Create QR Codes Online - QuickBestGo",
-    description: dict?.qr_code_generator?.meta_description || "Create high-quality QR codes for any text, URL, or contact information.",
-    lang,
-    slug: 'qr-code-generator',
-  });
+  return constructMetadata({ title: dict.qr_code_generator.meta_title, description: dict.qr_code_generator.meta_description, lang, slug: 'qr-code-generator' });
 }
 
 export default async function QRCodeGeneratorPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
-
-  const qrDict = dict?.qr_code_generator || {
-    title: "QR Code Generator",
-    meta_description: "Create high-quality QR codes for any text, URL, or contact information.",
-    about_title: "How to use the QR Code Generator?",
-    about_p1: "",
-    about_p2: "",
-    about_p3: "",
-    label_enter_text: "Enter Text or URL",
-    placeholder_text: "https://example.com",
-    btn_download: "Download QR Code",
-    label_qr_code: "Your QR Code",
-    error_dangerous_url: "This URL scheme is not allowed for security reasons.",
-  };
-
-  const schemas = generateWebApplicationSchema({
-    name: qrDict.title,
-    description: qrDict.meta_description,
-    lang,
-    slug: 'qr-code-generator',
-    category: 'UtilityApplication',
-  });
+  const d = dict.qr_code_generator;
+  const schemas = generateWebApplicationSchema({ name: d.title, description: d.meta_description, lang, slug: 'qr-code-generator', category: 'UtilityApplication' });
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
-      />
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-black text-center text-gray-900 dark:text-white mb-8">
-          {qrDict.title}
-        </h1>
-
-        <div className="mb-12">
-          <QRCodeGenerator dict={qrDict} />
-        </div>
-
-        <article className="prose dark:prose-invert max-w-none bg-gray-50 dark:bg-[#1a1a1a] p-8 rounded-3xl border dark:border-gray-800 transition-colors duration-300">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{qrDict.about_title}</h2>
-          <p>{qrDict.about_p1}</p>
-          <p>{qrDict.about_p2}</p>
-          <p>{qrDict.about_p3}</p>
-        </article>
-      </div>
-    </div>
+    <ToolPageTemplate
+      schemas={schemas}
+      title={d.title}
+      toolComponent={<QRCodeGenerator dict={d} />}
+      about={{ title: d.about_title, p1: d.about_p1, p2: d.about_p2, p3: d.about_p3 }}
+    />
   );
 }
