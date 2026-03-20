@@ -9,6 +9,7 @@ const CATEGORY_SLUGS = [
   'random-tools',
   'converters',
   'health-tools',
+  'utilities',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

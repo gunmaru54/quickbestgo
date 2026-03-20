@@ -19,6 +19,7 @@
     "cat_random": "Aleatório",
     "cat_converters": "Conversores",
     "cat_health": "Saúde",
+    "cat_utilities": "Utilitários",
     "no_results": "Nenhuma ferramenta encontrada. Tente outra palavra.",
     "stat_tools": "Ferramentas",
     "stat_languages": "Idiomas",
@@ -93,7 +94,10 @@
     "base64": { "name": "Codificador / Descodificador Base64", "description": "Codifique texto em Base64 ou descodifique Base64 para texto simples.", "category": "Ferramentas de Desenvolvedor" },
     "url_encoder": { "name": "Codificador / Descodificador URL", "description": "Codifique ou descodifique URLs e parâmetros de string de consulta.", "category": "Ferramentas de Desenvolvedor" },
     "json_formatter": { "name": "Formatador JSON", "description": "Formate, valide e minifique JSON com realce de sintaxe.", "category": "Ferramentas de Desenvolvedor" },
-    "color_converter": { "name": "Conversor de Cores", "description": "Converta cores entre os formatos HEX, RGB e HSL.", "category": "Ferramentas de Desenvolvedor" }
+    "color_converter": { "name": "Conversor de Cores", "description": "Converta cores entre os formatos HEX, RGB e HSL.", "category": "Ferramentas de Desenvolvedor" },
+    "word_counter": { "name": "Contador de Palavras", "description": "Conte palavras, caracteres, frases e estime o tempo de leitura instantaneamente.", "category": "Utilitários" },
+    "days_between_dates": { "name": "Dias Entre Datas", "description": "Calcule o número de dias, semanas e meses entre duas datas.", "category": "Calculadoras" },
+    "timezone_converter": { "name": "Conversor de Fusos Horários", "description": "Converta horas entre fusos horários com um relógio mundial ao vivo.", "category": "Conversores" }
   },
     "percentage_calculator": {
     "title": "Calculadora de Percentagem",
@@ -470,6 +474,67 @@
     "error_no_courses": "Por favor adicione pelo menos uma disciplina.",
     "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas."
   },
+  "word_counter": {
+    "title": "Contador de Palavras",
+    "meta_title": "Contador de Palavras - Ferramenta Gratuita de Contagem de Palavras e Caracteres - QuickBestGo",
+    "meta_description": "Conte palavras, caracteres, frases, parágrafos e tempo de leitura instantaneamente. Contador de palavras gratuito para escritores, estudantes e profissionais de SEO.",
+    "about_title": "Por que usar um Contador de Palavras?",
+    "about_p1": "O nosso Contador de Palavras analisa instantaneamente o seu texto e fornece uma análise completa: contagem total de palavras, contagem de caracteres (com e sem espaços), contagem de frases, contagem de parágrafos e tempo de leitura estimado com base numa velocidade média de leitura de 200 palavras por minuto.",
+    "about_p2": "Os escritores usam contadores de palavras para cumprir os requisitos das tarefas, manter-se dentro dos limites de caracteres das redes sociais (Twitter: 280, Instagram: 2.200) e acompanhar o progresso. Os profissionais de SEO usam-no para otimizar meta descrições (150–160 caracteres) e títulos (50–60 caracteres).",
+    "about_p3": "A secção de densidade de palavras-chave mostra as 5 palavras significativas mais frequentes no seu texto, ajudando-o a identificar palavras sobreutilizadas e melhorar a legibilidade.",
+    "label_input": "Insira ou cole o seu texto aqui",
+    "placeholder": "Comece a escrever ou cole o seu texto aqui para analisar...",
+    "btn_clear": "Limpar",
+    "stat_words": "Palavras",
+    "stat_chars": "Caracteres",
+    "stat_chars_no_space": "Sem Espaços",
+    "stat_sentences": "Frases",
+    "stat_paragraphs": "Parágrafos",
+    "stat_reading_time": "Leitura",
+    "stat_reading_unit": "min",
+    "keyword_title": "Palavras-chave Principais"
+  },
+  "days_between_dates": {
+    "title": "Calculadora de Dias Entre Datas",
+    "meta_title": "Calculadora de Dias Entre Datas - Ferramenta Gratuita - QuickBestGo",
+    "meta_description": "Calcule o número exato de dias, semanas, meses e dias úteis entre duas datas. Calculadora de diferença de datas gratuita.",
+    "about_title": "Como calcular os dias entre datas?",
+    "about_p1": "A nossa Calculadora de Dias Entre Datas fornece a diferença exata entre quaisquer duas datas em múltiplas unidades: dias totais, semanas completas, meses aproximados, anos e dias úteis (segunda a sexta-feira).",
+    "about_p2": "Use os botões de predefinição rápida para calcular instantaneamente intervalos de datas comuns — os próximos 7 dias, 30 dias, 100 dias ou um ano completo a partir de hoje. Também pode inserir quaisquer datas de início e fim personalizadas.",
+    "about_p3": "Usos comuns incluem calcular prazos, cronogramas de projetos, contagens regressivas para eventos (feriados, aniversários, comemorações) e determinar há quanto tempo algo aconteceu.",
+    "label_start": "Data de Início",
+    "label_end": "Data de Fim",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Redefinir",
+    "result_days": "Dias",
+    "result_weeks": "Semanas",
+    "result_months": "Meses",
+    "result_years": "Anos",
+    "result_working_days": "Dias Úteis",
+    "preset_week": "Próximos 7 Dias",
+    "preset_month": "Próximos 30 Dias",
+    "preset_year": "Próximo Ano",
+    "preset_100": "Próximos 100 Dias",
+    "label_weekends": "Fins de Semana",
+    "error_invalid": "Por favor selecione datas de início e fim válidas."
+  },
+  "timezone_converter": {
+    "title": "Conversor de Fusos Horários",
+    "meta_title": "Conversor de Fusos Horários - Relógio Mundial e Ferramenta de Fuso Horário - QuickBestGo",
+    "meta_description": "Converta horas entre fusos horários instantaneamente. Conversor de fusos horários gratuito com relógio mundial ao vivo para cidades de todo o mundo.",
+    "about_title": "Como usar o Conversor de Fusos Horários?",
+    "about_p1": "Selecione o seu fuso horário de origem e insira uma hora, depois escolha um fuso horário de destino para ver a hora convertida instantaneamente. Use o botão de troca para inverter a direção de conversão.",
+    "about_p2": "O relógio mundial ao vivo na parte inferior mostra a hora atual em 6 cidades principais simultaneamente — Nova Iorque, Londres, Paris, Dubai, Tóquio e Sydney — atualizado a cada segundo.",
+    "about_p3": "Todas as conversões de fuso horário usam a API Intl.DateTimeFormat integrada do seu browser com dados de fuso horário IANA, garantindo precisão para as transições de horário de verão.",
+    "label_from": "Fuso Horário de Origem",
+    "label_to": "Fuso Horário de Destino",
+    "label_time": "Hora",
+    "btn_swap": "Trocar",
+    "btn_convert": "Converter",
+    "label_world_clock": "Relógio Mundial ao Vivo",
+    "label_current_time": "Hora Atual",
+    "error_invalid": "Por favor selecione fusos horários válidos."
+  },
   "categories": {
     "calculators": {
       "slug": "calculators",
@@ -525,6 +590,17 @@
       "about_title": "Calculadoras de saúde, não conselhos médicos",
       "about_p1": "As nossas ferramentas de saúde usam fórmulas clinicamente reconhecidas — a classificação de IMC da OMS e a equação de Mifflin-St Jeor para estimativa calórica — para fornecer números de referência precisos para métricas de saúde comuns.",
       "about_p2": "Estas ferramentas destinam-se apenas a fins informativos e educacionais e não constituem aconselhamento médico. Consulte sempre um profissional de saúde qualificado para decisões pessoais de saúde."
+    },
+    "utilities": {
+      "slug": "utilities",
+      "name": "Utilitários",
+      "meta_title": "Ferramentas Utilitárias Gratuitas Online - QuickBestGo",
+      "meta_description": "Ferramentas utilitárias gratuitas online: contador de palavras, contador de caracteres e mais. Ferramentas essenciais para escritores, estudantes e profissionais.",
+      "hero_title": "Ferramentas Utilitárias",
+      "hero_desc": "Ferramentas essenciais para tarefas quotidianas de escrita, contagem e análise.",
+      "about_title": "Ferramentas para tarefas do dia a dia",
+      "about_p1": "As nossas ferramentas utilitárias ajudam com tarefas quotidianas comuns como contar palavras e caracteres na sua escrita. Quer seja um estudante a verificar a extensão do seu ensaio, um escritor a acompanhar o progresso, ou um profissional a otimizar conteúdo para SEO, as nossas ferramentas fornecem resultados instantâneos e precisos.",
+      "about_p2": "Todo o processamento é feito localmente no seu browser. Nenhum texto ou dados que insira é alguma vez enviado para os nossos servidores."
     }
   }
 }

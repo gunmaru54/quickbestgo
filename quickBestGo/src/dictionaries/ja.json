@@ -19,6 +19,7 @@
     "cat_random": "ランダム",
     "cat_converters": "変換",
     "cat_health": "健康",
+    "cat_utilities": "ユーティリティ",
     "no_results": "ツールが見つかりません。別のキーワードをお試しください。",
     "stat_tools": "無料ツール",
     "stat_languages": "対応言語",
@@ -93,7 +94,10 @@
     "base64": { "name": "Base64 エンコーダー / デコーダー", "description": "テキストをBase64にエンコード、またはBase64を元のテキストにデコードします。", "category": "開発者ツール" },
     "url_encoder": { "name": "URL エンコーダー / デコーダー", "description": "URLとクエリ文字列パラメーターをエンコードまたはデコードします。", "category": "開発者ツール" },
     "json_formatter": { "name": "JSON フォーマッター", "description": "JSONをフォーマット、検証、圧縮します。", "category": "開発者ツール" },
-    "color_converter": { "name": "カラーコンバーター", "description": "HEX、RGB、HSL形式間で色を変換します。", "category": "開発者ツール" }
+    "color_converter": { "name": "カラーコンバーター", "description": "HEX、RGB、HSL形式間で色を変換します。", "category": "開発者ツール" },
+    "word_counter": { "name": "文字数カウンター", "description": "単語数、文字数、文章数と読書時間を即座に計測します。", "category": "ユーティリティ" },
+    "days_between_dates": { "name": "日数計算機", "description": "2つの日付間の日数、週数、月数を計算します。", "category": "計算機" },
+    "timezone_converter": { "name": "タイムゾーン変換機", "description": "ライブ世界時計とともに任意の2つのタイムゾーン間で時間を変換します。", "category": "変換" }
   },
   "percentage_calculator": {
     "title": "パーセント計算機",
@@ -470,6 +474,67 @@
     "error_no_courses": "少なくとも1つの科目を追加してください。",
     "error_invalid_credits": "すべての科目に有効な単位数を入力してください。"
   },
+  "word_counter": {
+    "title": "文字数カウンター",
+    "meta_title": "文字数カウンター - 無料オンライン単語・文字数計測ツール - QuickBestGo",
+    "meta_description": "単語数、文字数、文章数、段落数、読書時間を即座に計算します。ライター、学生、SEOプロ向け無料オンライン文字数カウンター。",
+    "about_title": "文字数カウンターを使う理由は？",
+    "about_p1": "私たちの文字数カウンターはテキストを即座に分析し、包括的な内訳を提供します：総単語数、文字数（スペースあり・なし）、文章数、段落数、そして1分あたり200単語の平均読書速度に基づく予想読書時間。",
+    "about_p2": "ライターはレポートの要件を満たすため、ソーシャルメディアの文字制限（Twitter: 280字、Instagram: 2,200字）を守るため、執筆の進捗を追跡するために使います。SEOプロはメタディスクリプション（150〜160字）やタイトルタグ（50〜60字）の最適化に活用します。",
+    "about_p3": "キーワード密度セクションはテキスト内で最も頻繁に使われる意味のある単語トップ5を表示し、使いすぎた単語を特定して可読性を改善するのに役立ちます。",
+    "label_input": "テキストをここに入力または貼り付けてください",
+    "placeholder": "分析するテキストをここに入力または貼り付けてください...",
+    "btn_clear": "クリア",
+    "stat_words": "単語数",
+    "stat_chars": "文字数",
+    "stat_chars_no_space": "スペース除く",
+    "stat_sentences": "文章数",
+    "stat_paragraphs": "段落数",
+    "stat_reading_time": "読書時間",
+    "stat_reading_unit": "分",
+    "keyword_title": "主要キーワード"
+  },
+  "days_between_dates": {
+    "title": "日数計算機",
+    "meta_title": "日数計算機 - 無料オンラインツール - QuickBestGo",
+    "meta_description": "2つの日付間の正確な日数、週数、月数、営業日数を計算します。無料オンライン日付差分計算機。",
+    "about_title": "日付間の日数はどのように計算しますか？",
+    "about_p1": "私たちの日数計算機は、任意の2つの日付間の正確な差を複数の単位で表示します：総日数、完全な週数、おおよその月数、年数、営業日数（月曜から金曜）。",
+    "about_p2": "クイックプリセットボタンを使って、今日から7日、30日、100日、または1年間を即座に計算できます。任意のカスタム開始日と終了日を入力することもできます。",
+    "about_p3": "締め切りの計算、プロジェクトタイムライン、イベントのカウントダウン（祝日、誕生日、記念日）、過去の出来事がいつ起きたかを確認するのによく使われます。",
+    "label_start": "開始日",
+    "label_end": "終了日",
+    "btn_calculate": "計算",
+    "tooltip_reset": "リセット",
+    "result_days": "日数",
+    "result_weeks": "週数",
+    "result_months": "月数",
+    "result_years": "年数",
+    "result_working_days": "営業日数",
+    "preset_week": "次の7日間",
+    "preset_month": "次の30日間",
+    "preset_year": "来年",
+    "preset_100": "次の100日間",
+    "label_weekends": "週末",
+    "error_invalid": "有効な開始日と終了日を選択してください。"
+  },
+  "timezone_converter": {
+    "title": "タイムゾーン変換機",
+    "meta_title": "タイムゾーン変換機 - 世界時計と時間帯ツール - QuickBestGo",
+    "meta_description": "任意の2つのタイムゾーン間で時間を即座に変換します。世界中の主要都市のライブ世界時計付き無料オンラインタイムゾーン変換機。",
+    "about_title": "タイムゾーン変換機の使い方は？",
+    "about_p1": "変換元のタイムゾーンを選択して時刻を入力し、変換先のタイムゾーンを選択すると変換された時刻が即座に表示されます。スワップボタンを使って変換方向を逆にすることができます。",
+    "about_p2": "下部のライブ世界時計は、ニューヨーク、ロンドン、パリ、ドバイ、東京、シドニーの6つの主要都市の現在時刻を毎秒同時に表示します。",
+    "about_p3": "すべてのタイムゾーン変換は、ブラウザ内蔵のIntl.DateTimeFormat APIとIANAタイムゾーンデータを使用し、夏時間の切り替えに対しても正確な結果を提供します。",
+    "label_from": "変換元タイムゾーン",
+    "label_to": "変換先タイムゾーン",
+    "label_time": "時刻",
+    "btn_swap": "スワップ",
+    "btn_convert": "変換",
+    "label_world_clock": "ライブ世界時計",
+    "label_current_time": "現在時刻",
+    "error_invalid": "有効なタイムゾーンを選択してください。"
+  },
   "categories": {
     "calculators": {
       "slug": "calculators",
@@ -525,6 +590,17 @@
       "about_title": "健康計算機、医療アドバイスではありません",
       "about_p1": "私たちの健康ツールは臨床的に認められた計算式 — WHO BMI分類とMifflin-St Jeor方程式によるカロリー推定 — を使用して、一般的な健康指標の正確な参考値を提供します。",
       "about_p2": "これらのツールは情報提供および教育目的のみであり、医療アドバイスを構成するものではありません。個人の健康に関する決定には、必ず資格を持った医療専門家に相談してください。"
+    },
+    "utilities": {
+      "slug": "utilities",
+      "name": "ユーティリティ",
+      "meta_title": "無料オンラインユーティリティツール - QuickBestGo",
+      "meta_description": "無料オンラインユーティリティツール：文字数カウンター、その他。ライター、学生、プロフェッショナル向けの必須ツール。",
+      "hero_title": "ユーティリティツール",
+      "hero_desc": "日常の文章作成、計数、分析作業のための必須ツール。",
+      "about_title": "日常作業のためのツール",
+      "about_p1": "私たちのユーティリティツールは、文章内の単語数や文字数を数えるような日常的な作業を支援します。エッセイの長さを確認する学生、進捗を追跡するライター、SEO向けにコンテンツを最適化するプロフェッショナル、いずれにも即座で正確な結果を提供します。",
+      "about_p2": "すべての処理はブラウザ内でローカルに行われます。入力したテキストやデータは一切サーバーに送信されません。"
     }
   }
 }

@@ -19,6 +19,7 @@
     "cat_random": "랜덤 & 재미",
     "cat_converters": "변환기",
     "cat_health": "건강",
+    "cat_utilities": "유틸리티",
     "no_results": "검색 결과가 없습니다. 다른 키워드를 시도해보세요.",
     "stat_tools": "무료 도구",
     "stat_languages": "지원 언어",
@@ -93,7 +94,10 @@
     "base64": { "name": "Base64 인코더 / 디코더", "description": "텍스트를 Base64로 인코딩하거나 Base64를 일반 텍스트로 디코딩합니다.", "category": "개발자 도구" },
     "url_encoder": { "name": "URL 인코더 / 디코더", "description": "URL 및 쿼리 문자열 파라미터를 인코딩하거나 디코딩합니다.", "category": "개발자 도구" },
     "json_formatter": { "name": "JSON 포매터", "description": "JSON을 포맷, 검증, 압축합니다.", "category": "개발자 도구" },
-    "color_converter": { "name": "색상 변환기", "description": "HEX, RGB, HSL 형식 간에 색상을 변환합니다.", "category": "개발자 도구" }
+    "color_converter": { "name": "색상 변환기", "description": "HEX, RGB, HSL 형식 간에 색상을 변환합니다.", "category": "개발자 도구" },
+    "word_counter": { "name": "단어 수 세기", "description": "단어, 글자, 문장 수와 읽기 시간을 즉시 계산합니다.", "category": "유틸리티" },
+    "days_between_dates": { "name": "날짜 간격 계산기", "description": "두 날짜 사이의 일수, 주수, 개월 수를 계산합니다.", "category": "계산기" },
+    "timezone_converter": { "name": "시간대 변환기", "description": "실시간 세계 시계와 함께 시간대 간 시간을 변환합니다.", "category": "변환기" }
   },
   "percentage_calculator": {
     "title": "퍼센트 계산기",
@@ -470,6 +474,67 @@
     "error_no_courses": "최소 한 개의 과목을 추가해주세요.",
     "error_invalid_credits": "모든 과목에 유효한 학점을 입력해주세요."
   },
+  "word_counter": {
+    "title": "단어 수 세기",
+    "meta_title": "단어 수 세기 - 무료 온라인 단어 및 글자 수 도구 - QuickBestGo",
+    "meta_description": "단어, 글자, 문장, 단락 수와 읽기 시간을 즉시 계산하세요. 작가, 학생, SEO 전문가를 위한 무료 온라인 단어 카운터.",
+    "about_title": "단어 카운터를 사용하는 이유?",
+    "about_p1": "저희 단어 카운터는 텍스트를 즉시 분석하여 총 단어 수, 글자 수(공백 포함 및 제외), 문장 수, 단락 수, 그리고 분당 200단어의 평균 읽기 속도를 기준으로 예상 읽기 시간을 제공합니다.",
+    "about_p2": "작가들은 단어 카운터를 과제 요건 충족, 소셜 미디어 글자 제한(트위터: 280자, 인스타그램: 2,200자) 준수, 작성 진행 상황 추적에 사용합니다. SEO 전문가들은 메타 설명(150–160자)과 제목 태그(50–60자) 최적화에 활용합니다.",
+    "about_p3": "키워드 밀도 섹션은 텍스트에서 가장 자주 사용된 의미 있는 단어 상위 5개를 보여주어 과도하게 사용된 단어를 파악하고 가독성을 개선하는 데 도움을 줍니다.",
+    "label_input": "여기에 텍스트를 입력하거나 붙여넣으세요",
+    "placeholder": "분석할 텍스트를 여기에 입력하거나 붙여넣으세요...",
+    "btn_clear": "지우기",
+    "stat_words": "단어",
+    "stat_chars": "글자",
+    "stat_chars_no_space": "공백 제외",
+    "stat_sentences": "문장",
+    "stat_paragraphs": "단락",
+    "stat_reading_time": "읽기 시간",
+    "stat_reading_unit": "분",
+    "keyword_title": "주요 키워드"
+  },
+  "days_between_dates": {
+    "title": "날짜 간격 계산기",
+    "meta_title": "날짜 간격 계산기 - 무료 온라인 도구 - QuickBestGo",
+    "meta_description": "두 날짜 사이의 정확한 일수, 주수, 개월 수, 근무일을 계산하세요. 무료 온라인 날짜 차이 계산기.",
+    "about_title": "날짜 간격은 어떻게 계산하나요?",
+    "about_p1": "저희 날짜 간격 계산기는 두 날짜 사이의 정확한 차이를 여러 단위로 제공합니다: 총 일수, 완전한 주수, 대략적인 개월 수, 년수, 그리고 근무일(월요일부터 금요일까지).",
+    "about_p2": "빠른 사전 설정 버튼을 사용하여 오늘부터 7일, 30일, 100일, 또는 1년을 즉시 계산할 수 있습니다. 사용자 정의 시작일과 종료일을 직접 입력할 수도 있습니다.",
+    "about_p3": "마감일 계산, 프로젝트 타임라인, 이벤트 카운트다운(공휴일, 생일, 기념일), 과거 사건이 얼마나 오래되었는지 확인하는 데 자주 사용됩니다.",
+    "label_start": "시작 날짜",
+    "label_end": "종료 날짜",
+    "btn_calculate": "계산",
+    "tooltip_reset": "초기화",
+    "result_days": "일수",
+    "result_weeks": "주수",
+    "result_months": "개월",
+    "result_years": "년수",
+    "result_working_days": "근무일",
+    "preset_week": "7일 후",
+    "preset_month": "30일 후",
+    "preset_year": "1년 후",
+    "preset_100": "100일 후",
+    "label_weekends": "주말",
+    "error_invalid": "유효한 시작일과 종료일을 선택해주세요."
+  },
+  "timezone_converter": {
+    "title": "시간대 변환기",
+    "meta_title": "시간대 변환기 - 세계 시계 및 시간대 도구 - QuickBestGo",
+    "meta_description": "두 시간대 사이의 시간을 즉시 변환하세요. 전 세계 주요 도시의 실시간 세계 시계가 포함된 무료 온라인 시간대 변환기.",
+    "about_title": "시간대 변환기는 어떻게 사용하나요?",
+    "about_p1": "원본 시간대를 선택하고 시간을 입력한 다음 대상 시간대를 선택하면 즉시 변환된 시간을 확인할 수 있습니다. 스왑 버튼을 사용하여 변환 방향을 반대로 할 수 있습니다.",
+    "about_p2": "하단의 실시간 세계 시계는 뉴욕, 런던, 파리, 두바이, 도쿄, 시드니 등 6개 주요 도시의 현재 시간을 매초 동시에 보여줍니다.",
+    "about_p3": "모든 시간대 변환은 브라우저의 내장 Intl.DateTimeFormat API와 IANA 시간대 데이터를 사용하여 일광 절약 시간 전환 및 날짜에 대한 정확성을 보장합니다.",
+    "label_from": "변환 전 시간대",
+    "label_to": "변환 후 시간대",
+    "label_time": "시간",
+    "btn_swap": "바꾸기",
+    "btn_convert": "변환",
+    "label_world_clock": "실시간 세계 시계",
+    "label_current_time": "현재 시간",
+    "error_invalid": "유효한 시간대를 선택해주세요."
+  },
   "categories": {
     "calculators": {
       "slug": "calculators",
@@ -525,6 +590,17 @@
       "about_title": "건강 계산기, 건강 조언이 아닙니다",
       "about_p1": "저희 건강 도구는 임상적으로 인정된 공식인 WHO BMI 분류와 Mifflin-St Jeor 칼로리 추정 방정식을 사용하여 일반적인 건강 지표에 대한 정확한 참고 수치를 제공합니다.",
       "about_p2": "이 도구들은 정보 및 교육 목적으로만 제공되며 의학적 조언을 구성하지 않습니다. 개인 건강 결정을 위해서는 항상 자격을 갖춘 의료 전문가와 상담하세요."
+    },
+    "utilities": {
+      "slug": "utilities",
+      "name": "유틸리티",
+      "meta_title": "무료 온라인 유틸리티 도구 - QuickBestGo",
+      "meta_description": "무료 온라인 유틸리티 도구: 단어 카운터, 글자 수 세기 등. 작가, 학생, 전문가를 위한 필수 도구.",
+      "hero_title": "유틸리티 도구",
+      "hero_desc": "일상적인 글쓰기, 계산, 분석 작업을 위한 필수 도구.",
+      "about_title": "일상 작업을 위한 도구",
+      "about_p1": "저희 유틸리티 도구는 글쓰기에서 단어와 글자를 세는 것과 같은 일반적인 일상 작업을 도와줍니다. 에세이 길이를 확인하는 학생, 진행 상황을 추적하는 작가, SEO를 위해 콘텐츠를 최적화하는 전문가 모두에게 즉각적이고 정확한 결과를 제공합니다.",
+      "about_p2": "모든 처리는 브라우저에서 로컬로 수행됩니다. 입력한 텍스트나 데이터는 서버로 전송되지 않습니다."
     }
   }
 }

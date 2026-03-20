@@ -1,6 +1,6 @@
-import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, Flame, TrendingUp, Receipt, Ruler, GraduationCap, FileCode, Link, Braces, Palette, type LucideIcon } from 'lucide-react';
+import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, Flame, TrendingUp, Receipt, Ruler, GraduationCap, FileCode, Link, Braces, Palette, FileText, CalendarDays, Globe, type LucideIcon } from 'lucide-react';
 
-export type ToolCategory = 'calculators' | 'developer' | 'random' | 'converters' | 'health';
+export type ToolCategory = 'calculators' | 'developer' | 'random' | 'converters' | 'health' | 'utilities';
 
 export interface ToolConfig {
   slug: string;
@@ -28,4 +28,7 @@ export const TOOLS: ToolConfig[] = [
   { slug: 'base64',                       dictKey: 'base64',                       icon: FileCode,      schemaCategory: 'DeveloperApplication', category: 'developer'    },
   { slug: 'url-encoder',                  dictKey: 'url_encoder',                  icon: Link,          schemaCategory: 'DeveloperApplication', category: 'developer'    },
   { slug: 'color-converter',              dictKey: 'color_converter',              icon: Palette,       schemaCategory: 'DeveloperApplication', category: 'developer'    },
+  { slug: 'word-counter',                 dictKey: 'word_counter',                 icon: FileText,      schemaCategory: 'DeveloperApplication', category: 'utilities'    },
+  { slug: 'days-between-dates',           dictKey: 'days_between_dates',           icon: CalendarDays,  schemaCategory: 'UtilityApplication',   category: 'calculators'  },
+  { slug: 'timezone-converter',           dictKey: 'timezone_converter',           icon: Globe,         schemaCategory: 'UtilityApplication',   category: 'converters'   },
 ];

@@ -19,6 +19,7 @@
     "cat_random": "Aleatorio",
     "cat_converters": "Conversores",
     "cat_health": "Salud",
+    "cat_utilities": "Utilidades",
     "no_results": "No se encontraron herramientas. Prueba otra palabra.",
     "stat_tools": "Herramientas",
     "stat_languages": "Idiomas",
@@ -93,7 +94,10 @@
     "base64": { "name": "Codificador / Decodificador Base64", "description": "Codifica texto en Base64 o decodifica Base64 a texto plano.", "category": "Herramientas de Desarrollador" },
     "url_encoder": { "name": "Codificador / Decodificador URL", "description": "Codifica o decodifica URLs y parámetros de cadena de consulta.", "category": "Herramientas de Desarrollador" },
     "json_formatter": { "name": "Formateador JSON", "description": "Formatea, valida y minifica JSON con resaltado de sintaxis.", "category": "Herramientas de Desarrollador" },
-    "color_converter": { "name": "Conversor de Colores", "description": "Convierte colores entre formatos HEX, RGB y HSL.", "category": "Herramientas de Desarrollador" }
+    "color_converter": { "name": "Conversor de Colores", "description": "Convierte colores entre formatos HEX, RGB y HSL.", "category": "Herramientas de Desarrollador" },
+    "word_counter": { "name": "Contador de Palabras", "description": "Cuenta palabras, caracteres, oraciones y estima el tiempo de lectura al instante.", "category": "Utilidades" },
+    "days_between_dates": { "name": "Días Entre Fechas", "description": "Calcula el número de días, semanas y meses entre dos fechas.", "category": "Calculadoras" },
+    "timezone_converter": { "name": "Conversor de Zonas Horarias", "description": "Convierte tiempos entre zonas horarias con un reloj mundial en vivo.", "category": "Conversores" }
   },
     "percentage_calculator": {
     "title": "Calculadora de Porcentaje",
@@ -470,6 +474,67 @@
     "error_no_courses": "Por favor agrega al menos un curso.",
     "error_invalid_credits": "Por favor ingresa horas de crédito válidas para todos los cursos."
   },
+  "word_counter": {
+    "title": "Contador de Palabras",
+    "meta_title": "Contador de Palabras - Herramienta Gratuita de Recuento de Palabras y Caracteres - QuickBestGo",
+    "meta_description": "Cuenta palabras, caracteres, oraciones, párrafos y tiempo de lectura al instante. Contador de palabras gratuito para escritores, estudiantes y profesionales SEO.",
+    "about_title": "¿Por qué usar un Contador de Palabras?",
+    "about_p1": "Nuestro Contador de Palabras analiza instantáneamente tu texto y proporciona un desglose completo: recuento total de palabras, recuento de caracteres (con y sin espacios), recuento de oraciones, recuento de párrafos y tiempo de lectura estimado basado en una velocidad de lectura promedio de 200 palabras por minuto.",
+    "about_p2": "Los escritores usan contadores de palabras para cumplir con los requisitos de las tareas, mantenerse dentro de los límites de caracteres de las redes sociales (Twitter: 280, Instagram: 2,200) y hacer seguimiento de su progreso. Los profesionales SEO lo usan para optimizar meta descripciones (150–160 caracteres) y títulos (50–60 caracteres).",
+    "about_p3": "La sección de densidad de palabras clave muestra las 5 palabras significativas más frecuentes en tu texto, ayudándote a identificar palabras sobreutilizadas y mejorar la legibilidad.",
+    "label_input": "Ingresa o pega tu texto aquí",
+    "placeholder": "Empieza a escribir o pega tu texto aquí para analizar...",
+    "btn_clear": "Limpiar",
+    "stat_words": "Palabras",
+    "stat_chars": "Caracteres",
+    "stat_chars_no_space": "Sin Espacios",
+    "stat_sentences": "Oraciones",
+    "stat_paragraphs": "Párrafos",
+    "stat_reading_time": "Lectura",
+    "stat_reading_unit": "min",
+    "keyword_title": "Palabras Clave Principales"
+  },
+  "days_between_dates": {
+    "title": "Calculadora de Días Entre Fechas",
+    "meta_title": "Calculadora de Días Entre Fechas - Herramienta Gratuita - QuickBestGo",
+    "meta_description": "Calcula el número exacto de días, semanas, meses y días laborables entre dos fechas. Calculadora de diferencia de fechas gratuita.",
+    "about_title": "¿Cómo calcular los días entre fechas?",
+    "about_p1": "Nuestra Calculadora de Días Entre Fechas te da la diferencia exacta entre dos fechas en múltiples unidades: días totales, semanas completas, meses aproximados, años y días laborables (lunes a viernes).",
+    "about_p2": "Usa los botones de preajuste rápido para calcular instantáneamente rangos de fechas comunes: los próximos 7 días, 30 días, 100 días o un año completo desde hoy. También puedes ingresar cualquier fecha de inicio y fin personalizada.",
+    "about_p3": "Los usos comunes incluyen calcular plazos, cronogramas de proyectos, cuentas regresivas para eventos (feriados, cumpleaños, aniversarios) y determinar hace cuánto ocurrió algo.",
+    "label_start": "Fecha de Inicio",
+    "label_end": "Fecha de Fin",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Restablecer",
+    "result_days": "Días",
+    "result_weeks": "Semanas",
+    "result_months": "Meses",
+    "result_years": "Años",
+    "result_working_days": "Días Laborables",
+    "preset_week": "Próximos 7 Días",
+    "preset_month": "Próximos 30 Días",
+    "preset_year": "Próximo Año",
+    "preset_100": "Próximos 100 Días",
+    "label_weekends": "Fines de Semana",
+    "error_invalid": "Por favor selecciona fechas de inicio y fin válidas."
+  },
+  "timezone_converter": {
+    "title": "Conversor de Zonas Horarias",
+    "meta_title": "Conversor de Zonas Horarias - Reloj Mundial y Herramienta de Zona Horaria - QuickBestGo",
+    "meta_description": "Convierte tiempos entre zonas horarias al instante. Conversor de zonas horarias gratuito con reloj mundial en vivo para ciudades de todo el mundo.",
+    "about_title": "¿Cómo usar el Conversor de Zonas Horarias?",
+    "about_p1": "Selecciona tu zona horaria de origen e ingresa una hora, luego elige una zona horaria de destino para ver la hora convertida al instante. Usa el botón de intercambio para invertir la dirección de conversión.",
+    "about_p2": "El reloj mundial en vivo en la parte inferior muestra la hora actual en 6 ciudades principales simultáneamente — Nueva York, Londres, París, Dubái, Tokio y Sídney — actualizado cada segundo.",
+    "about_p3": "Todas las conversiones de zona horaria usan la API Intl.DateTimeFormat integrada de tu navegador con datos de zona horaria IANA, garantizando precisión para las transiciones de horario de verano.",
+    "label_from": "Zona Horaria Origen",
+    "label_to": "Zona Horaria Destino",
+    "label_time": "Hora",
+    "btn_swap": "Intercambiar",
+    "btn_convert": "Convertir",
+    "label_world_clock": "Reloj Mundial en Vivo",
+    "label_current_time": "Hora Actual",
+    "error_invalid": "Por favor selecciona zonas horarias válidas."
+  },
   "categories": {
     "calculators": {
       "slug": "calculators",
@@ -525,6 +590,17 @@
       "about_title": "Calculadoras de salud, no consejos médicos",
       "about_p1": "Nuestras herramientas de salud utilizan fórmulas clínicamente reconocidas — la clasificación de IMC de la OMS y la ecuación de Mifflin-St Jeor para la estimación calórica — para ofrecerte números de referencia precisos para métricas de salud comunes.",
       "about_p2": "Estas herramientas son solo para fines informativos y educativos y no constituyen consejo médico. Siempre consulta a un profesional de la salud calificado para decisiones personales de salud."
+    },
+    "utilities": {
+      "slug": "utilities",
+      "name": "Utilidades",
+      "meta_title": "Herramientas de Utilidad Gratuitas en Línea - QuickBestGo",
+      "meta_description": "Herramientas de utilidad gratuitas en línea: contador de palabras, contador de caracteres y más. Herramientas esenciales para escritores, estudiantes y profesionales.",
+      "hero_title": "Herramientas de Utilidad",
+      "hero_desc": "Herramientas esenciales para tareas cotidianas de escritura, conteo y análisis.",
+      "about_title": "Herramientas para tareas cotidianas",
+      "about_p1": "Nuestras herramientas de utilidad ayudan con tareas cotidianas comunes como contar palabras y caracteres en tu escritura. Ya seas un estudiante revisando la extensión de tu ensayo, un escritor haciendo seguimiento de tu progreso o un profesional optimizando contenido para SEO, nuestras herramientas te dan resultados instantáneos y precisos.",
+      "about_p2": "Todo el procesamiento se realiza localmente en tu navegador. Ningún texto o dato que ingreses se envía a nuestros servidores."
     }
   }
 }

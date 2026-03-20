@@ -17,6 +17,7 @@ interface ToolsGridProps {
       cat_random: string;
       cat_converters: string;
       cat_health: string;
+      cat_utilities: string;
       no_results: string;
       stat_tools: string;
       stat_languages: string;
@@ -42,9 +43,10 @@ const CATEGORY_META: Record<ToolCategory | 'all', {
   random:      { labelKey: 'cat_random',      color: 'text-orange-600 dark:text-orange-400', activeColor: 'bg-orange-500 text-white border-transparent',      iconBg: 'bg-orange-50 dark:bg-orange-900/20',    iconColor: 'text-orange-600 dark:text-orange-400', hoverBorder: 'hover:border-orange-400', badgeBg: 'bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400', sectionBorder: 'border-orange-200 dark:border-orange-900', emoji: '🎲' },
   converters:  { labelKey: 'cat_converters',  color: 'text-green-600 dark:text-green-400',  activeColor: 'bg-green-600 text-white border-transparent',        iconBg: 'bg-green-50 dark:bg-green-900/20',      iconColor: 'text-green-600 dark:text-green-400', hoverBorder: 'hover:border-green-400',  badgeBg: 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400',     sectionBorder: 'border-green-200 dark:border-green-900', emoji: '🔄' },
   health:      { labelKey: 'cat_health',      color: 'text-rose-600 dark:text-rose-400',    activeColor: 'bg-rose-600 text-white border-transparent',          iconBg: 'bg-rose-50 dark:bg-rose-900/20',        iconColor: 'text-rose-600 dark:text-rose-400', hoverBorder: 'hover:border-rose-400',   badgeBg: 'bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400',         sectionBorder: 'border-rose-200 dark:border-rose-900', emoji: '❤️' },
+  utilities:   { labelKey: 'cat_utilities',   color: 'text-teal-600 dark:text-teal-400',    activeColor: 'bg-teal-600 text-white border-transparent',          iconBg: 'bg-teal-50 dark:bg-teal-900/20',        iconColor: 'text-teal-600 dark:text-teal-400', hoverBorder: 'hover:border-teal-400',   badgeBg: 'bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400',         sectionBorder: 'border-teal-200 dark:border-teal-900', emoji: '📝' },
 };
 
-const CATEGORY_ORDER: ToolCategory[] = ['calculators', 'developer', 'random', 'converters', 'health'];
+const CATEGORY_ORDER: ToolCategory[] = ['calculators', 'developer', 'random', 'converters', 'health', 'utilities'];
 
 export default function ToolsGrid({ lang, dict }: ToolsGridProps) {
   const [activeCategory, setActiveCategory] = useState<ToolCategory | 'all'>('all');
@@ -68,7 +70,7 @@ export default function ToolsGrid({ lang, dict }: ToolsGridProps) {
   }, [activeCategory, query, dict.tools]);
 
   const groupedFiltered = useMemo(() => {
-    const groups: Record<ToolCategory, typeof TOOLS> = { calculators: [], developer: [], random: [], converters: [], health: [] };
+    const groups: Record<ToolCategory, typeof TOOLS> = { calculators: [], developer: [], random: [], converters: [], health: [], utilities: [] };
     for (const tool of filtered) groups[tool.category].push(tool);
     return groups;
   }, [filtered]);

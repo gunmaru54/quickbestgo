@@ -67,6 +67,17 @@ const CATEGORY_META: Record<ToolCategory, {
     heroText: 'text-rose-600 dark:text-rose-400',
     emoji: '❤️',
   },
+  utilities: {
+    color: 'text-teal-600 dark:text-teal-400',
+    iconBg: 'bg-teal-50 dark:bg-teal-900/20',
+    iconColor: 'text-teal-600 dark:text-teal-400',
+    hoverBorder: 'hover:border-teal-400 dark:hover:border-teal-500',
+    badgeBg: 'bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400',
+    sectionBorder: 'border-teal-200 dark:border-teal-900',
+    heroBg: 'from-teal-50 to-white dark:from-teal-950/30 dark:to-[#0a0a0a]',
+    heroText: 'text-teal-600 dark:text-teal-400',
+    emoji: '📝',
+  },
 };
 
 interface CatDict {

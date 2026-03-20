@@ -19,6 +19,7 @@
     "cat_random": "Random & Fun",
     "cat_converters": "Converters",
     "cat_health": "Health",
+    "cat_utilities": "Utilities",
     "no_results": "No tools found. Try a different keyword.",
     "stat_tools": "Free Tools",
     "stat_languages": "Languages",
@@ -93,7 +94,10 @@
     "base64": { "name": "Base64 Encoder / Decoder", "description": "Encode text to Base64 or decode Base64 back to plain text.", "category": "Developer Tools" },
     "url_encoder": { "name": "URL Encoder / Decoder", "description": "Encode or decode URLs and query string parameters.", "category": "Developer Tools" },
     "json_formatter": { "name": "JSON Formatter", "description": "Format, validate, and minify JSON with syntax highlighting.", "category": "Developer Tools" },
-    "color_converter": { "name": "Color Converter", "description": "Convert colors between HEX, RGB, and HSL formats.", "category": "Developer Tools" }
+    "color_converter": { "name": "Color Converter", "description": "Convert colors between HEX, RGB, and HSL formats.", "category": "Developer Tools" },
+    "word_counter": { "name": "Word Counter", "description": "Count words, characters, sentences, and estimate reading time instantly.", "category": "Utilities" },
+    "days_between_dates": { "name": "Days Between Dates", "description": "Calculate the number of days, weeks, and months between two dates.", "category": "Calculators" },
+    "timezone_converter": { "name": "Timezone Converter", "description": "Convert times between any two time zones with a live world clock.", "category": "Converters" }
   },
   "percentage_calculator": {
     "title": "Percentage Calculator",
@@ -470,6 +474,67 @@
     "error_no_courses": "Please add at least one course.",
     "error_invalid_credits": "Please enter valid credit hours for all courses."
   },
+  "word_counter": {
+    "title": "Word Counter",
+    "meta_title": "Word Counter - Free Online Word & Character Count Tool - QuickBestGo",
+    "meta_description": "Count words, characters, sentences, paragraphs, and reading time instantly. Free online word counter for writers, students, and SEO professionals.",
+    "about_title": "Why use a Word Counter?",
+    "about_p1": "Our Word Counter instantly analyzes your text and provides a comprehensive breakdown: total word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time based on an average reading speed of 200 words per minute.",
+    "about_p2": "Writers use word counters to meet assignment requirements, stay within social media character limits (Twitter: 280, Instagram: 2,200), and track their writing progress. SEO professionals use it to optimize meta descriptions (150–160 characters) and title tags (50–60 characters).",
+    "about_p3": "The keyword density section shows the top 5 most frequently used meaningful words in your text, helping you identify overused words and improve readability.",
+    "label_input": "Enter or paste your text here",
+    "placeholder": "Start typing or paste your text here to analyze...",
+    "btn_clear": "Clear",
+    "stat_words": "Words",
+    "stat_chars": "Characters",
+    "stat_chars_no_space": "No Spaces",
+    "stat_sentences": "Sentences",
+    "stat_paragraphs": "Paragraphs",
+    "stat_reading_time": "Read Time",
+    "stat_reading_unit": "min",
+    "keyword_title": "Top Keywords"
+  },
+  "days_between_dates": {
+    "title": "Days Between Dates Calculator",
+    "meta_title": "Days Between Dates Calculator - Free Online Tool - QuickBestGo",
+    "meta_description": "Calculate the exact number of days, weeks, months, and working days between two dates. Free online date difference calculator.",
+    "about_title": "How to calculate days between dates?",
+    "about_p1": "Our Days Between Dates Calculator gives you the exact difference between any two dates in multiple units: total days, complete weeks, approximate months, years, and working days (Monday to Friday).",
+    "about_p2": "Use the quick preset buttons to instantly calculate common date ranges — the next 7 days, 30 days, 100 days, or a full year from today. You can also enter any custom start and end dates.",
+    "about_p3": "Common uses include calculating deadlines, project timelines, countdowns to events (holidays, birthdays, anniversaries), and determining how long ago something happened.",
+    "label_start": "Start Date",
+    "label_end": "End Date",
+    "btn_calculate": "Calculate",
+    "tooltip_reset": "Reset",
+    "result_days": "Days",
+    "result_weeks": "Weeks",
+    "result_months": "Months",
+    "result_years": "Years",
+    "result_working_days": "Working Days",
+    "preset_week": "Next 7 Days",
+    "preset_month": "Next 30 Days",
+    "preset_year": "Next Year",
+    "preset_100": "Next 100 Days",
+    "label_weekends": "Weekends",
+    "error_invalid": "Please select valid start and end dates."
+  },
+  "timezone_converter": {
+    "title": "Timezone Converter",
+    "meta_title": "Timezone Converter - World Clock & Time Zone Tool - QuickBestGo",
+    "meta_description": "Convert times between any two time zones instantly. Free online timezone converter with live world clock for major cities worldwide.",
+    "about_title": "How to use the Timezone Converter?",
+    "about_p1": "Select your source timezone and enter a time, then choose a target timezone to see the converted time instantly. Use the swap button to reverse the conversion direction.",
+    "about_p2": "The live world clock at the bottom shows the current time in 6 major cities simultaneously — New York, London, Paris, Dubai, Tokyo, and Sydney — updated every second.",
+    "about_p3": "All timezone conversions use your browser's built-in Intl.DateTimeFormat API with IANA timezone data, ensuring accuracy for daylight saving time transitions and historical dates.",
+    "label_from": "From Timezone",
+    "label_to": "To Timezone",
+    "label_time": "Time",
+    "btn_swap": "Swap",
+    "btn_convert": "Convert",
+    "label_world_clock": "Live World Clock",
+    "label_current_time": "Current Time",
+    "error_invalid": "Please select valid timezones."
+  },
   "categories": {
     "calculators": {
       "slug": "calculators",
@@ -525,6 +590,17 @@
       "about_title": "Health calculators, not health advice",
       "about_p1": "Our health tools use clinically recognized formulas — the WHO BMI classification and the Mifflin-St Jeor equation for calorie estimation — to give you accurate reference numbers for common health metrics.",
       "about_p2": "These tools are for informational and educational purposes only and do not constitute medical advice. Always consult a qualified healthcare professional for personal health decisions."
+    },
+    "utilities": {
+      "slug": "utilities",
+      "name": "Utilities",
+      "meta_title": "Free Online Utility Tools - QuickBestGo",
+      "meta_description": "Free online utility tools: word counter, character counter, and more. Essential tools for writers, students, and professionals.",
+      "hero_title": "Utility Tools",
+      "hero_desc": "Essential tools for everyday writing, counting, and analysis tasks.",
+      "about_title": "Tools for everyday tasks",
+      "about_p1": "Our utility tools help with common everyday tasks like counting words and characters in your writing. Whether you're a student checking your essay length, a writer tracking progress, or a professional optimizing content for SEO, our tools give you instant, accurate results.",
+      "about_p2": "All processing is done locally in your browser. No text or data you enter is ever sent to our servers."
     }
   }
 }
