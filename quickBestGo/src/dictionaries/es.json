@@ -58,6 +58,26 @@
       "name": "Calculadora de Calorías",
       "description": "Calcula tus necesidades calóricas diarias según edad, peso y actividad.",
       "category": "Salud"
+    },
+    "compound_interest_calculator": {
+      "name": "Calculadora de Interés Compuesto",
+      "description": "Calcula el valor futuro de tu inversión con interés compuesto.",
+      "category": "Finanzas"
+    },
+    "tip_calculator": {
+      "name": "Calculadora de Propinas",
+      "description": "Calcula la propina y divide la cuenta entre varias personas.",
+      "category": "Calculadoras"
+    },
+    "unit_converter": {
+      "name": "Conversor de Unidades",
+      "description": "Convierte entre unidades métricas e imperiales de longitud, peso, temperatura y volumen.",
+      "category": "Utilidades"
+    },
+    "gpa_calculator": {
+      "name": "Calculadora de GPA",
+      "description": "Calcula tu promedio de calificaciones en escala de 4.0.",
+      "category": "Educación"
     }
   },
     "percentage_calculator": {
@@ -278,6 +298,88 @@
     "label_deficit": "−500 kcal/día",
     "label_surplus": "+500 kcal/día",
     "error_invalid": "Por favor ingresa valores válidos en todos los campos."
+  },
+  "compound_interest_calculator": {
+    "title": "Calculadora de Interés Compuesto",
+    "meta_title": "Calculadora de Interés Compuesto - Herramienta Gratuita de Inversión - QuickBestGo",
+    "meta_description": "Calcula el valor futuro de tu inversión con nuestra calculadora de interés compuesto gratuita. Ve cómo crece tu dinero con diferentes frecuencias de capitalización.",
+    "about_title": "¿Qué es el Interés Compuesto?",
+    "about_p1": "El interés compuesto es el interés calculado tanto sobre el capital inicial como sobre los intereses acumulados de períodos anteriores. A diferencia del interés simple, el interés compuesto crece exponencialmente con el tiempo, por lo que a menudo se le llama 'la octava maravilla del mundo'.",
+    "about_p2": "La fórmula es: A = P(1 + r/n)^(nt), donde P es el capital, r es la tasa de interés anual, n es el número de veces que se capitaliza por año y t es el tiempo en años. Cuanto más frecuentemente se capitalice el interés, mayor será el monto final.",
+    "about_p3": "Esta calculadora es solo para fines informativos y educativos. Los resultados son estimaciones basadas en los datos ingresados y no constituyen asesoramiento financiero.",
+    "label_principal": "Capital Inicial ($)",
+    "label_rate": "Tasa de Interés Anual (%)",
+    "label_frequency": "Frecuencia de Capitalización",
+    "label_years": "Período de Tiempo (Años)",
+    "freq_annually": "Anual",
+    "freq_semiannually": "Semestral",
+    "freq_quarterly": "Trimestral",
+    "freq_monthly": "Mensual",
+    "freq_daily": "Diario",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Restablecer",
+    "result_final": "Valor Futuro",
+    "result_principal": "Capital",
+    "result_interest": "Interés Total",
+    "error_invalid": "Por favor ingresa números positivos válidos en todos los campos."
+  },
+  "tip_calculator": {
+    "title": "Calculadora de Propinas",
+    "meta_title": "Calculadora de Propinas - Divide la Cuenta y Calcula la Propina - QuickBestGo",
+    "meta_description": "Calcula la propina y divide tu cuenta fácilmente con nuestra calculadora gratuita. Elige el porcentaje de propina y divide entre cualquier número de personas.",
+    "about_title": "¿Cómo usar la Calculadora de Propinas?",
+    "about_p1": "Nuestra Calculadora de Propinas facilita el cálculo de la propina y la división de una cuenta entre varias personas. Simplemente ingresa el monto total de la cuenta, selecciona o ingresa el porcentaje de propina deseado y elige cuántas personas van a dividir la cuenta.",
+    "about_p2": "Las costumbres de propinas varían según el país y la cultura. En Estados Unidos, el 15–20% es estándar para el servicio en restaurantes. En otros países, dar propina puede no ser habitual o es posible que ya se incluya un cargo por servicio.",
+    "about_p3": "Todos los cálculos se realizan instantáneamente en tu navegador. No se envían datos a ningún servidor.",
+    "label_bill": "Monto de la Cuenta ($)",
+    "label_tip_percent": "Porcentaje de Propina",
+    "label_people": "Número de Personas",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Restablecer",
+    "result_tip": "Monto de Propina",
+    "result_total": "Monto Total",
+    "result_per_person": "Por Persona",
+    "error_invalid": "Por favor ingresa un monto de cuenta válido."
+  },
+  "unit_converter": {
+    "title": "Conversor de Unidades",
+    "meta_title": "Conversor de Unidades - Longitud, Peso, Temperatura y Volumen - QuickBestGo",
+    "meta_description": "Convierte entre unidades métricas e imperiales al instante. Conversor gratuito en línea para longitud (km/mi), peso (kg/lb), temperatura (°C/°F) y volumen (L/gal).",
+    "about_title": "¿Cómo usar el Conversor de Unidades?",
+    "about_p1": "Nuestro Conversor de Unidades admite cuatro categorías: Longitud (kilómetros, millas, metros, pies, centímetros, pulgadas), Peso (kilogramos, libras, gramos, onzas), Temperatura (Celsius, Fahrenheit, Kelvin) y Volumen (litros, galones, mililitros, onzas líquidas).",
+    "about_p2": "Selecciona una categoría, ingresa tu valor, elige las unidades de origen y destino, y el resultado se calcula al instante. También puedes intercambiar las unidades con un solo clic.",
+    "about_p3": "Todas las conversiones usan factores de conversión aceptados internacionalmente. Los resultados se redondean a 4 decimales para mayor precisión.",
+    "tab_length": "Longitud",
+    "tab_weight": "Peso",
+    "tab_temperature": "Temperatura",
+    "tab_volume": "Volumen",
+    "label_from": "De",
+    "label_to": "A",
+    "label_value": "Valor",
+    "btn_swap": "Intercambiar",
+    "result_label": "Resultado",
+    "error_invalid": "Por favor ingresa un número válido."
+  },
+  "gpa_calculator": {
+    "title": "Calculadora de GPA",
+    "meta_title": "Calculadora de GPA - Calcula tu Promedio de Calificaciones - QuickBestGo",
+    "meta_description": "Calcula tu GPA en escala de 4.0 con nuestra calculadora gratuita en línea. Agrega cursos con calificaciones y horas de crédito para un GPA acumulado preciso.",
+    "about_title": "¿Cómo se calcula el GPA?",
+    "about_p1": "El GPA (Promedio de Puntos de Calificación) se calcula multiplicando los puntos de calificación de cada curso por sus horas de crédito, sumando esos valores y dividiéndolos por las horas de crédito totales. Por ejemplo: A (4.0) × 3 créditos + B (3.0) × 4 créditos = 24 puntos ÷ 7 créditos = 3.43 GPA.",
+    "about_p2": "Esta calculadora usa la escala estándar de 4.0: A+/A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, D- = 0.7, F = 0.0.",
+    "about_p3": "Las escalas de GPA y los sistemas de calificación varían según la institución y el país. Esta calculadora usa la escala estadounidense común de 4.0 como referencia general.",
+    "label_course": "Curso",
+    "label_grade": "Calificación",
+    "label_credits": "Créditos",
+    "btn_add_course": "Agregar Curso",
+    "btn_calculate": "Calcular GPA",
+    "btn_reset": "Restablecer",
+    "result_gpa": "Tu GPA",
+    "result_total_credits": "Créditos Totales",
+    "result_total_points": "Puntos de Calificación",
+    "placeholder_course": "Nombre del curso (opcional)",
+    "error_no_courses": "Por favor agrega al menos un curso.",
+    "error_invalid_credits": "Por favor ingresa horas de crédito válidas para todos los cursos."
   }
 }
 

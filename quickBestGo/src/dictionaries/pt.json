@@ -58,6 +58,26 @@
       "name": "Calculadora de Calorias",
       "description": "Calcule as suas necessidades calóricas diárias com base na idade, peso e atividade.",
       "category": "Saúde"
+    },
+    "compound_interest_calculator": {
+      "name": "Calculadora de Juros Compostos",
+      "description": "Calcule o valor futuro do seu investimento com juros compostos.",
+      "category": "Finanças"
+    },
+    "tip_calculator": {
+      "name": "Calculadora de Gorjeta",
+      "description": "Calcule a gorjeta e divida a conta entre várias pessoas.",
+      "category": "Calculadoras"
+    },
+    "unit_converter": {
+      "name": "Conversor de Unidades",
+      "description": "Converta entre unidades métricas e imperiais de comprimento, peso, temperatura e volume.",
+      "category": "Utilitários"
+    },
+    "gpa_calculator": {
+      "name": "Calculadora de GPA",
+      "description": "Calcule sua média de notas na escala de 4.0.",
+      "category": "Educação"
     }
   },
     "percentage_calculator": {
@@ -278,6 +298,88 @@
     "label_deficit": "−500 kcal/dia",
     "label_surplus": "+500 kcal/dia",
     "error_invalid": "Por favor insira valores válidos em todos os campos."
+  },
+  "compound_interest_calculator": {
+    "title": "Calculadora de Juros Compostos",
+    "meta_title": "Calculadora de Juros Compostos - Ferramenta Gratuita de Crescimento de Investimentos - QuickBestGo",
+    "meta_description": "Calcule o valor futuro do seu investimento com a nossa calculadora de juros compostos gratuita. Veja como o seu dinheiro cresce ao longo do tempo com diferentes frequências de capitalização.",
+    "about_title": "O que são Juros Compostos?",
+    "about_p1": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores. Ao contrário dos juros simples, os juros compostos crescem exponencialmente ao longo do tempo, razão pela qual são muitas vezes chamados de 'a oitava maravilha do mundo'.",
+    "about_p2": "A fórmula é: A = P(1 + r/n)^(nt), onde P é o capital, r é a taxa de juros anual, n é o número de vezes que os juros são capitalizados por ano e t é o tempo em anos. Quanto mais frequentemente os juros são capitalizados, maior será o montante final.",
+    "about_p3": "Esta calculadora destina-se apenas a fins informativos e educativos. Os resultados são estimativas baseadas nos dados fornecidos e não constituem aconselhamento financeiro.",
+    "label_principal": "Capital Inicial ($)",
+    "label_rate": "Taxa de Juros Anual (%)",
+    "label_frequency": "Frequência de Capitalização",
+    "label_years": "Período de Tempo (Anos)",
+    "freq_annually": "Anual",
+    "freq_semiannually": "Semestral",
+    "freq_quarterly": "Trimestral",
+    "freq_monthly": "Mensal",
+    "freq_daily": "Diário",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Redefinir",
+    "result_final": "Valor Futuro",
+    "result_principal": "Capital",
+    "result_interest": "Juros Totais",
+    "error_invalid": "Por favor insira números positivos válidos em todos os campos."
+  },
+  "tip_calculator": {
+    "title": "Calculadora de Gorjeta",
+    "meta_title": "Calculadora de Gorjeta - Dividir Conta e Calcular Gorjeta - QuickBestGo",
+    "meta_description": "Calcule a gorjeta e divida a sua conta facilmente com a nossa calculadora gratuita. Escolha a percentagem de gorjeta e divida por qualquer número de pessoas.",
+    "about_title": "Como usar a Calculadora de Gorjeta?",
+    "about_p1": "A nossa Calculadora de Gorjeta facilita o cálculo da gorjeta e a divisão de uma conta entre várias pessoas. Basta inserir o valor total da conta, selecionar ou inserir a percentagem de gorjeta desejada e escolher quantas pessoas vão dividir a conta.",
+    "about_p2": "Os costumes de gorjeta variam por país e cultura. Nos Estados Unidos, 15–20% é padrão para serviço em restaurantes. Em outros países, dar gorjeta pode não ser habitual ou uma taxa de serviço já pode estar incluída.",
+    "about_p3": "Todos os cálculos são realizados instantaneamente no seu navegador. Nenhum dado é enviado para qualquer servidor.",
+    "label_bill": "Valor da Conta ($)",
+    "label_tip_percent": "Percentagem de Gorjeta",
+    "label_people": "Número de Pessoas",
+    "btn_calculate": "Calcular",
+    "tooltip_reset": "Redefinir",
+    "result_tip": "Valor da Gorjeta",
+    "result_total": "Valor Total",
+    "result_per_person": "Por Pessoa",
+    "error_invalid": "Por favor insira um valor de conta válido."
+  },
+  "unit_converter": {
+    "title": "Conversor de Unidades",
+    "meta_title": "Conversor de Unidades - Comprimento, Peso, Temperatura e Volume - QuickBestGo",
+    "meta_description": "Converta entre unidades métricas e imperiais instantaneamente. Conversor gratuito online para comprimento (km/mi), peso (kg/lb), temperatura (°C/°F) e volume (L/gal).",
+    "about_title": "Como usar o Conversor de Unidades?",
+    "about_p1": "O nosso Conversor de Unidades suporta quatro categorias: Comprimento (quilômetros, milhas, metros, pés, centímetros, polegadas), Peso (quilogramas, libras, gramas, onças), Temperatura (Celsius, Fahrenheit, Kelvin) e Volume (litros, galões, mililitros, onças líquidas).",
+    "about_p2": "Selecione uma categoria, insira o seu valor, escolha as unidades de origem e destino, e o resultado é calculado instantaneamente. Também pode trocar as unidades com um único clique.",
+    "about_p3": "Todas as conversões usam fatores de conversão internacionalmente aceites. Os resultados são arredondados para 4 casas decimais para maior precisão.",
+    "tab_length": "Comprimento",
+    "tab_weight": "Peso",
+    "tab_temperature": "Temperatura",
+    "tab_volume": "Volume",
+    "label_from": "De",
+    "label_to": "Para",
+    "label_value": "Valor",
+    "btn_swap": "Trocar",
+    "result_label": "Resultado",
+    "error_invalid": "Por favor insira um número válido."
+  },
+  "gpa_calculator": {
+    "title": "Calculadora de GPA",
+    "meta_title": "Calculadora de GPA - Calcule a Sua Média de Notas - QuickBestGo",
+    "meta_description": "Calcule o seu GPA na escala de 4.0 com a nossa calculadora gratuita online. Adicione disciplinas com notas e horas de crédito para um GPA acumulado preciso.",
+    "about_title": "Como é calculado o GPA?",
+    "about_p1": "O GPA (Média de Pontos de Nota) é calculado multiplicando os pontos de nota de cada disciplina pelas suas horas de crédito, somando esses valores e dividindo pelo total de horas de crédito. Por exemplo: A (4.0) × 3 créditos + B (3.0) × 4 créditos = 24 pontos ÷ 7 créditos = 3.43 GPA.",
+    "about_p2": "Esta calculadora usa a escala padrão de 4.0: A+/A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, D- = 0.7, F = 0.0.",
+    "about_p3": "As escalas de GPA e os sistemas de classificação variam por instituição e país. Esta calculadora usa a escala americana comum de 4.0 como referência geral.",
+    "label_course": "Disciplina",
+    "label_grade": "Nota",
+    "label_credits": "Créditos",
+    "btn_add_course": "Adicionar Disciplina",
+    "btn_calculate": "Calcular GPA",
+    "btn_reset": "Redefinir",
+    "result_gpa": "O Seu GPA",
+    "result_total_credits": "Créditos Totais",
+    "result_total_points": "Pontos de Nota",
+    "placeholder_course": "Nome da disciplina (opcional)",
+    "error_no_courses": "Por favor adicione pelo menos uma disciplina.",
+    "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas."
   }
 }
 

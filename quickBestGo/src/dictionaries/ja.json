@@ -58,6 +58,26 @@
       "name": "カロリー計算機",
       "description": "年齢・体重・活動量に基づいて1日の必要カロリーを計算します。",
       "category": "健康"
+    },
+    "compound_interest_calculator": {
+      "name": "複利計算機",
+      "description": "複利投資の将来価値を計算します。",
+      "category": "ファイナンス"
+    },
+    "tip_calculator": {
+      "name": "チップ計算機",
+      "description": "チップ額を計算し、複数人で割り勘できます。",
+      "category": "計算機"
+    },
+    "unit_converter": {
+      "name": "単位変換機",
+      "description": "長さ・重量・温度・体積をメートル法とヤード法で変換します。",
+      "category": "ユーティリティ"
+    },
+    "gpa_calculator": {
+      "name": "GPA計算機",
+      "description": "4.0スケールで成績平均点を計算します。",
+      "category": "教育"
     }
   },
   "percentage_calculator": {
@@ -278,6 +298,88 @@
     "label_deficit": "−500 kcal/日",
     "label_surplus": "+500 kcal/日",
     "error_invalid": "すべての項目に有効な値を入力してください。"
+  },
+  "compound_interest_calculator": {
+    "title": "複利計算機",
+    "meta_title": "複利計算機 - 無料投資成長ツール - QuickBestGo",
+    "meta_description": "無料の複利計算機で投資の将来価値を計算しましょう。異なる複利計算頻度でお金がどのように増えるかを確認できます。",
+    "about_title": "複利とは何ですか？",
+    "about_p1": "複利とは、元金と過去の利息の両方に対して利息が計算される方式です。単利とは異なり、複利は時間とともに指数関数的に増加するため、「世界の第八不思議」とも呼ばれています。",
+    "about_p2": "計算式はA = P(1 + r/n)^(nt)です。Pは元金、rは年利率、nは年間複利回数、tは年数です。複利の頻度が高いほど、最終的な金額が大きくなります。",
+    "about_p3": "この計算機は情報・教育目的のみで提供されます。結果は入力値に基づく推定値であり、財務アドバイスを構成するものではありません。",
+    "label_principal": "元金 ($)",
+    "label_rate": "年利率 (%)",
+    "label_frequency": "複利計算頻度",
+    "label_years": "期間（年）",
+    "freq_annually": "年1回",
+    "freq_semiannually": "年2回",
+    "freq_quarterly": "四半期",
+    "freq_monthly": "月1回",
+    "freq_daily": "日1回",
+    "btn_calculate": "計算",
+    "tooltip_reset": "リセット",
+    "result_final": "将来価値",
+    "result_principal": "元金",
+    "result_interest": "利息合計",
+    "error_invalid": "すべての項目に有効な正の数を入力してください。"
+  },
+  "tip_calculator": {
+    "title": "チップ計算機",
+    "meta_title": "チップ計算機 - 割り勘とチップ計算 - QuickBestGo",
+    "meta_description": "無料のチップ計算機でチップ額を計算し、簡単に割り勘しましょう。チップの割合を選んで人数で割れます。",
+    "about_title": "チップ計算機の使い方",
+    "about_p1": "チップ計算機を使えば、チップを計算して複数人で簡単に割り勘できます。合計金額を入力し、希望のチップ割合を選択または入力し、割り勘する人数を選んでください。",
+    "about_p2": "チップの習慣は国や文化によって異なります。アメリカではレストランのサービスに15〜20%が一般的です。他の国ではチップが慣習でなかったり、サービス料が既に含まれている場合があります。",
+    "about_p3": "すべての計算はブラウザで即座に行われます。データはサーバーに送信されません。",
+    "label_bill": "請求金額 ($)",
+    "label_tip_percent": "チップ割合",
+    "label_people": "人数",
+    "btn_calculate": "計算",
+    "tooltip_reset": "リセット",
+    "result_tip": "チップ額",
+    "result_total": "合計金額",
+    "result_per_person": "一人当たり",
+    "error_invalid": "有効な請求金額を入力してください。"
+  },
+  "unit_converter": {
+    "title": "単位変換機",
+    "meta_title": "単位変換機 - 長さ・重量・温度・体積 - QuickBestGo",
+    "meta_description": "メートル法とヤード法の単位を即座に変換。長さ(km/mi)・重量(kg/lb)・温度(°C/°F)・体積(L/gal)の無料オンラインコンバーター。",
+    "about_title": "単位変換機の使い方",
+    "about_p1": "単位変換機は4つのカテゴリに対応しています：長さ（キロメートル、マイル、メートル、フィート、センチメートル、インチ）、重量（キログラム、ポンド、グラム、オンス）、温度（摂氏、華氏、ケルビン）、体積（リットル、ガロン、ミリリットル、液量オンス）。",
+    "about_p2": "カテゴリを選択し、値を入力し、変換元と変換先の単位を選ぶと、即座に結果が計算されます。ワンクリックで単位を入れ替えることもできます。",
+    "about_p3": "すべての変換は国際的に認められた換算係数を使用しています。結果は精度のために小数点以下4桁に丸められます。",
+    "tab_length": "長さ",
+    "tab_weight": "重量",
+    "tab_temperature": "温度",
+    "tab_volume": "体積",
+    "label_from": "変換元",
+    "label_to": "変換先",
+    "label_value": "値",
+    "btn_swap": "入替",
+    "result_label": "結果",
+    "error_invalid": "有効な数値を入力してください。"
+  },
+  "gpa_calculator": {
+    "title": "GPA計算機",
+    "meta_title": "GPA計算機 - 成績平均点を計算 - QuickBestGo",
+    "meta_description": "無料のGPA計算機で4.0スケールの成績平均点を計算しましょう。科目ごとの成績と単位数を入力して正確な累積GPAを確認できます。",
+    "about_title": "GPAはどのように計算されますか？",
+    "about_p1": "GPA（成績平均点）は、各科目のグレードポイントに単位数を掛けた値を合計し、総単位数で割って計算します。例：A(4.0) × 3単位 + B(3.0) × 4単位 = 24点 ÷ 7単位 = 3.43 GPA。",
+    "about_p2": "この計算機は標準的な4.0スケールを使用しています：A+/A = 4.0、A- = 3.7、B+ = 3.3、B = 3.0、B- = 2.7、C+ = 2.3、C = 2.0、C- = 1.7、D+ = 1.3、D = 1.0、D- = 0.7、F = 0.0。",
+    "about_p3": "GPAのスケールと成績制度は学校や国によって異なります。この計算機は一般的な米国式4.0スケールを基準としています。",
+    "label_course": "科目",
+    "label_grade": "成績",
+    "label_credits": "単位",
+    "btn_add_course": "科目を追加",
+    "btn_calculate": "GPAを計算",
+    "btn_reset": "リセット",
+    "result_gpa": "あなたのGPA",
+    "result_total_credits": "総単位数",
+    "result_total_points": "グレードポイント",
+    "placeholder_course": "科目名（任意）",
+    "error_no_courses": "少なくとも1つの科目を追加してください。",
+    "error_invalid_credits": "すべての科目に有効な単位数を入力してください。"
   }
 }
 
