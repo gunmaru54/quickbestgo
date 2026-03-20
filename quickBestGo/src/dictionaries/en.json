@@ -53,6 +53,11 @@
       "name": "BMI Calculator",
       "description": "Calculate your Body Mass Index with metric or imperial units.",
       "category": "Health"
+    },
+    "calorie_calculator": {
+      "name": "Calorie Calculator",
+      "description": "Calculate your daily calorie needs based on age, weight, and activity.",
+      "category": "Health"
     }
   },
   "percentage_calculator": {
@@ -242,6 +247,37 @@
     "s6_content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page with an updated effective date.",
     "contact_title": "7. Contact Us",
     "contact_content": "If you have any questions about this Privacy Policy, please contact us at: contact@quickbestgo.com"
+  },
+  "calorie_calculator": {
+    "title": "Calorie Calculator",
+    "meta_title": "Calorie Calculator - Daily Calorie Needs (BMR & TDEE) - QuickBestGo",
+    "meta_description": "Calculate your daily calorie needs based on age, height, weight, and activity level. Free online BMR and TDEE calculator.",
+    "about_title": "How does the Calorie Calculator work?",
+    "about_p1": "Our Calorie Calculator uses the Mifflin-St Jeor equation, the most accurate formula for estimating your Basal Metabolic Rate (BMR) — the number of calories your body burns at complete rest.",
+    "about_p2": "Your BMR is multiplied by an activity factor to calculate your Total Daily Energy Expenditure (TDEE). This is the number of calories you need to maintain your current weight.",
+    "about_p3": "To lose weight, aim for a 500 kcal/day deficit. To gain weight, add 500 kcal/day. All calculations are performed locally in your browser and no data is sent to our servers.",
+    "label_gender": "Gender",
+    "label_male": "Male",
+    "label_female": "Female",
+    "label_age": "Age",
+    "label_height": "Height (cm)",
+    "label_weight": "Weight (kg)",
+    "label_activity": "Activity Level",
+    "activity_sedentary": "Sedentary (little / no exercise)",
+    "activity_light": "Lightly Active (1–3 days/week)",
+    "activity_moderate": "Moderately Active (3–5 days/week)",
+    "activity_active": "Very Active (6–7 days/week)",
+    "activity_very_active": "Extra Active (hard exercise + physical job)",
+    "btn_calculate": "Calculate Calories",
+    "label_bmr": "BMR",
+    "label_bmr_desc": "Basal Metabolic Rate",
+    "label_maintenance": "Maintenance",
+    "label_weight_loss": "Weight Loss",
+    "label_weight_gain": "Weight Gain",
+    "label_kcal_day": "kcal / day",
+    "label_deficit": "−500 kcal/day",
+    "label_surplus": "+500 kcal/day",
+    "error_invalid": "Please enter valid values for all fields."
   }
 }
 

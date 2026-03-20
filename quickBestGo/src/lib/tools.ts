@@ -1,4 +1,4 @@
-import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, type LucideIcon } from 'lucide-react';
+import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, Flame, type LucideIcon } from 'lucide-react';
 
 export interface ToolConfig {
   slug: string;
@@ -16,4 +16,5 @@ export const TOOLS: ToolConfig[] = [
   { slug: 'qr-code-generator',       dictKey: 'qr_code_generator',       icon: QrCode,     schemaCategory: 'UtilityApplication' },
   { slug: 'percentage-calculator',   dictKey: 'percentage_calculator',   icon: Percent,    schemaCategory: 'UtilityApplication' },
   { slug: 'bmi-calculator',          dictKey: 'bmi_calculator',          icon: Activity,   schemaCategory: 'HealthApplication' },
+  { slug: 'calorie-calculator',      dictKey: 'calorie_calculator',      icon: Flame,      schemaCategory: 'HealthApplication' },
 ];

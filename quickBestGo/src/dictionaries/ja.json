@@ -53,6 +53,11 @@
       "name": "BMI計算機",
       "description": "メートル法またはヤードポンド法でBMIを計算します。",
       "category": "健康"
+    },
+    "calorie_calculator": {
+      "name": "カロリー計算機",
+      "description": "年齢・体重・活動量に基づいて1日の必要カロリーを計算します。",
+      "category": "健康"
     }
   },
   "percentage_calculator": {
@@ -242,6 +247,37 @@
     "s6_content": "このプライバシーポリシーは随時更新される場合があります。変更がある場合は、更新された有効日とともにこのページに掲載してお知らせします。",
     "contact_title": "7. お問い合わせ",
     "contact_content": "このプライバシーポリシーについてご質問がある場合は、以下にご連絡ください：contact@quickbestgo.com"
+  },
+  "calorie_calculator": {
+    "title": "カロリー計算機",
+    "meta_title": "カロリー計算機 - 1日の必要カロリー (BMR & TDEE) - QuickBestGo",
+    "meta_description": "年齢・身長・体重・活動量に基づいて1日の必要カロリーを計算。無料のBMR・TDEE計算機。",
+    "about_title": "カロリー計算機の仕組みは？",
+    "about_p1": "Mifflin-St Jeor式を使用して基礎代謝量（BMR）を推定します。BMRは完全な安静状態で体が消費するカロリーです。",
+    "about_p2": "BMRに活動係数を掛けて、1日の総エネルギー消費量（TDEE）を算出します。現在の体重を維持するために必要なカロリーです。",
+    "about_p3": "減量には500 kcal/日の赤字、増量には500 kcal/日の余剰を目指しましょう。すべての計算はブラウザ内で行われます。",
+    "label_gender": "性別",
+    "label_male": "男性",
+    "label_female": "女性",
+    "label_age": "年齢",
+    "label_height": "身長 (cm)",
+    "label_weight": "体重 (kg)",
+    "label_activity": "活動レベル",
+    "activity_sedentary": "非活動的（ほぼ運動なし）",
+    "activity_light": "軽い活動（週1〜3日）",
+    "activity_moderate": "中程度の活動（週3〜5日）",
+    "activity_active": "活動的（週6〜7日）",
+    "activity_very_active": "非常に活動的（激しい運動＋肉体労働）",
+    "btn_calculate": "カロリーを計算",
+    "label_bmr": "基礎代謝量 (BMR)",
+    "label_bmr_desc": "安静時消費カロリー",
+    "label_maintenance": "維持カロリー",
+    "label_weight_loss": "減量",
+    "label_weight_gain": "増量",
+    "label_kcal_day": "kcal / 日",
+    "label_deficit": "−500 kcal/日",
+    "label_surplus": "+500 kcal/日",
+    "error_invalid": "すべての項目に有効な値を入力してください。"
   }
 }
 
