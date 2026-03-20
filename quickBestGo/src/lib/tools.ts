@@ -1,4 +1,4 @@
-import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, Flame, TrendingUp, Receipt, Ruler, GraduationCap, type LucideIcon } from 'lucide-react';
+import { Hash, Lock, Calendar, CircleDot, RotateCw, QrCode, Percent, Activity, Flame, TrendingUp, Receipt, Ruler, GraduationCap, FileCode, Link, Braces, Palette, type LucideIcon } from 'lucide-react';
 
 export interface ToolConfig {
   slug: string;
@@ -21,4 +21,8 @@ export const TOOLS: ToolConfig[] = [
   { slug: 'tip-calculator',          dictKey: 'tip_calculator',          icon: Receipt,    schemaCategory: 'UtilityApplication' },
   { slug: 'unit-converter',          dictKey: 'unit_converter',          icon: Ruler,      schemaCategory: 'UtilityApplication' },
   { slug: 'gpa-calculator',          dictKey: 'gpa_calculator',          icon: GraduationCap, schemaCategory: 'EducationApplication' },
+  { slug: 'base64',                  dictKey: 'base64',                  icon: FileCode,      schemaCategory: 'DeveloperApplication' },
+  { slug: 'url-encoder',             dictKey: 'url_encoder',             icon: Link,          schemaCategory: 'DeveloperApplication' },
+  { slug: 'json-formatter',          dictKey: 'json_formatter',          icon: Braces,        schemaCategory: 'DeveloperApplication' },
+  { slug: 'color-converter',         dictKey: 'color_converter',         icon: Palette,       schemaCategory: 'DeveloperApplication' },
 ];
