@@ -40,7 +40,8 @@
       "Bash(taskkill /PID 3096 /F)",
       "Bash(taskkill /PID 22576 /F)",
       "Bash(taskkill /PID 42760 /F)",
-      "Bash(powershell -Command \"Stop-Process -Id 3096,22576,42760 -Force\")"
+      "Bash(powershell -Command \"Stop-Process -Id 3096,22576,42760 -Force\")",
+      "Bash(start \"c:\\\\Users\\\\gunma\\\\QuickBestGo\\\\mockup.html\")"
     ]
   },
   "spinnerTipsEnabled": true

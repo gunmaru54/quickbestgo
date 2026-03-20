@@ -11,7 +11,18 @@
     "description": "Herramientas rápidas, gratuitas y compatibles con dispositivos móviles para sus necesidades diarias. No se requiere registro.",
     "about_title": "Acerca de QuickBestGo",
     "about_p1": "QuickBestGo es un sitio web global que proporciona diversas herramientas de utilidad que se necesitan con frecuencia en la vida diaria. Nuestro objetivo es proporcionar a los usuarios una experiencia rápida, intuitiva y optimizada para móviles.",
-    "about_p2": "Todas las herramientas están disponibles directamente en su navegador sin ningún registro o instalación, y sus datos se procesan solo dentro de su navegador para mayor privacidad."
+    "about_p2": "Todas las herramientas están disponibles directamente en su navegador sin ningún registro o instalación, y sus datos se procesan solo dentro de su navegador para mayor privacidad.",
+    "search_placeholder": "Buscar herramientas... (ej. IMC, JSON, Base64)",
+    "cat_all": "Todo",
+    "cat_calculators": "Calculadoras",
+    "cat_developer": "Desarrollador",
+    "cat_random": "Aleatorio",
+    "cat_converters": "Conversores",
+    "cat_health": "Salud",
+    "no_results": "No se encontraron herramientas. Prueba otra palabra.",
+    "stat_tools": "Herramientas",
+    "stat_languages": "Idiomas",
+    "stat_signup": "Sin registro"
   },
   "tools": {
     "random_number_generator": {

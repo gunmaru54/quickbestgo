@@ -11,7 +11,18 @@
     "description": "日常のニーズに応える、高速で無料でモバイルフレンドリーなツール。登録不要。",
     "about_title": "QuickBestGoについて",
     "about_p1": "QuickBestGoは、日常生活で頻繁に必要となる様々なユーティリティツールを提供するグローバルウェブサイトです。私たちの目標は、ユーザーに高速で直感的、かつモバイルに最適化された体験を提供することです。",
-    "about_p2": "すべてのツールは、登録やインストールなしでブラウザで直接使用でき、プライバシーのためにデータはブラウザ内でのみ処理されます。"
+    "about_p2": "すべてのツールは、登録やインストールなしでブラウザで直接使用でき、プライバシーのためにデータはブラウザ内でのみ処理されます。",
+    "search_placeholder": "ツールを検索... (例: BMI、JSON、Base64)",
+    "cat_all": "すべて",
+    "cat_calculators": "計算機",
+    "cat_developer": "開発者",
+    "cat_random": "ランダム",
+    "cat_converters": "変換",
+    "cat_health": "健康",
+    "no_results": "ツールが見つかりません。別のキーワードをお試しください。",
+    "stat_tools": "無料ツール",
+    "stat_languages": "対応言語",
+    "stat_signup": "登録不要"
   },
   "tools": {
     "random_number_generator": {

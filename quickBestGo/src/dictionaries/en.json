@@ -11,7 +11,18 @@
     "description": "Fast, free, and mobile-friendly tools for your everyday needs. No signup required.",
     "about_title": "About QuickBestGo",
     "about_p1": "QuickBestGo is a global website providing various utility tools that are frequently needed in daily life. Our goal is to provide users with a fast, intuitive, and mobile-optimized experience.",
-    "about_p2": "All tools are available directly in your browser without any registration or installation, and your data is processed only within your browser for privacy."
+    "about_p2": "All tools are available directly in your browser without any registration or installation, and your data is processed only within your browser for privacy.",
+    "search_placeholder": "Search tools... (e.g. BMI, JSON, Base64)",
+    "cat_all": "All",
+    "cat_calculators": "Calculators",
+    "cat_developer": "Developer",
+    "cat_random": "Random & Fun",
+    "cat_converters": "Converters",
+    "cat_health": "Health",
+    "no_results": "No tools found. Try a different keyword.",
+    "stat_tools": "Free Tools",
+    "stat_languages": "Languages",
+    "stat_signup": "Sign-ups"
   },
   "tools": {
     "random_number_generator": {
