@@ -469,6 +469,63 @@
     "placeholder_course": "Course name (optional)",
     "error_no_courses": "Please add at least one course.",
     "error_invalid_credits": "Please enter valid credit hours for all courses."
+  },
+  "categories": {
+    "calculators": {
+      "slug": "calculators",
+      "name": "Calculators",
+      "meta_title": "Free Online Calculators - QuickBestGo",
+      "meta_description": "Free online calculators for percentages, BMI, compound interest, tips, GPA, and age. Fast, accurate, and no signup required.",
+      "hero_title": "Free Online Calculators",
+      "hero_desc": "Accurate calculators for everyday math — from tip splitting to investment growth. All free, all instant.",
+      "about_title": "Why use QuickBestGo Calculators?",
+      "about_p1": "Our calculators cover the most common everyday calculations: percentages for shopping discounts, age calculations, compound interest for savings, tip splitting at restaurants, and GPA tracking for students. Each tool is designed to give instant, accurate results.",
+      "about_p2": "All calculations run entirely in your browser. No data is sent to any server, ensuring your privacy while you work with sensitive numbers."
+    },
+    "developer": {
+      "slug": "developer-tools",
+      "name": "Developer Tools",
+      "meta_title": "Free Online Developer Tools - QuickBestGo",
+      "meta_description": "Free developer tools: JSON formatter, Base64 encoder/decoder, URL encoder/decoder, and color converter. Essential utilities for web developers.",
+      "hero_title": "Developer Tools",
+      "hero_desc": "Essential utilities for web developers and programmers — encode, decode, format, and convert instantly.",
+      "about_title": "Tools built for developers",
+      "about_p1": "Our developer tools handle the most common encoding and formatting tasks: formatting JSON for readability, encoding data in Base64 for safe transmission, percent-encoding URLs for APIs, and converting colors between HEX, RGB, and HSL for CSS work.",
+      "about_p2": "All tools run client-side in your browser. No data is logged or stored — perfect for handling sensitive code, API keys, or proprietary data."
+    },
+    "random": {
+      "slug": "random-tools",
+      "name": "Random & Fun Tools",
+      "meta_title": "Free Random & Fun Tools - QuickBestGo",
+      "meta_description": "Free random tools: random number generator, password generator, coin flip, and wheel spinner. Perfect for games, decisions, and more.",
+      "hero_title": "Random & Fun Tools",
+      "hero_desc": "Make decisions, generate passwords, and add randomness to your games and activities.",
+      "about_title": "Randomness for every situation",
+      "about_p1": "From generating cryptographically secure passwords to spinning a wheel to pick a random winner, our random tools cover a wide range of use cases — classrooms, office activities, games, and everyday decisions.",
+      "about_p2": "All random generation uses your browser's built-in cryptographic random number generator, ensuring true randomness and unpredictability."
+    },
+    "converters": {
+      "slug": "converters",
+      "name": "Converters & Utilities",
+      "meta_title": "Free Online Unit Converter & Utilities - QuickBestGo",
+      "meta_description": "Free online unit converter for length, weight, temperature, and volume. Plus QR code generator. Fast and accurate conversions.",
+      "hero_title": "Converters & Utilities",
+      "hero_desc": "Convert between metric and imperial units, and generate QR codes — all in one place.",
+      "about_title": "Conversions made simple",
+      "about_p1": "Our unit converter supports four categories: length (km, mi, m, ft, cm, in), weight (kg, lb, g, oz), temperature (°C, °F, K), and volume (L, gal, mL, fl oz). The QR code generator creates high-quality codes for any URL or text.",
+      "about_p2": "All conversions use internationally accepted conversion factors. Results are calculated instantly and no data is sent to any server."
+    },
+    "health": {
+      "slug": "health-tools",
+      "name": "Health Tools",
+      "meta_title": "Free Online Health Calculators - QuickBestGo",
+      "meta_description": "Free health calculators: BMI calculator and calorie calculator (BMR & TDEE). Track your health metrics with accurate, easy-to-use tools.",
+      "hero_title": "Health Tools",
+      "hero_desc": "Calculate your BMI and daily calorie needs with clinically recognized formulas.",
+      "about_title": "Health calculators, not health advice",
+      "about_p1": "Our health tools use clinically recognized formulas — the WHO BMI classification and the Mifflin-St Jeor equation for calorie estimation — to give you accurate reference numbers for common health metrics.",
+      "about_p2": "These tools are for informational and educational purposes only and do not constitute medical advice. Always consult a qualified healthcare professional for personal health decisions."
+    }
   }
 }
 

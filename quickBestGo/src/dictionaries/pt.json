@@ -469,6 +469,63 @@
     "placeholder_course": "Nome da disciplina (opcional)",
     "error_no_courses": "Por favor adicione pelo menos uma disciplina.",
     "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas."
+  },
+  "categories": {
+    "calculators": {
+      "slug": "calculators",
+      "name": "Calculadoras",
+      "meta_title": "Calculadoras Gratuitas Online - QuickBestGo",
+      "meta_description": "Calculadoras gratuitas online para percentagens, IMC, juro composto, gorjetas, GPA e idade. Rápidas, precisas e sem registo.",
+      "hero_title": "Calculadoras Gratuitas Online",
+      "hero_desc": "Calculadoras precisas para a matemática do dia a dia — desde dividir gorjetas ao crescimento de investimentos. Todas gratuitas, todas instantâneas.",
+      "about_title": "Porquê usar as calculadoras da QuickBestGo?",
+      "about_p1": "As nossas calculadoras cobrem os cálculos quotidianos mais comuns: percentagens para descontos de compras, cálculos de idade, juro composto para poupanças, divisão de gorjetas em restaurantes e acompanhamento de GPA para estudantes. Cada ferramenta foi concebida para fornecer resultados instantâneos e precisos.",
+      "about_p2": "Todos os cálculos são executados inteiramente no seu browser. Nenhum dado é enviado para qualquer servidor, garantindo a sua privacidade ao trabalhar com números sensíveis."
+    },
+    "developer": {
+      "slug": "developer-tools",
+      "name": "Ferramentas de Desenvolvimento",
+      "meta_title": "Ferramentas de Desenvolvimento Gratuitas Online - QuickBestGo",
+      "meta_description": "Ferramentas de desenvolvimento gratuitas: formatador JSON, codificador/descodificador Base64, codificador/descodificador de URL e conversor de cores. Utilitários essenciais para desenvolvedores web.",
+      "hero_title": "Ferramentas de Desenvolvimento",
+      "hero_desc": "Utilitários essenciais para desenvolvedores web e programadores — codifique, descodifique, formate e converta instantaneamente.",
+      "about_title": "Ferramentas criadas para programadores",
+      "about_p1": "As nossas ferramentas de desenvolvimento tratam das tarefas de codificação e formatação mais comuns: formatar JSON para legibilidade, codificar dados em Base64 para transmissão segura, codificar URLs em percentagem para APIs e converter cores entre HEX, RGB e HSL para trabalho CSS.",
+      "about_p2": "Todas as ferramentas são executadas do lado do cliente no seu browser. Nenhum dado é registado ou armazenado — perfeito para manusear código sensível, chaves de API ou dados proprietários."
+    },
+    "random": {
+      "slug": "random-tools",
+      "name": "Ferramentas Aleatórias e Divertidas",
+      "meta_title": "Ferramentas Aleatórias e Divertidas Gratuitas - QuickBestGo",
+      "meta_description": "Ferramentas aleatórias gratuitas: gerador de números aleatórios, gerador de palavras-passe, lançamento de moeda e roleta. Perfeitas para jogos, decisões e mais.",
+      "hero_title": "Ferramentas Aleatórias e Divertidas",
+      "hero_desc": "Tome decisões, gere palavras-passe e adicione aleatoriedade aos seus jogos e atividades.",
+      "about_title": "Aleatoriedade para cada situação",
+      "about_p1": "Desde gerar palavras-passe criptograficamente seguras até girar uma roleta para escolher um vencedor aleatório, as nossas ferramentas aleatórias cobrem uma ampla gama de casos de uso — salas de aula, atividades de escritório, jogos e decisões do quotidiano.",
+      "about_p2": "Toda a geração aleatória usa o gerador de números aleatórios criptográfico integrado no seu browser, garantindo verdadeira aleatoriedade e imprevisibilidade."
+    },
+    "converters": {
+      "slug": "converters",
+      "name": "Conversores e Utilitários",
+      "meta_title": "Conversor de Unidades Gratuito Online e Utilitários - QuickBestGo",
+      "meta_description": "Conversor de unidades gratuito online para comprimento, peso, temperatura e volume. Mais gerador de códigos QR. Conversões rápidas e precisas.",
+      "hero_title": "Conversores e Utilitários",
+      "hero_desc": "Converta entre unidades métricas e imperiais e gere códigos QR — tudo num só lugar.",
+      "about_title": "Conversões simplificadas",
+      "about_p1": "O nosso conversor de unidades suporta quatro categorias: comprimento (km, mi, m, ft, cm, in), peso (kg, lb, g, oz), temperatura (°C, °F, K) e volume (L, gal, mL, fl oz). O gerador de códigos QR cria códigos de alta qualidade para qualquer URL ou texto.",
+      "about_p2": "Todas as conversões usam fatores de conversão aceites internacionalmente. Os resultados são calculados instantaneamente e nenhum dado é enviado para qualquer servidor."
+    },
+    "health": {
+      "slug": "health-tools",
+      "name": "Ferramentas de Saúde",
+      "meta_title": "Calculadoras de Saúde Gratuitas Online - QuickBestGo",
+      "meta_description": "Calculadoras de saúde gratuitas: calculadora de IMC e calculadora de calorias (TMB e TDEE). Acompanhe as suas métricas de saúde com ferramentas precisas e fáceis de usar.",
+      "hero_title": "Ferramentas de Saúde",
+      "hero_desc": "Calcule o seu IMC e as suas necessidades calóricas diárias com fórmulas clinicamente reconhecidas.",
+      "about_title": "Calculadoras de saúde, não conselhos médicos",
+      "about_p1": "As nossas ferramentas de saúde usam fórmulas clinicamente reconhecidas — a classificação de IMC da OMS e a equação de Mifflin-St Jeor para estimativa calórica — para fornecer números de referência precisos para métricas de saúde comuns.",
+      "about_p2": "Estas ferramentas destinam-se apenas a fins informativos e educacionais e não constituem aconselhamento médico. Consulte sempre um profissional de saúde qualificado para decisões pessoais de saúde."
+    }
   }
 }
 
