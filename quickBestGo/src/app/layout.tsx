@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/seo";
-import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -45,11 +44,11 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <head>
         <meta name="google-adsense-account" content="ca-pub-6274863861710693" />
-        <Script
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6274863861710693"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
         />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] transition-colors duration-300`}>
