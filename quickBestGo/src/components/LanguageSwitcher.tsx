@@ -43,7 +43,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
       </div>
 
       {/* 데스크탑: Globe 아이콘 + 언어명 */}
-      <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg px-2 py-1 shadow-sm hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
+      <div className="hidden sm:flex items-center gap-2 h-9 px-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-sm hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
         <Globe size={16} className="text-gray-400 dark:text-gray-500" />
         <span className="text-sm font-medium text-gray-700 dark:text-gray-200 pr-1 whitespace-nowrap">
           {languageNames[currentLang]}
