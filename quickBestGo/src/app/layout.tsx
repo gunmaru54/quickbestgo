@@ -1,6 +1,6 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { siteConfig } from "@/lib/seo";
+import { siteConfig, generateOrganizationSchema } from "@/lib/seo";
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -48,6 +48,10 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6274863861710693"
           crossOrigin="anonymous"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
         />
       </head>
       <body className={`${GeistSans.className} min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] transition-colors duration-300`}>

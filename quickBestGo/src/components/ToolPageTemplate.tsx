@@ -1,5 +1,11 @@
 import { ReactNode } from 'react';
 import { CategoryTheme } from '@/lib/tools';
+import { generateFAQSchema } from '@/lib/seo';
+
+interface FaqItem {
+  q: string;
+  a: string;
+}
 
 interface ToolPageTemplateProps {
   schemas: object | object[];
@@ -13,15 +19,25 @@ interface ToolPageTemplateProps {
   };
   theme: CategoryTheme;
   icon: ReactNode;
+  faq?: {
+    title: string;
+    items: FaqItem[];
+  };
 }
 
-export default function ToolPageTemplate({ schemas, title, toolComponent, about, theme, icon }: ToolPageTemplateProps) {
+export default function ToolPageTemplate({ schemas, title, toolComponent, about, theme, icon, faq }: ToolPageTemplateProps) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
+      {faq && faq.items.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faq.items)) }}
+        />
+      )}
 
       {/* Category Hero */}
       <section className={`bg-gradient-to-br ${theme.gradient} border-b dark:border-gray-800 py-10 px-4`}>
@@ -48,6 +64,20 @@ export default function ToolPageTemplate({ schemas, title, toolComponent, about,
             <p>{about.p2}</p>
             <p>{about.p3}</p>
           </article>
+
+          {faq && faq.items.length > 0 && (
+            <section className="mt-8 bg-gray-50 dark:bg-[#1a1a1a] p-8 rounded-3xl border dark:border-gray-800 transition-colors duration-300">
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{faq.title}</h2>
+              <dl className="space-y-6">
+                {faq.items.map((item, i) => (
+                  <div key={i} className="border-b dark:border-gray-700 last:border-0 pb-6 last:pb-0">
+                    <dt className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</dt>
+                    <dd className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
         </div>
       </div>
     </>

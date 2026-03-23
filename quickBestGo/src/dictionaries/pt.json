@@ -23,7 +23,15 @@
     "no_results": "Nenhuma ferramenta encontrada. Tente outra palavra.",
     "stat_tools": "Ferramentas",
     "stat_languages": "Idiomas",
-    "stat_signup": "Sem registo"
+    "stat_signup": "Sem registo",
+    "faq_title": "Perguntas frequentes",
+    "faq": [
+      {"q": "Que ferramentas estão disponíveis no QuickBestGo?", "a": "O QuickBestGo oferece mais de 20 ferramentas gratuitas: calculadoras (IMC, GPA, juros compostos, gorjeta, percentagem, idade, dias entre datas), calculadora de calorias, ferramentas para programadores (Base64, codificador URL, formatador JSON, conversor de cores), ferramentas aleatórias (gerador de números, senhas, lançamento de moeda, roleta), conversores (unidades, fusos horários, QR code) e contador de palavras."},
+      {"q": "Todas as ferramentas do QuickBestGo são gratuitas?", "a": "Sim. Todas as ferramentas são completamente gratuitas, sem subscrição, sem registo e sem taxas ocultas."},
+      {"q": "Preciso de criar uma conta para usar as ferramentas?", "a": "Não. Nenhuma conta ou registo é necessário. Todas as ferramentas funcionam diretamente no seu navegador."},
+      {"q": "Os meus dados estão seguros ao usar o QuickBestGo?", "a": "Sim. Todos os cálculos e processamentos de dados acontecem localmente no seu navegador. Nada do que escreve é enviado para servidores ou armazenado."},
+      {"q": "Que idiomas o QuickBestGo suporta?", "a": "O QuickBestGo está disponível em 5 idiomas: inglês, coreano (한국어), espanhol (Español), japonês (日本語) e português."}
+    ]
   },
   "tools": {
     "random_number_generator": {
@@ -115,7 +123,13 @@
     "example_mode3": "Exemplo: 200 - 15% = 170",
     "label_percent": "%",
     "label_of": "de",
-    "label_result": "Resultado"
+    "label_result": "Resultado",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como calculo que percentagem um número é de outro?", "a": "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é 15% de 200 porque (30 ÷ 200) × 100 = 15."},
+      {"q": "Como calculo um aumento percentual?", "a": "Insira o valor original e a percentagem, e a calculadora adiciona essa percentagem ao original. Por exemplo, 200 aumentado em 15% é igual a 230."},
+      {"q": "Como calculo um desconto ou diminuição percentual?", "a": "Insira o preço original e a percentagem de desconto. A calculadora subtrai essa percentagem para mostrar o preço final após o desconto."}
+    ]
     },
     "qr_code_generator": {
     "title": "Gerador de Código QR",
@@ -129,7 +143,13 @@
     "placeholder_text": "https://exemplo.com",
     "btn_download": "Baixar Código QR",
     "label_qr_code": "Seu Código QR",
-    "error_dangerous_url": "Este esquema de URL não é permitido por razões de segurança."
+    "error_dangerous_url": "Este esquema de URL não é permitido por razões de segurança.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como gero um código QR?", "a": "Digite ou cole qualquer URL, texto ou informação de contato, e o código QR é gerado instantaneamente. Pode descarregá-lo como imagem para usar em qualquer lugar."},
+      {"q": "O que posso codificar num código QR?", "a": "Pode codificar URLs, texto simples, endereços de e-mail, números de telefone, credenciais Wi-Fi e muito mais. O código QR pode ser digitalizado por qualquer câmara de smartphone."},
+      {"q": "Os códigos QR gerados são gratuitos?", "a": "Sim, todos os códigos QR gerados no QuickBestGo são completamente gratuitos sem restrições de uso ou validade."}
+    ]
     },
     "random_number_generator": {
     "title": "Gerador de Números Aleatórios",
@@ -144,7 +164,13 @@
     "btn_generate": "Gerar Número Aleatório",
     "label_result": "Resultado",
     "label_history": "Últimos 5 Resultados",
-    "error_min_max": "O máximo deve ser maior que o mínimo"
+    "error_min_max": "O máximo deve ser maior que o mínimo",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como gero um número aleatório num intervalo específico?", "a": "Defina os seus valores mínimo e máximo, depois clique em Gerar. A ferramenta produz instantaneamente um número aleatório criptograficamente seguro dentro do intervalo especificado."},
+      {"q": "Este gerador de números aleatórios é verdadeiramente aleatório?", "a": "O gerador usa a API de números aleatórios seguros integrada no browser, produzindo números aleatórios de alta qualidade adequados para jogos, decisões e simulações."},
+      {"q": "Posso ver os números gerados anteriormente?", "a": "Sim, o gerador mantém um histórico de resultados recentes para que possa acompanhar os números gerados na sua sessão atual."}
+    ]
   },
   "password_generator": {
     "title": "Gerador de Passwords",
@@ -159,7 +185,13 @@
     "label_numbers": "Incluir Números",
     "label_symbols": "Incluir Símbolos",
     "btn_generate": "Gerar Password",
-    "tooltip_copy": "Copiar para a área de transferência"
+    "tooltip_copy": "Copiar para a área de transferência",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como crio uma password forte?", "a": "Use pelo menos 12 caracteres combinando maiúsculas, minúsculas, números e símbolos. Evite palavras do dicionário e informações pessoais. O nosso gerador cria passwords fortes automaticamente."},
+      {"q": "O que torna uma password segura?", "a": "Uma password segura é longa (12+ caracteres), aleatória e usa uma combinação de tipos de caracteres. Evite reutilizar passwords em diferentes contas."},
+      {"q": "A minha password gerada é armazenada em algum lugar?", "a": "Não. Toda a geração de passwords ocorre inteiramente no seu browser. Nenhum dado é enviado para qualquer servidor e as passwords nunca são armazenadas ou registadas."}
+    ]
   },
   "age_calculator": {
     "title": "Calculadora de Idade",
@@ -174,7 +206,13 @@
     "label_years": "Anos",
     "label_months": "Meses",
     "label_days": "Dias",
-    "tooltip_reset": "Repor"
+    "tooltip_reset": "Repor",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como calculo a minha idade exata?", "a": "Insira a sua data de nascimento e clique em Calcular. A ferramenta mostra a sua idade exata em anos, meses e dias com base na data de hoje."},
+      {"q": "Quantos dias de vida tenho?", "a": "A calculadora de idade mostra a sua idade dividida em anos, meses e dias. Para os dias totais, multiplique os anos por 365 e adicione os meses e dias restantes."},
+      {"q": "Posso calcular a idade de outra pessoa?", "a": "Sim, basta inserir qualquer data de nascimento para calcular a idade de qualquer pessoa — um familiar, uma figura histórica ou qualquer data no passado."}
+    ]
   },
   "coin_flip": {
     "title": "Lançamento de Moeda",
@@ -189,7 +227,13 @@
     "label_flip": "LANÇAR",
     "btn_flipping": "A lançar...",
     "btn_flip": "Lançar Moeda",
-    "label_history": "Histórico (Últimos 10)"
+    "label_history": "Histórico (Últimos 10)",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como funciona o lançamento de moeda online?", "a": "Clique no botão de lançar e o simulador usa um algoritmo aleatório seguro para determinar cara ou coroa — cada resultado tem uma probabilidade igual de 50%."},
+      {"q": "O lançamento de moeda online é verdadeiramente justo?", "a": "Sim. O lançamento de moeda usa um gerador de números aleatórios criptograficamente seguro, garantindo que cada lançamento seja completamente independente com uma chance igual de 50/50."},
+      {"q": "Posso usar este lançamento de moeda para tomar decisões?", "a": "Absolutamente. É ótimo para resolver disputas, fazer escolhas aleatórias ou qualquer situação em que precise de uma decisão imparcial de 50/50."}
+    ]
   },
   "wheel_spinner": {
     "title": "Roda da Sorte",
@@ -204,7 +248,13 @@
     "btn_spinning": "A girar...",
     "btn_spin": "Girar Roda",
     "label_winner": "O Vencedor é",
-    "error_min_options": "Por favor, introduza pelo menos 2 opções."
+    "error_min_options": "Por favor, introduza pelo menos 2 opções.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como uso a roda da sorte?", "a": "Adicione as suas opções ou nomes personalizados à roda, depois clique em Girar. A roda roda e seleciona aleatoriamente uma opção com probabilidade igual para cada entrada."},
+      {"q": "Posso adicionar opções personalizadas à roda?", "a": "Sim. Pode inserir qualquer lista de itens — nomes, escolhas, prémios — e a roda irá exibir e selecionar aleatoriamente das suas opções personalizadas."},
+      {"q": "A seleção da roda da sorte é aleatória?", "a": "Sim. Cada giro usa um algoritmo aleatório seguro, dando a cada item da roda uma chance igual de ser selecionado."}
+    ]
   },
   "bmi_calculator": {
     "title": "Calculadora de IMC",
@@ -232,7 +282,13 @@
     "result_overweight": "Sobrepeso",
     "result_obese": "Obeso",
     "result_range_label": "Intervalo de IMC",
-    "error_invalid": "Por favor, insira valores válidos de altura e peso."
+    "error_invalid": "Por favor, insira valores válidos de altura e peso.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "O que é o IMC e como é calculado?", "a": "O IMC (Índice de Massa Corporal) é calculado dividindo o peso em quilogramas pelo quadrado da altura em metros (kg/m²). Categoriza o peso em abaixo do peso, normal, sobrepeso ou obeso."},
+      {"q": "Qual é o intervalo de IMC saudável?", "a": "Um IMC de 18.5–24.9 é considerado normal/saudável. Abaixo de 18.5 é abaixo do peso, 25–29.9 é sobrepeso e 30 ou acima é classificado como obeso."},
+      {"q": "O IMC é uma medida precisa de saúde?", "a": "O IMC é uma ferramenta de rastreio útil, mas tem limitações — não tem em conta a massa muscular, a densidade óssea, a idade ou a distribuição de gordura corporal. Consulte um profissional de saúde para uma avaliação completa."}
+    ]
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
@@ -328,7 +384,13 @@
     "label_kcal_day": "kcal / dia",
     "label_deficit": "−500 kcal/dia",
     "label_surplus": "+500 kcal/dia",
-    "error_invalid": "Por favor insira valores válidos em todos os campos."
+    "error_invalid": "Por favor insira valores válidos em todos os campos.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Quantas calorias devo comer por dia?", "a": "As necessidades calóricas diárias dependem da sua idade, género, altura, peso e nível de atividade. A calculadora usa a fórmula Mifflin-St Jeor para estimar o seu BMR e TDEE."},
+      {"q": "Qual é a diferença entre BMR e TDEE?", "a": "BMR (Taxa Metabólica Basal) são as calorias que o seu corpo precisa em repouso completo. TDEE (Gasto Energético Total Diário) tem em conta o seu nível de atividade e mostra as necessidades calóricas diárias totais."},
+      {"q": "Quantas calorias preciso para perder peso?", "a": "Um défice de 500 calorias por dia geralmente leva a uma perda de peso de cerca de 0.5 kg (1 lb) por semana. A calculadora mostra as suas calorias de manutenção para o ajudar a planear."}
+    ]
   },
   "compound_interest_calculator": {
     "title": "Calculadora de Juros Compostos",
@@ -352,7 +414,13 @@
     "result_final": "Valor Futuro",
     "result_principal": "Capital",
     "result_interest": "Juros Totais",
-    "error_invalid": "Por favor insira números positivos válidos em todos os campos."
+    "error_invalid": "Por favor insira números positivos válidos em todos os campos.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "O que são juros compostos?", "a": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores, fazendo com que os investimentos cresçam exponencialmente ao longo do tempo."},
+      {"q": "Como diferem os juros compostos dos juros simples?", "a": "Os juros simples são calculados apenas sobre o capital, enquanto os juros compostos são calculados sobre o capital mais os juros já ganhos, resultando num crescimento mais rápido."},
+      {"q": "Qual a frequência de capitalização que rende mais?", "a": "Quanto mais frequentemente os juros são capitalizados, mais ganha. A capitalização diária rende ligeiramente mais que a mensal, que rende mais que a anual."}
+    ]
   },
   "tip_calculator": {
     "title": "Calculadora de Gorjeta",
@@ -371,7 +439,13 @@
     "result_total": "Valor Total",
     "result_per_person": "Por Pessoa",
     "error_invalid": "Por favor insira um valor de conta válido.",
-    "no_tip_culture": "A gorjeta não é comum nesta região."
+    "no_tip_culture": "A gorjeta não é comum nesta região.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como calculo uma gorjeta?", "a": "Insira o valor da sua conta, selecione uma percentagem de gorjeta (10–25% é comum) e a calculadora mostra instantaneamente o valor da gorjeta, o total e a parte de cada pessoa se dividir."},
+      {"q": "Que percentagem devo deixar de gorjeta num restaurante?", "a": "Nos EUA, 15–20% é padrão para serviço em restaurante. 10% é considerado baixo, enquanto 25%+ é para serviço excecional. Os costumes de gorjeta variam por país."},
+      {"q": "Como divido uma conta entre várias pessoas?", "a": "Insira o valor da conta e a percentagem de gorjeta, depois defina o número de pessoas. A calculadora divide o total igualmente e mostra a parte de cada pessoa."}
+    ]
   },
   "unit_converter": {
     "title": "Conversor de Unidades",
@@ -390,7 +464,13 @@
     "label_value": "Valor",
     "btn_swap": "Trocar",
     "result_label": "Resultado",
-    "error_invalid": "Por favor insira um número válido."
+    "error_invalid": "Por favor insira um número válido.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Que unidades posso converter?", "a": "O conversor suporta comprimento, peso, temperatura e volume — cobrindo dezenas de pares de unidades incluindo sistemas métrico e imperial."},
+      {"q": "Quão preciso é o conversor de unidades?", "a": "O conversor usa fatores de conversão precisos e trata os pares de unidades comuns com exatidão. Os resultados são apresentados com quatro casas decimais."},
+      {"q": "Posso converter Celsius para Fahrenheit?", "a": "Sim. Selecione Temperatura como categoria, escolha Celsius como unidade de entrada e Fahrenheit como saída, depois insira o seu valor."}
+    ]
   },
   "base64": {
     "title": "Codificador / Descodificador Base64",
@@ -409,7 +489,13 @@
     "placeholder_encode": "Insira texto para codificar...",
     "placeholder_decode": "Insira Base64 para descodificar...",
     "copied": "Copiado!",
-    "error_decode": "String Base64 inválida."
+    "error_decode": "String Base64 inválida.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "O que é a codificação Base64?", "a": "Base64 é um método que converte dados binários em texto ASCII usando 64 caracteres (A-Z, a-z, 0-9, +, /). É comumente usado para incorporar dados em HTML, CSS ou APIs."},
+      {"q": "Como codifico texto em Base64?", "a": "Cole o seu texto no campo de entrada e selecione Codificar. O equivalente em Base64 é mostrado instantaneamente e pode ser copiado para a área de transferência."},
+      {"q": "Para que é usado o Base64?", "a": "O Base64 é usado para incorporar imagens em CSS, enviar dados binários em APIs JSON, codificar anexos de e-mail e transmitir dados de forma segura em URLs."}
+    ]
   },
   "url_encoder": {
     "title": "Codificador / Descodificador URL",
@@ -428,7 +514,13 @@
     "placeholder_encode": "Insira URL ou texto para codificar...",
     "placeholder_decode": "Insira URL codificada para descodificar...",
     "copied": "Copiado!",
-    "error_decode": "String URL codificada inválida."
+    "error_decode": "String URL codificada inválida.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "O que é a codificação URL?", "a": "A codificação URL converte caracteres especiais num formato que pode ser transmitido de forma segura numa URL. Por exemplo, espaços tornam-se %20 e & torna-se %26."},
+      {"q": "Por que preciso de codificar uma URL?", "a": "As URLs só podem conter um conjunto limitado de caracteres. A codificação garante que caracteres especiais como espaços, aspas e símbolos sejam incluídos de forma segura sem quebrar a estrutura da URL."},
+      {"q": "Como descodifico uma URL?", "a": "Cole a URL codificada e selecione Descodificar. A ferramenta converte os caracteres codificados percentualmente de volta à sua forma original legível."}
+    ]
   },
   "json_formatter": {
     "title": "Formatador JSON",
@@ -448,7 +540,13 @@
     "copied": "Copiado!",
     "error_invalid": "JSON inválido",
     "status_valid": "JSON válido",
-    "label_indent": "Indentação"
+    "label_indent": "Indentação",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "O que faz um formatador JSON?", "a": "Recebe texto JSON bruto ou minificado e reformata-o com indentação e quebras de linha adequadas, tornando-o fácil de ler e depurar."},
+      {"q": "Como valido JSON online?", "a": "Cole o seu JSON no formatador. Se for válido, será formatado de forma limpa. Se houver um erro de sintaxe, a ferramenta irá realçar o problema."},
+      {"q": "O formatador JSON comprime dados?", "a": "Sim. Pode tanto formatar (prettify) JSON para legibilidade como minificá-lo para remover espaços em branco para ficheiros de menor tamanho."}
+    ]
   },
   "color_converter": {
     "title": "Conversor de Cores",
@@ -464,7 +562,13 @@
     "label_preview": "Pré-visualização de Cor",
     "label_picker": "Seletor de Cores",
     "btn_copy": "Copiar",
-    "copied": "Copiado!"
+    "copied": "Copiado!",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como converto HEX para RGB?", "a": "Insira um código de cor HEX (ex.: #2563eb) e o conversor mostra instantaneamente os valores equivalentes em RGB, HSL e outros formatos de cor."},
+      {"q": "Qual é a diferença entre cores HEX e RGB?", "a": "HEX é um código hexadecimal de 6 dígitos usado no design web. RGB representa a mesma cor como três valores (0–255) para os componentes Vermelho, Verde e Azul."},
+      {"q": "Como encontro o formato de cor que preciso para CSS?", "a": "O conversor mostra os formatos HEX, RGB e HSL simultaneamente, para que possa copiar o formato exato necessário para o seu CSS ou ferramenta de design."}
+    ]
   },
   "gpa_calculator": {
     "title": "Calculadora de GPA",
@@ -485,7 +589,13 @@
     "result_total_points": "Pontos de Nota",
     "placeholder_course": "Nome da disciplina (opcional)",
     "error_no_courses": "Por favor adicione pelo menos uma disciplina.",
-    "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas."
+    "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como é calculado o GPA?", "a": "O GPA é calculado multiplicando os pontos de nota de cada disciplina pelas suas horas de crédito, somando esses valores e dividindo pelo total de horas de crédito."},
+      {"q": "O que é um bom GPA?", "a": "Na escala de 4.0, 3.5–4.0 é excelente (Lista do Reitor), 3.0–3.5 é bom, 2.0–3.0 é médio e abaixo de 2.0 pode indicar dificuldades académicas."},
+      {"q": "Como converto notas em letras para pontos de nota?", "a": "Conversões comuns: A/A+ = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, D = 1.0, F = 0.0."}
+    ]
   },
   "word_counter": {
     "title": "Contador de Palavras",
@@ -505,7 +615,13 @@
     "stat_paragraphs": "Parágrafos",
     "stat_reading_time": "Leitura",
     "stat_reading_unit": "min",
-    "keyword_title": "Palavras-chave Principais"
+    "keyword_title": "Palavras-chave Principais",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como conto as palavras num texto?", "a": "Cole ou escreva o seu texto na área de entrada. A contagem de palavras, caracteres, frases e o tempo de leitura são atualizados instantaneamente."},
+      {"q": "O contador de palavras inclui espaços na contagem de caracteres?", "a": "A ferramenta mostra tanto a contagem de caracteres com espaços como sem espaços, para que possa usar a métrica de que necessita."},
+      {"q": "Existe um limite de comprimento de texto?", "a": "A ferramenta suporta até 100.000 caracteres. Para a maioria dos documentos, ensaios e artigos, isto é mais do que suficiente."}
+    ]
   },
   "days_between_dates": {
     "title": "Calculadora de Dias Entre Datas",
@@ -529,7 +645,13 @@
     "preset_year": "Próximo Ano",
     "preset_100": "Próximos 100 Dias",
     "label_weekends": "Fins de Semana",
-    "error_invalid": "Por favor selecione datas de início e fim válidas."
+    "error_invalid": "Por favor selecione datas de início e fim válidas.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como calculo o número de dias entre duas datas?", "a": "Selecione uma data de início e uma data de fim, depois clique em Calcular. A ferramenta mostra a diferença exata em dias, semanas, meses e anos."},
+      {"q": "Quantos dias úteis existem entre duas datas?", "a": "A calculadora inclui um resultado de dias úteis que exclui fins de semana, útil para planeamento de projetos e prazos de negócios."},
+      {"q": "Posso calcular quantos dias faltam para uma data futura?", "a": "Sim. Defina hoje como data de início e a sua data futura como data de fim para ver exatamente quantos dias restam."}
+    ]
   },
   "timezone_converter": {
     "title": "Conversor de Fusos Horários",
@@ -546,7 +668,13 @@
     "btn_convert": "Converter",
     "label_world_clock": "Relógio Mundial ao Vivo",
     "label_current_time": "Hora Atual",
-    "error_invalid": "Por favor selecione fusos horários válidos."
+    "error_invalid": "Por favor selecione fusos horários válidos.",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Como converto a hora entre fusos horários?", "a": "Selecione o seu fuso horário de origem, insira a hora e escolha um fuso horário de destino. A hora convertida é mostrada instantaneamente com o horário de verão considerado."},
+      {"q": "O que é o UTC?", "a": "UTC (Tempo Universal Coordenado) é o padrão global de tempo. Todos os fusos horários são definidos como deslocamentos do UTC — por exemplo, UTC+9 é a Hora Padrão do Japão."},
+      {"q": "Como encontro a hora atual noutro país?", "a": "Selecione o fuso horário do país de destino e a ferramenta mostra a hora local atual, automaticamente ajustada para o horário de verão."}
+    ]
   },
   "categories": {
     "calculators": {

@@ -23,7 +23,15 @@
     "no_results": "No tools found. Try a different keyword.",
     "stat_tools": "Free Tools",
     "stat_languages": "Languages",
-    "stat_signup": "Sign-ups"
+    "stat_signup": "Sign-ups",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What tools are available on QuickBestGo?", "a": "QuickBestGo offers 20+ free utility tools including calculators (BMI, GPA, compound interest, tip, percentage, age, days between dates), health tools (calorie calculator), developer tools (Base64, URL encoder, JSON formatter, color converter), random tools (random number generator, password generator, coin flip, wheel spinner), converters (unit converter, timezone converter, QR code generator), and utilities (word counter)."},
+      {"q": "Are all the tools on QuickBestGo free?", "a": "Yes. Every tool on QuickBestGo is completely free to use with no subscription, no registration, and no hidden fees."},
+      {"q": "Do I need to create an account to use the tools?", "a": "No account or sign-up is required. All tools work instantly in your browser — just open the page and start using them."},
+      {"q": "Is my data safe when using QuickBestGo tools?", "a": "Yes. All calculations and data processing happen entirely inside your browser. Nothing you type is ever sent to a server or stored anywhere."},
+      {"q": "Which languages does QuickBestGo support?", "a": "QuickBestGo is available in 5 languages: English, Korean (한국어), Spanish (Español), Japanese (日本語), and Portuguese (Português)."}
+    ]
   },
   "tools": {
     "random_number_generator": {
@@ -115,7 +123,13 @@
     "example_mode3": "Example: 200 - 15% = 170",
     "label_percent": "%",
     "label_of": "of",
-    "label_result": "Result"
+    "label_result": "Result",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I calculate what percentage one number is of another?", "a": "Divide the part by the whole, then multiply by 100. For example, 30 is 15% of 200 because (30 ÷ 200) × 100 = 15."},
+      {"q": "How do I calculate a percentage increase?", "a": "Enter the original value and the percentage, and the calculator adds that percentage to the original. For example, 200 increased by 15% equals 230."},
+      {"q": "How do I calculate a discount or percentage decrease?", "a": "Enter the original price and the discount percentage. The calculator subtracts that percentage to show the final price after the discount."}
+    ]
   },
   "qr_code_generator": {
     "title": "QR Code Generator",
@@ -129,7 +143,13 @@
     "placeholder_text": "https://example.com",
     "btn_download": "Download QR Code",
     "label_qr_code": "Your QR Code",
-    "error_dangerous_url": "This URL scheme is not allowed for security reasons."
+    "error_dangerous_url": "This URL scheme is not allowed for security reasons.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I generate a QR code?", "a": "Type or paste any URL, text, or contact information, and the QR code is generated instantly. You can download it as an image to use anywhere."},
+      {"q": "What can I encode in a QR code?", "a": "You can encode URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, and more. The QR code can be scanned by any smartphone camera."},
+      {"q": "Are the generated QR codes free to use?", "a": "Yes, all QR codes generated on QuickBestGo are completely free with no usage restrictions or expiration."}
+    ]
   },
   "random_number_generator": {
     "title": "Random Number Generator",
@@ -144,7 +164,13 @@
     "btn_generate": "Generate Random Number",
     "label_result": "Result",
     "label_history": "Last 5 Results",
-    "error_min_max": "Maximum must be greater than Minimum"
+    "error_min_max": "Maximum must be greater than Minimum",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I generate a random number in a specific range?", "a": "Set your minimum and maximum values, then click Generate. The tool instantly produces a cryptographically random number within your specified range."},
+      {"q": "Is this random number generator truly random?", "a": "The generator uses the browser's built-in secure random number API, producing high-quality random numbers suitable for games, decisions, and simulations."},
+      {"q": "Can I see previously generated numbers?", "a": "Yes, the generator keeps a history of recent results so you can track what numbers have been generated in your current session."}
+    ]
   },
   "password_generator": {
     "title": "Password Generator",
@@ -159,7 +185,13 @@
     "label_numbers": "Include Numbers",
     "label_symbols": "Include Symbols",
     "btn_generate": "Generate Password",
-    "tooltip_copy": "Copy to clipboard"
+    "tooltip_copy": "Copy to clipboard",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I create a strong password?", "a": "Use at least 12 characters combining uppercase, lowercase, numbers, and symbols. Avoid dictionary words and personal information. Our generator creates strong passwords automatically."},
+      {"q": "What makes a password secure?", "a": "A secure password is long (12+ characters), random, and uses a mix of character types. Avoid reusing passwords across different accounts."},
+      {"q": "Is my generated password stored anywhere?", "a": "No. All password generation happens entirely in your browser. No data is sent to any server, and passwords are never stored or logged."}
+    ]
   },
   "age_calculator": {
     "title": "Age Calculator",
@@ -174,7 +206,13 @@
     "label_years": "Years",
     "label_months": "Months",
     "label_days": "Days",
-    "tooltip_reset": "Reset"
+    "tooltip_reset": "Reset",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I calculate my exact age?", "a": "Enter your date of birth and click Calculate. The tool shows your exact age in years, months, and days based on today's date."},
+      {"q": "How many days old am I?", "a": "The age calculator shows your age broken down into years, months, and days. For total days, multiply years by 365 and add remaining months and days."},
+      {"q": "Can I calculate someone else's age?", "a": "Yes, simply enter any birth date to calculate the age of anyone — a family member, historical figure, or any date in the past."}
+    ]
   },
   "coin_flip": {
     "title": "Coin Flip",
@@ -189,7 +227,13 @@
     "label_flip": "FLIP",
     "btn_flipping": "Flipping...",
     "btn_flip": "Flip Coin",
-    "label_history": "History (Last 10)"
+    "label_history": "History (Last 10)",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How does an online coin flip work?", "a": "Click the flip button and the simulator uses a secure random algorithm to determine heads or tails — each outcome has an equal 50% probability."},
+      {"q": "Is an online coin flip truly fair?", "a": "Yes. The coin flip uses a cryptographically secure random number generator, ensuring each flip is completely independent with an equal 50/50 chance."},
+      {"q": "Can I use this coin flip to make decisions?", "a": "Absolutely. It's great for settling disputes, making random choices, or any situation where you need an unbiased 50/50 decision."}
+    ]
   },
   "wheel_spinner": {
     "title": "Wheel Spinner",
@@ -204,7 +248,13 @@
     "btn_spinning": "Spinning...",
     "btn_spin": "Spin Wheel",
     "label_winner": "The Winner is",
-    "error_min_options": "Please enter at least 2 options."
+    "error_min_options": "Please enter at least 2 options.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I use the wheel spinner?", "a": "Add your custom options or names to the wheel, then click Spin. The wheel rotates and randomly selects one option with equal probability for each entry."},
+      {"q": "Can I add custom options to the spinner?", "a": "Yes. You can enter any list of items — names, choices, prizes — and the wheel will display and randomly select from your custom options."},
+      {"q": "Is the wheel spinner selection random?", "a": "Yes. Each spin uses a secure random algorithm, giving every item on the wheel an equal chance of being selected."}
+    ]
   },
   "bmi_calculator": {
     "title": "BMI Calculator",
@@ -232,7 +282,13 @@
     "result_overweight": "Overweight",
     "result_obese": "Obese",
     "result_range_label": "BMI Range",
-    "error_invalid": "Please enter valid height and weight values."
+    "error_invalid": "Please enter valid height and weight values.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What is BMI and how is it calculated?", "a": "BMI (Body Mass Index) is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It categorizes weight as underweight, normal, overweight, or obese."},
+      {"q": "What is a healthy BMI range?", "a": "A BMI of 18.5–24.9 is considered normal/healthy. Under 18.5 is underweight, 25–29.9 is overweight, and 30 or above is classified as obese."},
+      {"q": "Is BMI an accurate measure of health?", "a": "BMI is a useful screening tool but has limitations — it doesn't account for muscle mass, bone density, age, or body fat distribution. Consult a healthcare professional for a comprehensive assessment."}
+    ]
   },
   "footer": {
     "rights": "All rights reserved.",
@@ -328,7 +384,13 @@
     "label_kcal_day": "kcal / day",
     "label_deficit": "−500 kcal/day",
     "label_surplus": "+500 kcal/day",
-    "error_invalid": "Please enter valid values for all fields."
+    "error_invalid": "Please enter valid values for all fields.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How many calories should I eat per day?", "a": "Daily calorie needs depend on your age, gender, height, weight, and activity level. The calculator uses the Mifflin-St Jeor formula to estimate your BMR and TDEE."},
+      {"q": "What is the difference between BMR and TDEE?", "a": "BMR (Basal Metabolic Rate) is the calories your body needs at complete rest. TDEE (Total Daily Energy Expenditure) accounts for your activity level and shows total daily calorie needs."},
+      {"q": "How many calories do I need to lose weight?", "a": "A deficit of 500 calories per day typically leads to about 0.5 kg (1 lb) of weight loss per week. The calculator shows your maintenance calories to help you plan."}
+    ]
   },
   "compound_interest_calculator": {
     "title": "Compound Interest Calculator",
@@ -352,7 +414,13 @@
     "result_final": "Future Value",
     "result_principal": "Principal",
     "result_interest": "Total Interest",
-    "error_invalid": "Please enter valid positive numbers for all fields."
+    "error_invalid": "Please enter valid positive numbers for all fields.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What is compound interest?", "a": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods, causing investments to grow exponentially over time."},
+      {"q": "How does compound interest differ from simple interest?", "a": "Simple interest is calculated only on the principal, while compound interest is calculated on the principal plus previously earned interest, resulting in faster growth."},
+      {"q": "Which compounding frequency earns the most?", "a": "The more frequently interest compounds, the more you earn. Daily compounding yields slightly more than monthly, which yields more than annual compounding."}
+    ]
   },
   "tip_calculator": {
     "title": "Tip Calculator",
@@ -371,7 +439,13 @@
     "result_total": "Total Amount",
     "result_per_person": "Per Person",
     "error_invalid": "Please enter a valid bill amount.",
-    "no_tip_culture": "Tipping is not common in this region."
+    "no_tip_culture": "Tipping is not common in this region.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I calculate a tip?", "a": "Enter your bill amount, select a tip percentage (10–25% is common), and the calculator instantly shows the tip amount, total, and per-person share if splitting."},
+      {"q": "What percentage should I tip at a restaurant?", "a": "In the US, 15–20% is standard for restaurant service. 10% is considered low, while 25%+ is for exceptional service. Tipping customs vary by country."},
+      {"q": "How do I split a bill among multiple people?", "a": "Enter the bill amount and tip percentage, then set the number of people. The calculator divides the total equally and shows each person's share."}
+    ]
   },
   "unit_converter": {
     "title": "Unit Converter",
@@ -390,7 +464,13 @@
     "label_value": "Value",
     "btn_swap": "Swap",
     "result_label": "Result",
-    "error_invalid": "Please enter a valid number."
+    "error_invalid": "Please enter a valid number.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What units can I convert?", "a": "The converter supports length, weight, temperature, and volume — covering dozens of unit pairs including metric and imperial systems."},
+      {"q": "How accurate is the unit converter?", "a": "The converter uses precise conversion factors and handles common unit pairs accurately. Results are displayed to four decimal places."},
+      {"q": "Can I convert Celsius to Fahrenheit?", "a": "Yes. Select Temperature as the category, choose Celsius as the input unit and Fahrenheit as the output, then enter your value."}
+    ]
   },
   "base64": {
     "title": "Base64 Encoder / Decoder",
@@ -409,7 +489,13 @@
     "placeholder_encode": "Enter text to encode...",
     "placeholder_decode": "Enter Base64 to decode...",
     "copied": "Copied!",
-    "error_decode": "Invalid Base64 string."
+    "error_decode": "Invalid Base64 string.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What is Base64 encoding?", "a": "Base64 is a method that converts binary data into ASCII text using 64 characters (A-Z, a-z, 0-9, +, /). It's commonly used for embedding data in HTML, CSS, or APIs."},
+      {"q": "How do I encode text to Base64?", "a": "Paste your text in the input field and select Encode. The Base64 equivalent is shown instantly and can be copied to clipboard."},
+      {"q": "What is Base64 used for?", "a": "Base64 is used to embed images in CSS, send binary data in JSON APIs, encode email attachments, and safely transmit data in URLs."}
+    ]
   },
   "url_encoder": {
     "title": "URL Encoder / Decoder",
@@ -428,7 +514,13 @@
     "placeholder_encode": "Enter URL or text to encode...",
     "placeholder_decode": "Enter encoded URL to decode...",
     "copied": "Copied!",
-    "error_decode": "Invalid URL-encoded string."
+    "error_decode": "Invalid URL-encoded string.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What is URL encoding?", "a": "URL encoding converts special characters into a format that can be safely transmitted in a URL. For example, spaces become %20 and & becomes %26."},
+      {"q": "Why do I need to encode a URL?", "a": "URLs can only contain a limited set of characters. Encoding ensures special characters like spaces, quotes, and symbols are safely included without breaking the URL structure."},
+      {"q": "How do I decode a URL?", "a": "Paste the encoded URL and select Decode. The tool converts percent-encoded characters back to their original readable form."}
+    ]
   },
   "json_formatter": {
     "title": "JSON Formatter",
@@ -448,7 +540,13 @@
     "copied": "Copied!",
     "error_invalid": "Invalid JSON",
     "status_valid": "Valid JSON",
-    "label_indent": "Indent"
+    "label_indent": "Indent",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "What does a JSON formatter do?", "a": "It takes raw or minified JSON text and reformats it with proper indentation and line breaks, making it easy to read and debug."},
+      {"q": "How do I validate JSON online?", "a": "Paste your JSON into the formatter. If it's valid, it will be formatted cleanly. If there's a syntax error, the tool will highlight the problem."},
+      {"q": "Does the JSON formatter compress data?", "a": "Yes. You can both format (prettify) JSON for readability and minify it to remove whitespace for smaller file sizes."}
+    ]
   },
   "color_converter": {
     "title": "Color Converter",
@@ -464,7 +562,13 @@
     "label_preview": "Color Preview",
     "label_picker": "Color Picker",
     "btn_copy": "Copy",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I convert HEX to RGB?", "a": "Enter a HEX color code (e.g., #2563eb) and the converter instantly shows the equivalent RGB, HSL, and other color format values."},
+      {"q": "What is the difference between HEX and RGB colors?", "a": "HEX is a 6-digit hexadecimal code used in web design. RGB represents the same color as three values (0–255) for Red, Green, and Blue components."},
+      {"q": "How do I find the color format I need for CSS?", "a": "The converter shows HEX, RGB, and HSL formats simultaneously, so you can copy the exact format required for your CSS or design tool."}
+    ]
   },
   "gpa_calculator": {
     "title": "GPA Calculator",
@@ -485,7 +589,13 @@
     "result_total_points": "Grade Points",
     "placeholder_course": "Course name (optional)",
     "error_no_courses": "Please add at least one course.",
-    "error_invalid_credits": "Please enter valid credit hours for all courses."
+    "error_invalid_credits": "Please enter valid credit hours for all courses.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How is GPA calculated?", "a": "GPA is calculated by multiplying each course's grade points by its credit hours, summing those values, then dividing by the total credit hours."},
+      {"q": "What is a good GPA?", "a": "On a 4.0 scale, 3.5–4.0 is excellent (Dean's List), 3.0–3.5 is good, 2.0–3.0 is average, and below 2.0 may indicate academic difficulty."},
+      {"q": "How do I convert letter grades to grade points?", "a": "Common conversions: A/A+ = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, D = 1.0, F = 0.0."}
+    ]
   },
   "word_counter": {
     "title": "Word Counter",
@@ -505,7 +615,13 @@
     "stat_paragraphs": "Paragraphs",
     "stat_reading_time": "Read Time",
     "stat_reading_unit": "min",
-    "keyword_title": "Top Keywords"
+    "keyword_title": "Top Keywords",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I count words in text?", "a": "Paste or type your text into the input area. The word count, character count, sentence count, and reading time are updated instantly."},
+      {"q": "Does the word counter include spaces in the character count?", "a": "The tool shows both character count with spaces and without spaces, so you can use whichever metric you need."},
+      {"q": "Is there a text length limit?", "a": "The tool handles up to 100,000 characters. For most documents, essays, and articles, this is more than sufficient."}
+    ]
   },
   "days_between_dates": {
     "title": "Days Between Dates Calculator",
@@ -529,7 +645,13 @@
     "preset_year": "Next Year",
     "preset_100": "Next 100 Days",
     "label_weekends": "Weekends",
-    "error_invalid": "Please select valid start and end dates."
+    "error_invalid": "Please select valid start and end dates.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I calculate the number of days between two dates?", "a": "Select a start date and end date, then click Calculate. The tool shows the exact difference in days, weeks, months, and years."},
+      {"q": "How many working days are between two dates?", "a": "The calculator includes a working days result that excludes weekends, useful for project planning and business deadlines."},
+      {"q": "Can I calculate how many days until a future date?", "a": "Yes. Set today as the start date and your future date as the end date to see exactly how many days remain."}
+    ]
   },
   "timezone_converter": {
     "title": "Timezone Converter",
@@ -546,7 +668,13 @@
     "btn_convert": "Convert",
     "label_world_clock": "Live World Clock",
     "label_current_time": "Current Time",
-    "error_invalid": "Please select valid timezones."
+    "error_invalid": "Please select valid timezones.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How do I convert time between time zones?", "a": "Select your source time zone, enter the time, then choose a target time zone. The converted time is shown instantly with daylight saving time accounted for."},
+      {"q": "What is UTC?", "a": "UTC (Coordinated Universal Time) is the global time standard. All time zones are defined as offsets from UTC — for example, UTC+9 is Japan Standard Time."},
+      {"q": "How do I find the current time in another country?", "a": "Select the target country's time zone and the tool displays the current local time there, automatically adjusted for daylight saving time."}
+    ]
   },
   "categories": {
     "calculators": {

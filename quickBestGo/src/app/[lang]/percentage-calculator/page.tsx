@@ -27,6 +27,7 @@ export default async function PercentageCalculatorPage({ params: { lang } }: { p
       icon={<toolConfig.icon size={20} />}
       toolComponent={<PercentageCalculator dict={d} lang={lang} />}
       about={{ title: d.about_title, p1: d.about_p1, p2: d.about_p2, p3: d.about_p3 }}
+      faq={{ title: d.faq_title, items: d.faq }}
     />
   );
 }

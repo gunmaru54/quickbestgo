@@ -1,6 +1,6 @@
 import { getDictionary, getStaticParams, Locale } from '@/lib/i18n';
 import { Metadata } from 'next';
-import { siteConfig, getLanguageAlternates, getOgLocale, generateWebSiteSchema } from '@/lib/seo';
+import { siteConfig, getLanguageAlternates, getOgLocale, generateWebSiteSchema, generateFAQSchema } from '@/lib/seo';
 import ToolsGrid from '@/components/ToolsGrid';
 
 export { getStaticParams as generateStaticParams };
@@ -41,6 +41,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
   const schema = generateWebSiteSchema(lang, dict.meta.description);
+  const homeFaq = dict.home.faq as Array<{ q: string; a: string }>;
 
   return (
     <div>
@@ -48,6 +49,12 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {homeFaq && homeFaq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(homeFaq)) }}
+        />
+      )}
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-violet-50 dark:from-blue-950/20 dark:via-[#0a0a0a] dark:to-violet-950/20 border-b dark:border-gray-800 py-14 px-4">
@@ -85,6 +92,20 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           <p>{dict.home.about_p1}</p>
           <p>{dict.home.about_p2}</p>
         </div>
+
+        {homeFaq && homeFaq.length > 0 && (
+          <section className="mt-8 bg-gray-50 dark:bg-[#1a1a1a] p-8 rounded-3xl border dark:border-gray-800 transition-colors duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{dict.home.faq_title}</h2>
+            <dl className="space-y-6">
+              {homeFaq.map((item, i) => (
+                <div key={i} className="border-b dark:border-gray-700 last:border-0 pb-6 last:pb-0">
+                  <dt className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</dt>
+                  <dd className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
       </div>
     </div>
   );
