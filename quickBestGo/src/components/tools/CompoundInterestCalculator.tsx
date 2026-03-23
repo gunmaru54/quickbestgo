@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { TrendingUp, RefreshCcw } from 'lucide-react';
 import { CategoryTheme } from '@/lib/tools';
+import { useCurrency } from '@/components/CurrencyProvider';
+import { formatCurrency, CURRENCIES, CurrencyCode } from '@/lib/currency';
 
 interface CompoundInterestCalculatorProps {
   dict: {
@@ -39,13 +41,24 @@ const FREQUENCIES: Record<string, number> = {
   daily: 365,
 };
 
+const PLACEHOLDER: Record<CurrencyCode, string> = {
+  USD: '10000',
+  KRW: '10000000',
+  JPY: '1000000',
+  EUR: '10000',
+  CNY: '100000',
+};
+
 const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorProps) => {
+  const { currency, setCurrency } = useCurrency();
   const [principal, setPrincipal] = useState('');
   const [rate, setRate] = useState('');
   const [frequency, setFrequency] = useState('monthly');
   const [years, setYears] = useState('');
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState('');
+
+  const symbol = CURRENCIES[currency].symbol;
 
   const calculate = () => {
     const P = parseFloat(principal);
@@ -78,29 +91,51 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
   };
 
   const freqOptions = [
-    { value: 'annually', label: dict.freq_annually },
+    { value: 'annually',     label: dict.freq_annually     },
     { value: 'semiannually', label: dict.freq_semiannually },
-    { value: 'quarterly', label: dict.freq_quarterly },
-    { value: 'monthly', label: dict.freq_monthly },
-    { value: 'daily', label: dict.freq_daily },
+    { value: 'quarterly',    label: dict.freq_quarterly    },
+    { value: 'monthly',      label: dict.freq_monthly      },
+    { value: 'daily',        label: dict.freq_daily        },
   ];
-
-  const fmt = (n: number) =>
-    n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   return (
     <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+      {/* Currency selector */}
+      <div className="flex items-center gap-1.5 mb-5 flex-wrap">
+        {(Object.keys(CURRENCIES) as CurrencyCode[]).map((code) => (
+          <button
+            key={code}
+            onClick={() => setCurrency(code)}
+            className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+              currency === code
+                ? `${theme.primaryBtn} text-white`
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}
+          >
+            {code} <span className="opacity-75">{CURRENCIES[code].symbol}</span>
+          </button>
+        ))}
+      </div>
       <div className="space-y-5">
         <div className="space-y-2">
-          <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_principal}</label>
-          <input
-            type="number"
-            min="0"
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-            placeholder="10000"
-            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
-          />
+          <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            {dict.label_principal} ({currency})
+          </label>
+          <div className="relative">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 font-medium pointer-events-none select-none">
+              {symbol}
+            </span>
+            <input
+              type="number"
+              min="0"
+              value={principal}
+              onChange={(e) => setPrincipal(e.target.value)}
+              placeholder={PLACEHOLDER[currency]}
+              maxLength={20}
+              aria-label={`${dict.label_principal} (${currency})`}
+              className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+            />
+          </div>
         </div>
 
         <div className="space-y-2">
@@ -112,6 +147,7 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
             value={rate}
             onChange={(e) => setRate(e.target.value)}
             placeholder="5"
+            aria-label={dict.label_rate}
             className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
@@ -121,6 +157,7 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
           <select
             value={frequency}
             onChange={(e) => setFrequency(e.target.value)}
+            aria-label={dict.label_frequency}
             className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           >
             {freqOptions.map((opt) => (
@@ -137,6 +174,7 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
             value={years}
             onChange={(e) => setYears(e.target.value)}
             placeholder="10"
+            aria-label={dict.label_years}
             className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
@@ -157,6 +195,7 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
             onClick={reset}
             className="p-4 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             title={dict.tooltip_reset}
+            aria-label={dict.tooltip_reset}
           >
             <RefreshCcw size={20} />
           </button>
@@ -166,17 +205,21 @@ const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorP
           <div className="space-y-3 animate-in fade-in zoom-in duration-300">
             <div className={`${theme.accentBg} p-5 rounded-2xl text-center border ${theme.accentBorder}`}>
               <span className={`block text-3xl md:text-4xl font-black ${theme.accent}`}>
-                ${fmt(result.futureValue)}
+                {formatCurrency(result.futureValue, currency)}
               </span>
               <span className={`text-sm font-bold ${theme.accentLight} uppercase tracking-wider`}>{dict.result_final}</span>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl text-center border border-gray-100 dark:border-gray-700">
-                <span className="block text-xl font-black text-gray-700 dark:text-gray-200">${fmt(result.principal)}</span>
+                <span className="block text-xl font-black text-gray-700 dark:text-gray-200">
+                  {formatCurrency(result.principal, currency)}
+                </span>
                 <span className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">{dict.result_principal}</span>
               </div>
               <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-2xl text-center border border-green-100 dark:border-green-900/30">
-                <span className="block text-xl font-black text-green-600 dark:text-green-400">${fmt(result.totalInterest)}</span>
+                <span className="block text-xl font-black text-green-600 dark:text-green-400">
+                  {formatCurrency(result.totalInterest, currency)}
+                </span>
                 <span className="text-xs font-bold text-green-400 dark:text-green-300 uppercase tracking-wider">{dict.result_interest}</span>
               </div>
             </div>

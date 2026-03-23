@@ -326,7 +326,7 @@
     "about_p1": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, compound interest grows exponentially over time, which is why it is often called 'the eighth wonder of the world'.",
     "about_p2": "The formula is: A = P(1 + r/n)^(nt), where P is the principal, r is the annual interest rate, n is the number of times interest compounds per year, and t is the time in years. The more frequently interest compounds, the greater the final amount.",
     "about_p3": "This calculator is for informational and educational purposes only. Results are estimates based on the inputs provided and do not constitute financial advice.",
-    "label_principal": "Principal Amount ($)",
+    "label_principal": "Principal Amount",
     "label_rate": "Annual Interest Rate (%)",
     "label_frequency": "Compounding Frequency",
     "label_years": "Time Period (Years)",
@@ -350,7 +350,7 @@
     "about_p1": "Our Tip Calculator makes it easy to calculate a tip and split a bill among multiple people. Simply enter the total bill amount, select or enter your desired tip percentage, and choose how many people are splitting the bill.",
     "about_p2": "Tipping customs vary by country and culture. In the United States, 15–20% is standard for restaurant service. In other countries, tipping may not be customary or a service charge may already be included.",
     "about_p3": "All calculations are performed instantly in your browser. No data is sent to any server.",
-    "label_bill": "Bill Amount ($)",
+    "label_bill": "Bill Amount",
     "label_tip_percent": "Tip Percentage",
     "label_people": "Number of People",
     "btn_calculate": "Calculate",
@@ -358,7 +358,8 @@
     "result_tip": "Tip Amount",
     "result_total": "Total Amount",
     "result_per_person": "Per Person",
-    "error_invalid": "Please enter a valid bill amount."
+    "error_invalid": "Please enter a valid bill amount.",
+    "no_tip_culture": "Tipping is not common in this region."
   },
   "unit_converter": {
     "title": "Unit Converter",

@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import { getDictionary, defaultLocale } from '@/lib/i18n';
 import { Metadata } from 'next';
 import { siteConfig, getLanguageAlternates, getOgLocale, generateWebSiteSchema } from '@/lib/seo';
-import { TOOLS } from '@/lib/tools';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { CurrencyProvider } from '@/components/CurrencyProvider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ToolsGrid from '@/components/ToolsGrid';
 
 export const metadata: Metadata = {
   title: 'QuickBestGo - Free Online Tools',
@@ -35,46 +35,44 @@ export default async function RootPage() {
 
   return (
     <ThemeProvider>
+      <CurrencyProvider>
       <Header lang={defaultLocale} />
       <main className="flex-grow bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
-        <div className="container mx-auto px-4 py-12">
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
 
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+        {/* Hero */}
+        <section className="bg-gradient-to-br from-blue-50 via-white to-violet-50 dark:from-blue-950/20 dark:via-[#0a0a0a] dark:to-violet-950/20 border-b dark:border-gray-800 py-14 px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full mb-5 uppercase tracking-wide">
+              ✨ Free · No signup required
+            </div>
+            <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight leading-tight">
               {dict.home.title}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-8">
               {dict.home.description}
             </p>
-          </section>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TOOLS.map((tool) => {
-              const t = dict.tools[tool.dictKey as keyof typeof dict.tools];
-              return (
-                <Link
-                  key={tool.slug}
-                  href={`/${defaultLocale}/${tool.slug}`}
-                  className="group p-6 bg-white dark:bg-[#1a1a1a] border dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-500 transition-all"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                      <tool.icon size={24} />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                      {t.category}
-                    </span>
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{t.name}</h2>
-                  <p className="text-gray-500 dark:text-gray-400">{t.description}</p>
-                </Link>
-              );
-            })}
+            <div className="flex justify-center gap-8">
+              {[
+                { num: '20', label: dict.home.stat_tools },
+                { num: '5',  label: dict.home.stat_languages },
+                { num: '0',  label: dict.home.stat_signup },
+              ].map(s => (
+                <div key={s.label} className="text-center">
+                  <div className="text-2xl font-black text-gray-900 dark:text-white">{s.num}</div>
+                  <div className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wide">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* Tools grid with search + tabs */}
+        <div className="container mx-auto px-4 py-12">
+          <ToolsGrid lang={defaultLocale} dict={dict} />
 
           <div className="mt-20 prose dark:prose-invert max-w-none border-t dark:border-gray-800 pt-12">
             <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{dict.home.about_title}</h2>
@@ -84,6 +82,7 @@ export default async function RootPage() {
         </div>
       </main>
       <Footer lang={defaultLocale} />
+      </CurrencyProvider>
     </ThemeProvider>
   );
 }

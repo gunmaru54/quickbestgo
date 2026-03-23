@@ -326,7 +326,7 @@
     "about_p1": "El interés compuesto es el interés calculado tanto sobre el capital inicial como sobre los intereses acumulados de períodos anteriores. A diferencia del interés simple, el interés compuesto crece exponencialmente con el tiempo, por lo que a menudo se le llama 'la octava maravilla del mundo'.",
     "about_p2": "La fórmula es: A = P(1 + r/n)^(nt), donde P es el capital, r es la tasa de interés anual, n es el número de veces que se capitaliza por año y t es el tiempo en años. Cuanto más frecuentemente se capitalice el interés, mayor será el monto final.",
     "about_p3": "Esta calculadora es solo para fines informativos y educativos. Los resultados son estimaciones basadas en los datos ingresados y no constituyen asesoramiento financiero.",
-    "label_principal": "Capital Inicial ($)",
+    "label_principal": "Capital Inicial",
     "label_rate": "Tasa de Interés Anual (%)",
     "label_frequency": "Frecuencia de Capitalización",
     "label_years": "Período de Tiempo (Años)",
@@ -350,7 +350,7 @@
     "about_p1": "Nuestra Calculadora de Propinas facilita el cálculo de la propina y la división de una cuenta entre varias personas. Simplemente ingresa el monto total de la cuenta, selecciona o ingresa el porcentaje de propina deseado y elige cuántas personas van a dividir la cuenta.",
     "about_p2": "Las costumbres de propinas varían según el país y la cultura. En Estados Unidos, el 15–20% es estándar para el servicio en restaurantes. En otros países, dar propina puede no ser habitual o es posible que ya se incluya un cargo por servicio.",
     "about_p3": "Todos los cálculos se realizan instantáneamente en tu navegador. No se envían datos a ningún servidor.",
-    "label_bill": "Monto de la Cuenta ($)",
+    "label_bill": "Monto de la Cuenta",
     "label_tip_percent": "Porcentaje de Propina",
     "label_people": "Número de Personas",
     "btn_calculate": "Calcular",
@@ -358,7 +358,8 @@
     "result_tip": "Monto de Propina",
     "result_total": "Monto Total",
     "result_per_person": "Por Persona",
-    "error_invalid": "Por favor ingresa un monto de cuenta válido."
+    "error_invalid": "Por favor ingresa un monto de cuenta válido.",
+    "no_tip_culture": "Las propinas no son habituales en esta región."
   },
   "unit_converter": {
     "title": "Conversor de Unidades",

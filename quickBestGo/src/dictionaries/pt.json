@@ -326,7 +326,7 @@
     "about_p1": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores. Ao contrário dos juros simples, os juros compostos crescem exponencialmente ao longo do tempo, razão pela qual são muitas vezes chamados de 'a oitava maravilha do mundo'.",
     "about_p2": "A fórmula é: A = P(1 + r/n)^(nt), onde P é o capital, r é a taxa de juros anual, n é o número de vezes que os juros são capitalizados por ano e t é o tempo em anos. Quanto mais frequentemente os juros são capitalizados, maior será o montante final.",
     "about_p3": "Esta calculadora destina-se apenas a fins informativos e educativos. Os resultados são estimativas baseadas nos dados fornecidos e não constituem aconselhamento financeiro.",
-    "label_principal": "Capital Inicial ($)",
+    "label_principal": "Capital Inicial",
     "label_rate": "Taxa de Juros Anual (%)",
     "label_frequency": "Frequência de Capitalização",
     "label_years": "Período de Tempo (Anos)",
@@ -350,7 +350,7 @@
     "about_p1": "A nossa Calculadora de Gorjeta facilita o cálculo da gorjeta e a divisão de uma conta entre várias pessoas. Basta inserir o valor total da conta, selecionar ou inserir a percentagem de gorjeta desejada e escolher quantas pessoas vão dividir a conta.",
     "about_p2": "Os costumes de gorjeta variam por país e cultura. Nos Estados Unidos, 15–20% é padrão para serviço em restaurantes. Em outros países, dar gorjeta pode não ser habitual ou uma taxa de serviço já pode estar incluída.",
     "about_p3": "Todos os cálculos são realizados instantaneamente no seu navegador. Nenhum dado é enviado para qualquer servidor.",
-    "label_bill": "Valor da Conta ($)",
+    "label_bill": "Valor da Conta",
     "label_tip_percent": "Percentagem de Gorjeta",
     "label_people": "Número de Pessoas",
     "btn_calculate": "Calcular",
@@ -358,7 +358,8 @@
     "result_tip": "Valor da Gorjeta",
     "result_total": "Valor Total",
     "result_per_person": "Por Pessoa",
-    "error_invalid": "Por favor insira um valor de conta válido."
+    "error_invalid": "Por favor insira um valor de conta válido.",
+    "no_tip_culture": "A gorjeta não é comum nesta região."
   },
   "unit_converter": {
     "title": "Conversor de Unidades",
