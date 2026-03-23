@@ -450,29 +450,21 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
 
           {/* Result Summary Cards */}
           {result && (
-            <div className="space-y-4 animate-in fade-in zoom-in duration-300">
-              <div className="grid grid-cols-3 gap-3">
-                <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl text-center border border-gray-100 dark:border-gray-700">
-                  <span className="block text-lg font-black text-gray-700 dark:text-gray-200 truncate">
-                    {formatCurrency(result.totalPrincipal, currency)}
-                  </span>
-                  <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">{dict.result_total_principal}</span>
-                </div>
-                <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-2xl text-center border border-green-100 dark:border-green-900/30">
-                  <span className="block text-lg font-black text-green-600 dark:text-green-400 truncate">
-                    {formatCurrency(result.totalInterest, currency)}
-                  </span>
-                  <span className="text-[10px] font-bold text-green-400 dark:text-green-300 uppercase tracking-wider">{dict.result_total_interest}</span>
-                </div>
-                <div className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder}`}>
-                  <span className={`block text-lg font-black ${theme.accent} truncate`}>
-                    {formatCurrency(result.finalAmount, currency)}
-                  </span>
-                  <span className={`text-[10px] font-bold ${theme.accentLight} uppercase tracking-wider`}>{dict.result_final_value}</span>
-                </div>
+            <div className="space-y-2 animate-in fade-in zoom-in duration-300">
+              <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
+                <span className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider shrink-0 mr-3">{dict.result_total_principal}</span>
+                <span className="text-base font-black text-gray-700 dark:text-gray-200 text-right">{formatCurrency(result.totalPrincipal, currency)}</span>
+              </div>
+              <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-900/30">
+                <span className="text-xs font-bold text-green-500 dark:text-green-400 uppercase tracking-wider shrink-0 mr-3">{dict.result_total_interest}</span>
+                <span className="text-base font-black text-green-600 dark:text-green-400 text-right">{formatCurrency(result.totalInterest, currency)}</span>
+              </div>
+              <div className={`flex items-center justify-between px-4 py-3 rounded-2xl border ${theme.accentBg} ${theme.accentBorder}`}>
+                <span className={`text-xs font-bold ${theme.accentLight} uppercase tracking-wider shrink-0 mr-3`}>{dict.result_final_value}</span>
+                <span className={`text-base font-black ${theme.accent} text-right`}>{formatCurrency(result.finalAmount, currency)}</span>
               </div>
               {parseFloat(inflationRate) > 0 && (
-                <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+                <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-1">
                   Real value ({inflationRate}% inflation): <strong className="text-gray-600 dark:text-gray-300">{formatCurrency(result.realValue, currency)}</strong>
                 </p>
               )}
