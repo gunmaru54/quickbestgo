@@ -46,6 +46,17 @@ const DEFAULT_TIP: Record<CurrencyCode, number> = {
 
 const NO_TIP_CURRENCIES: CurrencyCode[] = ['KRW', 'JPY'];
 
+function toCommaDisplay(raw: string): string {
+  if (!raw) return '';
+  const [intPart, decPart] = raw.split('.');
+  const formatted = parseInt(intPart || '0', 10).toLocaleString();
+  return decPart !== undefined ? `${formatted}.${decPart}` : formatted;
+}
+
+function fromCommaDisplay(display: string): string {
+  return display.replace(/,/g, '');
+}
+
 const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   const { currency, setCurrency } = useCurrency();
   const [bill, setBill] = useState('');
@@ -134,13 +145,12 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
               {symbol}
             </span>
             <input
-              type="number"
-              min="0"
-              step="0.01"
-              value={bill}
-              onChange={(e) => setBill(e.target.value)}
+              type="text"
+              inputMode="decimal"
+              value={toCommaDisplay(bill)}
+              onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) setBill(raw); }}
               placeholder="50.00"
-              maxLength={15}
+              maxLength={20}
               aria-label={`${dict.label_bill} (${currency})`}
               className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
