@@ -90,6 +90,8 @@ quickBestGo/src/
 2. `quickBestGo/src/components/tools/[ToolName].tsx` 클라이언트 컴포넌트 생성
 3. `quickBestGo/src/lib/tools.ts`의 TOOLS 배열에 항목 추가
 4. 각 언어 사전 파일(`quickBestGo/src/dictionaries/`)에 번역 키 추가
+   - 필수 키: `title`, `meta_title`, `meta_description`, `about_title`, `about_p1~p3`
+   - **GEO 필수 키**: `faq_title`, `faq` (Q&A 배열, 최소 3개) — 5개 언어 모두
 5. `quickBestGo/src/app/sitemap.ts`에 새 경로 등록
 6. `quickBestGo/` 에서 `npm run build`로 전체 빌드 검증
 
@@ -160,6 +162,59 @@ Require stack:
 - Cloudflare Pages 대시보드 → Deployments 탭 → 이전 빌드 선택 → "Rollback to this deployment" 클릭
 - 1분 내 이전 버전으로 즉시 복구. 코드 revert 불필요.
 - 롤백 후 원인 파악 → fix → 재배포.
+
+---
+
+## GEO (Generative Engine Optimization) 지침
+
+ChatGPT, Perplexity, Claude 등 AI 검색 엔진이 콘텐츠를 인용하도록 최적화하는 규칙.
+
+### 현재 구현된 GEO 구조
+
+```
+seo.ts
+├── generateOrganizationSchema()   → 루트 layout.tsx에 삽입 (사이트 권위 신호)
+├── generateWebSiteSchema()        → 홈 페이지에 삽입 (SearchAction 포함)
+├── generateWebApplicationSchema() → 각 툴 페이지에 삽입 (WebApplication + BreadcrumbList)
+└── generateFAQSchema()            → ToolPageTemplate + 홈 페이지에 자동 삽입
+
+ToolPageTemplate.tsx
+└── faq prop (optional)            → FAQPage JSON-LD 삽입 + FAQ 섹션 렌더링
+```
+
+### FAQ 작성 원칙
+
+GEO에서 FAQ는 AI 인용의 핵심 소스다. 아래 원칙을 따를 것:
+
+- **질문**: 사용자가 실제로 검색할 만한 자연어 문장 형식 ("How do I...", "What is...")
+- **답변**: 첫 문장에 핵심 정보 포함. 간결하되 완결성 있게 (2~4문장).
+- **개수**: 툴당 최소 3개, 홈 페이지 5개
+- **중복 금지**: 같은 툴 내 Q끼리 겹치는 내용 없이 각각 다른 관점에서 작성
+
+### 사전 키 구조 (툴별, 5개 언어 동일)
+
+```json
+"[tool_key]": {
+  "faq_title": "Frequently Asked Questions",
+  "faq": [
+    {"q": "질문1?", "a": "답변1."},
+    {"q": "질문2?", "a": "답변2."},
+    {"q": "질문3?", "a": "답변3."}
+  ]
+}
+```
+
+### 새 툴 추가 시 GEO 체크포인트
+
+1. 사전 5개 파일에 `faq_title` + `faq` 추가 (각 언어로 번역)
+2. 툴 `page.tsx`에서 `ToolPageTemplate`에 `faq={{ title: d.faq_title, items: d.faq }}` 전달
+3. FAQ가 실제로 페이지에 렌더링되는지 빌드 후 브라우저에서 확인
+
+### GEO에 영향을 주는 기존 구현 (변경 금지)
+
+- `ToolPageTemplate`의 FAQ `<dl>/<dt>/<dd>` 구조 — AI 크롤러가 시맨틱 HTML로 파싱
+- `generateFAQSchema()`의 `FAQPage` + `Question` + `Answer` 타입 — schema.org 표준
+- `generateOrganizationSchema()`의 루트 삽입 위치 — 사이트 권위 신호로 모든 페이지에 적용
 
 ---
 
@@ -250,6 +305,8 @@ Require stack:
 - [ ] 모든 입력 요소에 `aria-label` 또는 연결된 `<label>` 존재
 - [ ] 키보드만으로 핵심 기능 동작 확인
 - [ ] 5개 언어 사전 키 누락 없음 (`quickBestGo/src/dictionaries/*.json`)
+- [ ] **GEO**: `faq_title` + `faq` 배열(최소 3개 Q&A)이 5개 언어 모두에 있는지 확인
+- [ ] **GEO**: 툴 페이지에서 `faq` prop이 `ToolPageTemplate`에 전달되는지 확인
 - [ ] 계산/인코딩 로직이 있으면 핵심 수식 단위 테스트 작성
 - [ ] `npm run build` 경고/에러 없음
 - [ ] CF Pages Preview URL에서 브라우저 직접 확인
