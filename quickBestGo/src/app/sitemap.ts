@@ -3,6 +3,8 @@ import { locales } from '@/lib/i18n';
 import { siteConfig } from '@/lib/seo';
 import { TOOLS } from '@/lib/tools';
 
+const STATIC_SLUGS = ['about', 'contact', 'privacy-policy'];
+
 const CATEGORY_SLUGS = [
   'calculators',
   'developer-tools',
@@ -24,6 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date('2026-03-20'),
         changeFrequency: 'monthly',
         priority: slug === '' ? 1.0 : 0.8,
+      });
+    });
+
+    // Static pages (about, contact, privacy-policy)
+    STATIC_SLUGS.forEach((staticSlug) => {
+      entries.push({
+        url: `${siteConfig.url}/${locale}/${staticSlug}/`,
+        lastModified: new Date('2026-03-20'),
+        changeFrequency: 'monthly',
+        priority: 0.6,
       });
     });
 
