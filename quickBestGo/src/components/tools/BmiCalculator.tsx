@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Activity, RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface BmiDict {
   label_unit_metric: string;
@@ -25,6 +26,7 @@ interface BmiDict {
 
 interface BmiCalculatorProps {
   dict: BmiDict;
+  theme: CategoryTheme;
 }
 
 type Unit = 'metric' | 'imperial';
@@ -74,7 +76,7 @@ function getBmiCategory(bmi: number, dict: BmiDict): BmiCategory {
   };
 }
 
-export default function BmiCalculator({ dict }: BmiCalculatorProps) {
+export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
   const [unit, setUnit] = useState<Unit>('metric');
   const [heightCm, setHeightCm] = useState('');
   const [heightFt, setHeightFt] = useState('');
@@ -133,7 +135,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
             onClick={() => switchUnit(u)}
             className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-all ${
               unit === u
-                ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm'
+                ? `bg-white dark:bg-gray-700 ${theme.accent} shadow-sm`
                 : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
             }`}
           >
@@ -156,7 +158,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
               placeholder="170"
               min="50"
               max="300"
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
         ) : (
@@ -172,7 +174,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
                 placeholder="5"
                 min="1"
                 max="9"
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
               <input
                 type="number"
@@ -181,7 +183,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
                 placeholder="7"
                 min="0"
                 max="11"
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
             </div>
           </div>
@@ -198,7 +200,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
             onChange={(e) => setWeight(e.target.value)}
             placeholder={unit === 'metric' ? '65' : '143'}
             min="1"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -211,7 +213,7 @@ export default function BmiCalculator({ dict }: BmiCalculatorProps) {
         <div className="flex gap-2">
           <button
             onClick={calculate}
-            className="flex-grow py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`flex-grow py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             <Activity size={20} />
             {dict.btn_calculate}

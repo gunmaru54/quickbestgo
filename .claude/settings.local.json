@@ -45,7 +45,15 @@
       "Bash(powershell -Command \"Stop-Process -Id 49212 -Force -ErrorAction SilentlyContinue\")",
       "Bash(powershell -Command \"Stop-Process -Id 49896 -Force\")",
       "Bash(powershell -Command \"Stop-Process -Id 63604 -Force\")",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(powershell -Command \"Stop-Process -Id 44716 -Force\")",
+      "Bash(done)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/en)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/en/percentage-calculator)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/en/json-formatter)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/ko/qr-code-generator)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/ja/word-counter)",
+      "Bash(tasklist)"
     ]
   },
   "spinnerTipsEnabled": true

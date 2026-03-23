@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { X } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface WordCounterProps {
   dict: {
@@ -18,6 +19,7 @@ interface WordCounterProps {
     keyword_title: string;
   };
   lang: string;
+  theme: CategoryTheme;
 }
 
 const STOP_WORDS = new Set([
@@ -75,7 +77,7 @@ function analyzeText(text: string): Stats {
   return { words, chars, charsNoSpace, sentences, paragraphs, readingTime, keywords };
 }
 
-const WordCounter = ({ dict }: WordCounterProps) => {
+const WordCounter = ({ dict, theme }: WordCounterProps) => {
   const [text, setText] = useState('');
 
   const stats = analyzeText(text);
@@ -102,15 +104,17 @@ const WordCounter = ({ dict }: WordCounterProps) => {
       <div className="space-y-6">
         {/* Textarea */}
         <div className="space-y-2">
-          <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+          <label htmlFor="word-counter-input" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
             {dict.label_input}
           </label>
           <textarea
+            id="word-counter-input"
             value={text}
             onChange={handleChange}
             placeholder={dict.placeholder}
             rows={12}
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all resize-y leading-relaxed"
+            maxLength={100000}
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 ${theme.ring} focus:outline-none transition-all resize-y leading-relaxed`}
           />
         </div>
 
@@ -130,9 +134,9 @@ const WordCounter = ({ dict }: WordCounterProps) => {
           {statCards.map((card) => (
             <div
               key={card.label}
-              className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30"
+              className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder}`}
             >
-              <span className="block text-2xl md:text-3xl font-black text-blue-600 dark:text-blue-400">
+              <span className={`block text-2xl md:text-3xl font-black ${theme.accent}`}>
                 {card.value}
               </span>
               <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mt-1 block">
@@ -156,13 +160,13 @@ const WordCounter = ({ dict }: WordCounterProps) => {
                   <div key={word} className="flex items-center gap-3">
                     <span className="w-5 text-xs font-bold text-gray-400 dark:text-gray-500 text-right">{i + 1}</span>
                     <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 w-24 truncate">{word}</span>
-                    <div className="flex-1 h-2 bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
+                    <div className={`flex-1 h-2 ${theme.accentBg} rounded-full overflow-hidden`}>
                       <div
-                        className="h-full bg-blue-500 dark:bg-blue-400 rounded-full transition-all duration-500"
+                        className={`h-full ${theme.accent.replace('text-', 'bg-')} rounded-full transition-all duration-500`}
                         style={{ width: `${pct}%` }}
                       />
                     </div>
-                    <span className="text-xs font-bold text-blue-600 dark:text-blue-400 w-6 text-right">{count}</span>
+                    <span className={`text-xs font-bold ${theme.accent} w-6 text-right`}>{count}</span>
                   </div>
                 );
               })}

@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { ArrowLeftRight } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface UnitConverterProps {
   dict: {
@@ -16,6 +17,7 @@ interface UnitConverterProps {
     result_label: string;
     error_invalid: string;
   };
+  theme: CategoryTheme;
 }
 
 type Category = 'length' | 'weight' | 'temperature' | 'volume';
@@ -55,7 +57,7 @@ const UNITS: Record<Category, UnitDef[]> = {
   ],
 };
 
-const UnitConverter = ({ dict }: UnitConverterProps) => {
+const UnitConverter = ({ dict, theme }: UnitConverterProps) => {
   const [category, setCategory] = useState<Category>('length');
   const [fromUnit, setFromUnit] = useState('km');
   const [toUnit, setToUnit] = useState('mi');
@@ -129,7 +131,7 @@ const UnitConverter = ({ dict }: UnitConverterProps) => {
               onClick={() => handleCategoryChange(tab.key)}
               className={`flex-1 py-2 px-1 rounded-xl text-xs font-bold transition-all ${
                 category === tab.key
-                  ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm'
+                  ? `bg-white dark:bg-gray-700 ${theme.accent} shadow-sm`
                   : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
               }`}
             >
@@ -145,7 +147,7 @@ const UnitConverter = ({ dict }: UnitConverterProps) => {
             <select
               value={fromUnit}
               onChange={(e) => setFromUnit(e.target.value)}
-              className="w-28 px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-28 px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {units.map((u) => (
                 <option key={u.key} value={u.key}>{u.label}</option>
@@ -156,7 +158,7 @@ const UnitConverter = ({ dict }: UnitConverterProps) => {
               value={value}
               onChange={(e) => handleValueChange(e.target.value)}
               placeholder="0"
-              className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
         </div>
@@ -179,14 +181,14 @@ const UnitConverter = ({ dict }: UnitConverterProps) => {
             <select
               value={toUnit}
               onChange={(e) => setToUnit(e.target.value)}
-              className="w-28 px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-28 px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {units.map((u) => (
                 <option key={u.key} value={u.key}>{u.label}</option>
               ))}
             </select>
-            <div className="flex-1 px-4 py-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-900/30 rounded-xl">
-              <span className="text-blue-700 dark:text-blue-300 font-bold text-lg">
+            <div className={`flex-1 px-4 py-3 ${theme.accentBg} border ${theme.accentBorder} rounded-xl`}>
+              <span className={`${theme.accent} font-bold text-lg`}>
                 {result || <span className="text-gray-400 dark:text-gray-600 font-normal text-base">—</span>}
               </span>
             </div>
@@ -198,9 +200,9 @@ const UnitConverter = ({ dict }: UnitConverterProps) => {
         )}
 
         {result && !error && (
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30 animate-in fade-in zoom-in duration-300">
-            <span className="text-sm font-semibold text-blue-400 dark:text-blue-300 uppercase tracking-wider">{dict.result_label}</span>
-            <p className="text-2xl font-black text-blue-600 dark:text-blue-400 mt-1">
+          <div className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder} animate-in fade-in zoom-in duration-300`}>
+            <span className={`text-sm font-semibold ${theme.accentLight} uppercase tracking-wider`}>{dict.result_label}</span>
+            <p className={`text-2xl font-black ${theme.accent} mt-1`}>
               {value} {units.find((u) => u.key === fromUnit)?.label} = {result} {units.find((u) => u.key === toUnit)?.label}
             </p>
           </div>

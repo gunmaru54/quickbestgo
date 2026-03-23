@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface DaysBetweenDatesProps {
   dict: {
@@ -22,6 +23,7 @@ interface DaysBetweenDatesProps {
     error_invalid: string;
   };
   lang: string;
+  theme: CategoryTheme;
 }
 
 interface DateResult {
@@ -83,7 +85,7 @@ function computeResult(startStr: string, endStr: string): DateResult | null {
   return { days, weeks, months, years, workingDays, weekends };
 }
 
-const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
+const DaysBetweenDates = ({ dict, lang, theme }: DaysBetweenDatesProps) => {
   const today = toDateString(new Date());
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(today);
@@ -154,7 +156,7 @@ const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
               lang={lang}
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
           <div className="space-y-2">
@@ -164,7 +166,7 @@ const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
               lang={lang}
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
         </div>
@@ -180,7 +182,7 @@ const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
             <button
               key={label}
               onClick={action}
-              className="px-3 py-1.5 text-xs font-bold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/40 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
+              className={`px-3 py-1.5 text-xs font-bold ${theme.accentBg} ${theme.accent} border ${theme.accentBorder} rounded-lg hover:opacity-80 transition-colors`}
             >
               {label}
             </button>
@@ -191,7 +193,7 @@ const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
         <div className="flex gap-2">
           <button
             onClick={calculate}
-            className="flex-grow py-4 px-6 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`flex-grow py-4 px-6 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             {dict.btn_calculate}
           </button>
@@ -217,14 +219,14 @@ const DaysBetweenDates = ({ dict, lang }: DaysBetweenDatesProps) => {
                 key={card.label}
                 className={`p-4 rounded-2xl text-center border ${
                   card.highlight
-                    ? 'bg-blue-600 dark:bg-blue-700 border-blue-700 dark:border-blue-600 col-span-2 sm:col-span-1'
-                    : 'bg-blue-50 dark:bg-blue-900/20 border-blue-100 dark:border-blue-900/30'
+                    ? `${theme.primaryBtn} border-transparent col-span-2 sm:col-span-1`
+                    : `${theme.accentBg} ${theme.accentBorder}`
                 }`}
               >
-                <span className={`block font-black ${card.highlight ? 'text-3xl md:text-4xl text-white' : 'text-2xl md:text-3xl text-blue-600 dark:text-blue-400'}`}>
+                <span className={`block font-black ${card.highlight ? 'text-3xl md:text-4xl text-white' : `text-2xl md:text-3xl ${theme.accent}`}`}>
                   {card.value}
                 </span>
-                <span className={`text-xs font-bold uppercase tracking-wide mt-1 block ${card.highlight ? 'text-blue-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                <span className={`text-xs font-bold uppercase tracking-wide mt-1 block ${card.highlight ? 'text-white/80' : 'text-gray-500 dark:text-gray-400'}`}>
                   {card.label}
                 </span>
               </div>

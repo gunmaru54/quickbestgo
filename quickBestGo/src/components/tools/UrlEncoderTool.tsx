@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Copy, Check, Trash2 } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface UrlEncoderToolProps {
   dict: {
@@ -16,9 +17,10 @@ interface UrlEncoderToolProps {
     copied: string;
     error_decode: string;
   };
+  theme: CategoryTheme;
 }
 
-export default function UrlEncoderTool({ dict }: UrlEncoderToolProps) {
+export default function UrlEncoderTool({ dict, theme }: UrlEncoderToolProps) {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
@@ -64,12 +66,14 @@ export default function UrlEncoderTool({ dict }: UrlEncoderToolProps) {
     <div className="max-w-2xl mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="url-encoder-input" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
             {dict.label_input}
           </label>
           <textarea
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-mono text-sm resize-none"
+            id="url-encoder-input"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all font-mono text-sm resize-none`}
             rows={6}
+            maxLength={500000}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={mode === 'encode' ? dict.placeholder_encode : dict.placeholder_decode}
@@ -82,7 +86,7 @@ export default function UrlEncoderTool({ dict }: UrlEncoderToolProps) {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleEncode}
-            className="py-3 px-6 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all"
+            className={`py-3 px-6 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all`}
           >
             {dict.btn_encode}
           </button>
@@ -118,7 +122,7 @@ export default function UrlEncoderTool({ dict }: UrlEncoderToolProps) {
             </div>
           </div>
           <textarea
-            className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-mono text-sm resize-none"
+            className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all font-mono text-sm resize-none`}
             rows={6}
             value={output}
             readOnly

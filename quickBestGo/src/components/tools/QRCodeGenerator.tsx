@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { Download, QrCode } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 const DANGEROUS_PROTOCOLS = ['javascript', 'data', 'vbscript', 'file'];
 
@@ -26,10 +27,11 @@ interface QRCodeGeneratorProps {
     btn_download: string;
     label_qr_code: string;
     error_dangerous_url: string;
-  }
+  };
+  theme: CategoryTheme;
 }
 
-const QRCodeGenerator = ({ dict }: QRCodeGeneratorProps) => {
+const QRCodeGenerator = ({ dict, theme }: QRCodeGeneratorProps) => {
   const [text, setText] = useState<string>('https://example.com');
   const qrRef = useRef<HTMLDivElement>(null);
   const isDangerous = hasDangerousScheme(text);
@@ -62,14 +64,16 @@ const QRCodeGenerator = ({ dict }: QRCodeGeneratorProps) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <label htmlFor="qr-input" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
               {dict.label_enter_text}
             </label>
             <textarea
+              id="qr-input"
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder={dict.placeholder_text}
-              className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all min-h-[120px] text-gray-900 dark:text-gray-100"
+              maxLength={2000}
+              className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 ${theme.ring} outline-none transition-all min-h-[120px] text-gray-900 dark:text-gray-100`}
             />
           </div>
 
@@ -82,7 +86,7 @@ const QRCodeGenerator = ({ dict }: QRCodeGeneratorProps) => {
           <button
             onClick={downloadQRCode}
             disabled={!text || isDangerous}
-            className="w-full py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 disabled:opacity-50 disabled:active:scale-100 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`w-full py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 disabled:opacity-50 disabled:active:scale-100 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             <Download size={20} />
             {dict.btn_download}

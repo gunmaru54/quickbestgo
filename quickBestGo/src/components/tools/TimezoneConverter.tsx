@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowLeftRight } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface TimezoneConverterProps {
   dict: {
@@ -15,6 +16,7 @@ interface TimezoneConverterProps {
     error_invalid: string;
   };
   lang: string;
+  theme: CategoryTheme;
 }
 
 const TIMEZONE_OPTIONS = [
@@ -144,7 +146,7 @@ function convertTime(timeStr: string, fromTz: string, toTz: string): string {
   }
 }
 
-const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
+const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
   const [fromTz, setFromTz] = useState(getUserTimezone());
   const [toTz, setToTz] = useState('UTC');
   const [inputTime, setInputTime] = useState(getCurrentLocalTime());
@@ -202,7 +204,7 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
             <select
               value={fromTz}
               onChange={(e) => { setFromTz(e.target.value); setConvertedTime(''); }}
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {TIMEZONE_OPTIONS.map(opt => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -217,7 +219,7 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
               type="time"
               value={inputTime}
               onChange={(e) => { setInputTime(e.target.value); setConvertedTime(''); }}
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
 
@@ -239,7 +241,7 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
             <select
               value={toTz}
               onChange={(e) => { setToTz(e.target.value); setConvertedTime(''); }}
-              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {TIMEZONE_OPTIONS.map(opt => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -250,7 +252,7 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
           {/* Convert button */}
           <button
             onClick={handleConvert}
-            className="w-full py-4 px-6 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`w-full py-4 px-6 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             {dict.btn_convert}
           </button>
@@ -262,11 +264,11 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
 
           {/* Result */}
           {convertedTime && !error && (
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-900/30 rounded-2xl p-6 text-center animate-in fade-in zoom-in duration-300">
+            <div className={`${theme.accentBg} border ${theme.accentBorder} rounded-2xl p-6 text-center animate-in fade-in zoom-in duration-300`}>
               <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
                 {inputTime} ({TIMEZONE_OPTIONS.find(o => o.value === fromTz)?.label ?? fromTz})
               </p>
-              <p className="text-4xl font-black text-blue-600 dark:text-blue-400 tabular-nums">{convertedTime}</p>
+              <p className={`text-4xl font-black ${theme.accent} tabular-nums`}>{convertedTime}</p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 {TIMEZONE_OPTIONS.find(o => o.value === toTz)?.label ?? toTz}
               </p>
@@ -284,10 +286,10 @@ const TimezoneConverter = ({ dict }: TimezoneConverterProps) => {
           {WORLD_CLOCKS.map(({ city, tz }) => (
             <div
               key={tz}
-              className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30"
+              className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder}`}
             >
               <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">{city}</p>
-              <p className="text-xl font-black text-blue-600 dark:text-blue-400 tabular-nums">{formatTime(now, tz)}</p>
+              <p className={`text-xl font-black ${theme.accent} tabular-nums`}>{formatTime(now, tz)}</p>
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{formatDate(now, tz)}</p>
             </div>
           ))}

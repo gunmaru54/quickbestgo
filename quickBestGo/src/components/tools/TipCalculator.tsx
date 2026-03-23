@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface TipCalculatorProps {
   dict: {
@@ -15,6 +16,7 @@ interface TipCalculatorProps {
     result_per_person: string;
     error_invalid: string;
   };
+  theme: CategoryTheme;
 }
 
 interface Result {
@@ -25,7 +27,7 @@ interface Result {
 
 const PRESET_TIPS = [10, 15, 18, 20, 25];
 
-const TipCalculator = ({ dict }: TipCalculatorProps) => {
+const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   const [bill, setBill] = useState('');
   const [tipPercent, setTipPercent] = useState<number>(15);
   const [customTip, setCustomTip] = useState('');
@@ -87,7 +89,7 @@ const TipCalculator = ({ dict }: TipCalculatorProps) => {
             value={bill}
             onChange={(e) => setBill(e.target.value)}
             placeholder="50.00"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -100,7 +102,7 @@ const TipCalculator = ({ dict }: TipCalculatorProps) => {
                 onClick={() => { setTipPercent(pct); setIsCustom(false); }}
                 className={`flex-1 min-w-[52px] py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 ${
                   !isCustom && tipPercent === pct
-                    ? 'bg-blue-600 dark:bg-blue-700 text-white shadow-md shadow-blue-200 dark:shadow-none'
+                    ? `${theme.primaryBtn} text-white shadow-md ${theme.shadow} dark:shadow-none`
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
@@ -116,7 +118,7 @@ const TipCalculator = ({ dict }: TipCalculatorProps) => {
               placeholder="Custom"
               className={`flex-1 min-w-[72px] px-3 py-2.5 rounded-xl text-sm font-bold text-center border transition-all focus:outline-none ${
                 isCustom
-                  ? 'bg-blue-600 dark:bg-blue-700 text-white border-blue-600 dark:border-blue-700 placeholder-blue-200'
+                  ? `${theme.primaryBtn} text-white border-transparent placeholder-white/50`
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-100 dark:border-gray-800'
               }`}
             />
@@ -131,7 +133,7 @@ const TipCalculator = ({ dict }: TipCalculatorProps) => {
             value={people}
             onChange={(e) => setPeople(e.target.value)}
             placeholder="1"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -156,9 +158,9 @@ const TipCalculator = ({ dict }: TipCalculatorProps) => {
               { label: dict.result_total, value: `$${fmt(result.total)}`, color: 'blue' },
               { label: dict.result_per_person, value: `$${fmt(result.perPerson)}`, color: 'blue' },
             ].map((item) => (
-              <div key={item.label} className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30">
-                <span className="block text-lg md:text-xl font-black text-blue-600 dark:text-blue-400">{item.value}</span>
-                <span className="text-xs font-bold text-blue-400 dark:text-blue-300 uppercase tracking-wider leading-tight">{item.label}</span>
+              <div key={item.label} className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder}`}>
+                <span className={`block text-lg md:text-xl font-black ${theme.accent}`}>{item.value}</span>
+                <span className={`text-xs font-bold ${theme.accentLight} uppercase tracking-wider leading-tight`}>{item.label}</span>
               </div>
             ))}
           </div>

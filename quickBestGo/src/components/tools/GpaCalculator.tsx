@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { GraduationCap, Plus, X, RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface GpaCalculatorProps {
   dict: {
@@ -18,6 +19,7 @@ interface GpaCalculatorProps {
     error_no_courses: string;
     error_invalid_credits: string;
   };
+  theme: CategoryTheme;
 }
 
 interface Course {
@@ -68,7 +70,7 @@ let nextId = 4;
 
 const createCourse = (id: number): Course => ({ id, name: '', grade: '4.0', credits: '3' });
 
-const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
+const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
   const [courses, setCourses] = useState<Course[]>([
     createCourse(1),
     createCourse(2),
@@ -147,12 +149,12 @@ const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
                 value={course.name}
                 onChange={(e) => updateCourse(course.id, 'name', e.target.value)}
                 placeholder={dict.placeholder_course}
-                className="px-3 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600"
+                className={`px-3 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600`}
               />
               <select
                 value={course.grade}
                 onChange={(e) => updateCourse(course.id, 'grade', e.target.value)}
-                className="px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                className={`px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               >
                 {GRADES.map((g, i) => (
                   <option key={`${g.label}-${i}`} value={g.value}>{g.label} ({g.value})</option>
@@ -164,7 +166,7 @@ const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
                 step="0.5"
                 value={course.credits}
                 onChange={(e) => updateCourse(course.id, 'credits', e.target.value)}
-                className="px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm text-center focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                className={`px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm text-center focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
               <button
                 onClick={() => removeCourse(course.id)}
@@ -181,7 +183,7 @@ const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
         {/* Add Course */}
         <button
           onClick={addCourse}
-          className="w-full py-2.5 border-2 border-dashed border-gray-300 dark:border-gray-700 text-gray-500 dark:text-gray-400 rounded-xl hover:border-blue-400 dark:hover:border-blue-600 hover:text-blue-500 dark:hover:text-blue-400 font-semibold text-sm transition-all flex items-center justify-center gap-2"
+          className={`w-full py-2.5 border-2 border-dashed border-gray-300 dark:border-gray-700 text-gray-500 dark:text-gray-400 rounded-xl ${theme.hoverBorder} font-semibold text-sm transition-all flex items-center justify-center gap-2`}
         >
           <Plus size={16} />
           {dict.btn_add_course}
@@ -194,7 +196,7 @@ const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
         <div className="flex gap-2">
           <button
             onClick={calculate}
-            className="flex-grow py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`flex-grow py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             <GraduationCap size={20} />
             {dict.btn_calculate}
@@ -210,14 +212,14 @@ const GpaCalculator = ({ dict }: GpaCalculatorProps) => {
 
         {result && (
           <div className="space-y-3 animate-in fade-in zoom-in duration-300">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30">
-              <span className="block text-4xl font-black text-blue-600 dark:text-blue-400">
+            <div className={`${theme.accentBg} p-5 rounded-2xl text-center border ${theme.accentBorder}`}>
+              <span className={`block text-4xl font-black ${theme.accent}`}>
                 {result.gpa.toFixed(2)}
               </span>
-              <span className="block text-xl font-bold text-blue-400 dark:text-blue-300 mt-1">
+              <span className={`block text-xl font-bold ${theme.accentLight} mt-1`}>
                 {getLetterGrade(result.gpa)}
               </span>
-              <span className="text-sm font-bold text-blue-400 dark:text-blue-300 uppercase tracking-wider">{dict.result_gpa}</span>
+              <span className={`text-sm font-bold ${theme.accentLight} uppercase tracking-wider`}>{dict.result_gpa}</span>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl text-center border border-gray-100 dark:border-gray-700">

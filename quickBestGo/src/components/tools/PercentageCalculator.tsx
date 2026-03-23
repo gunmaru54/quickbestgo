@@ -70,16 +70,16 @@ const PercentageCalculator = ({ dict, lang }: PercentageCalculatorProps) => {
         <div className="flex flex-wrap items-center gap-2">
           {lang === 'ko' || lang === 'ja' ? (
             <>
-              <input type="number" value={baseA} onChange={(e) => setBaseA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="200" />
+              <input type="number" aria-label="base value" value={baseA} onChange={(e) => setBaseA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="200" />
               <span className="text-gray-700 dark:text-gray-300">{dict.label_of || 'of'}</span>
-              <input type="number" value={percentA} onChange={(e) => setPercentA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="15" />
+              <input type="number" aria-label="percentage" value={percentA} onChange={(e) => setPercentA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="15" />
               <span className="text-gray-700 dark:text-gray-300">{dict.label_percent || '%'}</span>
             </>
           ) : (
             <>
-              <input type="number" value={percentA} onChange={(e) => setPercentA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="15" />
+              <input type="number" aria-label="percentage" value={percentA} onChange={(e) => setPercentA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="15" />
               <span className="text-gray-700 dark:text-gray-300">{dict.label_percent || '%'} {dict.label_of || 'of'}</span>
-              <input type="number" value={baseA} onChange={(e) => setBaseA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="200" />
+              <input type="number" aria-label="base value" value={baseA} onChange={(e) => setBaseA(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="200" />
             </>
           )}
           <span className="text-gray-700 dark:text-gray-300">=</span>
@@ -91,9 +91,9 @@ const PercentageCalculator = ({ dict, lang }: PercentageCalculatorProps) => {
         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{dict.title_mode2 || '증가 계산'}</h3>
         <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">{dict.example_mode2 || '예: 200에서 15% 증가하면 230'}</div>
         <div className="flex flex-wrap items-center gap-2">
-          <input type="number" value={baseB} onChange={(e) => setBaseB(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="200" />
+          <input type="number" aria-label="base value" value={baseB} onChange={(e) => setBaseB(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="200" />
           <span className="text-gray-700 dark:text-gray-300">+</span>
-          <input type="number" value={percentB} onChange={(e) => setPercentB(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="15" />
+          <input type="number" aria-label="percentage" value={percentB} onChange={(e) => setPercentB(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="15" />
           <span className="text-gray-700 dark:text-gray-300">{dict.label_percent || '%'}</span>
           <span className="text-gray-700 dark:text-gray-300">=</span>
           <span className="font-semibold text-gray-900 dark:text-white">{resultB !== null ? formatNumber(resultB) : '-'}</span>
@@ -104,9 +104,9 @@ const PercentageCalculator = ({ dict, lang }: PercentageCalculatorProps) => {
         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{dict.title_mode3 || '감소 계산'}</h3>
         <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">{dict.example_mode3 || '예: 200에서 15% 감소하면 170'}</div>
         <div className="flex flex-wrap items-center gap-2">
-          <input type="number" value={baseC} onChange={(e) => setBaseC(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none" placeholder="200" />
+          <input type="number" aria-label="base value" value={baseC} onChange={(e) => setBaseC(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none" placeholder="200" />
           <span className="text-gray-700 dark:text-gray-300">-</span>
-          <input type="number" value={percentC} onChange={(e) => setPercentC(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none" placeholder="15" />
+          <input type="number" aria-label="percentage" value={percentC} onChange={(e) => setPercentC(e.target.value)} className="w-24 px-3 py-2 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none" placeholder="15" />
           <span className="text-gray-700 dark:text-gray-300">{dict.label_percent || '%'}</span>
           <span className="text-gray-700 dark:text-gray-300">=</span>
           <span className="font-semibold text-gray-900 dark:text-white">{resultC !== null ? formatNumber(resultC) : '-'}</span>

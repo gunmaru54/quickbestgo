@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { TrendingUp, RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface CompoundInterestCalculatorProps {
   dict: {
@@ -21,6 +22,7 @@ interface CompoundInterestCalculatorProps {
     result_interest: string;
     error_invalid: string;
   };
+  theme: CategoryTheme;
 }
 
 interface Result {
@@ -37,7 +39,7 @@ const FREQUENCIES: Record<string, number> = {
   daily: 365,
 };
 
-const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) => {
+const CompoundInterestCalculator = ({ dict, theme }: CompoundInterestCalculatorProps) => {
   const [principal, setPrincipal] = useState('');
   const [rate, setRate] = useState('');
   const [frequency, setFrequency] = useState('monthly');
@@ -97,7 +99,7 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
             value={principal}
             onChange={(e) => setPrincipal(e.target.value)}
             placeholder="10000"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -110,7 +112,7 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
             value={rate}
             onChange={(e) => setRate(e.target.value)}
             placeholder="5"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -119,7 +121,7 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
           <select
             value={frequency}
             onChange={(e) => setFrequency(e.target.value)}
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           >
             {freqOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -135,7 +137,7 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
             value={years}
             onChange={(e) => setYears(e.target.value)}
             placeholder="10"
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
@@ -146,7 +148,7 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
         <div className="flex gap-2">
           <button
             onClick={calculate}
-            className="flex-grow py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`flex-grow py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             <TrendingUp size={20} />
             {dict.btn_calculate}
@@ -162,11 +164,11 @@ const CompoundInterestCalculator = ({ dict }: CompoundInterestCalculatorProps) =
 
         {result && (
           <div className="space-y-3 animate-in fade-in zoom-in duration-300">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30">
-              <span className="block text-3xl md:text-4xl font-black text-blue-600 dark:text-blue-400">
+            <div className={`${theme.accentBg} p-5 rounded-2xl text-center border ${theme.accentBorder}`}>
+              <span className={`block text-3xl md:text-4xl font-black ${theme.accent}`}>
                 ${fmt(result.futureValue)}
               </span>
-              <span className="text-sm font-bold text-blue-400 dark:text-blue-300 uppercase tracking-wider">{dict.result_final}</span>
+              <span className={`text-sm font-bold ${theme.accentLight} uppercase tracking-wider`}>{dict.result_final}</span>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl text-center border border-gray-100 dark:border-gray-700">

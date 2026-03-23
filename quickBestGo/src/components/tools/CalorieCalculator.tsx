@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Flame } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface CalorieCalculatorProps {
   dict: {
@@ -28,6 +29,7 @@ interface CalorieCalculatorProps {
     label_surplus: string;
     error_invalid: string;
   };
+  theme: CategoryTheme;
 }
 
 const ACTIVITY_FACTORS = [1.2, 1.375, 1.55, 1.725, 1.9];
@@ -39,7 +41,7 @@ interface CalorieResult {
   gain: number;
 }
 
-export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
+export default function CalorieCalculator({ dict, theme }: CalorieCalculatorProps) {
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [age, setAge] = useState('');
   const [height, setHeight] = useState('');
@@ -98,8 +100,8 @@ export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
                 onClick={() => setGender(g)}
                 className={`py-3 rounded-xl font-semibold border transition-all ${
                   gender === g
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-blue-400'
+                    ? theme.activeSolid
+                    : `bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 ${theme.hoverBorder}`
                 }`}
               >
                 {g === 'male' ? dict.label_male : dict.label_female}
@@ -123,7 +125,7 @@ export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
                 onChange={(e) => setter(e.target.value)}
                 placeholder={placeholder}
                 min="1"
-                className="w-full px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                className={`w-full px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
             </div>
           ))}
@@ -135,7 +137,7 @@ export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
           <select
             value={activity}
             onChange={(e) => setActivity(Number(e.target.value))}
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           >
             {activityLabels.map((label, i) => (
               <option key={i} value={i}>{label}</option>
@@ -149,7 +151,7 @@ export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
         {/* Button */}
         <button
           onClick={calculate}
-          className="w-full py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+          className={`w-full py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
         >
           <Flame size={20} />
           {dict.btn_calculate}
@@ -168,9 +170,9 @@ export default function CalorieCalculator({ dict }: CalorieCalculatorProps) {
             </div>
 
             {/* Maintenance */}
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 flex justify-between items-center border border-blue-100 dark:border-blue-900/30">
-              <p className="text-sm font-bold text-blue-700 dark:text-blue-300">{dict.label_maintenance}</p>
-              <span className="text-xl font-black text-blue-600 dark:text-blue-400">{result.maintenance.toLocaleString()} <span className="text-sm font-medium">{dict.label_kcal_day}</span></span>
+            <div className={`${theme.accentBg} rounded-2xl p-4 flex justify-between items-center border ${theme.accentBorder}`}>
+              <p className={`text-sm font-bold ${theme.accent}`}>{dict.label_maintenance}</p>
+              <span className={`text-xl font-black ${theme.accent}`}>{result.maintenance.toLocaleString()} <span className="text-sm font-medium">{dict.label_kcal_day}</span></span>
             </div>
 
             {/* Loss / Gain */}

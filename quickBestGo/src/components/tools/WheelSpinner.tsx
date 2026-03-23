@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { RotateCw, Trash2 } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface WheelSpinnerProps {
   dict: {
@@ -11,7 +12,8 @@ interface WheelSpinnerProps {
     btn_spin: string;
     label_winner: string;
     error_min_options: string;
-  }
+  };
+  theme: CategoryTheme;
 }
 
 const COLORS = [
@@ -24,7 +26,7 @@ const COLORS = [
 const sanitizeItem = (item: string): string =>
   item.replace(/[\x00-\x1F\x7F<>&"']/g, '').trim().substring(0, 100);
 
-const WheelSpinner = ({ dict }: WheelSpinnerProps) => {
+const WheelSpinner = ({ dict, theme }: WheelSpinnerProps) => {
   const [itemsInput, setItemsInput] = useState<string>(dict.placeholder_options);
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<string | null>(null);
@@ -153,20 +155,23 @@ const WheelSpinner = ({ dict }: WheelSpinnerProps) => {
       <div className="space-y-6">
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_enter_options}</label>
-            <button 
+            <label htmlFor="wheel-options" className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_enter_options}</label>
+            <button
               onClick={() => setItemsInput('')}
+              aria-label="Clear options"
               className="text-gray-400 hover:text-red-500 transition-colors"
             >
               <Trash2 size={16} />
             </button>
           </div>
           <textarea
+            id="wheel-options"
             value={itemsInput}
             onChange={(e) => setItemsInput(e.target.value)}
             rows={4}
+            maxLength={10000}
             placeholder={dict.placeholder_options}
-            className="w-full px-4 py-3 border dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-medium min-h-[120px] bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            className={`w-full px-4 py-3 border dark:border-gray-700 rounded-xl focus:ring-2 ${theme.ring} focus:outline-none transition-all font-medium min-h-[120px] bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100`}
           />
         </div>
 
@@ -183,16 +188,16 @@ const WheelSpinner = ({ dict }: WheelSpinnerProps) => {
         <button
           onClick={spin}
           disabled={isSpinning || items.length < 2}
-          className="w-full py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 disabled:opacity-50 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+          className={`w-full py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 disabled:opacity-50 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
         >
           <RotateCw size={20} className={isSpinning ? 'animate-spin' : ''} />
           {isSpinning ? dict.btn_spinning : dict.btn_spin}
         </button>
 
         {winner && !isSpinning && (
-          <div className="text-center py-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl border border-blue-100 dark:border-blue-900/30 animate-in zoom-in duration-300">
-            <span className="text-sm text-blue-400 dark:text-blue-300 block mb-1 font-bold uppercase tracking-widest">{dict.label_winner}</span>
-            <div className="text-3xl font-black text-blue-600 dark:text-blue-400">
+          <div className={`text-center py-6 ${theme.accentBg} rounded-2xl border ${theme.accentBorder} animate-in zoom-in duration-300`}>
+            <span className={`text-sm ${theme.accentLight} block mb-1 font-bold uppercase tracking-widest`}>{dict.label_winner}</span>
+            <div className={`text-3xl font-black ${theme.accent}`}>
               {winner}
             </div>
           </div>

@@ -63,7 +63,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           </p>
           <div className="flex justify-center gap-8">
             {[
-              { num: '17', label: dict.home.stat_tools },
+              { num: '20', label: dict.home.stat_tools },
               { num: '5',  label: dict.home.stat_languages },
               { num: '0',  label: dict.home.stat_signup },
             ].map(s => (

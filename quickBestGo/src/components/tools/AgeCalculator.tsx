@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Calendar, RefreshCcw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface AgeResult {
   years: number;
@@ -19,9 +20,10 @@ interface AgeCalculatorProps {
     tooltip_reset: string;
   };
   lang: string;
+  theme: CategoryTheme;
 }
 
-const AgeCalculator = ({ dict, lang }: AgeCalculatorProps) => {
+const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
   const [birthDate, setBirthDate] = useState<string>('');
   const [result, setResult] = useState<AgeResult | null>(null);
 
@@ -64,14 +66,14 @@ const AgeCalculator = ({ dict, lang }: AgeCalculatorProps) => {
             lang={lang}
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
-            className="w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
 
         <div className="flex gap-2">
           <button
             onClick={calculateAge}
-            className="flex-grow py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+            className={`flex-grow py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
           >
             <Calendar size={20} />
             {dict.btn_calculate}
@@ -92,9 +94,9 @@ const AgeCalculator = ({ dict, lang }: AgeCalculatorProps) => {
               { label: dict.label_months, value: result.months },
               { label: dict.label_days, value: result.days },
             ].map((item) => (
-              <div key={item.label} className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-2xl text-center border border-blue-100 dark:border-blue-900/30">
-                <span className="block text-2xl md:text-3xl font-black text-blue-600 dark:text-blue-400">{item.value}</span>
-                <span className="text-xs font-bold text-blue-400 dark:text-blue-300 uppercase tracking-wider">{item.label}</span>
+              <div key={item.label} className={`${theme.accentBg} p-4 rounded-2xl text-center border ${theme.accentBorder}`}>
+                <span className={`block text-2xl md:text-3xl font-black ${theme.accent}`}>{item.value}</span>
+                <span className={`text-xs font-bold ${theme.accentLight} uppercase tracking-wider`}>{item.label}</span>
               </div>
             ))}
           </div>

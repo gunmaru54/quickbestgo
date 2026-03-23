@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { Copy, Check } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface ColorConverterToolProps {
   dict: {
@@ -13,6 +14,7 @@ interface ColorConverterToolProps {
     btn_copy: string;
     copied: string;
   };
+  theme: CategoryTheme;
 }
 
 // Conversion helpers
@@ -82,7 +84,7 @@ function parseHsl(val: string): { h: number; s: number; l: number } | null {
 
 const DEFAULT_HEX = '#3B82F6';
 
-export default function ColorConverterTool({ dict }: ColorConverterToolProps) {
+export default function ColorConverterTool({ dict, theme }: ColorConverterToolProps) {
   const defaultRgb = hexToRgb(DEFAULT_HEX)!;
   const defaultHsl = rgbToHsl(defaultRgb.r, defaultRgb.g, defaultRgb.b);
 
@@ -201,7 +203,7 @@ export default function ColorConverterTool({ dict }: ColorConverterToolProps) {
               type="text"
               value={hex}
               onChange={(e) => handleHexChange(e.target.value)}
-              className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-mono text-sm"
+              className={`flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all font-mono text-sm`}
               placeholder="#RRGGBB"
             />
             <button
@@ -225,7 +227,7 @@ export default function ColorConverterTool({ dict }: ColorConverterToolProps) {
               type="text"
               value={rgb}
               onChange={(e) => handleRgbChange(e.target.value)}
-              className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-mono text-sm"
+              className={`flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all font-mono text-sm`}
               placeholder="rgb(0, 0, 0)"
             />
             <button
@@ -249,7 +251,7 @@ export default function ColorConverterTool({ dict }: ColorConverterToolProps) {
               type="text"
               value={hsl}
               onChange={(e) => handleHslChange(e.target.value)}
-              className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-mono text-sm"
+              className={`flex-1 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all font-mono text-sm`}
               placeholder="hsl(0, 0%, 0%)"
             />
             <button

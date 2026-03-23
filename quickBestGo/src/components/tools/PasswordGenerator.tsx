@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { Copy, Check, RefreshCw } from 'lucide-react';
+import { CategoryTheme } from '@/lib/tools';
 
 interface PasswordGeneratorProps {
   dict: {
@@ -11,10 +12,11 @@ interface PasswordGeneratorProps {
     label_symbols: string;
     btn_generate: string;
     tooltip_copy: string;
-  }
+  };
+  theme: CategoryTheme;
 }
 
-const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
+const PasswordGenerator = ({ dict, theme }: PasswordGeneratorProps) => {
   const [length, setLength] = useState<number>(16);
   const [includeUppercase, setIncludeUppercase] = useState<boolean>(true);
   const [includeNumbers, setIncludeNumbers] = useState<boolean>(true);
@@ -63,7 +65,7 @@ const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
           </div>
           <button
             onClick={copyToClipboard}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-2 hover:bg-white dark:hover:bg-gray-700 rounded-lg transition-colors text-blue-600 dark:text-blue-400"
+            className={`absolute right-3 top-1/2 -translate-y-1/2 p-2 hover:bg-white dark:hover:bg-gray-700 rounded-lg transition-colors ${theme.accent}`}
             title={dict.tooltip_copy}
           >
             {copied ? <Check size={20} /> : <Copy size={20} />}
@@ -82,7 +84,7 @@ const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
               max="50"
               value={length}
               onChange={(e) => setLength(Number(e.target.value))}
-              className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+              className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-current"
             />
           </div>
 
@@ -101,7 +103,7 @@ const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
                   type="checkbox"
                   checked={option.state}
                   onChange={(e) => option.setState(e.target.checked)}
-                  className="w-6 h-6 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 text-blue-600 focus:ring-blue-500"
+                  className={`w-6 h-6 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 ${theme.accent} ${theme.ring}`}
                 />
               </label>
             ))}
@@ -110,7 +112,7 @@ const PasswordGenerator = ({ dict }: PasswordGeneratorProps) => {
 
         <button
           onClick={generatePassword}
-          className="w-full py-4 bg-blue-600 dark:bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg shadow-blue-200 dark:shadow-none"
+          className={`w-full py-4 ${theme.primaryBtn} text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-lg shadow-lg ${theme.shadow} dark:shadow-none`}
         >
           <RefreshCw size={20} />
           {dict.btn_generate}

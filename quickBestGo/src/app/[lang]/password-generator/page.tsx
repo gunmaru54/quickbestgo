@@ -3,6 +3,7 @@ import PasswordGenerator from '@/components/tools/PasswordGenerator';
 import ToolPageTemplate from '@/components/ToolPageTemplate';
 import { getDictionary, getStaticParams, Locale } from '@/lib/i18n';
 import { constructMetadata, generateWebApplicationSchema } from '@/lib/seo';
+import { TOOLS, CATEGORY_THEMES } from '@/lib/tools';
 
 export { getStaticParams as generateStaticParams };
 
@@ -15,12 +16,16 @@ export default async function PasswordGeneratorPage({ params: { lang } }: { para
   const dict = await getDictionary(lang);
   const d = dict.password_generator;
   const schemas = generateWebApplicationSchema({ name: d.title, description: d.meta_description, lang, slug: 'password-generator', category: 'SecurityApplication' });
+  const toolConfig = TOOLS.find(t => t.slug === 'password-generator')!;
+  const theme = CATEGORY_THEMES[toolConfig.category];
 
   return (
     <ToolPageTemplate
       schemas={schemas}
       title={d.title}
-      toolComponent={<PasswordGenerator dict={d} />}
+      theme={theme}
+      icon={<toolConfig.icon size={20} />}
+      toolComponent={<PasswordGenerator dict={d} theme={theme} />}
       about={{ title: d.about_title, p1: d.about_p1, p2: d.about_p2, p3: d.about_p3 }}
     />
   );
