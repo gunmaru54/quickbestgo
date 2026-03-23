@@ -103,6 +103,43 @@ quickBestGo/src/
 - `quickBestGo/public/ads.txt`의 publisher ID와 layout.tsx의 `ca-pub-*` 값이 일치해야 함
 - CSP 헤더는 `quickBestGo/public/_headers`에서 관리 (Cloudflare Pages가 읽음)
 
+### 로컬 개발 서버
+
+**서버 시작**:
+```bash
+cd quickBestGo
+npm run dev -- --port 3000
+```
+
+**반복 발생하는 캐시 에러 처리**:
+
+아래 에러가 발생하면 `.next` 캐시 불일치 문제다. 코드 변경 후 chunk 번호가 바뀌었는데 이전 캐시가 남아 충돌하는 Next.js의 알려진 문제.
+
+```
+Error: Cannot find module './XXXX.js'
+Require stack:
+- .next\server\webpack-runtime.js
+...
+```
+
+**조치 순서** (반드시 이 순서대로):
+1. 3000 포트 프로세스 강제 종료
+   ```bash
+   netstat -ano | grep ":3000" | awk '{print $5}' | sort -u | xargs -I{} taskkill //PID {} //F
+   ```
+2. `.next` 캐시 삭제
+   ```bash
+   rm -rf quickBestGo/.next
+   ```
+3. 서버 재시작
+   ```bash
+   cd quickBestGo && npm run dev -- --port 3000
+   ```
+
+> Claude가 이 에러를 만나면 위 3단계를 즉시 실행할 것. 원인 설명보다 조치 우선.
+
+---
+
 ### 배포 프로세스
 
 **브랜치 전략** (1인 프로젝트 기준):
