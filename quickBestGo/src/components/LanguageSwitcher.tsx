@@ -12,17 +12,15 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
   const handleLanguageChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     if (!pathname) return;
-    
+
     const segments = pathname.split('/');
-    // Check if first segment is a locale
     const firstSegment = segments[1];
     if (locales.includes(firstSegment as Locale)) {
       segments[1] = newLocale;
     } else {
-      // If it's something like /sitemap.xml (though middleware should handle)
       segments.splice(1, 0, newLocale);
     }
-    
+
     const newPathname = segments.join('/') || `/${newLocale}`;
     router.push(newPathname);
   };
@@ -36,17 +34,33 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
   };
 
   return (
-    <div className="flex items-center gap-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg px-2 py-1 shadow-sm hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
-      <Globe size={16} className="text-gray-400 dark:text-gray-500" />
+    <div className="relative">
+      {/* 모바일: 언어 코드만 표시하는 compact 버튼 */}
+      <div className="flex sm:hidden items-center justify-center w-9 h-9 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-sm hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
+        <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
+          {currentLang.toUpperCase()}
+        </span>
+      </div>
+
+      {/* 데스크탑: Globe 아이콘 + 언어명 */}
+      <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg px-2 py-1 shadow-sm hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
+        <Globe size={16} className="text-gray-400 dark:text-gray-500" />
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-200 pr-1 whitespace-nowrap">
+          {languageNames[currentLang]}
+        </span>
+      </div>
+
+      {/* select overlay — 실제 변경 동작 처리 */}
       <select
         value={currentLang}
         onChange={handleLanguageChange}
-        className="text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 outline-none cursor-pointer pr-1"
+        aria-label="Language"
+        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
         style={{ colorScheme: 'light dark' }}
       >
         {locales.map((locale) => (
-          <option 
-            key={locale} 
+          <option
+            key={locale}
             value={locale}
             className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200"
           >
