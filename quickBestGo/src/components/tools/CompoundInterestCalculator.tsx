@@ -88,6 +88,17 @@ const COMPARISON_RATES = [3, 5, 7, 10];
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
+function toCommaDisplay(raw: string): string {
+  if (!raw) return '';
+  const [intPart, decPart] = raw.split('.');
+  const formatted = parseInt(intPart || '0', 10).toLocaleString();
+  return decPart !== undefined ? `${formatted}.${decPart}` : formatted;
+}
+
+function fromCommaDisplay(display: string): string {
+  return display.replace(/,/g, '');
+}
+
 // ── Calculation ────────────────────────────────────────────────────────────
 function computeResult(
   P: number, r: number, n: number, t: number, PMT: number, inf: number,
@@ -359,8 +370,9 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
             </label>
             <div className="relative">
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 font-medium pointer-events-none select-none">{symbol}</span>
-              <input type="number" min="0" value={principal} onChange={(e) => setPrincipal(e.target.value)}
-                placeholder={PLACEHOLDER[currency]} maxLength={20} aria-label={`${dict.label_principal} (${currency})`}
+              <input type="text" inputMode="decimal" value={toCommaDisplay(principal)}
+                onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) setPrincipal(raw); }}
+                placeholder={toCommaDisplay(PLACEHOLDER[currency])} maxLength={25} aria-label={`${dict.label_principal} (${currency})`}
                 className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
             </div>
@@ -398,7 +410,8 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
               </label>
               <div className="relative">
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 font-medium pointer-events-none select-none text-sm">{symbol}</span>
-                <input type="number" min="0" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)}
+                <input type="text" inputMode="decimal" value={toCommaDisplay(monthlyContribution)}
+                  onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) setMonthlyContribution(raw); }}
                   placeholder="0" aria-label={dict.label_monthly_contribution}
                   className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
                 />
