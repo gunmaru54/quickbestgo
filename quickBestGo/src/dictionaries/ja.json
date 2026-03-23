@@ -264,7 +264,19 @@
     "response_title": "返信時間",
     "response_time": "通常、1〜3営業日以内にご返答いたします。",
     "feedback_title": "フィードバックとご提案",
-    "feedback_p1": "QuickBestGoを常に改善していきたいと考えています。新しいツールのアイデアや既存ツールの改善案がございましたら、ぜひご連絡ください。"
+    "feedback_p1": "QuickBestGoを常に改善していきたいと考えています。新しいツールのアイデアや既存ツールの改善案がございましたら、ぜひご連絡ください。",
+    "form_title": "お問い合わせフォーム",
+    "label_name": "お名前",
+    "label_email": "メールアドレス",
+    "label_message": "メッセージ",
+    "placeholder_name": "山田 太郎",
+    "placeholder_email": "example@email.com",
+    "placeholder_message": "お問い合わせ内容をご記入ください。",
+    "btn_submit": "送信する",
+    "btn_sending": "送信中...",
+    "success_title": "送信完了しました！",
+    "success_message": "お問い合わせありがとうございます。1〜3営業日以内にご返信いたします。",
+    "error_message": "送信に失敗しました。しばらくしてから再度お試しいただくか、メールでお問い合わせください。"
   },
   "privacy_policy_page": {
     "meta_title": "プライバシーポリシー - QuickBestGo",

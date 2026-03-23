@@ -264,7 +264,19 @@
     "response_title": "응답 시간",
     "response_time": "일반적으로 1~3 영업일 이내에 답변 드립니다.",
     "feedback_title": "피드백 및 제안",
-    "feedback_p1": "저희는 항상 QuickBestGo를 개선하고자 합니다. 새로운 도구에 대한 아이디어나 기존 도구 개선 제안이 있으시면 언제든지 연락해 주세요."
+    "feedback_p1": "저희는 항상 QuickBestGo를 개선하고자 합니다. 새로운 도구에 대한 아이디어나 기존 도구 개선 제안이 있으시면 언제든지 연락해 주세요.",
+    "form_title": "문의 양식",
+    "label_name": "이름",
+    "label_email": "이메일",
+    "label_message": "문의 내용",
+    "placeholder_name": "홍길동",
+    "placeholder_email": "example@email.com",
+    "placeholder_message": "문의하실 내용을 자유롭게 작성해 주세요.",
+    "btn_submit": "보내기",
+    "btn_sending": "전송 중...",
+    "success_title": "전송되었습니다!",
+    "success_message": "문의해 주셔서 감사합니다. 빠른 시일 내에 답변 드리겠습니다.",
+    "error_message": "전송에 실패했습니다. 잠시 후 다시 시도하거나 이메일로 직접 문의해 주세요."
   },
   "privacy_policy_page": {
     "meta_title": "개인정보처리방침 - QuickBestGo",

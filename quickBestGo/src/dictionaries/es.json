@@ -264,7 +264,19 @@
     "response_title": "Tiempo de Respuesta",
     "response_time": "Normalmente respondemos en 1 a 3 días hábiles.",
     "feedback_title": "Comentarios y Sugerencias",
-    "feedback_p1": "Siempre estamos buscando mejorar QuickBestGo. Si tienes ideas para nuevas herramientas o mejoras a las existentes, no dudes en contactarnos."
+    "feedback_p1": "Siempre estamos buscando mejorar QuickBestGo. Si tienes ideas para nuevas herramientas o mejoras a las existentes, no dudes en contactarnos.",
+    "form_title": "Enviar un Mensaje",
+    "label_name": "Nombre",
+    "label_email": "Correo electrónico",
+    "label_message": "Mensaje",
+    "placeholder_name": "Juan García",
+    "placeholder_email": "ejemplo@correo.com",
+    "placeholder_message": "Escribe tu mensaje aquí...",
+    "btn_submit": "Enviar",
+    "btn_sending": "Enviando...",
+    "success_title": "¡Mensaje Enviado!",
+    "success_message": "Gracias por contactarnos. Te responderemos en 1–3 días hábiles.",
+    "error_message": "Algo salió mal. Por favor intenta de nuevo o escríbenos directamente."
   },
   "privacy_policy_page": {
     "meta_title": "Política de Privacidad - QuickBestGo",
