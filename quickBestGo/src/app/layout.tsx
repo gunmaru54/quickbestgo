@@ -43,6 +43,15 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <head>
         <meta name="google-adsense-account" content="ca-pub-6274863861710693" />
+        {/* Google Analytics */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7LSNG1GKJ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G7LSNG1GKJ');`,
+          }}
+        />
+        {/* Google AdSense */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
           async
