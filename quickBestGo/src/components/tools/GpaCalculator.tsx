@@ -133,7 +133,7 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
     <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
       <div className="space-y-4">
         {/* Header row */}
-        <div className="grid grid-cols-[1fr_80px_70px_32px] gap-2">
+        <div className="grid grid-cols-[1fr_72px_56px_28px] gap-1.5">
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_course}</span>
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_grade}</span>
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_credits}</span>
@@ -143,7 +143,7 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
         {/* Course rows */}
         <div className="space-y-2">
           {courses.map((course) => (
-            <div key={course.id} className="grid grid-cols-[1fr_80px_70px_32px] gap-2 items-center">
+            <div key={course.id} className="grid grid-cols-[1fr_72px_56px_28px] gap-1.5 items-center">
               <input
                 type="text"
                 value={course.name}

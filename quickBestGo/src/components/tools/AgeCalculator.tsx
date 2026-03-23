@@ -66,6 +66,8 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
             lang={lang}
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
+            aria-label={dict.label_birthdate}
+            style={{ colorScheme: 'light dark' }}
             className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>

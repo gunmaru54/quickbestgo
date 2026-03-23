@@ -156,6 +156,8 @@ const DaysBetweenDates = ({ dict, lang, theme }: DaysBetweenDatesProps) => {
               lang={lang}
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
+              aria-label={dict.label_start}
+              style={{ colorScheme: 'light dark' }}
               className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
@@ -166,6 +168,8 @@ const DaysBetweenDates = ({ dict, lang, theme }: DaysBetweenDatesProps) => {
               lang={lang}
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
+              aria-label={dict.label_end}
+              style={{ colorScheme: 'light dark' }}
               className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
