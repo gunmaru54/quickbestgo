@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Calendar, RefreshCcw } from 'lucide-react';
 import { CategoryTheme } from '@/lib/tools';
 
@@ -26,9 +26,16 @@ interface AgeCalculatorProps {
 const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
   const [birthDate, setBirthDate] = useState<string>('');
   const [result, setResult] = useState<AgeResult | null>(null);
+  const [dateError, setDateError] = useState(false);
+  const dateRef = useRef<HTMLInputElement>(null);
 
   const calculateAge = () => {
-    if (!birthDate) return;
+    if (!birthDate) {
+      setDateError(true);
+      dateRef.current?.focus();
+      return;
+    }
+    setDateError(false);
 
     const today = new Date();
     const birth = new Date(birthDate);
@@ -54,6 +61,7 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
   const reset = () => {
     setBirthDate('');
     setResult(null);
+    setDateError(false);
   };
 
   return (
@@ -62,13 +70,14 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_birthdate}</label>
           <input
+            ref={dateRef}
             type="date"
             lang={lang}
             value={birthDate}
-            onChange={(e) => setBirthDate(e.target.value)}
+            onChange={(e) => { setBirthDate(e.target.value); if (dateError) setDateError(false); }}
             aria-label={dict.label_birthdate}
             style={{ colorScheme: 'light dark' }}
-            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${dateError ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
           />
         </div>
 

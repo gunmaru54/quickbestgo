@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { RefreshCcw } from 'lucide-react';
 import { CategoryTheme } from '@/lib/tools';
 import { useCurrency } from '@/components/CurrencyProvider';
@@ -66,6 +66,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   const [people, setPeople] = useState('1');
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState('');
+  const billRef = useRef<HTMLInputElement>(null);
 
   const presetTips = PRESET_TIPS[currency];
   const symbol = CURRENCIES[currency].symbol;
@@ -145,6 +146,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
               {symbol}
             </span>
             <input
+              ref={billRef}
               type="text"
               inputMode="decimal"
               value={toCommaDisplay(bill)}
@@ -152,7 +154,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
               placeholder="50.00"
               maxLength={20}
               aria-label={`${dict.label_bill} (${currency})`}
-              className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+              className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${error ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
             />
           </div>
         </div>
@@ -207,10 +209,6 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
             className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
           />
         </div>
-
-        {error && (
-          <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
-        )}
 
         <div className="flex justify-end">
           <button

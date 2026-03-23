@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Activity, RefreshCcw } from 'lucide-react';
 import { CategoryTheme } from '@/lib/tools';
 
@@ -83,25 +83,37 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
   const [heightIn, setHeightIn] = useState('');
   const [weight, setWeight] = useState('');
   const [bmi, setBmi] = useState<number | null>(null);
-  const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, boolean>>({});
+  const heightCmRef = useRef<HTMLInputElement>(null);
+  const heightFtRef = useRef<HTMLInputElement>(null);
+  const weightRef = useRef<HTMLInputElement>(null);
 
   const calculate = () => {
-    setError('');
-    let heightM: number;
-    let weightKg: number;
+    const errors: Record<string, boolean> = {};
+    let heightM = 0;
+    let weightKg = 0;
 
     if (unit === 'metric') {
-      heightM = parseFloat(heightCm) / 100;
+      const hCm = parseFloat(heightCm);
+      if (!hCm || hCm <= 0) errors.height = true;
+      heightM = hCm / 100;
       weightKg = parseFloat(weight);
     } else {
       const ft = parseFloat(heightFt) || 0;
       const inches = parseFloat(heightIn) || 0;
+      if (!ft && !inches) errors.height = true;
       heightM = (ft * 12 + inches) * 0.0254;
       weightKg = parseFloat(weight) * 0.453592;
     }
 
-    if (!heightM || !weightKg || heightM <= 0 || weightKg <= 0) {
-      setError(dict.error_invalid);
+    const wRaw = parseFloat(weight);
+    if (!wRaw || wRaw <= 0) errors.weight = true;
+
+    setFieldErrors(errors);
+
+    if (Object.keys(errors).length > 0) {
+      if (errors.height) (unit === 'metric' ? heightCmRef : heightFtRef).current?.focus();
+      else if (errors.weight) weightRef.current?.focus();
       setBmi(null);
       return;
     }
@@ -115,7 +127,7 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
     setHeightIn('');
     setWeight('');
     setBmi(null);
-    setError('');
+    setFieldErrors({});
   };
 
   const switchUnit = (next: Unit) => {
@@ -152,13 +164,14 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
               {dict.label_height_cm}
             </label>
             <input
+              ref={heightCmRef}
               type="number"
               value={heightCm}
-              onChange={(e) => setHeightCm(e.target.value)}
+              onChange={(e) => { setHeightCm(e.target.value); if (fieldErrors.height) setFieldErrors(prev => ({ ...prev, height: false })); }}
               placeholder="170"
               min="50"
               max="300"
-              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.height ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
             />
           </div>
         ) : (
@@ -168,22 +181,23 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
             </label>
             <div className="flex gap-3">
               <input
+                ref={heightFtRef}
                 type="number"
                 value={heightFt}
-                onChange={(e) => setHeightFt(e.target.value)}
+                onChange={(e) => { setHeightFt(e.target.value); if (fieldErrors.height) setFieldErrors(prev => ({ ...prev, height: false })); }}
                 placeholder="5"
                 min="1"
                 max="9"
-                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.height ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
               />
               <input
                 type="number"
                 value={heightIn}
-                onChange={(e) => setHeightIn(e.target.value)}
+                onChange={(e) => { setHeightIn(e.target.value); if (fieldErrors.height) setFieldErrors(prev => ({ ...prev, height: false })); }}
                 placeholder="7"
                 min="0"
                 max="11"
-                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.height ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
               />
             </div>
           </div>
@@ -195,19 +209,15 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
             {unit === 'metric' ? dict.label_weight_kg : dict.label_weight_lb}
           </label>
           <input
+            ref={weightRef}
             type="number"
             value={weight}
-            onChange={(e) => setWeight(e.target.value)}
+            onChange={(e) => { setWeight(e.target.value); if (fieldErrors.weight) setFieldErrors(prev => ({ ...prev, weight: false })); }}
             placeholder={unit === 'metric' ? '65' : '143'}
             min="1"
-            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.weight ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
           />
         </div>
-
-        {/* Error */}
-        {error && (
-          <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
-        )}
 
         {/* Buttons */}
         <div className="flex gap-2">

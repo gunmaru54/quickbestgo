@@ -170,10 +170,13 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
   const [monthlyContribution, setMonthlyContribution] = useState('0');
   const [inflationRate, setInflationRate] = useState('2.5');
   const [result, setResult] = useState<Result | null>(null);
-  const [error, setError] = useState('');
   const [copyState, setCopyState] = useState<'result' | 'link' | null>(null);
   const chartRef = useRef<HTMLCanvasElement>(null);
   const chartInstance = useRef<Chart | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, boolean>>({});
+  const principalRef = useRef<HTMLInputElement>(null);
+  const rateRef = useRef<HTMLInputElement>(null);
+  const yearsRef = useRef<HTMLInputElement>(null);
   const symbol = CURRENCIES[currency].symbol;
 
   const validate = useCallback((P: number, r: number, t: number) =>
@@ -275,19 +278,29 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
     const PMT = parseFloat(monthlyContribution) || 0;
     const inf = parseFloat(inflationRate) / 100;
 
-    if (!validate(P, r, t)) {
-      setError(dict.error_invalid);
+    const errors = {
+      principal: !(P > 0) || !Number.isFinite(P),
+      rate: !(r > 0) || !Number.isFinite(r),
+      years: !(t > 0) || t > 50 || !Number.isFinite(t),
+    };
+    setFieldErrors(errors);
+
+    if (Object.values(errors).some(Boolean)) {
+      const refs = { principal: principalRef, rate: rateRef, years: yearsRef };
+      const firstKey = (Object.keys(errors) as Array<keyof typeof errors>).find(k => errors[k]);
+      if (firstKey) refs[firstKey].current?.focus();
       setResult(null);
       return;
     }
-    setError('');
+
+    setFieldErrors({});
     setResult(computeResult(P, r, n, t, PMT, inf));
   };
 
   const reset = () => {
     setPrincipal(''); setRate(''); setFrequency('monthly'); setYears('');
     setMonthlyContribution('0'); setInflationRate('2.5');
-    setResult(null); setError('');
+    setResult(null); setFieldErrors({});
     if (chartInstance.current) { chartInstance.current.destroy(); chartInstance.current = null; }
   };
 
@@ -370,10 +383,10 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
             </label>
             <div className="relative">
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 font-medium pointer-events-none select-none">{symbol}</span>
-              <input type="text" inputMode="decimal" value={toCommaDisplay(principal)}
-                onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) setPrincipal(raw); }}
+              <input ref={principalRef} type="text" inputMode="decimal" value={toCommaDisplay(principal)}
+                onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) { setPrincipal(raw); if (fieldErrors.principal) setFieldErrors(prev => ({ ...prev, principal: false })); } }}
                 placeholder={toCommaDisplay(PLACEHOLDER[currency])} maxLength={25} aria-label={`${dict.label_principal} (${currency})`}
-                className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.principal ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
               />
             </div>
           </div>
@@ -381,8 +394,10 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
           {/* Rate */}
           <div className="space-y-2">
             <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_rate}</label>
-            <input type="number" min="0" step="0.01" value={rate} onChange={(e) => setRate(e.target.value)}
-              placeholder="5" aria-label={dict.label_rate} className={inputClass} />
+            <input ref={rateRef} type="number" min="0" step="0.01" value={rate}
+              onChange={(e) => { setRate(e.target.value); if (fieldErrors.rate) setFieldErrors(prev => ({ ...prev, rate: false })); }}
+              placeholder="5" aria-label={dict.label_rate}
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.rate ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`} />
           </div>
 
           {/* Frequency */}
@@ -397,8 +412,10 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
           {/* Years */}
           <div className="space-y-2">
             <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_years}</label>
-            <input type="number" min="1" max="50" value={years} onChange={(e) => setYears(e.target.value)}
-              placeholder="10" aria-label={dict.label_years} className={inputClass} />
+            <input ref={yearsRef} type="number" min="1" max="50" value={years}
+              onChange={(e) => { setYears(e.target.value); if (fieldErrors.years) setFieldErrors(prev => ({ ...prev, years: false })); }}
+              placeholder="10" aria-label={dict.label_years}
+              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.years ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`} />
           </div>
 
           {/* NEW: Monthly Contribution + Inflation Rate */}
@@ -431,8 +448,6 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
               </div>
             </div>
           </div>
-
-          {error && <p className="text-sm text-red-500 dark:text-red-400">{error}</p>}
 
           {/* Buttons */}
           <div className="flex gap-2">

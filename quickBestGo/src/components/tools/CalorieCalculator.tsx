@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Flame } from 'lucide-react';
 import { CategoryTheme } from '@/lib/tools';
 
@@ -48,7 +48,10 @@ export default function CalorieCalculator({ dict, theme }: CalorieCalculatorProp
   const [weight, setWeight] = useState('');
   const [activity, setActivity] = useState(0);
   const [result, setResult] = useState<CalorieResult | null>(null);
-  const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, boolean>>({});
+  const ageRef = useRef<HTMLInputElement>(null);
+  const heightRef = useRef<HTMLInputElement>(null);
+  const weightRef = useRef<HTMLInputElement>(null);
 
   const activityLabels = [
     dict.activity_sedentary,
@@ -63,13 +66,22 @@ export default function CalorieCalculator({ dict, theme }: CalorieCalculatorProp
     const h = parseFloat(height);
     const w = parseFloat(weight);
 
-    if (!a || !h || !w || a <= 0 || h <= 0 || w <= 0 || a > 120 || h > 300 || w > 500) {
-      setError(dict.error_invalid);
+    const errors = {
+      age: !a || a <= 0 || a > 120,
+      height: !h || h <= 0 || h > 300,
+      weight: !w || w <= 0 || w > 500,
+    };
+    setFieldErrors(errors);
+
+    if (Object.values(errors).some(Boolean)) {
+      const refs = { age: ageRef, height: heightRef, weight: weightRef };
+      const firstKey = (Object.keys(errors) as Array<keyof typeof errors>).find(k => errors[k]);
+      if (firstKey) refs[firstKey].current?.focus();
       setResult(null);
       return;
     }
 
-    setError('');
+    setFieldErrors({});
 
     // Mifflin-St Jeor equation
     const bmr = gender === 'male'
@@ -112,23 +124,30 @@ export default function CalorieCalculator({ dict, theme }: CalorieCalculatorProp
 
         {/* Age / Height / Weight */}
         <div className="grid grid-cols-3 gap-3">
-          {[
-            { label: dict.label_age,    value: age,    setter: setAge,    placeholder: '25' },
-            { label: dict.label_height, value: height, setter: setHeight, placeholder: '170' },
-            { label: dict.label_weight, value: weight, setter: setWeight, placeholder: '70' },
-          ].map(({ label, value, setter, placeholder }) => (
-            <div key={label}>
-              <label className="text-xs font-semibold text-gray-700 dark:text-gray-300 block mb-1">{label}</label>
-              <input
-                type="number"
-                value={value}
-                onChange={(e) => setter(e.target.value)}
-                placeholder={placeholder}
-                min="1"
-                className={`w-full px-3 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
-              />
-            </div>
-          ))}
+          <div>
+            <label className="text-xs font-semibold text-gray-700 dark:text-gray-300 block mb-1">{dict.label_age}</label>
+            <input ref={ageRef} type="number" value={age}
+              onChange={(e) => { setAge(e.target.value); if (fieldErrors.age) setFieldErrors(prev => ({ ...prev, age: false })); }}
+              placeholder="25" min="1"
+              className={`w-full px-3 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:outline-none transition-all ${fieldErrors.age ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-gray-700 dark:text-gray-300 block mb-1">{dict.label_height}</label>
+            <input ref={heightRef} type="number" value={height}
+              onChange={(e) => { setHeight(e.target.value); if (fieldErrors.height) setFieldErrors(prev => ({ ...prev, height: false })); }}
+              placeholder="170" min="1"
+              className={`w-full px-3 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:outline-none transition-all ${fieldErrors.height ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-gray-700 dark:text-gray-300 block mb-1">{dict.label_weight}</label>
+            <input ref={weightRef} type="number" value={weight}
+              onChange={(e) => { setWeight(e.target.value); if (fieldErrors.weight) setFieldErrors(prev => ({ ...prev, weight: false })); }}
+              placeholder="70" min="1"
+              className={`w-full px-3 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 text-center font-bold focus:outline-none transition-all ${fieldErrors.weight ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
+            />
+          </div>
         </div>
 
         {/* Activity Level */}
@@ -144,9 +163,6 @@ export default function CalorieCalculator({ dict, theme }: CalorieCalculatorProp
             ))}
           </select>
         </div>
-
-        {/* Error */}
-        {error && <p className="text-sm text-red-500 dark:text-red-400">{error}</p>}
 
         {/* Button */}
         <button
