@@ -105,7 +105,8 @@
     "color_converter": { "name": "Color Converter", "description": "Convert colors between HEX, RGB, and HSL formats.", "category": "Developer Tools" },
     "word_counter": { "name": "Word Counter", "description": "Count words, characters, sentences, and estimate reading time instantly.", "category": "Utilities" },
     "days_between_dates": { "name": "Days Between Dates", "description": "Calculate the number of days, weeks, and months between two dates.", "category": "Calculators" },
-    "timezone_converter": { "name": "Timezone Converter", "description": "Convert times between any two time zones with a live world clock.", "category": "Converters" }
+    "timezone_converter": { "name": "Timezone Converter", "description": "Convert times between any two time zones with a live world clock.", "category": "Converters" },
+    "currency_exchange_calculator": { "name": "Currency Exchange Calculator", "description": "Convert between 16 major currencies with real-time exchange rates.", "category": "Converters" }
   },
   "percentage_calculator": {
     "title": "Percentage Calculator",
@@ -696,6 +697,36 @@
       {"q": "How do I convert time between time zones?", "a": "Select your source time zone, enter the time, then choose a target time zone. The converted time is shown instantly with daylight saving time accounted for."},
       {"q": "What is UTC?", "a": "UTC (Coordinated Universal Time) is the global time standard. All time zones are defined as offsets from UTC — for example, UTC+9 is Japan Standard Time."},
       {"q": "How do I find the current time in another country?", "a": "Select the target country's time zone and the tool displays the current local time there, automatically adjusted for daylight saving time."}
+    ]
+  },
+  "currency_exchange_calculator": {
+    "title": "Currency Exchange Calculator",
+    "meta_title": "Currency Exchange Calculator - Real-time Rates - QuickBestGo",
+    "meta_description": "Free currency converter with real-time exchange rates. Convert USD, EUR, KRW, JPY and 160+ currencies instantly. No signup required.",
+    "about_title": "How to use the Currency Exchange Calculator?",
+    "about_p1": "Select the currencies you want to convert in the From and To fields. Enter the amount and the result is calculated instantly using real-time exchange rates from Open Exchange Rates. Use the swap button to reverse the conversion.",
+    "about_p2": "Click any card in the Major Rates section to load that currency pair automatically. The Quick Conversion Table shows common amounts pre-calculated — click any row to set that amount in the converter.",
+    "about_p3": "All calculations happen in your browser. Exchange rates are cached for 60 minutes to minimize API calls and ensure fast performance.",
+    "label_from": "From",
+    "label_to": "To",
+    "btn_swap": "Swap currencies",
+    "label_quick": "Quick:",
+    "label_major_rates": "Major Exchange Rates",
+    "label_quick_table": "Quick Conversion Table",
+    "label_quick_table_sub": "Click a row to set the amount above",
+    "label_rate_updated": "Updated",
+    "label_loading": "Loading rates...",
+    "label_error": "Failed to load rates. Please try again.",
+    "label_copied": "Copied!",
+    "label_copy_link": "Copy Link",
+    "label_result_eq": "equals",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {"q": "How often are exchange rates updated?", "a": "Exchange rates are fetched from Open Exchange Rates and refreshed every 60 minutes. The timestamp shown below the result tells you exactly when the rates were last updated."},
+      {"q": "How many currencies are supported?", "a": "We support 16 major currencies: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB, and VND — covering the most traded currencies worldwide."},
+      {"q": "How do I share a specific conversion?", "a": "Click the Copy Link button. The URL automatically includes the selected currencies and amount as parameters (?from=USD&to=KRW&amount=1000), so anyone who opens the link sees the same conversion instantly."},
+      {"q": "Are the exchange rates accurate?", "a": "Rates come from Open Exchange Rates, which aggregates data from global financial sources. They are suitable for informational purposes. For transactions, always verify with your bank or financial institution."},
+      {"q": "Is this calculator free to use?", "a": "Completely free. No subscription, no registration, no hidden fees. All tools on QuickBestGo are free forever."}
     ]
   },
   "categories": {

@@ -105,7 +105,8 @@
     "color_converter": { "name": "색상 변환기", "description": "HEX, RGB, HSL 형식 간에 색상을 변환합니다.", "category": "개발자 도구" },
     "word_counter": { "name": "단어 수 세기", "description": "단어, 글자, 문장 수와 읽기 시간을 즉시 계산합니다.", "category": "유틸리티" },
     "days_between_dates": { "name": "날짜 간격 계산기", "description": "두 날짜 사이의 일수, 주수, 개월 수를 계산합니다.", "category": "계산기" },
-    "timezone_converter": { "name": "시간대 변환기", "description": "실시간 세계 시계와 함께 시간대 간 시간을 변환합니다.", "category": "변환기" }
+    "timezone_converter": { "name": "시간대 변환기", "description": "실시간 세계 시계와 함께 시간대 간 시간을 변환합니다.", "category": "변환기" },
+    "currency_exchange_calculator": { "name": "환율 계산기", "description": "실시간 환율로 16개 주요 통화를 즉시 변환합니다.", "category": "변환기" }
   },
   "percentage_calculator": {
     "title": "퍼센트 계산기",
@@ -696,6 +697,36 @@
       {"q": "시간대 간 시간을 어떻게 변환하나요?", "a": "원본 시간대를 선택하고 시간을 입력한 후 대상 시간대를 선택하세요. 일광 절약 시간을 고려한 변환된 시간이 즉시 표시됩니다."},
       {"q": "UTC란 무엇인가요?", "a": "UTC(협정 세계시)는 전 세계 시간 표준입니다. 모든 시간대는 UTC를 기준으로 한 오프셋으로 정의됩니다. 예를 들어, UTC+9는 일본 표준시입니다."},
       {"q": "다른 나라의 현재 시간을 어떻게 알 수 있나요?", "a": "대상 국가의 시간대를 선택하면 일광 절약 시간을 자동으로 조정하여 현지 시간을 표시합니다."}
+    ]
+  },
+  "currency_exchange_calculator": {
+    "title": "환율 계산기",
+    "meta_title": "환율 계산기 - 실시간 환율 변환 - QuickBestGo",
+    "meta_description": "실시간 환율로 USD, EUR, KRW, JPY 등 160개 이상 통화를 무료로 변환하세요. 회원가입 불필요.",
+    "about_title": "환율 계산기 사용 방법",
+    "about_p1": "출발 통화와 도착 통화를 선택하고 금액을 입력하면 Open Exchange Rates의 실시간 환율로 즉시 변환됩니다. 스왑 버튼으로 두 통화를 바꿀 수 있습니다.",
+    "about_p2": "주요 환율 카드를 클릭하면 해당 통화 쌍이 자동으로 설정됩니다. 빠른 변환표에서 행을 클릭하면 금액이 자동으로 입력됩니다.",
+    "about_p3": "모든 계산은 브라우저에서 처리됩니다. 환율은 60분마다 자동으로 갱신되며 빠른 성능을 위해 캐시됩니다.",
+    "label_from": "출발 통화",
+    "label_to": "도착 통화",
+    "btn_swap": "통화 바꾸기",
+    "label_quick": "빠른 금액:",
+    "label_major_rates": "주요 환율",
+    "label_quick_table": "빠른 변환표",
+    "label_quick_table_sub": "행을 클릭하면 위 변환기에 금액이 자동 입력됩니다",
+    "label_rate_updated": "업데이트",
+    "label_loading": "환율 불러오는 중...",
+    "label_error": "환율을 불러오지 못했습니다. 다시 시도해 주세요.",
+    "label_copied": "복사됨!",
+    "label_copy_link": "링크 복사",
+    "label_result_eq": "=",
+    "faq_title": "자주 묻는 질문",
+    "faq": [
+      {"q": "환율은 얼마나 자주 업데이트되나요?", "a": "Open Exchange Rates에서 환율을 가져오며 60분마다 갱신됩니다. 결과 아래에 마지막 업데이트 시간이 표시됩니다."},
+      {"q": "지원하는 통화가 몇 개인가요?", "a": "USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB, VND 등 16개 주요 통화를 지원합니다."},
+      {"q": "특정 환율 변환 결과를 공유하려면 어떻게 하나요?", "a": "링크 복사 버튼을 클릭하세요. URL에 선택한 통화와 금액이 자동으로 포함되어 링크를 열면 동일한 변환 결과를 볼 수 있습니다."},
+      {"q": "환율이 정확한가요?", "a": "글로벌 금융 데이터를 집계하는 Open Exchange Rates의 데이터를 사용합니다. 참고용으로 적합하며, 실제 거래 시에는 은행에서 확인하세요."},
+      {"q": "무료로 사용할 수 있나요?", "a": "완전 무료입니다. 구독, 회원가입, 숨겨진 요금 없이 QuickBestGo의 모든 도구는 영원히 무료입니다."}
     ]
   },
   "categories": {

@@ -80,7 +80,7 @@ const FREQ_PARAM: Record<string, string> = {
   '1': 'annually', '2': 'semiannually', '4': 'quarterly', '12': 'monthly', '365': 'daily',
 };
 
-const PLACEHOLDER: Record<CurrencyCode, string> = {
+const PLACEHOLDER: Partial<Record<CurrencyCode, string>> = {
   USD: '10000', KRW: '10000000', JPY: '1000000', EUR: '10000', CNY: '100000',
 };
 
@@ -385,7 +385,7 @@ const CompoundInterestCalculator = ({ dict, theme, lang }: Props) => {
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 font-medium pointer-events-none select-none">{symbol}</span>
               <input ref={principalRef} type="text" inputMode="decimal" value={toCommaDisplay(principal)}
                 onChange={(e) => { const raw = fromCommaDisplay(e.target.value); if (/^[0-9]*\.?[0-9]*$/.test(raw)) { setPrincipal(raw); if (fieldErrors.principal) setFieldErrors(prev => ({ ...prev, principal: false })); } }}
-                placeholder={toCommaDisplay(PLACEHOLDER[currency])} maxLength={25} aria-label={`${dict.label_principal} (${currency})`}
+                placeholder={toCommaDisplay(PLACEHOLDER[currency] ?? '10000')} maxLength={25} aria-label={`${dict.label_principal} (${currency})`}
                 className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${fieldErrors.principal ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
               />
             </div>

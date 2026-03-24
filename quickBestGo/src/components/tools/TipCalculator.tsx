@@ -28,7 +28,7 @@ interface Result {
   perPerson: number;
 }
 
-const PRESET_TIPS: Record<CurrencyCode, number[]> = {
+const PRESET_TIPS: Partial<Record<CurrencyCode, number[]>> = {
   USD: [10, 15, 18, 20, 25],
   KRW: [0, 5, 10],
   JPY: [0, 5, 10],
@@ -36,7 +36,7 @@ const PRESET_TIPS: Record<CurrencyCode, number[]> = {
   CNY: [0, 5, 10],
 };
 
-const DEFAULT_TIP: Record<CurrencyCode, number> = {
+const DEFAULT_TIP: Partial<Record<CurrencyCode, number>> = {
   USD: 15,
   KRW: 0,
   JPY: 0,
@@ -68,7 +68,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   const [error, setError] = useState('');
   const billRef = useRef<HTMLInputElement>(null);
 
-  const presetTips = PRESET_TIPS[currency];
+  const presetTips = PRESET_TIPS[currency] ?? [10, 15, 20];
   const symbol = CURRENCIES[currency].symbol;
   const showNoTipNotice = NO_TIP_CURRENCIES.includes(currency);
 
@@ -76,7 +76,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   useEffect(() => {
     if (isCustom) return;
     if (!presetTips.includes(tipPercent)) {
-      setTipPercent(DEFAULT_TIP[currency]);
+      setTipPercent(DEFAULT_TIP[currency] ?? 15);
     }
   }, [currency]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -110,7 +110,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
 
   const reset = () => {
     setBill('');
-    setTipPercent(DEFAULT_TIP[currency]);
+    setTipPercent(DEFAULT_TIP[currency] ?? 15);
     setCustomTip('');
     setIsCustom(false);
     setPeople('1');

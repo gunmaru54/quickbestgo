@@ -105,7 +105,8 @@
     "color_converter": { "name": "Conversor de Cores", "description": "Converta cores entre os formatos HEX, RGB e HSL.", "category": "Ferramentas de Desenvolvedor" },
     "word_counter": { "name": "Contador de Palavras", "description": "Conte palavras, caracteres, frases e estime o tempo de leitura instantaneamente.", "category": "Utilitários" },
     "days_between_dates": { "name": "Dias Entre Datas", "description": "Calcule o número de dias, semanas e meses entre duas datas.", "category": "Calculadoras" },
-    "timezone_converter": { "name": "Conversor de Fusos Horários", "description": "Converta horas entre fusos horários com um relógio mundial ao vivo.", "category": "Conversores" }
+    "timezone_converter": { "name": "Conversor de Fusos Horários", "description": "Converta horas entre fusos horários com um relógio mundial ao vivo.", "category": "Conversores" },
+    "currency_exchange_calculator": { "name": "Calculadora de Câmbio", "description": "Converta entre 16 moedas principais com taxas em tempo real.", "category": "Conversores" }
   },
     "percentage_calculator": {
     "title": "Calculadora de Percentagem",
@@ -696,6 +697,36 @@
       {"q": "Como converto a hora entre fusos horários?", "a": "Selecione o seu fuso horário de origem, insira a hora e escolha um fuso horário de destino. A hora convertida é mostrada instantaneamente com o horário de verão considerado."},
       {"q": "O que é o UTC?", "a": "UTC (Tempo Universal Coordenado) é o padrão global de tempo. Todos os fusos horários são definidos como deslocamentos do UTC — por exemplo, UTC+9 é a Hora Padrão do Japão."},
       {"q": "Como encontro a hora atual noutro país?", "a": "Selecione o fuso horário do país de destino e a ferramenta mostra a hora local atual, automaticamente ajustada para o horário de verão."}
+    ]
+  },
+  "currency_exchange_calculator": {
+    "title": "Calculadora de Câmbio de Moedas",
+    "meta_title": "Calculadora de Câmbio - Taxas em Tempo Real - QuickBestGo",
+    "meta_description": "Conversor de moedas gratuito com taxas em tempo real. Converta USD, EUR, KRW, JPY e mais de 160 moedas instantaneamente. Sem cadastro.",
+    "about_title": "Como usar a Calculadora de Câmbio?",
+    "about_p1": "Selecione as moedas nos campos De e Para, insira o valor e o resultado é calculado instantaneamente com taxas em tempo real do Open Exchange Rates. Use o botão de troca para inverter a conversão.",
+    "about_p2": "Clique em qualquer cartão de Taxas Principais para carregar esse par de moedas automaticamente. A Tabela de Conversão Rápida mostra valores comuns pré-calculados — clique em uma linha para definir esse valor.",
+    "about_p3": "Todos os cálculos são feitos no seu navegador. As taxas são armazenadas em cache por 60 minutos para desempenho rápido.",
+    "label_from": "De",
+    "label_to": "Para",
+    "btn_swap": "Trocar moedas",
+    "label_quick": "Rápido:",
+    "label_major_rates": "Taxas de Câmbio Principais",
+    "label_quick_table": "Tabela de Conversão Rápida",
+    "label_quick_table_sub": "Clique em uma linha para definir o valor acima",
+    "label_rate_updated": "Atualizado",
+    "label_loading": "Carregando taxas...",
+    "label_error": "Falha ao carregar taxas. Por favor, tente novamente.",
+    "label_copied": "Copiado!",
+    "label_copy_link": "Copiar link",
+    "label_result_eq": "=",
+    "faq_title": "Perguntas Frequentes",
+    "faq": [
+      {"q": "Com que frequência as taxas de câmbio são atualizadas?", "a": "As taxas são obtidas do Open Exchange Rates e atualizadas a cada 60 minutos. O horário abaixo do resultado mostra quando foram atualizadas pela última vez."},
+      {"q": "Quantas moedas são suportadas?", "a": "Suportamos 16 moedas principais: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB e VND."},
+      {"q": "Como compartilho uma conversão específica?", "a": "Clique em Copiar link. O URL inclui automaticamente as moedas e o valor selecionados como parâmetros, para que qualquer pessoa que abra o link veja a mesma conversão."},
+      {"q": "As taxas de câmbio são precisas?", "a": "As taxas vêm do Open Exchange Rates, que agrega dados de fontes financeiras globais. São adequadas para fins informativos. Para transações, sempre verifique com seu banco."},
+      {"q": "Esta calculadora é gratuita?", "a": "Completamente gratuita. Sem assinatura, sem cadastro, sem taxas ocultas. Todas as ferramentas do QuickBestGo são gratuitas para sempre."}
     ]
   },
   "categories": {
