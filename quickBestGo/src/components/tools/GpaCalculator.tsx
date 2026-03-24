@@ -130,10 +130,10 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
-      <div className="space-y-4">
+    <div className="w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm transition-colors duration-300">
+      <div className="p-4 sm:p-6 md:p-8 space-y-4">
         {/* Header row */}
-        <div className="grid grid-cols-[1fr_72px_56px_28px] gap-1.5">
+        <div className="grid grid-cols-[1fr_80px_56px_32px] gap-2">
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_course}</span>
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_grade}</span>
           <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{dict.label_credits}</span>
@@ -143,21 +143,22 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
         {/* Course rows */}
         <div className="space-y-2">
           {courses.map((course) => (
-            <div key={course.id} className="grid grid-cols-[1fr_72px_56px_28px] gap-1.5 items-center">
+            <div key={course.id} className="grid grid-cols-[1fr_80px_56px_32px] gap-2 items-center">
               <input
                 type="text"
                 value={course.name}
                 onChange={(e) => updateCourse(course.id, 'name', e.target.value)}
                 placeholder={dict.placeholder_course}
-                className={`px-3 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600`}
+                className={`w-full px-3 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600 truncate`}
               />
               <select
                 value={course.grade}
                 onChange={(e) => updateCourse(course.id, 'grade', e.target.value)}
-                className={`px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                aria-label={dict.label_grade}
+                className={`w-full px-1 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               >
                 {GRADES.map((g, i) => (
-                  <option key={`${g.label}-${i}`} value={g.value}>{g.label} ({g.value})</option>
+                  <option key={`${g.label}-${i}`} value={g.value}>{g.label}</option>
                 ))}
               </select>
               <input
@@ -166,16 +167,19 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
                 step="0.5"
                 value={course.credits}
                 onChange={(e) => updateCourse(course.id, 'credits', e.target.value)}
-                className={`px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm text-center focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                aria-label={dict.label_credits}
+                className={`w-full px-2 py-2.5 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 text-sm text-center focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
-              <button
-                onClick={() => removeCourse(course.id)}
-                disabled={courses.length <= 1}
-                className="p-1.5 text-gray-400 hover:text-red-500 dark:hover:text-red-400 disabled:opacity-30 disabled:cursor-not-allowed transition-colors rounded-lg"
-                title="Remove"
-              >
-                <X size={16} />
-              </button>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => removeCourse(course.id)}
+                  disabled={courses.length <= 1}
+                  aria-label="Remove course"
+                  className="p-1.5 text-gray-400 hover:text-red-500 dark:hover:text-red-400 disabled:opacity-30 disabled:cursor-not-allowed transition-colors rounded-lg"
+                >
+                  <X size={16} />
+                </button>
+              </div>
             </div>
           ))}
         </div>
