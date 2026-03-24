@@ -127,24 +127,24 @@ function CurrencySelector({ value, onChange, label, recentCodes, align = 'left' 
   }
 
   return (
-    <div className="relative" ref={wrapperRef}>
+    <div className="relative min-w-0" ref={wrapperRef}>
       <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1.5">
         {label}
       </label>
-      {/* Trigger — fixed height so size never changes with currency name length */}
+      {/* Trigger — fixed height + overflow-hidden so size never changes */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-label={`${label}: ${meta.name}`}
         aria-expanded={open}
-        className="flex items-center gap-2 w-full h-[58px] px-3 rounded-xl border bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
+        className="flex items-center gap-1.5 w-full h-[58px] px-2 sm:px-3 rounded-xl border bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors overflow-hidden"
       >
-        <span className="text-2xl leading-none w-8 flex-shrink-0 text-center">{meta.flag}</span>
+        <span className="text-xl leading-none w-7 flex-shrink-0 text-center">{meta.flag}</span>
         <span className="flex-1 min-w-0 text-left">
-          <span className="block text-base font-extrabold text-gray-900 dark:text-gray-100 leading-tight truncate">{value}</span>
+          <span className="block text-sm font-extrabold text-gray-900 dark:text-gray-100 leading-tight truncate">{value}</span>
           <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{meta.name}</span>
         </span>
-        <ChevronDown size={16} className={`flex-shrink-0 text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown size={14} className={`flex-shrink-0 text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown — absolute, aligned left or right, capped to viewport width */}
@@ -401,8 +401,17 @@ export default function CurrencyExchangeCalculator({ dict, theme }: Props) {
 
         {result !== null && !loading && !error && (
           <div className={`rounded-xl px-4 py-4 ${theme.accentBg} border ${theme.accentBorder}`}>
-            <div className={`text-2xl sm:text-3xl font-black ${theme.accent} leading-tight break-all`}>
-              {formatAmount(amount, fromCode)} {fromCode} = {formatAmount(result, toCode)} {toCode}
+            {/* FROM amount */}
+            <div className="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">
+              {formatAmount(amount, fromCode)} {fromCode}
+            </div>
+            {/* Arrow + TO amount */}
+            <div className="flex items-baseline gap-2 mt-0.5">
+              <span className="text-gray-400 dark:text-gray-500 text-base font-bold">▼</span>
+              <div className={`text-2xl sm:text-3xl font-black ${theme.accent} leading-tight tabular-nums`}>
+                {formatAmount(result, toCode)}
+                <span className="ml-1.5 text-base sm:text-lg font-bold opacity-80">{toCode}</span>
+              </div>
             </div>
             {rate1 !== null && (
               <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500 dark:text-gray-400">
