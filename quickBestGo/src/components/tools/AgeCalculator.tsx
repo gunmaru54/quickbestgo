@@ -65,7 +65,7 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+    <div className="w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300">
       <div className="space-y-6">
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_birthdate}</label>
@@ -76,8 +76,8 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
             value={birthDate}
             onChange={(e) => { setBirthDate(e.target.value); if (dateError) setDateError(false); }}
             aria-label={dict.label_birthdate}
-            style={{ colorScheme: 'light dark' }}
-            className={`w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${dateError ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
+            style={{ colorScheme: 'light dark', fontSize: '16px' }}
+            className={`w-full min-w-0 px-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${dateError ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30' : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`}`}
           />
         </div>
 

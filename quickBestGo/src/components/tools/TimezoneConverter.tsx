@@ -183,16 +183,16 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
   }, [fromTz, toTz]);
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6">
+    <div className="w-full max-w-2xl mx-auto space-y-6">
       {/* Main converter card */}
-      <div className="bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+      <div className="bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300">
         <div className="space-y-6">
           {/* Current time display */}
           <div className="text-center">
             <p className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-1">
               {dict.label_current_time}
             </p>
-            <p className="text-4xl font-black text-gray-900 dark:text-white tabular-nums">
+            <p className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tabular-nums">
               {formatTime(now, fromTz)}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{formatDate(now, fromTz)}</p>
@@ -204,7 +204,8 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
             <select
               value={fromTz}
               onChange={(e) => { setFromTz(e.target.value); setConvertedTime(''); }}
-              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+              style={{ fontSize: '16px' }}
+              className={`w-full min-w-0 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {TIMEZONE_OPTIONS.map(opt => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -219,7 +220,8 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
               type="time"
               value={inputTime}
               onChange={(e) => { setInputTime(e.target.value); setConvertedTime(''); }}
-              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+              style={{ fontSize: '16px' }}
+              className={`w-full min-w-0 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             />
           </div>
 
@@ -241,7 +243,8 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
             <select
               value={toTz}
               onChange={(e) => { setToTz(e.target.value); setConvertedTime(''); }}
-              className={`w-full px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+              style={{ fontSize: '16px' }}
+              className={`w-full min-w-0 px-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
             >
               {TIMEZONE_OPTIONS.map(opt => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -264,12 +267,12 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
 
           {/* Result */}
           {convertedTime && !error && (
-            <div className={`${theme.accentBg} border ${theme.accentBorder} rounded-2xl p-6 text-center animate-in fade-in zoom-in duration-300`}>
-              <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+            <div className={`${theme.accentBg} border ${theme.accentBorder} rounded-2xl p-4 sm:p-6 text-center animate-in fade-in zoom-in duration-300`}>
+              <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2 truncate">
                 {inputTime} ({TIMEZONE_OPTIONS.find(o => o.value === fromTz)?.label ?? fromTz})
               </p>
-              <p className={`text-4xl font-black ${theme.accent} tabular-nums`}>{convertedTime}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <p className={`text-3xl sm:text-4xl font-black ${theme.accent} tabular-nums`}>{convertedTime}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 truncate">
                 {TIMEZONE_OPTIONS.find(o => o.value === toTz)?.label ?? toTz}
               </p>
             </div>
