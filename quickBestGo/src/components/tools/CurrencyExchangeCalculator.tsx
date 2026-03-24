@@ -82,9 +82,10 @@ interface SelectorProps {
   label: string;
   theme: CategoryTheme;
   recentCodes: CurrencyCode[];
+  align?: 'left' | 'right';
 }
 
-function CurrencySelector({ value, onChange, label, recentCodes }: SelectorProps) {
+function CurrencySelector({ value, onChange, label, recentCodes, align = 'left' }: SelectorProps) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -103,14 +104,18 @@ function CurrencySelector({ value, onChange, label, recentCodes }: SelectorProps
   }, [open]);
 
   useEffect(() => {
-    function onOutside(e: MouseEvent) {
+    function onOutside(e: MouseEvent | TouchEvent) {
       if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
         setOpen(false);
         setQuery('');
       }
     }
     document.addEventListener('mousedown', onOutside);
-    return () => document.removeEventListener('mousedown', onOutside);
+    document.addEventListener('touchstart', onOutside);
+    return () => {
+      document.removeEventListener('mousedown', onOutside);
+      document.removeEventListener('touchstart', onOutside);
+    };
   }, []);
 
   const meta = CURRENCY_META[value];
@@ -126,25 +131,27 @@ function CurrencySelector({ value, onChange, label, recentCodes }: SelectorProps
       <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1.5">
         {label}
       </label>
-      {/* Trigger */}
+      {/* Trigger — fixed height so size never changes with currency name length */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-label={`${label}: ${meta.name}`}
         aria-expanded={open}
-        className={`flex items-center gap-2.5 w-full px-3 py-2.5 rounded-xl border bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors`}
+        className="flex items-center gap-2 w-full h-[58px] px-3 rounded-xl border bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
       >
-        <span className="text-2xl leading-none">{meta.flag}</span>
-        <span className="flex-1 text-left">
-          <span className="block text-base font-extrabold text-gray-900 dark:text-gray-100 leading-tight">{value}</span>
+        <span className="text-2xl leading-none w-8 flex-shrink-0 text-center">{meta.flag}</span>
+        <span className="flex-1 min-w-0 text-left">
+          <span className="block text-base font-extrabold text-gray-900 dark:text-gray-100 leading-tight truncate">{value}</span>
           <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{meta.name}</span>
         </span>
-        <ChevronDown size={16} className={`text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown size={16} className={`flex-shrink-0 text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
-      {/* Dropdown */}
+      {/* Dropdown — absolute, aligned left or right, capped to viewport width */}
       {open && (
-        <div className="absolute z-50 top-full mt-1 left-0 w-72 max-sm:fixed max-sm:inset-x-3 max-sm:top-auto max-sm:bottom-3 max-sm:w-auto bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+        <div
+          className={`absolute z-50 top-full mt-1 w-72 max-w-[calc(100vw-1.5rem)] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-2xl overflow-hidden ${align === 'right' ? 'right-0' : 'left-0'}`}
+        >
           {/* Search */}
           <div className="flex items-center gap-2 px-3 py-2.5 border-b border-gray-100 dark:border-gray-800">
             <Search size={14} className="text-gray-400 flex-shrink-0" />
@@ -358,6 +365,7 @@ export default function CurrencyExchangeCalculator({ dict, theme }: Props) {
             label={dict.label_to}
             theme={theme}
             recentCodes={recentCodes}
+            align="right"
           />
         </div>
 
