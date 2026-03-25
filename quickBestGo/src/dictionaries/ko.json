@@ -106,7 +106,9 @@
     "word_counter": { "name": "단어 수 세기", "description": "단어, 글자, 문장 수와 읽기 시간을 즉시 계산합니다.", "category": "유틸리티" },
     "days_between_dates": { "name": "날짜 간격 계산기", "description": "두 날짜 사이의 일수, 주수, 개월 수를 계산합니다.", "category": "계산기" },
     "timezone_converter": { "name": "시간대 변환기", "description": "실시간 세계 시계와 함께 시간대 간 시간을 변환합니다.", "category": "변환기" },
-    "currency_exchange_calculator": { "name": "환율 계산기", "description": "실시간 환율로 16개 주요 통화를 즉시 변환합니다.", "category": "변환기" }
+    "currency_exchange_calculator": { "name": "환율 계산기", "description": "실시간 환율로 16개 주요 통화를 즉시 변환합니다.", "category": "변환기" },
+    "loan_calculator": { "name": "대출 계산기", "description": "월 상환금, 총 이자, 원리금 상환표를 계산합니다.", "category": "계산기" },
+    "retirement_calculator": { "name": "은퇴 저축 계산기", "description": "월 납입금, 수익률, 물가상승률을 반영한 노후 자금을 예측합니다.", "category": "계산기" }
   },
   "percentage_calculator": {
     "title": "퍼센트 계산기",

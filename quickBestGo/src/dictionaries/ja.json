@@ -106,7 +106,9 @@
     "word_counter": { "name": "文字数カウンター", "description": "単語数、文字数、文章数と読書時間を即座に計測します。", "category": "ユーティリティ" },
     "days_between_dates": { "name": "日数計算機", "description": "2つの日付間の日数、週数、月数を計算します。", "category": "計算機" },
     "timezone_converter": { "name": "タイムゾーン変換機", "description": "ライブ世界時計とともに任意の2つのタイムゾーン間で時間を変換します。", "category": "変換" },
-    "currency_exchange_calculator": { "name": "為替計算機", "description": "リアルタイムレートで16の主要通貨を即座に換算します。", "category": "変換" }
+    "currency_exchange_calculator": { "name": "為替計算機", "description": "リアルタイムレートで16の主要通貨を即座に換算します。", "category": "変換" },
+    "loan_calculator": { "name": "ローン計算機", "description": "月々の返済額、総利息、返済スケジュールを計算します。", "category": "計算機" },
+    "retirement_calculator": { "name": "老後資金計算機", "description": "毎月の積立、収益率、インフレを考慮した退職時の資産を予測します。", "category": "計算機" }
   },
   "percentage_calculator": {
     "title": "パーセント計算機",

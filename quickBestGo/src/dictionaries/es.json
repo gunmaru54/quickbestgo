@@ -106,7 +106,9 @@
     "word_counter": { "name": "Contador de Palabras", "description": "Cuenta palabras, caracteres, oraciones y estima el tiempo de lectura al instante.", "category": "Utilidades" },
     "days_between_dates": { "name": "Días Entre Fechas", "description": "Calcula el número de días, semanas y meses entre dos fechas.", "category": "Calculadoras" },
     "timezone_converter": { "name": "Conversor de Zonas Horarias", "description": "Convierte tiempos entre zonas horarias con un reloj mundial en vivo.", "category": "Conversores" },
-    "currency_exchange_calculator": { "name": "Calculadora de Cambio de Divisas", "description": "Convierte entre 16 monedas principales con tasas en tiempo real.", "category": "Conversores" }
+    "currency_exchange_calculator": { "name": "Calculadora de Cambio de Divisas", "description": "Convierte entre 16 monedas principales con tasas en tiempo real.", "category": "Conversores" },
+    "loan_calculator": { "name": "Calculadora de Préstamos", "description": "Calcula cuotas mensuales, interés total y tabla de amortización para cualquier préstamo.", "category": "Calculadoras" },
+    "retirement_calculator": { "name": "Calculadora de Jubilación", "description": "Proyecta tus ahorros de jubilación con aportaciones, rendimiento e inflación.", "category": "Calculadoras" }
   },
     "percentage_calculator": {
     "title": "Calculadora de Porcentaje",

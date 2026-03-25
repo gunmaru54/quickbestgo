@@ -106,7 +106,9 @@
     "word_counter": { "name": "Word Counter", "description": "Count words, characters, sentences, and estimate reading time instantly.", "category": "Utilities" },
     "days_between_dates": { "name": "Days Between Dates", "description": "Calculate the number of days, weeks, and months between two dates.", "category": "Calculators" },
     "timezone_converter": { "name": "Timezone Converter", "description": "Convert times between any two time zones with a live world clock.", "category": "Converters" },
-    "currency_exchange_calculator": { "name": "Currency Exchange Calculator", "description": "Convert between 16 major currencies with real-time exchange rates.", "category": "Converters" }
+    "currency_exchange_calculator": { "name": "Currency Exchange Calculator", "description": "Convert between 16 major currencies with real-time exchange rates.", "category": "Converters" },
+    "loan_calculator": { "name": "Loan Calculator", "description": "Calculate monthly payments, total interest, and full amortization schedule for any loan.", "category": "Calculators" },
+    "retirement_calculator": { "name": "Retirement Savings Calculator", "description": "Project your retirement savings with monthly contributions, returns, and inflation adjustment.", "category": "Calculators" }
   },
   "percentage_calculator": {
     "title": "Percentage Calculator",
