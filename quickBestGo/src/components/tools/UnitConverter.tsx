@@ -121,7 +121,7 @@ const UnitConverter = ({ dict, theme }: UnitConverterProps) => {
   const units = UNITS[category];
 
   return (
-    <div className="max-w-lg mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+    <div className={`max-w-lg mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 transition-colors duration-300`}>
       <div className="space-y-5">
         {/* Category Tabs */}
         <div className="flex bg-gray-100 dark:bg-gray-800 rounded-2xl p-1 gap-1">

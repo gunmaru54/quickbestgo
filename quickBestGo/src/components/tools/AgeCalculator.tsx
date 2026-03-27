@@ -65,7 +65,7 @@ const AgeCalculator = ({ dict, lang, theme }: AgeCalculatorProps) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300">
+    <div className={`w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300`}>
       <div className="space-y-6">
         <div className="space-y-2">
           <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dict.label_birthdate}</label>

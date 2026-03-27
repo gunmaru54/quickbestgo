@@ -1,13 +1,12 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { locales, Locale } from '@/lib/i18n';
 import { Globe } from 'lucide-react';
 import { ChangeEvent } from 'react';
 
 export default function LanguageSwitcher({ currentLang }: { currentLang: Locale }) {
   const pathname = usePathname();
-  const router = useRouter();
 
   const handleLanguageChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
@@ -22,7 +21,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
     }
 
     const newPathname = segments.join('/') || `/${newLocale}`;
-    router.push(newPathname);
+    window.location.href = newPathname;
   };
 
   const languageNames: Record<string, string> = {

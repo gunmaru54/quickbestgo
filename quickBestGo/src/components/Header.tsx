@@ -33,7 +33,11 @@ const Header = ({ lang }: { lang: Locale }) => {
     <header className="border-b bg-white dark:bg-[#0a0a0a] dark:border-gray-800 sticky top-0 z-50 transition-colors duration-300">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href={`/${lang}`} className="text-2xl font-bold text-blue-600 dark:text-blue-500">
+          {/* Brand logo — Gradient primary */}
+          <Link
+            href={`/${lang}`}
+            className="font-display text-xl font-bold bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          >
             QuickBestGo
           </Link>
 
@@ -41,25 +45,28 @@ const Header = ({ lang }: { lang: Locale }) => {
           <div className="relative" ref={ref}>
             <button
               onClick={() => setOpen((v) => !v)}
-              className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-primary transition-colors px-2 py-1 rounded-lg hover:bg-brand-primary/8 dark:hover:bg-brand-primary/8"
+              aria-expanded={open}
+              aria-haspopup="true"
             >
               Tools
               <ChevronDown
                 size={15}
                 className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                aria-hidden="true"
               />
             </button>
 
             {open && (
-              <div className="absolute left-0 top-full mt-2 w-52 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg overflow-hidden z-50">
+              <div className="absolute left-0 top-full mt-2 w-52 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl shadow-brand-primary/5 overflow-hidden z-50">
                 {CATEGORY_LINKS.map((cat) => (
                   <Link
                     key={cat.slug}
                     href={`/${lang}/${cat.slug}`}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-brand-primary/8 dark:hover:bg-brand-primary/8 hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
                   >
-                    <span className="text-base">{cat.emoji}</span>
+                    <span className="text-base" aria-hidden="true">{cat.emoji}</span>
                     {cat.label}
                   </Link>
                 ))}

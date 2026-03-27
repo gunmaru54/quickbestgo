@@ -49,7 +49,7 @@ const PercentageCalculator = ({ dict }: PercentageCalculatorProps) => {
 
   const fmt = (num: number) => (Number.isInteger(num) ? num.toString() : num.toFixed(2));
 
-  const cardClass = 'bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300';
+  const cardClass = 'bg-white dark:bg-[#1a1a1a] rounded-3xl border border-[#990FFA]/20 dark:border-[#990FFA]/15 shadow-sm p-6 md:p-8 transition-colors duration-300';
   const inputClass = 'w-full px-3 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 focus:outline-none transition-all';
 
   return (

@@ -185,7 +185,7 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
   return (
     <div className="w-full max-w-2xl mx-auto space-y-6">
       {/* Main converter card */}
-      <div className="bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300">
+      <div className={`bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-4 sm:p-6 md:p-8 transition-colors duration-300`}>
         <div className="space-y-6">
           {/* Current time display */}
           <div className="text-center">
@@ -281,7 +281,7 @@ const TimezoneConverter = ({ dict, theme }: TimezoneConverterProps) => {
       </div>
 
       {/* World clock */}
-      <div className="bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+      <div className={`bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 transition-colors duration-300`}>
         <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide mb-4">
           {dict.label_world_clock}
         </h3>

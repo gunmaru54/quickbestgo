@@ -138,7 +138,7 @@ export default function BmiCalculator({ dict, theme }: BmiCalculatorProps) {
   const category = bmi !== null ? getBmiCategory(bmi, dict) : null;
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+    <div className={`max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 transition-colors duration-300`}>
       {/* Unit toggle */}
       <div className="flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1 mb-6">
         {(['metric', 'imperial'] as Unit[]).map((u) => (

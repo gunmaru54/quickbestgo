@@ -130,7 +130,7 @@ const GpaCalculator = ({ dict, theme }: GpaCalculatorProps) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm transition-colors duration-300">
+    <div className={`w-full max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm transition-colors duration-300`}>
       <div className="p-4 sm:p-6 md:p-8 space-y-4">
         {/* Header row */}
         <div className="grid grid-cols-[1fr_80px_56px] gap-2 pr-9">

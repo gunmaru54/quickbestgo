@@ -119,7 +119,7 @@ const TipCalculator = ({ dict, theme }: TipCalculatorProps) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+    <div className={`max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 transition-colors duration-300`}>
       {/* Currency selector */}
       <div className="flex items-center gap-1.5 mb-5 flex-wrap">
         {(Object.keys(CURRENCIES) as CurrencyCode[]).map((code) => (

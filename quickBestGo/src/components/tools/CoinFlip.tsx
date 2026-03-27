@@ -41,7 +41,7 @@ const CoinFlip = ({ dict, theme }: CoinFlipProps) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 text-center transition-colors duration-300">
+    <div className={`max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 text-center transition-colors duration-300`}>
       <div className="flex flex-col items-center gap-8">
         <div className={`
           w-40 h-40 rounded-full border-8 flex items-center justify-center text-3xl font-black transition-all duration-500

@@ -57,7 +57,7 @@ const PasswordGenerator = ({ dict, theme }: PasswordGeneratorProps) => {
   }, [generatePassword]);
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border dark:border-gray-800 shadow-sm p-6 md:p-8 transition-colors duration-300">
+    <div className={`max-w-md mx-auto bg-white dark:bg-[#1a1a1a] rounded-3xl border ${theme.cardBorder} shadow-sm p-6 md:p-8 transition-colors duration-300`}>
       <div className="space-y-6">
         <div className="relative group">
           <div className="w-full px-4 py-5 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-2xl text-center font-mono text-xl md:text-2xl break-all min-h-[4rem] flex items-center justify-center pr-12 text-gray-900 dark:text-gray-100">
