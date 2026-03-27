@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#990FFA"/>
+      <stop offset="100%" style="stop-color:#E60076"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow blobs -->
+  <circle cx="900" cy="150" r="280" fill="#990FFA" opacity="0.08"/>
+  <circle cx="200" cy="500" r="220" fill="#E60076" opacity="0.06"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#grad1)"/>
+
+  <!-- Logo / Brand name -->
+  <text x="80" y="110" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="52" fill="url(#grad1)">QuickBestGo</text>
+
+  <!-- Main headline -->
+  <text x="80" y="230" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Quick &amp; Simple</text>
+  <text x="80" y="320" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Utility Tools</text>
+
+  <!-- Description -->
+  <text x="80" y="400" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="30" fill="#9CA3AF">Fast, free, and mobile-friendly tools for everyday needs.</text>
+  <text x="80" y="442" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="30" fill="#9CA3AF">No installation or signup required.</text>
+
+  <!-- Stats pills -->
+  <rect x="80" y="500" width="160" height="52" rx="26" fill="#990FFA" opacity="0.15" stroke="#990FFA" stroke-width="1.5"/>
+  <text x="160" y="532" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#990FFA" text-anchor="middle">20+ Tools</text>
+
+  <rect x="258" y="500" width="170" height="52" rx="26" fill="#E60076" opacity="0.12" stroke="#E60076" stroke-width="1.5"/>
+  <text x="343" y="532" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#E60076" text-anchor="middle">5 Languages</text>
+
+  <rect x="446" y="500" width="160" height="52" rx="26" fill="#16A34A" opacity="0.12" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="526" y="532" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#16A34A" text-anchor="middle">0 Sign-ups</text>
+
+  <!-- URL badge -->
+  <text x="1120" y="590" font-family="system-ui, sans-serif" font-weight="600" font-size="22" fill="#6B7280" text-anchor="end">quickbestgo.com</text>
+</svg>

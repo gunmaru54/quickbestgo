@@ -25,12 +25,14 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
       siteName: siteConfig.name,
       locale: getOgLocale(lang),
       type: 'website',
+      images: [{ url: `${siteConfig.url}/og-image.png`, width: 1200, height: 630, alt: siteConfig.name }],
     },
     twitter: {
       card: 'summary_large_image',
       title: dict.meta.title,
       description: dict.meta.description,
       creator: '@quickbestgo',
+      images: [`${siteConfig.url}/og-image.png`],
     },
     robots: {
       index: true,
