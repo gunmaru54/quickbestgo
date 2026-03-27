@@ -28,6 +28,9 @@ export default async function CompoundInterestCalculatorPage({ params: { lang } 
       toolComponent={<CompoundInterestCalculator dict={d} theme={theme} lang={lang} />}
       about={{ title: d.about_title, p1: d.about_p1, p2: d.about_p2, p3: d.about_p3 }}
       faq={{ title: d.faq_title, items: d.faq }}
+      slug="compound-interest-calculator"
+      favLabels={{ add: dict.home.fav_add, remove: dict.home.fav_remove }}
+      lang={lang}
     />
   );
 }

@@ -28,6 +28,9 @@ export default async function LoanCalculatorPage({ params: { lang } }: { params:
       toolComponent={<LoanCalculator dict={d} theme={theme} lang={lang} />}
       about={{ title: d.about_title, p1: d.about_p1, p2: d.about_p2, p3: d.about_p3 }}
       faq={{ title: d.faq_title, items: d.faq }}
+      slug="loan-calculator"
+      favLabels={{ add: dict.home.fav_add, remove: dict.home.fav_remove }}
+      lang={lang}
     />
   );
 }

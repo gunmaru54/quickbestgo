@@ -113,6 +113,15 @@ cd quickBestGo
 npm run dev -- --port 3000
 ```
 
+**소스 수정 후 필수 규칙**:
+
+> **Claude는 소스 파일을 수정할 때마다, 작업 완료 후 반드시 아래 원스텝 명령을 실행해야 한다.**
+> 설명·확인 없이 즉시 실행. 이 규칙은 예외 없이 적용된다.
+
+```bash
+netstat -ano | grep ":3000" | awk '{print $5}' | sort -u | xargs -I{} taskkill //PID {} //F 2>&1; rm -rf quickBestGo/.next && cd quickBestGo && npm run dev -- --port 3000
+```
+
 **반복 발생하는 캐시 에러 처리**:
 
 아래 에러가 발생하면 `.next` 캐시 불일치 문제다. 코드 변경 후 chunk 번호가 바뀌었는데 이전 캐시가 남아 충돌하는 Next.js의 알려진 문제.
@@ -138,7 +147,7 @@ Require stack:
    cd quickBestGo && npm run dev -- --port 3000
    ```
 
-> Claude가 이 에러를 만나면 위 3단계를 즉시 실행할 것. 원인 설명보다 조치 우선.
+> Claude가 이 에러를 만나거나, 소스를 수정한 직후에는 위 3단계를 즉시 실행할 것. 원인 설명보다 조치 우선.
 
 ---
 

@@ -1,13 +1,31 @@
-import { GeistSans } from "geist/font/sans";
+import { Montserrat, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
 import "./globals.css";
 import { siteConfig, generateOrganizationSchema } from "@/lib/seo";
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.svg?v=2",
+    shortcut: "/favicon.svg?v=2",
+    apple: "/favicon.svg?v=2",
   },
   robots: {
     index: true,
@@ -63,7 +81,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
         />
       </head>
-      <body className={`${GeistSans.className} min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] transition-colors duration-300`}>
+      <body
+        className={`${montserrat.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-brand-text dark:text-[#f9fafb] transition-colors duration-300`}
+      >
         {children}
       </body>
     </html>
