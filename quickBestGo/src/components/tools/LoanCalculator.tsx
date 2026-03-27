@@ -142,6 +142,7 @@ const LoanCalculator = ({ dict, theme }: Props) => {
   const rateRef = useRef<HTMLInputElement>(null);
   const termRef = useRef<HTMLInputElement>(null);
   const symbol = CURRENCIES[currency].symbol;
+  const symbolPl = symbol.length === 1 ? 'pl-8' : symbol.length === 2 ? 'pl-10' : 'pl-14';
 
   useEffect(() => {
     if (!result || !chartRef.current) return;
@@ -284,7 +285,7 @@ const LoanCalculator = ({ dict, theme }: Props) => {
                 placeholder={toCommaDisplay(PLACEHOLDER[currency] ?? '300000')}
                 maxLength={25}
                 aria-label={`${dict.label_loan_amount} (${currency})`}
-                className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${
+                className={`w-full ${symbolPl} pr-4 py-3 bg-white dark:bg-gray-800 rounded-xl text-gray-900 dark:text-gray-100 focus:outline-none transition-all ${
                   fieldErrors.amount
                     ? 'border border-red-400 dark:border-red-500 ring-2 ring-red-400/30'
                     : `border dark:border-gray-700 focus:ring-2 ${theme.ring}`

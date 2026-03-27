@@ -157,6 +157,7 @@ const RetirementCalculator = ({ dict, theme }: Props) => {
   const currentAgeRef = useRef<HTMLInputElement>(null);
   const retirementAgeRef = useRef<HTMLInputElement>(null);
   const symbol = CURRENCIES[currency].symbol;
+  const symbolPl = symbol.length === 1 ? 'pl-8' : symbol.length === 2 ? 'pl-10' : 'pl-14';
 
   useEffect(() => {
     if (!result || !chartRef.current) return;
@@ -336,7 +337,7 @@ const RetirementCalculator = ({ dict, theme }: Props) => {
                 placeholder={toCommaDisplay(PLACEHOLDER[currency] ?? '50000')}
                 maxLength={25}
                 aria-label={`${dict.label_current_savings} (${currency})`}
-                className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                className={`w-full ${symbolPl} pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
             </div>
           </div>
@@ -359,7 +360,7 @@ const RetirementCalculator = ({ dict, theme }: Props) => {
                 placeholder={toCommaDisplay(CONTRIBUTION_PLACEHOLDER[currency] ?? '500')}
                 maxLength={25}
                 aria-label={`${dict.label_monthly_contribution} (${currency})`}
-                className={`w-full pl-8 pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
+                className={`w-full ${symbolPl} pr-4 py-3 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 focus:ring-2 ${theme.ring} focus:outline-none transition-all`}
               />
             </div>
           </div>
