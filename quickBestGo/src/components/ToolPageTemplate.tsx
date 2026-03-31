@@ -25,6 +25,10 @@ interface ToolPageTemplateProps {
     title: string;
     items: FaqItem[];
   };
+  howToUse?: {
+    title: string;
+    steps: string[];
+  };
   slug?: string;
   favLabels?: {
     add: string;
@@ -33,7 +37,7 @@ interface ToolPageTemplateProps {
   lang?: string;
 }
 
-export default function ToolPageTemplate({ schemas, title, toolComponent, about, theme, icon, faq, slug, favLabels, lang }: ToolPageTemplateProps) {
+export default function ToolPageTemplate({ schemas, title, toolComponent, about, theme, icon, faq, howToUse, slug, favLabels, lang }: ToolPageTemplateProps) {
   return (
     <>
       <script
@@ -99,6 +103,23 @@ export default function ToolPageTemplate({ schemas, title, toolComponent, about,
             <p>{about.p2}</p>
             <p>{about.p3}</p>
           </article>
+
+          {/* How to Use section */}
+          {howToUse && howToUse.steps.length > 0 && (
+            <section className={`mt-6 bg-white dark:bg-[#111] p-8 rounded-3xl border ${theme.accentBorder} transition-colors duration-300`}>
+              <h2 className="font-display text-2xl font-bold mb-6 text-brand-text dark:text-white">{howToUse.title}</h2>
+              <ol className="space-y-4">
+                {howToUse.steps.map((step, i) => (
+                  <li key={i} className="flex gap-4 items-start">
+                    <span className={`flex-none w-7 h-7 rounded-full ${theme.iconBg} ${theme.iconColor} flex items-center justify-center text-sm font-bold`}>
+                      {i + 1}
+                    </span>
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed pt-0.5">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
 
           {/* FAQ section */}
           {faq && faq.items.length > 0 && (

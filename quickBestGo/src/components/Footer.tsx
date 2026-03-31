@@ -40,6 +40,7 @@ const Footer = async ({ lang }: { lang: Locale }) => {
               <li><Link href={`/${lang}/about`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.about}</Link></li>
               <li><Link href={`/${lang}/contact`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.contact}</Link></li>
               <li><Link href={`/${lang}/privacy-policy`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.privacy_policy}</Link></li>
+              <li><Link href={`/${lang}/terms-of-service`} className="hover:text-blue-600 dark:hover:text-blue-400">{dict.navigation.terms_of_service}</Link></li>
             </ul>
           </div>
         </div>

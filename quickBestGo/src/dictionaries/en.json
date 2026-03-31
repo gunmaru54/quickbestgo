@@ -4,7 +4,8 @@
     "tools": "Tools",
     "about": "About",
     "contact": "Contact",
-    "privacy_policy": "Privacy Policy"
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service"
   },
   "home": {
     "title": "Quick & Simple Utility Tools",
@@ -47,11 +48,26 @@
     "chart_avg_note": "Based on 5 common task types, ~1 use each",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What tools are available on QuickBestGo?", "a": "QuickBestGo offers 20+ free utility tools including calculators (BMI, GPA, compound interest, tip, percentage, age, days between dates), health tools (calorie calculator), developer tools (Base64, URL encoder, JSON formatter, color converter), random tools (random number generator, password generator, coin flip, wheel spinner), converters (unit converter, timezone converter, QR code generator), and utilities (word counter)."},
-      {"q": "Are all the tools on QuickBestGo free?", "a": "Yes. Every tool on QuickBestGo is completely free to use with no subscription, no registration, and no hidden fees."},
-      {"q": "Do I need to create an account to use the tools?", "a": "No account or sign-up is required. All tools work instantly in your browser — just open the page and start using them."},
-      {"q": "Is my data safe when using QuickBestGo tools?", "a": "Yes. All calculations and data processing happen entirely inside your browser. Nothing you type is ever sent to a server or stored anywhere."},
-      {"q": "Which languages does QuickBestGo support?", "a": "QuickBestGo is available in 5 languages: English, Korean (한국어), Spanish (Español), Japanese (日本語), and Portuguese (Português)."}
+      {
+        "q": "What tools are available on QuickBestGo?",
+        "a": "QuickBestGo offers 20+ free utility tools including calculators (BMI, GPA, compound interest, tip, percentage, age, days between dates), health tools (calorie calculator), developer tools (Base64, URL encoder, JSON formatter, color converter), random tools (random number generator, password generator, coin flip, wheel spinner), converters (unit converter, timezone converter, QR code generator), and utilities (word counter)."
+      },
+      {
+        "q": "Are all the tools on QuickBestGo free?",
+        "a": "Yes. Every tool on QuickBestGo is completely free to use with no subscription, no registration, and no hidden fees."
+      },
+      {
+        "q": "Do I need to create an account to use the tools?",
+        "a": "No account or sign-up is required. All tools work instantly in your browser — just open the page and start using them."
+      },
+      {
+        "q": "Is my data safe when using QuickBestGo tools?",
+        "a": "Yes. All calculations and data processing happen entirely inside your browser. Nothing you type is ever sent to a server or stored anywhere."
+      },
+      {
+        "q": "Which languages does QuickBestGo support?",
+        "a": "QuickBestGo is available in 5 languages: English, Korean (한국어), Spanish (Español), Japanese (日本語), and Portuguese (Português)."
+      }
     ]
   },
   "tools": {
@@ -120,25 +136,65 @@
       "description": "Calculate your Grade Point Average on a 4.0 scale.",
       "category": "Education"
     },
-    "base64": { "name": "Base64 Encoder / Decoder", "description": "Encode text to Base64 or decode Base64 back to plain text.", "category": "Developer Tools" },
-    "url_encoder": { "name": "URL Encoder / Decoder", "description": "Encode or decode URLs and query string parameters.", "category": "Developer Tools" },
-    "json_formatter": { "name": "JSON Formatter", "description": "Format, validate, and minify JSON with syntax highlighting.", "category": "Developer Tools" },
-    "color_converter": { "name": "Color Converter", "description": "Convert colors between HEX, RGB, and HSL formats.", "category": "Developer Tools" },
-    "word_counter": { "name": "Word Counter", "description": "Count words, characters, sentences, and estimate reading time instantly.", "category": "Utilities" },
-    "days_between_dates": { "name": "Days Between Dates", "description": "Calculate the number of days, weeks, and months between two dates.", "category": "Calculators" },
-    "timezone_converter": { "name": "Timezone Converter", "description": "Convert times between any two time zones with a live world clock.", "category": "Converters" },
-    "currency_exchange_calculator": { "name": "Currency Exchange Calculator", "description": "Convert between 16 major currencies with real-time exchange rates.", "category": "Converters" },
-    "loan_calculator": { "name": "Loan Calculator", "description": "Calculate monthly payments, total interest, and full amortization schedule for any loan.", "category": "Calculators" },
-    "retirement_calculator": { "name": "Retirement Savings Calculator", "description": "Project your retirement savings with monthly contributions, returns, and inflation adjustment.", "category": "Calculators" }
+    "base64": {
+      "name": "Base64 Encoder / Decoder",
+      "description": "Encode text to Base64 or decode Base64 back to plain text.",
+      "category": "Developer Tools"
+    },
+    "url_encoder": {
+      "name": "URL Encoder / Decoder",
+      "description": "Encode or decode URLs and query string parameters.",
+      "category": "Developer Tools"
+    },
+    "json_formatter": {
+      "name": "JSON Formatter",
+      "description": "Format, validate, and minify JSON with syntax highlighting.",
+      "category": "Developer Tools"
+    },
+    "color_converter": {
+      "name": "Color Converter",
+      "description": "Convert colors between HEX, RGB, and HSL formats.",
+      "category": "Developer Tools"
+    },
+    "word_counter": {
+      "name": "Word Counter",
+      "description": "Count words, characters, sentences, and estimate reading time instantly.",
+      "category": "Utilities"
+    },
+    "days_between_dates": {
+      "name": "Days Between Dates",
+      "description": "Calculate the number of days, weeks, and months between two dates.",
+      "category": "Calculators"
+    },
+    "timezone_converter": {
+      "name": "Timezone Converter",
+      "description": "Convert times between any two time zones with a live world clock.",
+      "category": "Converters"
+    },
+    "currency_exchange_calculator": {
+      "name": "Currency Exchange Calculator",
+      "description": "Convert between 16 major currencies with real-time exchange rates.",
+      "category": "Converters"
+    },
+    "loan_calculator": {
+      "name": "Loan Calculator",
+      "description": "Calculate monthly payments, total interest, and full amortization schedule for any loan.",
+      "category": "Calculators"
+    },
+    "retirement_calculator": {
+      "name": "Retirement Savings Calculator",
+      "description": "Project your retirement savings with monthly contributions, returns, and inflation adjustment.",
+      "category": "Calculators"
+    }
   },
   "percentage_calculator": {
     "title": "Percentage Calculator",
     "meta_title": "Percentage Calculator - Free Online Tool - QuickBestGo",
     "meta_description": "Calculate percentages quickly with our free online tool. Support for percentage of, percentage change, and more.",
     "about_title": "How to use the Percentage Calculator?",
-    "about_p1": "QuickBestGo's Percentage Calculator is a versatile tool designed to handle common percentage-related calculations. Whether you need to find a percentage of a number, determine what percentage one number is of another, or calculate percentage increases and decreases, this tool has you covered.",
-    "about_p2": "The calculator now provides three modes: percent of a number, increase by percent, and decrease by percent. Enter your values and see results instantly.",
-    "about_p3": "Examples: 15% of 200 = 30, 200 increased by 15% = 230, 200 decreased by 15% = 170.",
+    "about_p1": "The Percentage Calculator handles three types of percentage problems in one tool. Mode 1 answers 'What is X% of Y?' (e.g., what is 15% of 200 = 30). Mode 2 answers 'X is what percent of Y?' (e.g., 30 is 15% of 200). Mode 3 answers 'What is Y after increasing or decreasing by X%?' (e.g., 200 increased by 15% = 230, or 200 decreased by 15% = 170). Results update instantly as you type, with no need to press a button. All three modes cover the vast majority of percentage questions that come up in everyday life.",
+    "about_p2": "Percentages appear in nearly every domain of daily life: retail discounts and sale prices, tax calculations, interest rates, tip amounts, grade scores, statistical data, business profit margins, and investment returns. Understanding how to work with percentages quickly and accurately — in both directions — gives you a practical edge in financial decisions, shopping, and data interpretation. The ability to switch between 'finding a percent of a number' and 'finding what percent a number represents' is especially useful for comparisons.",
+    "about_p3": "The underlying formulas are straightforward: to find X% of Y, compute Y × (X/100). To find what percentage X is of Y, compute (X/Y) × 100. To increase Y by X%, compute Y × (1 + X/100); to decrease, compute Y × (1 − X/100). This calculator handles these operations so you can focus on the result. All calculations run locally in your browser — no data is sent to any server, and results are available offline.",
     "title_mode1": "Percent of",
     "title_mode2": "Increase by Percent",
     "title_mode3": "Decrease by Percent",
@@ -150,9 +206,43 @@
     "label_result": "Result",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I calculate what percentage one number is of another?", "a": "Divide the part by the whole, then multiply by 100. For example, 30 is 15% of 200 because (30 ÷ 200) × 100 = 15."},
-      {"q": "How do I calculate a percentage increase?", "a": "Enter the original value and the percentage, and the calculator adds that percentage to the original. For example, 200 increased by 15% equals 230."},
-      {"q": "How do I calculate a discount or percentage decrease?", "a": "Enter the original price and the discount percentage. The calculator subtracts that percentage to show the final price after the discount."}
+      {
+        "q": "How do I calculate a percentage of a number?",
+        "a": "Formula: Result = Number × (Percentage divided by 100). Example: 15% of 200 = 200 × 0.15 = 30. Use Mode 1 in this calculator — enter 15 as the percentage and 200 as the number. The result is 30."
+      },
+      {
+        "q": "How do I find what percentage one number is of another?",
+        "a": "Formula: Percentage = (Part divided by Whole) × 100. Example: what percent is 30 of 200? = (30 divided by 200) × 100 = 15%. Use Mode 2 — enter 30 and 200. The result is 15%."
+      },
+      {
+        "q": "How do I calculate a percentage increase?",
+        "a": "Formula: New Value = Original × (1 + Percentage divided by 100). Example: 200 increased by 15% = 200 × 1.15 = 230. To find the percentage change between two numbers: ((New minus Old) divided by Old) × 100."
+      },
+      {
+        "q": "How do I calculate a sale price after a discount?",
+        "a": "Subtract the discount percentage from 100%, then multiply by the original price. Example: $120 item at 30% off = 120 × 0.70 = $84. The discount amount is 120 × 0.30 = $36. This is Mode 3 (Decrease by Percent) in this calculator."
+      },
+      {
+        "q": "What is the difference between a percentage point and a percent change?",
+        "a": "A percentage point is an absolute arithmetic difference between two percentages. A percent change is relative. Example: if an interest rate rises from 2% to 3%, that is 1 percentage point — but it is a 50% relative increase in the rate. The distinction is critical in finance, polling, and statistics."
+      },
+      {
+        "q": "How do I quickly calculate a tip percentage mentally?",
+        "a": "Find 10% first by moving the decimal point one place left. Then adjust: 20% = double the 10% figure; 15% = the 10% figure plus half of it; 18% ≈ double the 10% figure minus a small amount. Example: 18% of $65 — 10% = $6.50, 20% = $13.00, 18% ≈ $11.70."
+      },
+      {
+        "q": "Can I calculate a tax-inclusive price?",
+        "a": "Yes. Use Mode 1 to find the tax amount (e.g., 8% of $100 = $8), then add it to the original price ($108 total). Or use Mode 3 (Increase by Percent) to get the tax-inclusive price directly: $100 increased by 8% = $108."
+      }
+    ],
+    "how_to_use_title": "How to Use the Percentage Calculator",
+    "how_to_use_steps": [
+      "Select the calculation mode that matches your question: 'Percent of a Number,' 'What Percent Is X of Y,' or 'Increase/Decrease by Percent.'",
+      "For Mode 1 (Percent of Number): enter the percentage value and the base number to find the resulting amount.",
+      "For Mode 2 (What Percent): enter both numbers to find what percentage the first number is of the second.",
+      "For Mode 3 (Increase/Decrease): enter the original number and the percentage, then toggle between increase and decrease.",
+      "Results appear instantly as you type — there is no Calculate button to press.",
+      "Click the copy icon to copy the result to your clipboard for use in other applications."
     ]
   },
   "qr_code_generator": {
@@ -160,9 +250,9 @@
     "meta_title": "QR Code Generator - Create QR Codes Online - QuickBestGo",
     "meta_description": "Create high-quality QR codes for any text, URL, or contact information with our free online tool. Download as PNG.",
     "about_title": "How to use the QR Code Generator?",
-    "about_p1": "QuickBestGo's QR Code Generator allows you to instantly create QR codes for any text or URL you provide. Simply enter your content, and the QR code will be generated in real-time.",
-    "about_p2": "You can use these QR codes for sharing website links, text messages, or any other information that can be scanned by a smartphone camera. It's a fast and efficient way to bridge physical and digital content.",
-    "about_p3": "Your data is processed locally in your browser, ensuring that your information is never sent to our servers. Once generated, you can download the QR code as a PNG file for use in your projects.",
+    "about_p1": "The QR Code Generator creates instant, scannable QR codes from any text or URL you provide. QR codes (Quick Response codes) are 2D barcodes readable by any modern smartphone camera — no special app required on iOS or Android. The code updates in real time as you type, so you can preview the result immediately. Once satisfied, download the QR code as a high-resolution PNG image suitable for printing, embedding in documents, or sharing digitally.",
+    "about_p2": "QR codes have become a universal bridge between the physical and digital world. Businesses use them on business cards, product packaging, restaurant menus, event posters, and store displays to direct customers instantly to websites, social profiles, or contact information. Event organizers use QR codes for paperless ticketing. Marketers embed them in print ads to track engagement. Educators include them in worksheets to link to supplementary videos. Wi-Fi credentials encoded as QR codes let guests connect without typing a password.",
+    "about_p3": "The data capacity of a QR code depends on content type: URLs support up to approximately 4,000 characters, and plain text a similar range. For best scan reliability, keep content concise — URLs with many long parameters result in dense, complex codes that are harder to scan in poor lighting or when printed small. If your URL is long, use a URL shortener before generating. All QR code generation happens locally in your browser; no data is sent to any server.",
     "label_enter_text": "Enter Text or URL",
     "placeholder_text": "https://example.com",
     "btn_download": "Download QR Code",
@@ -170,9 +260,34 @@
     "error_dangerous_url": "This URL scheme is not allowed for security reasons.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I generate a QR code?", "a": "Type or paste any URL, text, or contact information, and the QR code is generated instantly. You can download it as an image to use anywhere."},
-      {"q": "What can I encode in a QR code?", "a": "You can encode URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, and more. The QR code can be scanned by any smartphone camera."},
-      {"q": "Are the generated QR codes free to use?", "a": "Yes, all QR codes generated on QuickBestGo are completely free with no usage restrictions or expiration."}
+      {
+        "q": "How do I generate a QR code?",
+        "a": "Type or paste any URL, text, or information into the input field. The QR code is generated and previewed instantly. Click Download to save it as a PNG image file."
+      },
+      {
+        "q": "What can I encode in a QR code?",
+        "a": "You can encode URLs, plain text, email addresses (mailto: links), phone numbers (tel: links), SMS messages, Wi-Fi credentials, and vCard contact information. Any smartphone camera can scan the result without a special app."
+      },
+      {
+        "q": "Are the generated QR codes free to use?",
+        "a": "Yes. All QR codes created on QuickBestGo are completely free with no usage restrictions, no watermarks, and no expiration date."
+      },
+      {
+        "q": "What file format is the downloaded QR code?",
+        "a": "The QR code is downloaded as a PNG image file, compatible with all design tools, documents, and web platforms. The resolution is sufficient for printing on standard business cards and flyers."
+      },
+      {
+        "q": "Can I print the QR code?",
+        "a": "Yes. Download the PNG and insert it into your design or document. For reliable scanning when printed, ensure the code is at least 2 cm × 2 cm (about 0.8 inches) and has high contrast against the background."
+      },
+      {
+        "q": "Why might a QR code fail to scan?",
+        "a": "Common causes: printed too small (under 2 cm), low contrast between the code and background, blurry or damaged image, or a very long URL creating an overly dense code. Simplify the content or increase the print size."
+      },
+      {
+        "q": "Do QR codes expire?",
+        "a": "QR codes generated here never expire. They are static codes encoding the data you provided and will scan correctly as long as the destination URL or data remains valid. There is no server that can deactivate the code."
+      }
     ]
   },
   "random_number_generator": {
@@ -180,9 +295,9 @@
     "meta_title": "Random Number Generator - QuickBestGo",
     "meta_description": "Generate a random number within your custom range quickly and easily. Free online tool for random selection, gaming, and more.",
     "about_title": "What is a Random Number Generator?",
-    "about_p1": "QuickBestGo's Random Number Generator is a tool that quickly and accurately generates random numbers between a minimum and maximum value specified by the user.",
-    "about_p2": "This tool can be used for various purposes, such as simple number selection, complex probability calculations, random event generation in games, or random number drawing for prize draws.",
-    "about_p3": "Our random number generator reflects the range entered by the user immediately and is designed to store the history of the generated numbers up to the latest 5 so that you can easily check previous results.",
+    "about_p1": "The Random Number Generator produces cryptographically secure random integers within any range you specify. Set a minimum (as low as any negative number) and a maximum (up to 9,999,999), then click Generate — the result appears instantly. The generator uses your browser built-in crypto.getRandomValues() API, which provides true unpredictability suitable for simulations, games, lottery draws, and any situation requiring unbiased random selection.",
+    "about_p2": "Random number generators have countless practical applications. Teachers use them for fair lottery-style draws among students. Game masters use them to resolve random events in tabletop RPGs. Developers use them to generate test data and seed random scenarios in code. Statisticians generate random sample indices for surveys. Decision-makers use random selection to break ties without bias. Any situation requiring an unbiased, unpredictable number — from picking a movie to watch to assigning tasks in a team — benefits from a truly random generator.",
+    "about_p3": "The last 5 generated numbers appear in a history panel so you can track recent results within your session. If you need multiple numbers (for example, 6 lottery numbers from 1 to 49), click Generate repeatedly and watch the history fill. The same range settings persist until you change them, making repeated generation fast. All generation happens locally in your browser — no numbers are sent to any server or logged. The tool works offline once the page is loaded.",
     "label_min": "Minimum",
     "label_max": "Maximum",
     "btn_generate": "Generate Random Number",
@@ -191,9 +306,34 @@
     "error_min_max": "Maximum must be greater than Minimum",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I generate a random number in a specific range?", "a": "Set your minimum and maximum values, then click Generate. The tool instantly produces a cryptographically random number within your specified range."},
-      {"q": "Is this random number generator truly random?", "a": "The generator uses the browser's built-in secure random number API, producing high-quality random numbers suitable for games, decisions, and simulations."},
-      {"q": "Can I see previously generated numbers?", "a": "Yes, the generator keeps a history of recent results so you can track what numbers have been generated in your current session."}
+      {
+        "q": "How do I generate a random number in a specific range?",
+        "a": "Enter your minimum and maximum values, then click Generate. The tool instantly produces a cryptographically random integer within your range, inclusive of both the minimum and maximum values."
+      },
+      {
+        "q": "Is this random number generator truly random?",
+        "a": "Yes. It uses the browser crypto.getRandomValues() API, a cryptographically secure pseudorandom number generator (CSPRNG). Unlike Math.random(), its output is not predictable or reproducible."
+      },
+      {
+        "q": "Can I see previously generated numbers?",
+        "a": "Yes. The generator displays the last 5 results in a history panel so you can review recent numbers without re-generating. The history resets when you reload the page."
+      },
+      {
+        "q": "Can I generate a random number between 1 and 100?",
+        "a": "Yes. Set the minimum to 1 and the maximum to 100, then click Generate. The result will be a whole number from 1 to 100, with every number equally likely."
+      },
+      {
+        "q": "Can I use negative numbers in the range?",
+        "a": "Yes. Negative minimums are fully supported. For example, set minimum to -50 and maximum to 50 to generate numbers in that range, including negative values and zero."
+      },
+      {
+        "q": "What is the maximum range I can use?",
+        "a": "The minimum can be any integer (including negative), and the maximum can be up to 9,999,999. This covers lottery-style draws (1–49), dice rolls (1–6), and large dataset random sampling."
+      },
+      {
+        "q": "What is a cryptographically secure random number?",
+        "a": "A CSPRNG produces numbers that are statistically random and computationally unpredictable — even knowing previous outputs, the next number cannot be guessed. This is different from Math.random(), which is a deterministic algorithm."
+      }
     ]
   },
   "password_generator": {
@@ -201,9 +341,9 @@
     "meta_title": "Password Generator - QuickBestGo",
     "meta_description": "Create secure and customizable passwords with our free online tool. Choose length and character types for maximum security.",
     "about_title": "Strong Password Generator",
-    "about_p1": "In an era where digital security is more important than ever, a secure password is the first line of defense to protect your personal information. QuickBestGo's Password Generator maximizes your account security by generating unpredictable and complex passwords in seconds.",
-    "about_p2": "Our tool provides options to freely select whether to include uppercase letters, numbers, and special symbols, and you can set the desired length from 8 to up to 50 characters.",
-    "about_p3": "Since all password generation is performed in your local browser engine, there is no worry that the generated password will be recorded on the server or leaked through the network.",
+    "about_p1": "The Password Generator creates cryptographically secure random passwords using your browser built-in crypto.getRandomValues() API — the same randomness source used by professional security tools. Set a length from 8 to 64 characters, then select which character sets to include: lowercase letters (a–z), uppercase letters (A–Z), digits (0–9), and special symbols (!@#$%^&*). The generated password appears instantly with a real-time strength meter rating it as Weak, Fair, Strong, or Very Strong.",
+    "about_p2": "Password security directly determines your protection against credential stuffing, brute-force attacks, and account takeovers. A 12-character password using all character types has approximately 475 trillion possible combinations — cracking it would take centuries at current computing speeds. A 16-character password extends that to quintillions. The single most dangerous password habit is reuse: one breached site exposes every other account using the same password. Creating a unique, strong password for every account is the most effective personal security measure available.",
+    "about_p3": "Best practice is to pair this generator with a password manager — 1Password, Bitwarden, or your browser built-in manager — which stores passwords encrypted and autofills them. You only need to remember one strong master password. Never store passwords in plain-text notes, spreadsheets, or emails. Never share passwords over unencrypted channels. All generation in this tool happens locally in your browser — no passwords are ever transmitted, stored, or logged anywhere.",
     "label_length": "Password Length",
     "label_uppercase": "Include Uppercase",
     "label_numbers": "Include Numbers",
@@ -212,9 +352,34 @@
     "tooltip_copy": "Copy to clipboard",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I create a strong password?", "a": "Use at least 12 characters combining uppercase, lowercase, numbers, and symbols. Avoid dictionary words and personal information. Our generator creates strong passwords automatically."},
-      {"q": "What makes a password secure?", "a": "A secure password is long (12+ characters), random, and uses a mix of character types. Avoid reusing passwords across different accounts."},
-      {"q": "Is my generated password stored anywhere?", "a": "No. All password generation happens entirely in your browser. No data is sent to any server, and passwords are never stored or logged."}
+      {
+        "q": "How do I create a strong password?",
+        "a": "Use at least 12 characters and include uppercase letters, lowercase letters, numbers, and symbols. Avoid dictionary words, names, and predictable patterns like 123 or abc. Our generator handles all of this automatically."
+      },
+      {
+        "q": "What makes a password secure?",
+        "a": "Security comes from length and randomness. A 16-character random password is far stronger than a 30-character predictable phrase. Using all four character types (upper, lower, digits, symbols) maximizes the number of possible combinations an attacker must guess."
+      },
+      {
+        "q": "Is my generated password stored anywhere?",
+        "a": "No. All password generation happens entirely in your browser using the crypto.getRandomValues() API. No password is ever sent to a server, stored in a database, or logged anywhere."
+      },
+      {
+        "q": "How long should my password be?",
+        "a": "For most accounts, 16 characters provides excellent security. For high-value accounts such as banking, email, or your password manager master password, use 20 or more characters. The generator supports up to 64 characters."
+      },
+      {
+        "q": "What special symbols are included?",
+        "a": "The special symbols set includes common symbols accepted by most websites: !@#$%^&*()-_=+[]{}|;:,./<>? If a site rejects certain symbols, uncheck that option and regenerate — a longer all-alphanumeric password is still very strong."
+      },
+      {
+        "q": "Should I use a password manager with generated passwords?",
+        "a": "Yes. Password managers like Bitwarden (free and open-source), 1Password, or your browser built-in manager store passwords encrypted and autofill them. This lets you use a unique strong password for every site without memorizing them."
+      },
+      {
+        "q": "Is this password generator truly random?",
+        "a": "Yes. It uses crypto.getRandomValues(), which is the browser cryptographically secure pseudorandom number generator (CSPRNG). This is not predictable or reproducible, unlike Math.random()."
+      }
     ]
   },
   "age_calculator": {
@@ -222,9 +387,9 @@
     "meta_title": "Age Calculator - QuickBestGo",
     "meta_description": "Calculate your exact age in years, months, and days with our free online tool. Just enter your birth date.",
     "about_title": "How does the Age Calculator work?",
-    "about_p1": "QuickBestGo's Age Calculator is a tool that allows you to calculate your exact age in years, months, and days by simply entering your date of birth.",
-    "about_p2": "The calculator takes into account the different number of days in months and leap years to provide highly accurate results.",
-    "about_p3": "Your data is not sent to any server; the calculation happens entirely in your browser.",
+    "about_p1": "The Age Calculator computes your exact age from your date of birth to today — or to any target date you specify. Unlike a simple year subtraction, the result shows your age in years, months, and days simultaneously, giving you the precise breakdown needed for medical records, legal documents, insurance applications, or immigration paperwork where the exact number of completed years, months, and days may be specifically required rather than an approximated age.",
+    "about_p2": "The calculation correctly accounts for the unequal lengths of calendar months, leap years, and the transition between months of different lengths. For example, the span from January 31 to March 1 is calculated accurately as 1 month and 1 day (or exactly 1 month in a leap year), not simply 29 or 30 days. These edge cases are handled automatically using precise calendar arithmetic, so you always get an accurate result without having to manually count days or account for leap years.",
+    "about_p3": "Beyond calculating current age, this tool can determine the time elapsed between any two dates — useful for anniversary countdowns, determining eligibility for age-restricted activities (voting, driving, retirement benefits), checking whether a deadline has passed, or simply finding out how many days you have been alive. All calculations happen entirely within your browser using JavaScript; your date of birth and any other inputs are never transmitted to any server, stored in any database, or shared with any third party.",
     "label_birthdate": "Select Birth Date",
     "btn_calculate": "Calculate Age",
     "label_years": "Years",
@@ -233,9 +398,43 @@
     "tooltip_reset": "Reset",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I calculate my exact age?", "a": "Enter your date of birth and click Calculate. The tool shows your exact age in years, months, and days based on today's date."},
-      {"q": "How many days old am I?", "a": "The age calculator shows your age broken down into years, months, and days. For total days, multiply years by 365 and add remaining months and days."},
-      {"q": "Can I calculate someone else's age?", "a": "Yes, simply enter any birth date to calculate the age of anyone — a family member, historical figure, or any date in the past."}
+      {
+        "q": "How is exact age calculated?",
+        "a": "The calculator subtracts the birth date from the reference date step by step: it counts complete years first, then the remaining complete months, then the remaining days. The logic uses the actual number of days in each calendar month and correctly handles leap years throughout the calculation."
+      },
+      {
+        "q": "Why might my age in days differ from what I expected?",
+        "a": "Calendar months have different lengths (28, 29, 30, or 31 days), and leap years add an extra day in February. The calculator uses the actual calendar rather than an approximation of 30 days per month, which produces results that may differ from a simple average-based estimate."
+      },
+      {
+        "q": "Can this calculator handle leap-day birthdays (February 29)?",
+        "a": "Yes. People born on February 29 officially complete a year on February 28 or March 1 in non-leap years, depending on the legal convention used. The calculator handles February 29 birthdays accurately and correctly shows the age in non-leap years."
+      },
+      {
+        "q": "Can I calculate the age of someone else besides myself?",
+        "a": "Absolutely. Enter any date of birth — a family member, a historical figure, or any date you are curious about. The calculator shows the age from that date to today, or to any reference date you specify in the second date field."
+      },
+      {
+        "q": "What is the maximum age this calculator can compute?",
+        "a": "The calculator can handle any date within the range of the standard Gregorian calendar. Practically, it accurately computes ages from newborn to well over 120 years. For historical dates before the Gregorian calendar reform (1582), results may not align with historical age conventions."
+      },
+      {
+        "q": "Can I find the day of the week I was born?",
+        "a": "Many age calculators, including this one, display the day of the week for your date of birth. This is computed mathematically from the calendar date using a standard day-of-week algorithm and is accurate for any date in the Gregorian calendar."
+      },
+      {
+        "q": "Is my date of birth stored or used for any other purpose?",
+        "a": "No. All calculations run entirely in your browser using JavaScript. Your date of birth is never sent to any server, stored in a database, or used for any purpose beyond the calculation you requested on this page."
+      }
+    ],
+    "how_to_use_title": "How to Use the Age Calculator",
+    "how_to_use_steps": [
+      "Enter your Date of Birth using the date picker or by typing the date directly — use the format shown in the input field.",
+      "The calculator automatically uses today's date as the end point and displays your exact age instantly.",
+      "To find your age on a specific past or future date, change the 'Age As Of' or end date field to the desired date.",
+      "Review your exact age displayed in years, months, and days in the results panel.",
+      "Note any additional information shown, such as the day of the week you were born or the countdown to your next birthday.",
+      "All calculation is instant and private — your birth date is never stored or transmitted anywhere."
     ]
   },
   "coin_flip": {
@@ -254,9 +453,18 @@
     "label_history": "History (Last 10)",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How does an online coin flip work?", "a": "Click the flip button and the simulator uses a secure random algorithm to determine heads or tails — each outcome has an equal 50% probability."},
-      {"q": "Is an online coin flip truly fair?", "a": "Yes. The coin flip uses a cryptographically secure random number generator, ensuring each flip is completely independent with an equal 50/50 chance."},
-      {"q": "Can I use this coin flip to make decisions?", "a": "Absolutely. It's great for settling disputes, making random choices, or any situation where you need an unbiased 50/50 decision."}
+      {
+        "q": "How does an online coin flip work?",
+        "a": "Click the flip button and the simulator uses a secure random algorithm to determine heads or tails — each outcome has an equal 50% probability."
+      },
+      {
+        "q": "Is an online coin flip truly fair?",
+        "a": "Yes. The coin flip uses a cryptographically secure random number generator, ensuring each flip is completely independent with an equal 50/50 chance."
+      },
+      {
+        "q": "Can I use this coin flip to make decisions?",
+        "a": "Absolutely. It's great for settling disputes, making random choices, or any situation where you need an unbiased 50/50 decision."
+      }
     ]
   },
   "wheel_spinner": {
@@ -275,9 +483,18 @@
     "error_min_options": "Please enter at least 2 options.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I use the wheel spinner?", "a": "Add your custom options or names to the wheel, then click Spin. The wheel rotates and randomly selects one option with equal probability for each entry."},
-      {"q": "Can I add custom options to the spinner?", "a": "Yes. You can enter any list of items — names, choices, prizes — and the wheel will display and randomly select from your custom options."},
-      {"q": "Is the wheel spinner selection random?", "a": "Yes. Each spin uses a secure random algorithm, giving every item on the wheel an equal chance of being selected."}
+      {
+        "q": "How do I use the wheel spinner?",
+        "a": "Add your custom options or names to the wheel, then click Spin. The wheel rotates and randomly selects one option with equal probability for each entry."
+      },
+      {
+        "q": "Can I add custom options to the spinner?",
+        "a": "Yes. You can enter any list of items — names, choices, prizes — and the wheel will display and randomly select from your custom options."
+      },
+      {
+        "q": "Is the wheel spinner selection random?",
+        "a": "Yes. Each spin uses a secure random algorithm, giving every item on the wheel an equal chance of being selected."
+      }
     ]
   },
   "bmi_calculator": {
@@ -285,9 +502,9 @@
     "meta_title": "BMI Calculator - Free Body Mass Index Tool - QuickBestGo",
     "meta_description": "Calculate your Body Mass Index (BMI) instantly with our free online tool. Supports both metric (cm/kg) and imperial (ft/lb) units.",
     "about_title": "What is BMI and how is it calculated?",
-    "about_p1": "Body Mass Index (BMI) is a simple numerical value calculated from a person's height and weight. It is widely used as a screening tool to identify weight categories that may lead to health problems. The formula is: BMI = weight (kg) / height (m)².",
-    "about_p2": "BMI categories are defined by the World Health Organization (WHO): Underweight is below 18.5, Normal weight is 18.5–24.9, Overweight is 25–29.9, and Obese is 30 or above. These ranges apply to most adults aged 18–65.",
-    "about_p3": "BMI is a useful screening tool but does not directly measure body fat or overall health. Factors such as muscle mass, age, sex, and ethnicity can affect the interpretation. Always consult a healthcare professional for a comprehensive health assessment.",
+    "about_p1": "Body Mass Index (BMI) is a widely used screening tool that estimates body fat based on height and weight. Developed in the early 19th century by Belgian mathematician Adolphe Quetelet and later adopted by the World Health Organization (WHO), BMI provides a quick numerical estimate that correlates with health risks across large populations. The formula divides weight in kilograms by height in meters squared (kg/m²), making it simple to calculate and compare across different body sizes.",
+    "about_p2": "The WHO defines four standard BMI categories for adults aged 18 and older: Underweight (below 18.5), which may indicate malnutrition or other underlying health conditions; Normal weight (18.5–24.9), associated with the lowest overall health risks; Overweight (25–29.9), which raises the risk for conditions like type 2 diabetes, hypertension, and cardiovascular disease; and Obese (30 or above), further divided into Class I (30–34.9), Class II (35–39.9), and Class III (40+) for more precise clinical risk assessment.",
+    "about_p3": "While BMI is a practical screening tool, it has recognized limitations. It does not distinguish between muscle and fat — an athlete with high muscle mass may be classified as overweight despite having very low body fat. It also does not account for age-related changes in body composition, sex differences in fat distribution, or ethnic variation in risk thresholds. Research shows that people of Asian descent may face higher metabolic risks at lower BMI values. BMI should be one data point among many, and a qualified healthcare professional should always be consulted for a comprehensive health assessment.",
     "label_unit_metric": "Metric",
     "label_unit_imperial": "Imperial",
     "label_height": "Height",
@@ -309,9 +526,47 @@
     "error_invalid": "Please enter valid height and weight values.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What is BMI and how is it calculated?", "a": "BMI (Body Mass Index) is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It categorizes weight as underweight, normal, overweight, or obese."},
-      {"q": "What is a healthy BMI range?", "a": "A BMI of 18.5–24.9 is considered normal/healthy. Under 18.5 is underweight, 25–29.9 is overweight, and 30 or above is classified as obese."},
-      {"q": "Is BMI an accurate measure of health?", "a": "BMI is a useful screening tool but has limitations — it doesn't account for muscle mass, bone density, age, or body fat distribution. Consult a healthcare professional for a comprehensive assessment."}
+      {
+        "q": "What is a healthy BMI range for adults?",
+        "a": "For most adults aged 18–65, the WHO defines a healthy BMI as 18.5 to 24.9. This range is associated with the lowest risk of weight-related health conditions such as heart disease, type 2 diabetes, and certain cancers. However, optimal ranges can vary by age, sex, and ethnicity."
+      },
+      {
+        "q": "Is BMI accurate for athletes and muscular people?",
+        "a": "BMI can overestimate health risk in athletes and people with high muscle mass. Muscle is denser than fat, so a very muscular person may have a high BMI despite having low body fat. In these cases, additional assessments like body fat percentage testing or waist circumference measurement are more informative."
+      },
+      {
+        "q": "What is the exact BMI formula?",
+        "a": "BMI = weight (kg) divided by height squared (m²). For imperial units, the formula is: BMI = (weight in lbs × 703) divided by height in inches squared. Our calculator handles the unit conversion automatically — just select your preferred unit system."
+      },
+      {
+        "q": "Can I use this calculator for children and teenagers?",
+        "a": "This calculator is designed for adults aged 18 and older. For children and teenagers, BMI is interpreted using age- and sex-specific growth chart percentiles (BMI-for-age), which account for normal growth patterns. A pediatrician should evaluate weight status in children."
+      },
+      {
+        "q": "Does BMI differ by ethnicity?",
+        "a": "Yes. Research indicates that people of South and East Asian descent may face higher metabolic health risks at lower BMI values — some guidelines suggest an overweight threshold of 23 for Asian populations. Our calculator displays standard WHO international thresholds."
+      },
+      {
+        "q": "What does it mean if my BMI is in the underweight range?",
+        "a": "A BMI below 18.5 may indicate insufficient body weight, which can be associated with malnutrition, eating disorders, or underlying medical conditions. It is important to consult a doctor to understand the cause and get appropriate guidance."
+      },
+      {
+        "q": "How often should I check my BMI?",
+        "a": "If you are actively working toward a weight goal, checking monthly can help track progress. More frequent checks are rarely necessary. Keep in mind that short-term fluctuations in weight are normal and BMI alone should not be your only measure of health."
+      },
+      {
+        "q": "Is my data stored or shared?",
+        "a": "No. All calculations run entirely within your browser using JavaScript. Your height, weight, and results are never sent to any server or stored in any database."
+      }
+    ],
+    "how_to_use_title": "How to Use the BMI Calculator",
+    "how_to_use_steps": [
+      "Select your unit system — Metric (kg and cm) or Imperial (lbs and inches) — using the toggle at the top of the calculator.",
+      "Enter your weight in the weight field. Use kilograms for metric or pounds for imperial.",
+      "Enter your height. For metric, enter centimeters. For imperial, enter feet and inches in the separate fields.",
+      "Click the Calculate button to instantly see your BMI score and weight category.",
+      "Review the color-coded gauge that shows where your BMI falls — Underweight, Normal, Overweight, or Obese.",
+      "Remember: BMI is a screening tool only. Consult a healthcare professional for a complete health evaluation."
     ]
   },
   "footer": {
@@ -323,16 +578,32 @@
     "description": "A collection of simple, fast, and free online utility tools. Random number generator, password generator, age calculator, and more."
   },
   "about_page": {
-    "meta_title": "About Us - QuickBestGo",
-    "meta_description": "Learn about QuickBestGo, our mission to provide free, fast, and privacy-friendly utility tools for everyone.",
+    "meta_title": "About QuickBestGo — Free Online Utility Tools",
+    "meta_description": "Learn who built QuickBestGo, how our tools work, and why we prioritize privacy, accuracy, and accessibility in everything we create.",
     "title": "About QuickBestGo",
+    "tagline": "Built by one developer. Trusted by users worldwide.",
+    "stat_tools": "24+ Free Tools",
+    "stat_languages": "5 Languages",
+    "stat_data": "Zero Data Collected",
+    "story_title": "Our Story",
+    "story_p1": "QuickBestGo started as a personal project in 2025. Tired of tool websites cluttered with ads, paywalls, and forced sign-ups, I set out to build the kind of utility site I actually wanted to use — fast, focused, and private by design.",
+    "story_p2": "What began as a handful of calculators has grown into 24+ tools covering health, finance, development, and everyday math. Every tool is built with the same principle: your browser does the work, your data stays with you.",
     "mission_title": "Our Mission",
-    "mission_p1": "QuickBestGo was created with a simple goal: to provide fast, free, and easy-to-use online utility tools for everyone, without registration, without installation, and without compromising your privacy.",
-    "mission_p2": "We believe that everyday digital tools should be accessible to everyone, everywhere. That's why all our tools work directly in your browser and support multiple languages.",
-    "tools_title": "Our Tools",
-    "tools_p1": "We currently offer 7 free utility tools: Random Number Generator, Password Generator, Coin Flip, Wheel Spinner, Age Calculator, QR Code Generator, and Percentage Calculator. We are continuously working to add more useful tools.",
-    "privacy_title": "Your Privacy Matters",
-    "privacy_p1": "All calculations and operations are performed locally in your browser. We do not collect, store, or transmit any of the data you input into our tools. Your privacy is our priority."
+    "mission_p1": "QuickBestGo exists to make everyday digital tasks effortless. Whether you need to calculate compound interest, convert a unit, format a JSON payload, or just flip a coin — you should not need to install anything, create an account, or worry about where your data goes.",
+    "mission_p2": "We support five languages — English, Korean, Spanish, Japanese, and Portuguese — because useful tools should be accessible regardless of where you are or what language you speak.",
+    "expertise_title": "How We Build Our Tools",
+    "expertise_p1": "Every calculator on QuickBestGo is based on established, verifiable formulas. Our BMI calculator uses the standard WHO formula. Our calorie calculator applies the Mifflin-St Jeor equation, the most clinically validated method for estimating basal metabolic rate. Our loan calculator uses standard amortization math.",
+    "expertise_p2": "Financial tools use transparent formulas that you can verify independently. Health tools include clear disclaimers that results are informational and not a substitute for professional medical advice.",
+    "expertise_p3": "All calculations happen entirely within your browser using JavaScript. There is no server processing your inputs, no database storing your results. This architecture is not just good for privacy — it means the tools work offline and load instantly on any device.",
+    "tools_title": "24+ Free Tools",
+    "tools_p1": "QuickBestGo currently offers 24 free tools across six categories: Calculators (BMI, Calorie, Age, GPA, Loan, Compound Interest, Tip, Percentage, Retirement), Developer Tools (JSON Formatter, Base64, URL Encoder, Color Converter), Random & Fun (Coin Flip, Password Generator, Random Number, Wheel Spinner), Converters (Unit, Timezone, Currency), Health, and Utilities (QR Code, Word Counter, Days Between Dates).",
+    "transparency_title": "Transparency & Advertising",
+    "transparency_p1": "QuickBestGo is a free service supported by Google AdSense advertising. Ads help cover the costs of running and improving the site. Google may use cookies to serve ads based on your browsing history — you can opt out at any time via Google's Ads Settings.",
+    "transparency_p2": "We will never place ads in a way that obscures tool functionality or tricks you into clicking. Our commitment is to keep tools usable, fast, and uncluttered — advertising is secondary to that.",
+    "privacy_title": "Your Privacy, By Design",
+    "privacy_p1": "No user accounts. No data collection. No telemetry. All tool operations — calculations, encodings, conversions — run locally in your browser. The data you enter into our tools never leaves your device. We take this seriously because we use these tools ourselves.",
+    "contact_title": "Get in Touch",
+    "contact_p1": "Have a suggestion for a new tool, found a bug, or have a question about how something works? We would love to hear from you. Reach out through our contact page and we will get back to you within a few days."
   },
   "contact_page": {
     "meta_title": "Contact Us - QuickBestGo",
@@ -379,14 +650,37 @@
     "contact_title": "7. Contact Us",
     "contact_content": "If you have any questions about this Privacy Policy, please reach out via our contact page."
   },
+  "terms_of_service_page": {
+    "meta_title": "Terms of Service - QuickBestGo",
+    "meta_description": "Read the QuickBestGo Terms of Service to understand the rules and conditions for using our free online utility tools.",
+    "title": "Terms of Service",
+    "last_updated": "Last updated: March 30, 2026",
+    "intro": "By accessing or using QuickBestGo at https://quickbestgo.com, you agree to be bound by these Terms of Service. Please read them carefully before using our tools.",
+    "s1_title": "1. Acceptance of Terms",
+    "s1_content": "By using QuickBestGo, you confirm that you have read, understood, and agree to these Terms of Service and our Privacy Policy. If you do not agree, please discontinue use of our website.",
+    "s2_title": "2. Use of Service",
+    "s2_content": "QuickBestGo provides free online utility tools for personal and non-commercial use. You agree not to misuse the service, attempt to disrupt its operation, or use it for any unlawful purpose. All tools operate entirely within your browser — no data is transmitted to our servers.",
+    "s3_title": "3. Intellectual Property",
+    "s3_content": "All content on QuickBestGo, including but not limited to text, graphics, logos, and code, is the property of QuickBestGo and is protected by applicable intellectual property laws. You may not reproduce or redistribute content without prior written permission.",
+    "s4_title": "4. Disclaimer of Warranties",
+    "s4_content": "QuickBestGo is provided \"as is\" without warranties of any kind. We do not guarantee that the tools will be error-free, uninterrupted, or produce results suitable for any specific purpose. Results from calculators and converters are for informational purposes only and should not be relied upon as professional advice.",
+    "s5_title": "5. Limitation of Liability",
+    "s5_content": "To the fullest extent permitted by law, QuickBestGo shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of, or inability to use, our service or its results.",
+    "s6_title": "6. Advertising",
+    "s6_content": "QuickBestGo displays advertisements through Google AdSense. These ads are served by Google and governed by Google's advertising policies. We are not responsible for the content of third-party advertisements displayed on our site.",
+    "s7_title": "7. Changes to Terms",
+    "s7_content": "We reserve the right to update these Terms of Service at any time. Changes will be effective immediately upon posting. Your continued use of the site after changes constitutes your acceptance of the revised terms.",
+    "contact_title": "8. Contact Us",
+    "contact_content": "If you have any questions about these Terms of Service, please contact us via our contact page."
+  },
   "calorie_calculator": {
     "title": "Calorie Calculator",
     "meta_title": "Calorie Calculator - Daily Calorie Needs (BMR & TDEE) - QuickBestGo",
     "meta_description": "Calculate your daily calorie needs based on age, height, weight, and activity level. Free online BMR and TDEE calculator.",
     "about_title": "How does the Calorie Calculator work?",
-    "about_p1": "Our Calorie Calculator uses the Mifflin-St Jeor equation, the most accurate formula for estimating your Basal Metabolic Rate (BMR) — the number of calories your body burns at complete rest.",
-    "about_p2": "Your BMR is multiplied by an activity factor to calculate your Total Daily Energy Expenditure (TDEE). This is the number of calories you need to maintain your current weight.",
-    "about_p3": "To lose weight, aim for a 500 kcal/day deficit. To gain weight, add 500 kcal/day. All calculations are performed locally in your browser and no data is sent to our servers.",
+    "about_p1": "The Calorie Calculator estimates your daily energy needs using the Mifflin-St Jeor equation, the formula most widely recommended by registered dietitians and the Academy of Nutrition and Dietetics. Published in 1990, it calculates your Basal Metabolic Rate (BMR) — the minimum calories your body needs to sustain vital functions at complete rest, including breathing, circulation, cell repair, and temperature regulation. The formula uses different coefficients for men and women to account for differences in typical body composition.",
+    "about_p2": "Your BMR is multiplied by an Activity Factor to estimate your Total Daily Energy Expenditure (TDEE) — the total calories you burn each day including all physical activity. Activity levels range from Sedentary (factor 1.2, for desk workers with little exercise) to Extra Active (factor 1.9, for people with physically demanding jobs plus intense daily training). The result is the number of calories required to maintain your current weight. Eating below this number creates a calorie deficit; eating above it creates a surplus.",
+    "about_p3": "To lose weight safely and sustainably, aim for a deficit of 300–500 kcal per day, which corresponds to approximately 0.3–0.5 kg of fat loss per week. To gain weight or build muscle, add 250–500 kcal above your TDEE. These are evidence-based starting estimates — individual results vary based on genetics, hormonal factors, sleep quality, stress levels, and medication. The best approach is to use this calculator as a baseline, track your actual body weight over 2–3 weeks, and adjust your intake accordingly based on real-world results.",
     "label_gender": "Gender",
     "label_male": "Male",
     "label_female": "Female",
@@ -411,9 +705,47 @@
     "error_invalid": "Please enter valid values for all fields.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How many calories should I eat per day?", "a": "Daily calorie needs depend on your age, gender, height, weight, and activity level. The calculator uses the Mifflin-St Jeor formula to estimate your BMR and TDEE."},
-      {"q": "What is the difference between BMR and TDEE?", "a": "BMR (Basal Metabolic Rate) is the calories your body needs at complete rest. TDEE (Total Daily Energy Expenditure) accounts for your activity level and shows total daily calorie needs."},
-      {"q": "How many calories do I need to lose weight?", "a": "A deficit of 500 calories per day typically leads to about 0.5 kg (1 lb) of weight loss per week. The calculator shows your maintenance calories to help you plan."}
+      {
+        "q": "What is the Mifflin-St Jeor equation?",
+        "a": "The Mifflin-St Jeor equation estimates BMR as follows — For men: (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5. For women: (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161. It is more accurate than the older Harris-Benedict equation and is the standard recommended by most nutrition and dietetics organizations."
+      },
+      {
+        "q": "What is the difference between BMR and TDEE?",
+        "a": "BMR (Basal Metabolic Rate) is the calories your body burns at complete rest — just to keep you alive. TDEE (Total Daily Energy Expenditure) includes all your daily activity on top of BMR. Your TDEE is the practical number to use when planning your diet, not your BMR."
+      },
+      {
+        "q": "How many calories should I eat to lose weight?",
+        "a": "A safe and sustainable weight loss pace is 0.5–1 kg per week, achieved through a daily calorie deficit of approximately 500–1000 kcal below your TDEE. Eating below 1200 kcal/day for women or 1500 kcal/day for men is not recommended without medical supervision, as it risks nutrient deficiencies and muscle loss."
+      },
+      {
+        "q": "How accurate is this calorie calculator?",
+        "a": "The Mifflin-St Jeor equation is accurate to within roughly 10% for most healthy adults. Actual calorie needs vary with individual metabolism, body composition, hormonal status, medications, and other factors. Use the result as a starting estimate and adjust based on 2–3 weeks of real-world weight tracking."
+      },
+      {
+        "q": "What activity level should I choose?",
+        "a": "Choose the level that reflects your average typical week, not your best week. Sedentary means a desk job with minimal movement. Lightly active means light exercise 1–3 days per week. Moderately active means 3–5 days of exercise. Very active means hard exercise 6–7 days. Extra active means physically demanding work plus intense daily training. When in doubt, select one level lower than you think."
+      },
+      {
+        "q": "Should I eat my BMR or my TDEE calories?",
+        "a": "You should plan your diet around your TDEE, not your BMR. Your BMR is the minimum your body needs just to stay alive at complete rest. Eating at or below BMR for extended periods is harmful — it can slow your metabolism, cause muscle loss, and lead to nutritional deficiencies."
+      },
+      {
+        "q": "Does this calculator work for weight gain and muscle building?",
+        "a": "Yes. To build muscle and gain weight, eat 250–500 kcal above your TDEE. A smaller surplus of 250–300 kcal is better if you want to minimize fat gain. Pairing a calorie surplus with a structured strength training program gives significantly better results than diet alone."
+      },
+      {
+        "q": "Is the data I enter stored or shared?",
+        "a": "No. All calculations are performed entirely within your browser. Your age, sex, height, weight, and activity data are never transmitted to any server or stored in any form."
+      }
+    ],
+    "how_to_use_title": "How to Use the Calorie Calculator",
+    "how_to_use_steps": [
+      "Select your biological sex (Male or Female). The Mifflin-St Jeor formula uses different coefficients for men and women.",
+      "Enter your age in years. Metabolism naturally slows with age, and the formula accounts for this change.",
+      "Enter your height in centimeters and your current weight in kilograms.",
+      "Select the activity level that best matches your typical weekly routine — be honest and conservative; most people overestimate their activity.",
+      "Click Calculate to see both your BMR (calories at complete rest) and your TDEE (total daily calories needed).",
+      "Use your TDEE as your calorie target: eat at TDEE to maintain weight, below to lose, or above to gain."
     ]
   },
   "compound_interest_calculator": {
@@ -421,9 +753,9 @@
     "meta_title": "Compound Interest Calculator - Free Investment Growth Tool - QuickBestGo",
     "meta_description": "Calculate the future value of your investment with our free compound interest calculator. See how your money grows over time with different compounding frequencies.",
     "about_title": "What is Compound Interest?",
-    "about_p1": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, compound interest grows exponentially over time, which is why it is often called 'the eighth wonder of the world'.",
-    "about_p2": "The formula is: A = P(1 + r/n)^(nt), where P is the principal, r is the annual interest rate, n is the number of times interest compounds per year, and t is the time in years. The more frequently interest compounds, the greater the final amount.",
-    "about_p3": "This calculator is for informational and educational purposes only. Results are estimates based on the inputs provided and do not constitute financial advice.",
+    "about_p1": "Compound interest is the process of earning interest not just on your original principal, but also on the interest that has already accumulated. Unlike simple interest — which grows in a straight line — compound interest grows exponentially. The difference becomes dramatic over long time periods: $10,000 invested at 7% annual compound interest for 30 years grows to approximately $76,000, while simple interest would yield only $31,000. This exponential growth is the fundamental principle behind long-term investing, retirement savings, and why starting early makes such a dramatic difference.",
+    "about_p2": "The standard compound interest formula is: A = P(1 + r/n)^(nt), where A is the final amount, P is the principal (initial investment), r is the annual interest rate as a decimal, n is the number of times interest compounds per year (1 = annually, 4 = quarterly, 12 = monthly, 365 = daily), and t is the time in years. Our calculator additionally supports monthly contributions, making it possible to model real-world savings plans, 401(k) contributions, or recurring investment deposits alongside a lump-sum starting amount.",
+    "about_p3": "Compounding frequency significantly affects the final result. Monthly compounding yields more than annual compounding because interest is added to the principal more often, giving it more periods to grow. For example, $10,000 invested for 10 years at 8% grows to $21,589 with annual compounding and $22,196 with monthly compounding. The calculator also offers an inflation adjustment option — essential for long-term projections — since $1 million in 30 years will not buy what $1 million buys today. Inflation-adjusted returns give you a more honest picture of your actual future purchasing power.",
     "label_principal": "Principal Amount",
     "label_rate": "Annual Interest Rate (%)",
     "label_frequency": "Compounding Frequency",
@@ -461,11 +793,47 @@
     "error_invalid": "Please enter valid positive numbers for all fields.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What is compound interest?", "a": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods, causing investments to grow exponentially over time."},
-      {"q": "How often should interest compound?", "a": "More frequent compounding yields more — daily > monthly > annual. However, the difference is smaller than you'd expect. Comparing APY (Annual Percentage Yield) across accounts gives the most accurate comparison."},
-      {"q": "What is the Rule of 72?", "a": "Divide 72 by the annual interest rate to estimate how many years it takes to double your money. For example, at 6% interest: 72 ÷ 6 = 12 years to double."},
-      {"q": "How does monthly contribution affect my savings?", "a": "Monthly contributions significantly amplify compound growth. Even small regular additions can far outpace a one-time lump sum investment over the long term due to the compounding effect on each contribution."},
-      {"q": "What is inflation-adjusted return?", "a": "The real (inflation-adjusted) value shows the future amount in today's purchasing power. Subtract the inflation rate from your nominal return to get the real return — e.g., 7% nominal minus 2.5% inflation = ~4.5% real return."}
+      {
+        "q": "What is the difference between simple and compound interest?",
+        "a": "Simple interest is calculated only on the original principal: Interest = P × r × t. Compound interest is calculated on the principal plus accumulated interest, so each period's interest is larger than the last. Over long periods, this difference becomes enormous — compound interest grows exponentially while simple interest grows linearly."
+      },
+      {
+        "q": "How does compounding frequency affect the final amount?",
+        "a": "The more frequently interest compounds, the more you earn. For example, $10,000 at 8% for 10 years: annual compounding gives $21,589; monthly gives $22,196; daily gives $22,253. The jump from annual to monthly is significant; from monthly to daily is minimal in practice."
+      },
+      {
+        "q": "What is the Rule of 72?",
+        "a": "The Rule of 72 is a quick mental shortcut: divide 72 by the annual interest rate to estimate how many years it takes for money to double. At 6%, money doubles in approximately 72 divided by 6 = 12 years. At 9%, it doubles in 8 years. This works reasonably well for any compound interest scenario."
+      },
+      {
+        "q": "What interest rate should I use for long-term projections?",
+        "a": "For stock market investments, the inflation-adjusted long-term average return of the S&P 500 is approximately 7% annually. For savings accounts, use your bank's current APY. For bonds or balanced portfolios, 4–5% is a reasonable conservative estimate."
+      },
+      {
+        "q": "Why does starting early matter so much?",
+        "a": "Starting early matters because compound interest needs time to accelerate. Someone who invests $5,000 per year from age 25 to 35 and then stops will often end up with more at retirement than someone who invests $5,000 per year from age 35 to 65 — even though the second person invested three times as long. This is the power of early compounding."
+      },
+      {
+        "q": "What does the inflation adjustment option do?",
+        "a": "The inflation adjustment converts your future nominal value into today's purchasing power equivalent. For example, if your projection shows $2 million in 30 years but inflation averages 3%, the real value in today's dollars would be closer to $825,000. Always use inflation-adjusted figures for realistic long-term financial planning."
+      },
+      {
+        "q": "Can I use this for investment returns, not just savings accounts?",
+        "a": "Yes. Enter your current portfolio value as the principal, your expected annual return rate, and any regular contributions. The calculator works for any asset that generates compound returns, including stocks, index funds, bonds, or interest-bearing accounts."
+      },
+      {
+        "q": "Is this a financial advice tool?",
+        "a": "No. This calculator is for educational and informational purposes only. Results are projections based on constant rates and do not account for taxes, fees, market volatility, or changing contribution levels. Consult a licensed financial advisor for personalized investment advice."
+      }
+    ],
+    "how_to_use_title": "How to Use the Compound Interest Calculator",
+    "how_to_use_steps": [
+      "Enter your Principal Amount — the initial lump sum you are starting with (e.g., your current savings balance).",
+      "Set the Annual Interest Rate (%) — try the historical stock market average of approximately 7% real return, or your savings account rate.",
+      "Choose your Compounding Frequency — Monthly is most common for savings accounts and investment accounts.",
+      "Set the Time Period in years — experiment with 10, 20, and 30 years to see how dramatically time affects the outcome.",
+      "Optionally, enter a Monthly Contribution to simulate regular deposits, such as a monthly savings plan or 401(k) contribution.",
+      "Review the yearly breakdown chart to see exactly when and how fast your wealth accelerates year by year."
     ]
   },
   "tip_calculator": {
@@ -473,9 +841,9 @@
     "meta_title": "Tip Calculator - Split Bill & Calculate Tip - QuickBestGo",
     "meta_description": "Calculate the tip amount and split your bill easily with our free tip calculator. Choose your tip percentage and divide among any number of people.",
     "about_title": "How to use the Tip Calculator?",
-    "about_p1": "Our Tip Calculator makes it easy to calculate a tip and split a bill among multiple people. Simply enter the total bill amount, select or enter your desired tip percentage, and choose how many people are splitting the bill.",
-    "about_p2": "Tipping customs vary by country and culture. In the United States, 15–20% is standard for restaurant service. In other countries, tipping may not be customary or a service charge may already be included.",
-    "about_p3": "All calculations are performed instantly in your browser. No data is sent to any server.",
+    "about_p1": "The Tip Calculator makes it quick and fair to calculate a gratuity and split a restaurant bill among multiple people. Enter the total bill amount, select your desired tip percentage, and specify how many people are sharing the cost. The calculator instantly shows the tip amount, the total with tip, and each person's individual share — eliminating mental math and the awkward end-of-meal calculations that can make dining out feel stressful.",
+    "about_p2": "Tipping customs vary significantly by country and culture. In the United States, 15% is a minimum for adequate service, 18–20% is standard for good service, and 20–25% is appropriate for exceptional service. In Canada, 15–20% is the norm. In the United Kingdom and most of Europe, 10–15% is common and a service charge of 12.5% is often already included in the bill. In Japan, tipping is generally not practiced and may even be considered impolite. Always check your bill for an automatic service charge before adding an additional tip — especially for larger groups where gratuity is frequently added automatically.",
+    "about_p3": "When splitting a bill, small rounding differences can create friction. This calculator shows the exact per-person amount to the cent, so your group can decide how to handle rounding fairly. Many groups prefer to round up slightly so there is always enough to cover tax and any rounding differences. For dining occasions where different people ordered very different amounts, consider calculating each person's share individually before applying the tip percentage, which is the fairest approach.",
     "label_bill": "Bill Amount",
     "label_tip_percent": "Tip Percentage",
     "label_people": "Number of People",
@@ -488,9 +856,43 @@
     "no_tip_culture": "Tipping is not common in this region.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I calculate a tip?", "a": "Enter your bill amount, select a tip percentage (10–25% is common), and the calculator instantly shows the tip amount, total, and per-person share if splitting."},
-      {"q": "What percentage should I tip at a restaurant?", "a": "In the US, 15–20% is standard for restaurant service. 10% is considered low, while 25%+ is for exceptional service. Tipping customs vary by country."},
-      {"q": "How do I split a bill among multiple people?", "a": "Enter the bill amount and tip percentage, then set the number of people. The calculator divides the total equally and shows each person's share."}
+      {
+        "q": "How much should I tip at a restaurant in the US?",
+        "a": "In the US: 15% is the minimum for adequate service, 18–20% is standard for good service, and 20–25% is appropriate for exceptional service. For buffets with minimal table service, 10% is acceptable. At counter service or coffee shops, a small tip of $1–2 is appreciated but optional."
+      },
+      {
+        "q": "Should I tip on the pre-tax or post-tax total?",
+        "a": "Both are acceptable. Tipping on the pre-tax amount is technically traditional, while tipping on the total is simpler. The difference is minor — on an $80 bill with 10% tax, tipping 20% on $80 versus $88 is a difference of about $1.60. Either approach is considered acceptable etiquette."
+      },
+      {
+        "q": "When is a service charge already included?",
+        "a": "Many restaurants automatically add an 18–20% service charge for large groups (typically 6 or more people). Look for line items labeled 'service charge,' 'auto-gratuity,' or 'gratuity' on your receipt. Adding an additional tip on top of an auto-gratuity means double-tipping, which is unnecessary."
+      },
+      {
+        "q": "Is it rude not to tip in the United States?",
+        "a": "In the US, where many restaurant servers are paid below the standard minimum wage and rely on tips for most of their income, not tipping is generally considered very poor etiquette except in cases of genuinely problematic service. Tipping norms are different in other countries — always research local customs when traveling."
+      },
+      {
+        "q": "How do I handle a bill where people ordered very different amounts?",
+        "a": "This calculator splits the total (bill plus tip) evenly. For a fairer split when orders differ significantly, each person can calculate their own subtotal separately and then apply the shared tip percentage to their individual amount. Many dining groups prefer the simplicity of an even split."
+      },
+      {
+        "q": "What tip is appropriate for food delivery?",
+        "a": "For food delivery services, 15–20% is generally considered appropriate, with a minimum of $3–5 for small orders. Delivery drivers often use their own vehicles and pay for their own fuel. Poor weather, long distances, or exceptional service can justify a higher tip."
+      },
+      {
+        "q": "Does the calculator store my information?",
+        "a": "No. All calculations happen locally in your browser. The bill amount, tip percentage, and number of people are never transmitted to any server or stored anywhere."
+      }
+    ],
+    "how_to_use_title": "How to Use the Tip Calculator",
+    "how_to_use_steps": [
+      "Enter the Total Bill Amount — this is the pre-tax or post-tax subtotal from your receipt, before any tip.",
+      "Select a Tip Percentage using the preset buttons (10%, 15%, 18%, 20%, 25%) or enter a custom percentage in the input field.",
+      "Enter the Number of People splitting the bill — enter 1 if you are paying alone.",
+      "The calculator instantly shows the tip amount, total bill with tip, and each person's share.",
+      "If your bill already includes a service charge, enter 0% as the tip or only tip on the remaining amount.",
+      "For special occasions or to round up to a clean total, use the custom tip field to enter any specific amount."
     ]
   },
   "unit_converter": {
@@ -498,9 +900,9 @@
     "meta_title": "Unit Converter - Length, Weight, Temperature & Volume - QuickBestGo",
     "meta_description": "Convert between metric and imperial units instantly. Free online converter for length (km/mi), weight (kg/lb), temperature (°C/°F), and volume (L/gal).",
     "about_title": "How to use the Unit Converter?",
-    "about_p1": "Our Unit Converter supports four categories: Length (kilometers, miles, meters, feet, centimeters, inches), Weight (kilograms, pounds, grams, ounces), Temperature (Celsius, Fahrenheit, Kelvin), and Volume (liters, US gallons, milliliters, fluid ounces).",
-    "about_p2": "Select a category, enter your value, choose the source and target units, and the result is calculated instantly. You can also swap the units with a single click.",
-    "about_p3": "All conversions use internationally accepted conversion factors. Results are rounded to 4 decimal places for precision.",
+    "about_p1": "The Unit Converter supports four major categories essential for everyday life: Length (kilometers, miles, meters, feet, centimeters, inches, yards), Weight (kilograms, pounds, grams, ounces, metric tons), Temperature (Celsius, Fahrenheit, Kelvin), and Volume (liters, US gallons, UK gallons, milliliters, fluid ounces, cups). With over 30 unit pairs covered, it handles both the metric system used by most of the world and the imperial system common in the United States.",
+    "about_p2": "Converting units is a daily necessity across science, cooking, fitness, travel, and engineering. Knowing your weight in pounds when your gym app uses kilograms, understanding a recipe that calls for cups when you measure in milliliters, or calculating fuel efficiency across different unit systems are all common real-world scenarios. Our converter handles bidirectional conversion instantly — enter a value and the result appears without pressing any button. The swap button reverses the direction in one click.",
+    "about_p3": "All conversions use internationally standardized SI (Système International) conversion factors from NIST (National Institute of Standards and Technology). Temperature uses the exact formulas: Celsius to Fahrenheit = (C × 9/5) + 32, and Kelvin = C + 273.15. Results are displayed to four decimal places for precision. All calculations run locally in your browser — no data is sent to any server and the tool works offline once the page is loaded.",
     "tab_length": "Length",
     "tab_weight": "Weight",
     "tab_temperature": "Temperature",
@@ -513,9 +915,34 @@
     "error_invalid": "Please enter a valid number.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What units can I convert?", "a": "The converter supports length, weight, temperature, and volume — covering dozens of unit pairs including metric and imperial systems."},
-      {"q": "How accurate is the unit converter?", "a": "The converter uses precise conversion factors and handles common unit pairs accurately. Results are displayed to four decimal places."},
-      {"q": "Can I convert Celsius to Fahrenheit?", "a": "Yes. Select Temperature as the category, choose Celsius as the input unit and Fahrenheit as the output, then enter your value."}
+      {
+        "q": "What units can I convert?",
+        "a": "The converter supports length (km, miles, meters, feet, cm, inches, yards), weight (kg, lbs, grams, ounces), temperature (Celsius, Fahrenheit, Kelvin), and volume (liters, gallons, ml, fluid ounces, cups) — over 30 unit pairs total."
+      },
+      {
+        "q": "How accurate is the unit converter?",
+        "a": "Results are accurate to four decimal places using standardized SI conversion factors. For temperature, exact mathematical formulas are applied rather than approximations."
+      },
+      {
+        "q": "Can I convert Celsius to Fahrenheit?",
+        "a": "Yes. Select Temperature as the category, choose Celsius as the input unit and Fahrenheit as the output, then enter your value. The formula (C × 9/5) + 32 is applied automatically."
+      },
+      {
+        "q": "How do I convert miles to kilometers?",
+        "a": "Select Length, set miles as the source unit and kilometers as the target. One mile equals exactly 1.60934 km. Enter your mileage and the result appears instantly."
+      },
+      {
+        "q": "What is the difference between metric and imperial units?",
+        "a": "The metric system (SI) is based on powers of 10 and is used by most countries worldwide. The imperial system uses units like miles, pounds, and gallons, and is primarily used in the United States."
+      },
+      {
+        "q": "Can I use this unit converter on mobile?",
+        "a": "Yes. The converter is fully mobile-optimized with a touch-friendly interface. All features work on smartphones and tablets without any app installation."
+      },
+      {
+        "q": "What is the formula for converting Fahrenheit to Celsius?",
+        "a": "Subtract 32 from the Fahrenheit value, then multiply by 5/9. Formula: C = (F − 32) × 5/9. For example, 98.6°F = (98.6 − 32) × 5/9 = 37°C."
+      }
     ]
   },
   "base64": {
@@ -523,9 +950,9 @@
     "meta_title": "Base64 Encoder & Decoder - Free Online Tool - QuickBestGo",
     "meta_description": "Encode text to Base64 or decode Base64 strings back to plain text instantly. Free online Base64 converter for developers.",
     "about_title": "What is Base64 encoding?",
-    "about_p1": "Base64 is an encoding scheme that converts binary data into a text format using 64 ASCII characters (A–Z, a–z, 0–9, +, /). It is widely used in web development to embed images in CSS, encode email attachments, and transmit data in JSON payloads.",
-    "about_p2": "Encoding increases the data size by approximately 33%, but ensures safe transmission over text-based protocols. Base64 is not encryption — it is purely an encoding scheme and can be decoded by anyone.",
-    "about_p3": "All encoding and decoding is performed locally in your browser. No data is ever sent to our servers.",
+    "about_p1": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters: uppercase A–Z (26), lowercase a–z (26), digits 0–9 (10), plus (+) and slash (/), with equals (=) used as padding. It was designed to safely transmit binary data over text-based protocols that might corrupt raw binary bytes. Today it appears throughout web development: data URI images embedded in CSS, Basic Auth headers, JWT tokens, MIME email attachments, and API payloads containing binary content.",
+    "about_p2": "The most visible use of Base64 in modern web development is the data URI format: data:image/png;base64,... — embedding an image directly in HTML or CSS without an additional HTTP request, useful for small icons and inline backgrounds. JWTs (JSON Web Tokens) use Base64url encoding (a variant using - and _ instead of + and /) for their header and payload sections. Basic HTTP authentication sends credentials encoded as Base64 in the Authorization header. Recognizing and decoding Base64 in API responses is a foundational debugging skill for developers.",
+    "about_p3": "Important: Base64 is encoding, not encryption. Anyone can decode Base64 with no key or password — it provides zero confidentiality. Never use Base64 to protect sensitive data. Base64 increases data size by approximately 33%: every 3 bytes of binary become 4 Base64 characters. This size trade-off is acceptable because the encoded data is safe to transmit over any text-based channel. This tool supports standard Base64 (RFC 4648). All encoding and decoding runs locally in your browser — nothing is sent to any server.",
     "label_input": "Input",
     "label_output": "Output",
     "btn_encode": "Encode",
@@ -538,9 +965,34 @@
     "error_decode": "Invalid Base64 string.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What is Base64 encoding?", "a": "Base64 is a method that converts binary data into ASCII text using 64 characters (A-Z, a-z, 0-9, +, /). It's commonly used for embedding data in HTML, CSS, or APIs."},
-      {"q": "How do I encode text to Base64?", "a": "Paste your text in the input field and select Encode. The Base64 equivalent is shown instantly and can be copied to clipboard."},
-      {"q": "What is Base64 used for?", "a": "Base64 is used to embed images in CSS, send binary data in JSON APIs, encode email attachments, and safely transmit data in URLs."}
+      {
+        "q": "What is Base64 encoding?",
+        "a": "Base64 converts binary data into a string of 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It lets binary data travel safely over text-based systems like HTTP headers, email, or JSON without corruption."
+      },
+      {
+        "q": "How do I encode text to Base64?",
+        "a": "Paste your text in the input area, select Encode, and the Base64 output appears instantly. Click the copy button to copy the result to your clipboard for use in code or configuration."
+      },
+      {
+        "q": "What is Base64 commonly used for?",
+        "a": "Base64 is used for embedding images in CSS as data URIs, encoding JWT token payloads, transmitting email attachments via MIME encoding, encoding binary data in JSON API responses, and Basic HTTP authentication credentials."
+      },
+      {
+        "q": "Is Base64 a form of encryption?",
+        "a": "No. Base64 is purely an encoding scheme — it is completely reversible without any key. Anyone who receives Base64-encoded data can decode it instantly. Never use Base64 to protect sensitive information like passwords or private data."
+      },
+      {
+        "q": "Why does Base64 output sometimes end with == or =?",
+        "a": "The = characters are padding. Base64 encodes 3 bytes at a time into 4 characters. If the input length is not a multiple of 3, one or two = padding characters are added to complete the final group."
+      },
+      {
+        "q": "How much larger is Base64 output than the original?",
+        "a": "Base64 output is approximately 33% larger than the original data. Every 3 input bytes produce 4 output characters — so a 1 MB binary file becomes about 1.33 MB when Base64-encoded."
+      },
+      {
+        "q": "What is the difference between standard Base64 and Base64url?",
+        "a": "Standard Base64 uses + and / characters, which have special meaning in URLs. Base64url replaces + with - and / with _, making it safe to use directly in URLs and filenames. JWTs use Base64url for their header and payload sections."
+      }
     ]
   },
   "url_encoder": {
@@ -548,9 +1000,9 @@
     "meta_title": "URL Encoder & Decoder - Free Online Tool - QuickBestGo",
     "meta_description": "Encode or decode URLs and query parameters instantly. Free online URL percent-encoding tool for developers.",
     "about_title": "What is URL encoding?",
-    "about_p1": "URL encoding (percent-encoding) replaces special characters with a % sign followed by two hexadecimal digits. For example, a space becomes %20 and & becomes %26. This ensures URLs are valid and can be safely transmitted over the internet.",
-    "about_p2": "URL decoding reverses this process, converting percent-encoded sequences back to their original characters. This is commonly used when parsing query strings, handling form submissions, or debugging API requests.",
-    "about_p3": "This tool uses the standard encodeURIComponent / decodeURIComponent functions, which encode all characters except letters, digits, -, _, ., and ~.",
+    "about_p1": "URL encoding (officially percent-encoding, defined in RFC 3986) converts characters that are unsafe or reserved in URLs into a % followed by two hexadecimal digits. A space becomes %20, & becomes %26, = becomes %3D, and ? becomes %3F. This ensures URLs remain structurally valid when they contain special characters in query parameters, path segments, or fragment identifiers. All characters except unreserved characters (letters, digits, -, _, ., ~) must be percent-encoded in standard URLs.",
+    "about_p2": "URL encoding is critical when constructing API requests, parsing query strings, building redirect URLs, and handling user-submitted content in web applications. A common bug is embedding raw special characters in URLs: an & inside a query parameter value gets parsed as a parameter separator, breaking the URL structure. Search queries, tokens, file names with spaces, and any user-generated text must be properly encoded before being placed in a URL. URL decoding is equally useful when reading encoded values from log files or API responses.",
+    "about_p3": "This tool uses the RFC 3986-compliant encodeURIComponent / decodeURIComponent functions, which encode all characters except A–Z, a–z, 0–9, -, _, ., and ~. Note: encodeURIComponent also encodes forward slashes (/), so it is designed for encoding individual query parameter values, not entire URLs. To encode a complete URL while preserving its structure, use encodeURI instead — which preserves structural characters like :, /, ?, and #. All processing runs locally in your browser.",
     "label_input": "Input",
     "label_output": "Output",
     "btn_encode": "Encode",
@@ -563,9 +1015,34 @@
     "error_decode": "Invalid URL-encoded string.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What is URL encoding?", "a": "URL encoding converts special characters into a format that can be safely transmitted in a URL. For example, spaces become %20 and & becomes %26."},
-      {"q": "Why do I need to encode a URL?", "a": "URLs can only contain a limited set of characters. Encoding ensures special characters like spaces, quotes, and symbols are safely included without breaking the URL structure."},
-      {"q": "How do I decode a URL?", "a": "Paste the encoded URL and select Decode. The tool converts percent-encoded characters back to their original readable form."}
+      {
+        "q": "What is URL encoding?",
+        "a": "URL encoding (percent-encoding) converts unsafe characters into a % followed by two hexadecimal digits. For example, a space becomes %20, & becomes %26, and = becomes %3D, keeping URLs structurally valid."
+      },
+      {
+        "q": "Why do I need to URL-encode a value?",
+        "a": "URLs only allow a limited set of characters. If a query parameter contains &, =, ?, #, or spaces, those characters must be encoded before being placed in a URL — otherwise they break the URL structure and corrupt the data."
+      },
+      {
+        "q": "How do I decode a percent-encoded URL?",
+        "a": "Paste the encoded URL or value into the input field and select Decode. The tool converts all %XX sequences back to their original readable characters."
+      },
+      {
+        "q": "What characters are encoded by this tool?",
+        "a": "All characters except letters (A–Z, a–z), digits (0–9), hyphen (-), underscore (_), period (.), and tilde (~) are encoded. These are the unreserved characters defined in RFC 3986 that are always safe in URLs."
+      },
+      {
+        "q": "What is the difference between %20 and + for spaces?",
+        "a": "%20 is the standard percent-encoding for a space (RFC 3986). The + sign represents a space only in application/x-www-form-urlencoded format (HTML form submissions). In modern URLs and APIs, %20 is preferred and unambiguous."
+      },
+      {
+        "q": "How do I encode a URL query parameter value?",
+        "a": "Encode only the parameter value, not the entire URL. For example, if your value is \"hello world\", encode it to \"hello%20world\" and append it to the URL. Encoding the full URL would also encode the :// and structural slashes."
+      },
+      {
+        "q": "What does %3D mean in a URL?",
+        "a": "%3D is the percent-encoded form of the = character. Since = separates parameter names from values in query strings (key=value), any = that appears inside a parameter value must be encoded as %3D to avoid ambiguity."
+      }
     ]
   },
   "json_formatter": {
@@ -573,9 +1050,9 @@
     "meta_title": "JSON Formatter & Validator - Free Online Tool - QuickBestGo",
     "meta_description": "Format, beautify, validate, and minify JSON instantly. Free online JSON formatter with error highlighting for developers.",
     "about_title": "How to use the JSON Formatter?",
-    "about_p1": "Paste your JSON into the input area and click Format to beautify it with proper indentation, or Minify to compress it into a single line. The validator will highlight any syntax errors and show you exactly where the problem is.",
-    "about_p2": "Valid JSON uses double quotes for keys and string values, supports numbers, booleans (true/false), null, arrays ([]), and objects ({}). Common mistakes include trailing commas, single quotes, and unquoted keys.",
-    "about_p3": "All processing is done locally in your browser. Large JSON files are supported and no data is sent to any server.",
+    "about_p1": "The JSON Formatter and Validator instantly beautifies minified or compressed JSON into human-readable format with consistent indentation, or minifies formatted JSON back into a compact single line. As you paste or type, the tool validates JSON in real time and highlights syntax errors — showing the exact line and character position of the problem. Syntax highlighting color-codes keys, strings, numbers, booleans, and null values, making complex nested structures easy to navigate at a glance.",
+    "about_p2": "JSON (JavaScript Object Notation) is the dominant data exchange format for web APIs, configuration files, and modern databases. When working with APIs, responses often arrive as flat, unformatted strings — pasting into the formatter immediately reveals the structure. When debugging webhook payloads, log entries, or database exports, properly formatted JSON exposes nested relationships invisible in minified output. Developers also use the minifier to reduce JSON payload sizes for production, improving load times and reducing bandwidth costs.",
+    "about_p3": "JSON syntax is strict: keys must be double-quoted strings, values must use double quotes (not single quotes), trailing commas after the last element are forbidden, and undefined, NaN, Infinity, and function values are not valid JSON. Common mistakes include trailing commas copied from JavaScript, single-quoted strings, unquoted keys from JavaScript object literals, and inline comments — which JSON does not support. The validator catches all of these and shows precisely where the error occurs.",
     "label_input": "Input JSON",
     "label_output": "Output",
     "btn_format": "Format",
@@ -589,9 +1066,34 @@
     "label_indent": "Indent",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "What does a JSON formatter do?", "a": "It takes raw or minified JSON text and reformats it with proper indentation and line breaks, making it easy to read and debug."},
-      {"q": "How do I validate JSON online?", "a": "Paste your JSON into the formatter. If it's valid, it will be formatted cleanly. If there's a syntax error, the tool will highlight the problem."},
-      {"q": "Does the JSON formatter compress data?", "a": "Yes. You can both format (prettify) JSON for readability and minify it to remove whitespace for smaller file sizes."}
+      {
+        "q": "What does a JSON formatter do?",
+        "a": "It takes raw or minified JSON text and reformats it with proper indentation and line breaks, making nested objects and arrays easy to read and navigate. It also validates the syntax and highlights any errors."
+      },
+      {
+        "q": "How do I validate JSON online?",
+        "a": "Paste your JSON into the input area. If valid, it is formatted cleanly. If there is a syntax error, the tool highlights the problem and shows the line and character position so you can fix it immediately."
+      },
+      {
+        "q": "Can the JSON formatter also compress JSON?",
+        "a": "Yes. The Minify function removes all whitespace and line breaks to produce a compact single-line string. This reduces file size for production use or when sending JSON in API requests."
+      },
+      {
+        "q": "What are common JSON syntax errors?",
+        "a": "The most common errors are trailing commas after the last item in an array or object, single-quoted strings (JSON requires double quotes), unquoted keys (valid in JavaScript but not JSON), and comments (JSON does not support // or block comments)."
+      },
+      {
+        "q": "What is the difference between JSON and a JavaScript object?",
+        "a": "JavaScript object literals allow single quotes, unquoted keys, trailing commas, and comments. JSON requires double-quoted keys and string values, no trailing commas, and no comments. JSON is a strict text format, not executable code."
+      },
+      {
+        "q": "Can I format large JSON files?",
+        "a": "Yes. The formatter supports JSON input up to 500KB. For very large files, processing may take a moment. If you are working with files larger than 500KB, consider splitting them into smaller sections."
+      },
+      {
+        "q": "Why does my JSON show a syntax error?",
+        "a": "The most likely causes are a trailing comma after the last property in an object or array, single quotes instead of double quotes around keys or values, or a key that is not quoted at all. Check the line number shown in the error message."
+      }
     ]
   },
   "color_converter": {
@@ -599,9 +1101,9 @@
     "meta_title": "Color Converter - HEX, RGB & HSL - QuickBestGo",
     "meta_description": "Convert colors between HEX, RGB, and HSL formats instantly. Free online color picker and converter for designers and developers.",
     "about_title": "How to use the Color Converter?",
-    "about_p1": "Enter a color in any format — HEX (#RRGGBB), RGB (rgb(r, g, b)), or HSL (hsl(h, s%, l%)) — and the other formats are calculated instantly. You can also use the color picker to select any color visually.",
-    "about_p2": "HEX is the most common format in web development (CSS, HTML). RGB defines colors by red, green, and blue channels (0–255 each). HSL represents colors by hue (0–360°), saturation (0–100%), and lightness (0–100%), which is more intuitive for adjusting colors.",
-    "about_p3": "All conversions use standard color space formulas and are performed locally in your browser.",
+    "about_p1": "The Color Converter supports instant conversion between the three most common web color formats: HEX (#RRGGBB or #RGB shorthand), RGB (Red, Green, Blue — each 0 to 255), and HSL (Hue 0–360°, Saturation 0–100%, Lightness 0–100%). Enter a value in any format or use the visual color picker — all three representations update simultaneously. A live preview swatch shows exactly what the color looks like as you adjust values.",
+    "about_p2": "Each color format has its ideal use case in design and development. HEX is the dominant format in HTML, CSS stylesheets, and design export tools like Figma and Sketch. RGB is preferred in JavaScript canvas operations and image processing where individual channel manipulation is needed programmatically. HSL is the most human-readable format: adjusting only Lightness creates color ramps for UI components, and modifying just Hue rotates through complementary colors without changing saturation or brightness.",
+    "about_p3": "Conversion formulas follow the sRGB color space standard used by all major browsers and display systems. HEX to RGB converts each pair of hex digits to a decimal number (0–255). RGB to HSL normalizes channel values to 0–1, then computes hue from the dominant channel, saturation from the min-max range, and lightness as the average of min and max. All conversions are performed locally in your browser — no color data is transmitted anywhere.",
     "label_hex": "HEX",
     "label_rgb": "RGB",
     "label_hsl": "HSL",
@@ -611,9 +1113,34 @@
     "copied": "Copied!",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I convert HEX to RGB?", "a": "Enter a HEX color code (e.g., #2563eb) and the converter instantly shows the equivalent RGB, HSL, and other color format values."},
-      {"q": "What is the difference between HEX and RGB colors?", "a": "HEX is a 6-digit hexadecimal code used in web design. RGB represents the same color as three values (0–255) for Red, Green, and Blue components."},
-      {"q": "How do I find the color format I need for CSS?", "a": "The converter shows HEX, RGB, and HSL formats simultaneously, so you can copy the exact format required for your CSS or design tool."}
+      {
+        "q": "How do I convert HEX to RGB?",
+        "a": "Enter a HEX color code (e.g., #2563eb) in the input field and the converter instantly shows the equivalent RGB and HSL values. You can also type directly into the RGB or HSL fields to convert in any direction."
+      },
+      {
+        "q": "What is the difference between HEX and RGB colors?",
+        "a": "HEX is a 6-digit hexadecimal code (e.g., #FF5500) used in HTML and CSS. RGB represents the same color as three decimal values 0–255 (e.g., rgb(255, 85, 0)). Both describe the same color — they are different notations for identical values."
+      },
+      {
+        "q": "How do I find the CSS color format I need?",
+        "a": "The converter shows HEX, RGB, and HSL formats simultaneously. Copy the format required for your CSS rule — all three are valid in modern CSS and produce identical visual results."
+      },
+      {
+        "q": "What is HSL and when should I use it?",
+        "a": "HSL stands for Hue, Saturation, Lightness. It is more intuitive than HEX or RGB for adjusting colors: change only Lightness to make a color lighter or darker, or shift Hue to get a related color. It is popular in CSS theming and design systems."
+      },
+      {
+        "q": "Can I use the color picker instead of typing values?",
+        "a": "Yes. Click the color swatch or picker icon to open a visual color picker. Drag to select any color and all three format values update automatically."
+      },
+      {
+        "q": "Are HEX color codes case-sensitive?",
+        "a": "No. #FF5500 and #ff5500 are identical. CSS accepts HEX codes in both uppercase and lowercase. The converter accepts either and normalizes the output to uppercase."
+      },
+      {
+        "q": "What does the # symbol mean in a HEX color?",
+        "a": "The # is a prefix that tells CSS this is a hexadecimal color code. It is not part of the color value itself. Some tools like Figma or Photoshop may show the 6-digit code without the # prefix."
+      }
     ]
   },
   "gpa_calculator": {
@@ -621,9 +1148,9 @@
     "meta_title": "GPA Calculator - Calculate Your Grade Point Average - QuickBestGo",
     "meta_description": "Calculate your GPA on a 4.0 scale with our free online GPA calculator. Add courses with grades and credit hours for an accurate cumulative GPA.",
     "about_title": "How is GPA calculated?",
-    "about_p1": "GPA (Grade Point Average) is calculated by multiplying each course's grade points by its credit hours, summing those values, and dividing by the total credit hours. For example: A (4.0) × 3 credits + B (3.0) × 4 credits = 24 points ÷ 7 credits = 3.43 GPA.",
-    "about_p2": "This calculator uses the standard 4.0 scale: A+/A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, D- = 0.7, F = 0.0.",
-    "about_p3": "GPA scales and grading systems vary by institution and country. This calculator uses the common US 4.0 scale as a general reference.",
+    "about_p1": "A Grade Point Average (GPA) is a standardized numerical measure of academic performance used by educational institutions to evaluate and compare students. It is calculated by multiplying each course grade's point value by the number of credit hours for that course (producing quality points), summing all quality points, and dividing by the total credit hours attempted. For example: earning an A (4.0) in a 3-credit course and a B (3.0) in a 4-credit course produces 24 quality points divided by 7 total credits, resulting in a GPA of 3.43.",
+    "about_p2": "This calculator uses the standard US 4.0 grading scale: A+ and A = 4.0, A− = 3.7, B+ = 3.3, B = 3.0, B− = 2.7, C+ = 2.3, C = 2.0, C− = 1.7, D+ = 1.3, D = 1.0, D− = 0.7, and F = 0.0. You can add as many courses as needed with different credit weights to calculate either a semester GPA or a cumulative GPA. The calculator updates instantly as you add or modify course entries, so you can quickly model different grade scenarios.",
+    "about_p3": "GPA thresholds matter for many academic and professional milestones. Most universities require a minimum GPA of 2.0 to remain in good academic standing. Dean's List recognition typically requires 3.5 or higher. Graduate school admissions commonly expect a 3.0 minimum, with competitive programs preferring 3.5 or above. Scholarships, honor societies, and certain employers also use GPA cutoffs. Note that grading systems vary by institution and country — this calculator uses the common US 4.0 scale as a general reference and may not match your institution's specific scale.",
     "label_course": "Course",
     "label_grade": "Grade",
     "label_credits": "Credits",
@@ -638,9 +1165,43 @@
     "error_invalid_credits": "Please enter valid credit hours for all courses.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How is GPA calculated?", "a": "GPA is calculated by multiplying each course's grade points by its credit hours, summing those values, then dividing by the total credit hours."},
-      {"q": "What is a good GPA?", "a": "On a 4.0 scale, 3.5–4.0 is excellent (Dean's List), 3.0–3.5 is good, 2.0–3.0 is average, and below 2.0 may indicate academic difficulty."},
-      {"q": "How do I convert letter grades to grade points?", "a": "Common conversions: A/A+ = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, D = 1.0, F = 0.0."}
+      {
+        "q": "What is the GPA calculation formula?",
+        "a": "GPA = Sum of (Grade Points × Credit Hours for each course) divided by Total Credit Hours. Grade points are the numerical value for the letter grade. Multiply each course's grade points by its credits to get quality points. Add all quality points and divide by total credits."
+      },
+      {
+        "q": "What GPA do I need for graduate school?",
+        "a": "Most graduate programs require a minimum GPA of 3.0. Competitive programs such as law school, medical school, and top MBA programs typically prefer 3.5 or higher. Some programs evaluate your GPA in your major separately from your overall GPA, so a strong major GPA can sometimes partially offset a lower overall average."
+      },
+      {
+        "q": "What is the difference between semester GPA and cumulative GPA?",
+        "a": "Semester GPA includes only the courses from a single semester. Cumulative GPA is calculated across all completed semesters. Use this calculator for either: enter just the current semester's courses for semester GPA, or all courses taken to date for cumulative GPA."
+      },
+      {
+        "q": "Do Pass/Fail courses affect my GPA?",
+        "a": "In most institutions, Pass/Fail courses do not affect GPA — they add credit hours but not grade points. However, a Fail grade may count as an F (0.0) at some schools. Check with your registrar to confirm your institution's specific policy."
+      },
+      {
+        "q": "How can I raise my GPA?",
+        "a": "The most effective strategies are: earn high grades in courses with more credit hours (they have more weight), retake courses where you received a low grade if your school allows grade replacement, and focus on consistency across all semesters. A single excellent semester helps, but a pattern of strong performance over time is what builds a high cumulative GPA."
+      },
+      {
+        "q": "My school uses a different grading scale — can I still use this?",
+        "a": "This calculator uses the standard US 4.0 scale. If your institution uses a different scale such as a 10-point system, a percentage-based system, or different letter grades, you will need to convert your grades to the 4.0 equivalent. Many European and Asian universities use entirely different grading systems that do not map directly to this scale."
+      },
+      {
+        "q": "What GPA is considered good?",
+        "a": "Generally: 3.5–4.0 is excellent and often qualifies for Dean's List; 3.0–3.49 is good and competitive for most graduate programs; 2.5–2.99 is average and meets most minimum requirements; below 2.0 often triggers academic probation. What is considered good depends significantly on the program, institution, and the opportunity you are pursuing."
+      }
+    ],
+    "how_to_use_title": "How to Use the GPA Calculator",
+    "how_to_use_steps": [
+      "Add each course by entering the course name (optional), selecting the grade earned from the dropdown, and entering the credit hours.",
+      "Click Add Course to include additional courses — add as many as your semester or transcript requires.",
+      "Your GPA updates automatically as you add or change any course entry — no need to click Calculate.",
+      "To remove a course from the calculation, click the delete icon next to that row.",
+      "Review your calculated GPA, total credit hours, and total quality points in the results panel.",
+      "Use the results to check your standing against academic thresholds or to plan what grades you need in remaining courses to reach a target GPA."
     ]
   },
   "word_counter": {
@@ -648,9 +1209,9 @@
     "meta_title": "Word Counter - Free Online Word & Character Count Tool - QuickBestGo",
     "meta_description": "Count words, characters, sentences, paragraphs, and reading time instantly. Free online word counter for writers, students, and SEO professionals.",
     "about_title": "Why use a Word Counter?",
-    "about_p1": "Our Word Counter instantly analyzes your text and provides a comprehensive breakdown: total word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time based on an average reading speed of 200 words per minute.",
-    "about_p2": "Writers use word counters to meet assignment requirements, stay within social media character limits (Twitter: 280, Instagram: 2,200), and track their writing progress. SEO professionals use it to optimize meta descriptions (150–160 characters) and title tags (50–60 characters).",
-    "about_p3": "The keyword density section shows the top 5 most frequently used meaningful words in your text, helping you identify overused words and improve readability.",
+    "about_p1": "The Word Counter analyzes your text instantly and displays seven key metrics: total word count, character count with spaces, character count without spaces, sentence count, paragraph count, estimated reading time (based on 200 words per minute — the average adult reading speed), and a keyword density table showing your top 10 most-used meaningful words. All metrics update in real time as you type or paste, making it ideal for live editing sessions.",
+    "about_p2": "Writers and content creators rely on specific counts to meet platform requirements and goals. Blog posts targeting SEO typically need 800–2,000 words. Academic essays have strict assignment limits. Twitter enforces 280 characters, LinkedIn articles cap at 125,000 characters, and meta descriptions should stay under 160 characters for optimal search display. YouTube descriptions are most effective under 300 characters before the fold. Knowing your exact count as you write eliminates guesswork and saves time-consuming revisions at submission time.",
+    "about_p3": "The keyword density feature helps writers spot overused words and diversify vocabulary — a common problem in first drafts. Common stop words (the, and, is, a, of, to, in) are filtered out so only meaningful content words appear in the density table. Reading time at 200 WPM applies to standard prose; technical documentation is typically consumed at around 150 WPM. All text processing runs locally in your browser — no text you enter is ever transmitted or stored.",
     "label_input": "Enter or paste your text here",
     "placeholder": "Start typing or paste your text here to analyze...",
     "btn_clear": "Clear",
@@ -664,9 +1225,34 @@
     "keyword_title": "Top Keywords",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I count words in text?", "a": "Paste or type your text into the input area. The word count, character count, sentence count, and reading time are updated instantly."},
-      {"q": "Does the word counter include spaces in the character count?", "a": "The tool shows both character count with spaces and without spaces, so you can use whichever metric you need."},
-      {"q": "Is there a text length limit?", "a": "The tool handles up to 100,000 characters. For most documents, essays, and articles, this is more than sufficient."}
+      {
+        "q": "How do I count words in my text?",
+        "a": "Paste or type your text into the input area. Word count, character count, sentence count, paragraph count, and reading time all update instantly in real time — no button press required."
+      },
+      {
+        "q": "Does the word counter include spaces in the character count?",
+        "a": "The tool shows both: character count including spaces and character count excluding spaces. Use the one that matches the platform you are writing for — Twitter counts spaces as characters, for example."
+      },
+      {
+        "q": "Is there a text length limit?",
+        "a": "The tool handles up to 100,000 characters. This is more than enough for novels, long reports, or any typical document. For larger texts, split into sections."
+      },
+      {
+        "q": "How is reading time calculated?",
+        "a": "Reading time is estimated at 200 words per minute, which is the average adult silent reading speed for standard prose. Technical or academic content may take 30–50% longer."
+      },
+      {
+        "q": "Can I use this to check my character count for Twitter or Instagram?",
+        "a": "Yes. Twitter allows 280 characters per post and Instagram captions can be up to 2,200 characters. Use the character count with spaces to check against these limits."
+      },
+      {
+        "q": "What is keyword density?",
+        "a": "Keyword density shows how often each meaningful word appears relative to the total word count, expressed as a percentage. It helps identify overused words and ensures balanced, varied vocabulary."
+      },
+      {
+        "q": "Does the word counter count numbers as words?",
+        "a": "Yes. Any sequence of non-whitespace characters separated by spaces counts as a word, including numbers, hyphenated terms, and abbreviations like Dr. or e.g."
+      }
     ]
   },
   "days_between_dates": {
@@ -674,9 +1260,9 @@
     "meta_title": "Days Between Dates Calculator - Free Online Tool - QuickBestGo",
     "meta_description": "Calculate the exact number of days, weeks, months, and working days between two dates. Free online date difference calculator.",
     "about_title": "How to calculate days between dates?",
-    "about_p1": "Our Days Between Dates Calculator gives you the exact difference between any two dates in multiple units: total days, complete weeks, approximate months, years, and working days (Monday to Friday).",
-    "about_p2": "Use the quick preset buttons to instantly calculate common date ranges — the next 7 days, 30 days, 100 days, or a full year from today. You can also enter any custom start and end dates.",
-    "about_p3": "Common uses include calculating deadlines, project timelines, countdowns to events (holidays, birthdays, anniversaries), and determining how long ago something happened.",
+    "about_p1": "The Days Between Dates Calculator computes the exact difference between any two calendar dates in multiple units simultaneously: total calendar days, complete weeks (with remaining days), approximate months, approximate years, and working days (Monday through Friday, excluding weekends). All calculations automatically handle leap years and months with different lengths, so results are always accurate regardless of the date range selected.",
+    "about_p2": "Date calculations are essential in project management, legal contracts, payroll, loan terms, and event planning. Knowing the exact number of working days in a contract period affects cost estimates and billing. Calculating the days remaining until a deadline creates urgency and supports prioritization. Counting business days between milestones matters for onboarding schedules and HR compliance. Anniversary and birthday countdowns are popular personal uses. The quick presets (7, 30, 100 days, 1 year from today) skip manual entry for the most common scenarios.",
+    "about_p3": "The calculation uses the proleptic Gregorian calendar — the global civil calendar used in nearly all countries. Working day calculations exclude Saturdays and Sundays but do not subtract public holidays, which vary by country and region. For business purposes where public holidays matter, adjust the result manually. All calculations run locally in your browser, so the tool works offline once the page is loaded.",
     "label_start": "Start Date",
     "label_end": "End Date",
     "btn_calculate": "Calculate",
@@ -694,9 +1280,34 @@
     "error_invalid": "Please select valid start and end dates.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I calculate the number of days between two dates?", "a": "Select a start date and end date, then click Calculate. The tool shows the exact difference in days, weeks, months, and years."},
-      {"q": "How many working days are between two dates?", "a": "The calculator includes a working days result that excludes weekends, useful for project planning and business deadlines."},
-      {"q": "Can I calculate how many days until a future date?", "a": "Yes. Set today as the start date and your future date as the end date to see exactly how many days remain."}
+      {
+        "q": "How do I calculate the number of days between two dates?",
+        "a": "Select a start date and end date using the date pickers, then click Calculate. The exact difference in total days, complete weeks, months, years, and working days is shown simultaneously."
+      },
+      {
+        "q": "How many working days are between two dates?",
+        "a": "The calculator shows working days separately, counting only Monday through Friday and excluding weekends. This is useful for project planning, billing cycles, and business contract deadlines."
+      },
+      {
+        "q": "Can I calculate how many days until a future date?",
+        "a": "Yes. Set today as the start date and your future target as the end date. The result shows the exact countdown in days, weeks, months, and other units."
+      },
+      {
+        "q": "Does the calculator account for leap years?",
+        "a": "Yes. Leap years (every 4 years, with century-year exceptions) are handled automatically. February 29 is correctly included when it falls within the date range."
+      },
+      {
+        "q": "What is the difference between calendar days and working days?",
+        "a": "Calendar days count every day including weekends and holidays. Working days count only Monday through Friday, excluding Saturdays and Sundays — but public holidays are not excluded automatically."
+      },
+      {
+        "q": "How do I calculate days from today to a specific date?",
+        "a": "Use the quick preset buttons (7 days, 30 days, 1 year from today) for common ranges, or manually set today as the start date and enter your target as the end date."
+      },
+      {
+        "q": "Can I use this for business contract deadline calculations?",
+        "a": "Yes. The working days feature is specifically useful for business timelines. Enter your contract start and end dates to see exactly how many business days fall within the period."
+      }
     ]
   },
   "timezone_converter": {
@@ -704,9 +1315,9 @@
     "meta_title": "Timezone Converter - World Clock & Time Zone Tool - QuickBestGo",
     "meta_description": "Convert times between any two time zones instantly. Free online timezone converter with live world clock for major cities worldwide.",
     "about_title": "How to use the Timezone Converter?",
-    "about_p1": "Select your source timezone and enter a time, then choose a target timezone to see the converted time instantly. Use the swap button to reverse the conversion direction.",
-    "about_p2": "The live world clock at the bottom shows the current time in 6 major cities simultaneously — New York, London, Paris, Dubai, Tokyo, and Sydney — updated every second.",
-    "about_p3": "All timezone conversions use your browser's built-in Intl.DateTimeFormat API with IANA timezone data, ensuring accuracy for daylight saving time transitions and historical dates.",
+    "about_p1": "The Timezone Converter supports 400+ IANA-standard time zones from every country and region. Select a source time zone from the searchable dropdown, enter the date and time you want to convert, then choose a target time zone — the result appears instantly. The swap button reverses the direction in one click. Day-boundary crossings are handled correctly: converting 11 PM in New York to Tokyo shows the correct time on the following calendar day.",
+    "about_p2": "As remote work, international travel, and globally distributed teams become standard, timezone conversions are a daily necessity. Scheduling a video call between New York (EDT), London (BST), and Seoul (KST) requires understanding three-way time overlaps. Watching a live event broadcast at a specific UTC time means converting to your local timezone. Missing a timezone conversion can result in a missed meeting, a late flight, or a mistimed trade — the cost of getting it wrong is real.",
+    "about_p3": "All conversions use the browser built-in Intl.DateTimeFormat API with the full IANA timezone database, so daylight saving time (DST) transitions are handled automatically for every region. DST schedules differ by country: the US switches in March and November, Europe in March and October, and countries near the equator generally do not observe DST at all. The live world clock shows current times in 6 major cities — New York, London, Paris, Dubai, Tokyo, and Sydney — updated every second.",
     "label_from": "From Timezone",
     "label_to": "To Timezone",
     "label_time": "Time",
@@ -717,9 +1328,34 @@
     "error_invalid": "Please select valid timezones.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How do I convert time between time zones?", "a": "Select your source time zone, enter the time, then choose a target time zone. The converted time is shown instantly with daylight saving time accounted for."},
-      {"q": "What is UTC?", "a": "UTC (Coordinated Universal Time) is the global time standard. All time zones are defined as offsets from UTC — for example, UTC+9 is Japan Standard Time."},
-      {"q": "How do I find the current time in another country?", "a": "Select the target country's time zone and the tool displays the current local time there, automatically adjusted for daylight saving time."}
+      {
+        "q": "How do I convert time between time zones?",
+        "a": "Select your source time zone, enter the date and time, then select the target time zone. The converted time appears instantly with daylight saving time automatically accounted for."
+      },
+      {
+        "q": "What is UTC?",
+        "a": "UTC (Coordinated Universal Time) is the global time standard. All time zones are defined as offsets from UTC — for example, UTC+9 is Japan Standard Time (JST) and UTC-5 is Eastern Standard Time (EST) in the US."
+      },
+      {
+        "q": "How do I find the current time in another country?",
+        "a": "Select the target country's time zone and the converter shows the current local time there, automatically adjusted for whether that location observes daylight saving time."
+      },
+      {
+        "q": "What is daylight saving time (DST)?",
+        "a": "Daylight saving time is the practice of advancing clocks one hour during summer months to extend evening daylight. Not all countries observe DST. The converter handles all DST transitions automatically using IANA timezone data."
+      },
+      {
+        "q": "Why does the date sometimes change when I convert time zones?",
+        "a": "When converting across the international date line or late-night times to eastern time zones, the calendar date may advance by one day or go back. This is correct behavior — the converter accounts for all date changes."
+      },
+      {
+        "q": "How many time zones are supported?",
+        "a": "Over 400 IANA-standard time zones are supported, covering every country, territory, and region. You can search by city name or timezone identifier such as America/New_York or Asia/Tokyo."
+      },
+      {
+        "q": "What is the difference between GMT and UTC?",
+        "a": "GMT (Greenwich Mean Time) and UTC are effectively equivalent for everyday use. UTC is the modern scientific standard, while GMT is a geographic time zone at UTC+0. Both show the same time, but UTC is the preferred technical reference."
+      }
     ]
   },
   "currency_exchange_calculator": {
@@ -727,9 +1363,9 @@
     "meta_title": "Currency Exchange Calculator - Real-time Rates - QuickBestGo",
     "meta_description": "Free currency converter with real-time exchange rates. Convert USD, EUR, KRW, JPY and 160+ currencies instantly. No signup required.",
     "about_title": "How to use the Currency Exchange Calculator?",
-    "about_p1": "Select the currencies you want to convert in the From and To fields. Enter the amount and the result is calculated instantly using real-time exchange rates from Open Exchange Rates. Use the swap button to reverse the conversion.",
-    "about_p2": "Click any card in the Major Rates section to load that currency pair automatically. The Quick Conversion Table shows common amounts pre-calculated — click any row to set that amount in the converter.",
-    "about_p3": "All calculations happen in your browser. Exchange rates are cached for 60 minutes to minimize API calls and ensure fast performance.",
+    "about_p1": "The Currency Exchange Calculator converts between 16 major world currencies using real-time exchange rates fetched from Open Exchange Rates. Enter an amount, select source and target currencies from the dropdown menus, and the result appears instantly. The swap button reverses the direction in one click. A quick conversion table below pre-calculates common amounts (1, 5, 10, 25, 50, 100, 500, 1,000, 5,000) for the current currency pair, so you can compare values at a glance without re-entering amounts.",
+    "about_p2": "Exchange rates fluctuate 24/7 based on global market activity, economic news, central bank decisions, and geopolitical events. Our calculator refreshes rates every 60 minutes from Open Exchange Rates, which aggregates data from global financial institutions. The timestamp beneath the result shows exactly when rates were last fetched. The Major Rates section displays current rates of the 15 most-traded currency pairs relative to USD, giving you a real-time snapshot of the global currency market.",
+    "about_p3": "Sixteen supported currencies span the world largest economies: USD (US Dollar), EUR (Euro), GBP (British Pound), JPY (Japanese Yen), KRW (Korean Won), CNY (Chinese Yuan), CAD (Canadian Dollar), AUD (Australian Dollar), HKD (Hong Kong Dollar), SGD (Singapore Dollar), CHF (Swiss Franc), MXN (Mexican Peso), BRL (Brazilian Real), INR (Indian Rupee), THB (Thai Baht), and VND (Vietnamese Dong). Rates are suitable for reference and travel planning; always verify with your bank before financial transactions.",
     "label_from": "From",
     "label_to": "To",
     "btn_swap": "Swap currencies",
@@ -745,11 +1381,38 @@
     "label_result_eq": "equals",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How often are exchange rates updated?", "a": "Exchange rates are fetched from Open Exchange Rates and refreshed every 60 minutes. The timestamp shown below the result tells you exactly when the rates were last updated."},
-      {"q": "How many currencies are supported?", "a": "We support 16 major currencies: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB, and VND — covering the most traded currencies worldwide."},
-      {"q": "How do I share a specific conversion?", "a": "Click the Copy Link button. The URL automatically includes the selected currencies and amount as parameters (?from=USD&to=KRW&amount=1000), so anyone who opens the link sees the same conversion instantly."},
-      {"q": "Are the exchange rates accurate?", "a": "Rates come from Open Exchange Rates, which aggregates data from global financial sources. They are suitable for informational purposes. For transactions, always verify with your bank or financial institution."},
-      {"q": "Is this calculator free to use?", "a": "Completely free. No subscription, no registration, no hidden fees. All tools on QuickBestGo are free forever."}
+      {
+        "q": "How often are exchange rates updated?",
+        "a": "Exchange rates are fetched from Open Exchange Rates and refreshed every 60 minutes. The timestamp shown below the result tells you exactly when the rates were last updated."
+      },
+      {
+        "q": "How many currencies are supported?",
+        "a": "We support 16 major currencies: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB, and VND — covering the most traded currencies worldwide."
+      },
+      {
+        "q": "How do I share a specific conversion?",
+        "a": "Click the Copy Link button. The URL automatically includes the selected currencies and amount as parameters (?from=USD&to=KRW&amount=1000), so anyone who opens the link sees the same conversion instantly."
+      },
+      {
+        "q": "Are the exchange rates accurate?",
+        "a": "Rates come from Open Exchange Rates, which aggregates data from global financial sources. They are suitable for informational and travel planning purposes. For financial transactions, always verify with your bank or financial institution."
+      },
+      {
+        "q": "Is this calculator free to use?",
+        "a": "Completely free. No subscription, no registration, no hidden fees. All tools on QuickBestGo are free forever."
+      },
+      {
+        "q": "Can I use this calculator offline?",
+        "a": "The converter interface loads without internet, but real-time rates require a connection. If offline, the last cached rates (up to 60 minutes old) may be used if available from a previous session."
+      },
+      {
+        "q": "What does the Major Rates section show?",
+        "a": "Major Rates displays the current exchange rates for the 15 most-traded currency pairs, all relative to USD. Click any rate card to automatically load that currency pair into the converter."
+      },
+      {
+        "q": "Why do bank rates differ from the calculator?",
+        "a": "Banks and exchange services add a spread (margin) on top of the market rate to generate profit. The calculator shows the mid-market rate — the midpoint between buy and sell rates — which is the fairest reference but not the rate you receive at a bank counter."
+      }
     ]
   },
   "categories": {
@@ -825,9 +1488,9 @@
     "meta_title": "Loan Calculator - Monthly Payment & Amortization - QuickBestGo",
     "meta_description": "Calculate your monthly loan payment, total interest, and full amortization schedule. Free online mortgage and loan calculator for any loan amount, rate, and term.",
     "about_title": "How to Use the Loan Calculator",
-    "about_p1": "Enter your loan amount, annual interest rate, and loan term in years. The calculator will instantly show your monthly payment, total amount paid, and total interest over the life of the loan.",
-    "about_p2": "The amortization schedule breaks down each year into principal paid, interest paid, and remaining balance. The formula used is the standard equal-installment (annuity) method: M = P × r(1+r)^n / ((1+r)^n − 1).",
-    "about_p3": "This calculator works for any type of installment loan — mortgages, auto loans, personal loans, and student loans. Results are estimates for reference only and do not constitute financial advice.",
+    "about_p1": "The Loan Calculator helps you understand the full cost of any installment loan before you commit. Enter your loan amount, annual interest rate, and repayment term to instantly see your monthly payment, total amount repaid over the life of the loan, and the total interest cost. This transparency is essential for comparing loan offers, negotiating better terms, or deciding whether a loan fits your budget before signing any agreement.",
+    "about_p2": "The calculator uses the standard equal-installment amortization formula: M = P × [r(1+r)^n] / [(1+r)^n − 1], where M is the monthly payment, P is the loan principal, r is the monthly interest rate (annual rate divided by 12), and n is the total number of monthly payments. Each payment covers both interest (front-loaded in early payments) and principal (which grows over time as the balance decreases). The amortization schedule shows this breakdown year by year, helping you see exactly how much of each payment reduces your balance versus paying interest charges.",
+    "about_p3": "This calculator applies to any fixed-rate installment loan: mortgages, auto loans, personal loans, student loans, and home equity loans. Variable-rate loans will have different actual payments than projected here. Results are estimates for planning purposes and do not constitute a loan offer or financial advice. Always verify actual terms with your lender, including origination fees, prepayment penalties, and any other costs not captured in the base interest rate that affect your true cost of borrowing.",
     "label_loan_amount": "Loan Amount",
     "label_annual_rate": "Annual Interest Rate (%)",
     "label_loan_term": "Loan Term (Years)",
@@ -852,10 +1515,47 @@
     "error_invalid": "Please enter valid positive values.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How is my monthly loan payment calculated?", "a": "Your monthly payment is calculated using the standard amortization formula: M = P × r(1+r)^n / ((1+r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12), and n is the total number of monthly payments. This ensures equal payments throughout the loan term."},
-      {"q": "What is an amortization schedule?", "a": "An amortization schedule is a table showing each payment broken down into principal and interest portions, along with the remaining loan balance after each payment. In the early years, most of your payment goes toward interest; in later years, more goes toward principal."},
-      {"q": "How does the interest rate affect my total payment?", "a": "Even a small difference in interest rate has a large impact over a long loan term. For example, on a $300,000 30-year mortgage, a rate of 6% vs 7% results in over $60,000 more in total interest paid. Use this calculator to compare different rate scenarios."},
-      {"q": "What is the difference between a fixed-rate and variable-rate loan?", "a": "A fixed-rate loan keeps the same interest rate for the entire term, making your monthly payment predictable. A variable-rate loan has an interest rate that can change over time, which may lower initial payments but introduces risk. This calculator assumes a fixed rate."}
+      {
+        "q": "What is an amortization schedule?",
+        "a": "An amortization schedule is a complete table showing the breakdown of each loan payment into principal and interest. In the early months, most of each payment goes toward interest. As the loan matures, more goes toward reducing the principal balance. Our calculator shows this breakdown year by year."
+      },
+      {
+        "q": "Why is so much of my early payment interest?",
+        "a": "This is how amortized loans work. Your interest charge each period is based on your outstanding balance. When the balance is high at the start, the interest portion is large. As you pay down the principal, the interest charge shrinks and more of your fixed payment goes toward reducing the balance."
+      },
+      {
+        "q": "Should I choose a shorter or longer loan term?",
+        "a": "A shorter term means higher monthly payments but significantly less total interest. A longer term lowers monthly payments but increases total cost. For example, a $200,000 mortgage at 6%: 15-year term costs about $52,000 in total interest; a 30-year term costs about $232,000. The 30-year option nearly doubles the total interest paid."
+      },
+      {
+        "q": "What is the difference between interest rate and APR?",
+        "a": "The interest rate is the cost of borrowing the principal. APR (Annual Percentage Rate) includes the interest rate plus other costs such as origination fees, broker fees, and mortgage points. APR is the better number to use when comparing loans because it reflects the true annual cost of borrowing."
+      },
+      {
+        "q": "Can I use this for a mortgage calculation?",
+        "a": "Yes. Enter the loan amount (home price minus down payment), your mortgage interest rate, and the term (typically 15 or 30 years). Note that your actual monthly mortgage payment may be higher because it often includes property taxes and homeowner's insurance paid into escrow."
+      },
+      {
+        "q": "How do extra payments affect the total loan cost?",
+        "a": "Extra payments go directly toward reducing the principal balance, which reduces the total interest you pay and shortens the loan term. Even a small additional payment each month can save thousands in interest over the life of a mortgage or long-term loan."
+      },
+      {
+        "q": "What loan term is recommended for a car loan?",
+        "a": "Most financial advisors recommend auto loan terms of 48–60 months or shorter. Longer terms (72–84 months) lower monthly payments but result in paying significantly more interest and risk the car being worth less than you owe. A good rule is that your total monthly car payment should not exceed 15% of your take-home pay."
+      },
+      {
+        "q": "Are the calculated results exact?",
+        "a": "The monthly payment and amortization figures are mathematically exact based on the inputs you provide. However, actual loan costs may differ due to origination fees, closing costs, prepayment penalties, or variable rate adjustments not included in this calculation. Always confirm all terms with your lender."
+      }
+    ],
+    "how_to_use_title": "How to Use the Loan Calculator",
+    "how_to_use_steps": [
+      "Enter the Loan Amount — the total principal you plan to borrow, not including fees or closing costs.",
+      "Enter the Annual Interest Rate (%) — use the APR (Annual Percentage Rate) from your loan offer for the most accurate comparison.",
+      "Set the Loan Term in years — common terms are 5 years for auto loans, 15 or 30 years for mortgages, and 2–7 years for personal loans.",
+      "Click Calculate to see your monthly payment, total amount paid over the full term, and total interest cost.",
+      "Review the amortization table to understand how each payment is split between principal and interest over time.",
+      "Compare multiple scenarios by changing the interest rate or loan term to identify the most affordable borrowing option."
     ]
   },
   "retirement_calculator": {
@@ -863,9 +1563,9 @@
     "meta_title": "Retirement Calculator - Savings & Income Projection - QuickBestGo",
     "meta_description": "Calculate how much you'll have at retirement. Project your savings growth with monthly contributions, expected returns, and inflation adjustment. Free online retirement planner.",
     "about_title": "How to Use the Retirement Calculator",
-    "about_p1": "Enter your current age, target retirement age, current savings, and monthly contribution. Set your expected annual return and inflation rate to see how your savings will grow year by year.",
-    "about_p2": "The calculator uses the future value formula: FV = P(1+r)^n + PMT × ((1+r)^n − 1) / r, where P is current savings, r is the monthly rate, n is total months, and PMT is the monthly contribution.",
-    "about_p3": "The estimated monthly income is based on a 20-year withdrawal period (240 months). Results are projections for informational purposes only and do not constitute financial advice. Actual returns will vary.",
+    "about_p1": "The Retirement Savings Calculator projects how much your savings will grow by your target retirement age, based on your current savings, monthly contributions, expected annual return, and inflation rate. Planning for retirement requires understanding the combined effect of compound growth over decades — even modest monthly contributions started early can grow into significant wealth. This calculator makes that long-term trajectory visible so you can take action now, when time is still on your side.",
+    "about_p2": "The calculation uses the future value formula for a growing annuity: FV = P(1+r)^n + PMT × [(1+r)^n − 1] / r, where P is your current savings, r is the monthly return rate (annual rate divided by 12), n is the total months until retirement, and PMT is your monthly contribution. The inflation adjustment converts the projected nominal value into today's purchasing power, giving you a realistic sense of what your savings will actually buy in the future.",
+    "about_p3": "The estimated monthly retirement income assumes a 20-year drawdown period (240 months) after retirement. This is a conservative and widely used planning assumption, though actual retirement duration varies. Results are projections for planning purposes only and do not account for Social Security or pension income, taxes on withdrawals, changes in contribution levels, healthcare costs, or unexpected expenses. Working with a certified financial planner (CFP) for a comprehensive retirement plan is strongly recommended for decisions involving large sums.",
     "label_current_age": "Current Age",
     "label_retirement_age": "Retirement Age",
     "label_current_savings": "Current Savings",
@@ -895,11 +1595,47 @@
     "error_age": "Retirement age must be greater than current age.",
     "faq_title": "Frequently Asked Questions",
     "faq": [
-      {"q": "How much should I save for retirement each month?", "a": "A common guideline is to save 15% of your gross income for retirement, including any employer match. The right amount depends on your current age, existing savings, desired retirement lifestyle, and expected retirement age. Use this calculator to find the monthly contribution needed to reach your goal."},
-      {"q": "What annual return rate should I use?", "a": "Historically, a diversified stock portfolio has returned approximately 7–10% annually before inflation. A conservative estimate of 5–7% is often used for long-term retirement planning. The default in this calculator is 7%."},
-      {"q": "How does inflation affect my retirement savings?", "a": "Inflation reduces the purchasing power of your money over time. For example, $1,000,000 in 30 years will have the purchasing power of roughly $412,000 today at 3% annual inflation. The 'Real Value' shown in this calculator adjusts your projected savings for inflation."},
-      {"q": "What is the 4% withdrawal rule?", "a": "The 4% rule suggests you can withdraw 4% of your savings annually without running out of money over a 30-year retirement. For example, $1,000,000 in savings allows a $40,000 annual ($3,333/month) withdrawal. This calculator estimates income based on a 20-year withdrawal period as a conservative alternative."}
+      {
+        "q": "How much should I save for retirement?",
+        "a": "A common rule of thumb is to save 10–15% of your gross income for retirement starting as early as possible. Many financial planners recommend having 10–12 times your final annual salary saved by retirement age. The right amount depends on your target lifestyle, retirement age, expected Social Security income, and health costs."
+      },
+      {
+        "q": "What annual return rate should I use?",
+        "a": "For a diversified stock portfolio such as index funds, a commonly used long-term real return assumption is 6–7% annually after inflation, based on historical S&P 500 averages. For a balanced stock and bond portfolio, 4–5% is more conservative. Use a lower rate if you are close to retirement and have a conservative asset allocation."
+      },
+      {
+        "q": "What inflation rate should I enter?",
+        "a": "The U.S. Federal Reserve targets 2% annual inflation as a long-term average. For planning purposes, 2–3% is a reasonable assumption. Using 2.5–3% gives a slightly pessimistic view of future purchasing power, which is appropriate for conservative long-horizon planning."
+      },
+      {
+        "q": "How is the monthly retirement income calculated?",
+        "a": "The estimated monthly income is calculated by dividing your projected retirement savings by 240 months (a 20-year drawdown period). This is a simplified model. Actual retirement income planning should also incorporate Social Security benefits, tax rates on withdrawals, Required Minimum Distributions, and other income sources."
+      },
+      {
+        "q": "What is the 4% withdrawal rule?",
+        "a": "The 4% rule states that you can withdraw 4% of your retirement portfolio in the first year and adjust for inflation each subsequent year, with a high probability of the money lasting 30 years. To find your target savings: multiply your desired annual retirement income by 25. For example, $60,000 per year requires $1.5 million saved."
+      },
+      {
+        "q": "Should I include Social Security benefits in this calculation?",
+        "a": "This calculator focuses on personal savings growth. Social Security income should be estimated separately using the Social Security Administration's online tools. Your actual benefit depends on your earnings history and the age at which you choose to claim — earlier claiming reduces your monthly benefit."
+      },
+      {
+        "q": "Why does starting early make such a large difference?",
+        "a": "Starting early allows compound interest to work over a longer period. Someone who saves $300 per month from age 25 to 65 at 7% ends up with roughly $800,000. Someone who starts at 35 with the same monthly contribution ends up with about $380,000 — less than half — despite only 10 fewer years of saving. Early contributions have more time to compound."
+      },
+      {
+        "q": "Can self-employed individuals use this calculator?",
+        "a": "Yes. Self-employed individuals can enter their projected monthly contribution to a SEP-IRA, Solo 401(k), or other retirement vehicle. The underlying growth math is the same regardless of account type. The contribution limits and tax treatment differ by account type — a tax advisor can clarify the best option for your situation."
+      }
+    ],
+    "how_to_use_title": "How to Use the Retirement Calculator",
+    "how_to_use_steps": [
+      "Enter your Current Age and Target Retirement Age — the gap between these determines how many years your savings have to compound and grow.",
+      "Enter your Current Savings — the total amount you have already set aside for retirement across all accounts.",
+      "Set your Monthly Contribution — the amount you plan to add to your retirement savings each month going forward.",
+      "Set the Expected Annual Return (%) — 6–7% is a common estimate for a diversified stock portfolio; use a lower rate for conservative allocations.",
+      "Set the Inflation Rate (%) — 2–3% is the historical average; this converts future nominal values into today's purchasing power.",
+      "Review your projected total, inflation-adjusted balance, and estimated monthly retirement income in the results panel."
     ]
   }
 }
-

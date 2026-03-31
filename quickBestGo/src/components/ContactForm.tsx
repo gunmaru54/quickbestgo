@@ -19,7 +19,7 @@ interface ContactFormProps {
   };
 }
 
-const FORMSPREE_URL = 'https://formspree.io/f/xkoqlzaw';
+const FORMSPREE_URL = 'https://formspree.io/f/mkoprnek';
 
 export default function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');

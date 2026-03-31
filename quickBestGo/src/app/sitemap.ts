@@ -3,7 +3,7 @@ import { locales } from '@/lib/i18n';
 import { siteConfig } from '@/lib/seo';
 import { TOOLS } from '@/lib/tools';
 
-const STATIC_SLUGS = ['about', 'contact', 'privacy-policy'];
+const STATIC_SLUGS = ['about', 'contact', 'privacy-policy', 'terms-of-service'];
 
 const CATEGORY_SLUGS = [
   'calculators',

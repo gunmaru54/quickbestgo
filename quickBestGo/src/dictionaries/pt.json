@@ -4,7 +4,8 @@
     "tools": "Ferramentas",
     "about": "Sobre",
     "contact": "Contacto",
-    "privacy_policy": "Política de Privacidade"
+    "privacy_policy": "Política de Privacidade",
+    "terms_of_service": "Termos de Serviço"
   },
   "home": {
     "title": "Ferramentas Utilitárias Rápidas e Simples",
@@ -47,11 +48,26 @@
     "chart_avg_note": "Baseado em 5 tipos de tarefas comuns, ~1 uso cada",
     "faq_title": "Perguntas frequentes",
     "faq": [
-      {"q": "Que ferramentas estão disponíveis no QuickBestGo?", "a": "O QuickBestGo oferece mais de 20 ferramentas gratuitas: calculadoras (IMC, GPA, juros compostos, gorjeta, percentagem, idade, dias entre datas), calculadora de calorias, ferramentas para programadores (Base64, codificador URL, formatador JSON, conversor de cores), ferramentas aleatórias (gerador de números, senhas, lançamento de moeda, roleta), conversores (unidades, fusos horários, QR code) e contador de palavras."},
-      {"q": "Todas as ferramentas do QuickBestGo são gratuitas?", "a": "Sim. Todas as ferramentas são completamente gratuitas, sem subscrição, sem registo e sem taxas ocultas."},
-      {"q": "Preciso de criar uma conta para usar as ferramentas?", "a": "Não. Nenhuma conta ou registo é necessário. Todas as ferramentas funcionam diretamente no seu navegador."},
-      {"q": "Os meus dados estão seguros ao usar o QuickBestGo?", "a": "Sim. Todos os cálculos e processamentos de dados acontecem localmente no seu navegador. Nada do que escreve é enviado para servidores ou armazenado."},
-      {"q": "Que idiomas o QuickBestGo suporta?", "a": "O QuickBestGo está disponível em 5 idiomas: inglês, coreano (한국어), espanhol (Español), japonês (日本語) e português."}
+      {
+        "q": "Que ferramentas estão disponíveis no QuickBestGo?",
+        "a": "O QuickBestGo oferece mais de 20 ferramentas gratuitas: calculadoras (IMC, GPA, juros compostos, gorjeta, percentagem, idade, dias entre datas), calculadora de calorias, ferramentas para programadores (Base64, codificador URL, formatador JSON, conversor de cores), ferramentas aleatórias (gerador de números, senhas, lançamento de moeda, roleta), conversores (unidades, fusos horários, QR code) e contador de palavras."
+      },
+      {
+        "q": "Todas as ferramentas do QuickBestGo são gratuitas?",
+        "a": "Sim. Todas as ferramentas são completamente gratuitas, sem subscrição, sem registo e sem taxas ocultas."
+      },
+      {
+        "q": "Preciso de criar uma conta para usar as ferramentas?",
+        "a": "Não. Nenhuma conta ou registo é necessário. Todas as ferramentas funcionam diretamente no seu navegador."
+      },
+      {
+        "q": "Os meus dados estão seguros ao usar o QuickBestGo?",
+        "a": "Sim. Todos os cálculos e processamentos de dados acontecem localmente no seu navegador. Nada do que escreve é enviado para servidores ou armazenado."
+      },
+      {
+        "q": "Que idiomas o QuickBestGo suporta?",
+        "a": "O QuickBestGo está disponível em 5 idiomas: inglês, coreano (한국어), espanhol (Español), japonês (日本語) e português."
+      }
     ]
   },
   "tools": {
@@ -120,25 +136,65 @@
       "description": "Calcule sua média de notas na escala de 4.0.",
       "category": "Educação"
     },
-    "base64": { "name": "Codificador / Descodificador Base64", "description": "Codifique texto em Base64 ou descodifique Base64 para texto simples.", "category": "Ferramentas de Desenvolvedor" },
-    "url_encoder": { "name": "Codificador / Descodificador URL", "description": "Codifique ou descodifique URLs e parâmetros de string de consulta.", "category": "Ferramentas de Desenvolvedor" },
-    "json_formatter": { "name": "Formatador JSON", "description": "Formate, valide e minifique JSON com realce de sintaxe.", "category": "Ferramentas de Desenvolvedor" },
-    "color_converter": { "name": "Conversor de Cores", "description": "Converta cores entre os formatos HEX, RGB e HSL.", "category": "Ferramentas de Desenvolvedor" },
-    "word_counter": { "name": "Contador de Palavras", "description": "Conte palavras, caracteres, frases e estime o tempo de leitura instantaneamente.", "category": "Utilitários" },
-    "days_between_dates": { "name": "Dias Entre Datas", "description": "Calcule o número de dias, semanas e meses entre duas datas.", "category": "Calculadoras" },
-    "timezone_converter": { "name": "Conversor de Fusos Horários", "description": "Converta horas entre fusos horários com um relógio mundial ao vivo.", "category": "Conversores" },
-    "currency_exchange_calculator": { "name": "Calculadora de Câmbio", "description": "Converta entre 16 moedas principais com taxas em tempo real.", "category": "Conversores" },
-    "loan_calculator": { "name": "Calculadora de Empréstimos", "description": "Calcule prestações mensais, juros totais e tabela de amortização para qualquer empréstimo.", "category": "Calculadoras" },
-    "retirement_calculator": { "name": "Calculadora de Reforma", "description": "Projete as suas poupanças de reforma com contribuições, rendimento e inflação.", "category": "Calculadoras" }
+    "base64": {
+      "name": "Codificador / Descodificador Base64",
+      "description": "Codifique texto em Base64 ou descodifique Base64 para texto simples.",
+      "category": "Ferramentas de Desenvolvedor"
+    },
+    "url_encoder": {
+      "name": "Codificador / Descodificador URL",
+      "description": "Codifique ou descodifique URLs e parâmetros de string de consulta.",
+      "category": "Ferramentas de Desenvolvedor"
+    },
+    "json_formatter": {
+      "name": "Formatador JSON",
+      "description": "Formate, valide e minifique JSON com realce de sintaxe.",
+      "category": "Ferramentas de Desenvolvedor"
+    },
+    "color_converter": {
+      "name": "Conversor de Cores",
+      "description": "Converta cores entre os formatos HEX, RGB e HSL.",
+      "category": "Ferramentas de Desenvolvedor"
+    },
+    "word_counter": {
+      "name": "Contador de Palavras",
+      "description": "Conte palavras, caracteres, frases e estime o tempo de leitura instantaneamente.",
+      "category": "Utilitários"
+    },
+    "days_between_dates": {
+      "name": "Dias Entre Datas",
+      "description": "Calcule o número de dias, semanas e meses entre duas datas.",
+      "category": "Calculadoras"
+    },
+    "timezone_converter": {
+      "name": "Conversor de Fusos Horários",
+      "description": "Converta horas entre fusos horários com um relógio mundial ao vivo.",
+      "category": "Conversores"
+    },
+    "currency_exchange_calculator": {
+      "name": "Calculadora de Câmbio",
+      "description": "Converta entre 16 moedas principais com taxas em tempo real.",
+      "category": "Conversores"
+    },
+    "loan_calculator": {
+      "name": "Calculadora de Empréstimos",
+      "description": "Calcule prestações mensais, juros totais e tabela de amortização para qualquer empréstimo.",
+      "category": "Calculadoras"
+    },
+    "retirement_calculator": {
+      "name": "Calculadora de Reforma",
+      "description": "Projete as suas poupanças de reforma com contribuições, rendimento e inflação.",
+      "category": "Calculadoras"
+    }
   },
-    "percentage_calculator": {
+  "percentage_calculator": {
     "title": "Calculadora de Percentagem",
     "meta_title": "Calculadora de Percentagem - Ferramenta Online Gratuita - QuickBestGo",
     "meta_description": "Calcule percentagens rapidamente com a nossa ferramenta online gratuita. Suporte para percentagem de, variação percentual e muito mais.",
     "about_title": "Como usar a Calculadora de Percentagem?",
-    "about_p1": "A Calculadora de Percentagem do QuickBestGo é uma ferramenta versátil concebida para lidar com cálculos comuns relacionados com percentagens. Quer precise de encontrar a percentagem de um número, determinar que percentagem um número representa de outro, ou calcular aumentos e diminuições percentuais, esta ferramenta ajuda-o.",
-    "about_p2": "A calculadora agora oferece três modos: porcentagem de um número, aumento por porcentagem e diminuição por porcentagem. Digite seus valores e veja o resultado instantaneamente.",
-    "about_p3": "Exemplos: 15% de 200 = 30, 200 aumentado em 15% = 230, 200 diminuído em 15% = 170.",
+    "about_p1": "A Calculadora de Porcentagem resolve três tipos de problemas percentuais em uma só ferramenta. O Modo 1 responde \"Quanto é X% de Y?\" (ex.: quanto é 15% de 200 = 30). O Modo 2 responde \"X é que percentual de Y?\" (ex.: 30 é 15% de 200). O Modo 3 responde \"Quanto é Y após aumentar ou diminuir X%?\" (ex.: 200 aumentado em 15% = 230, ou 200 diminuído em 15% = 170). Os resultados são atualizados instantaneamente conforme você digita, sem necessidade de pressionar um botão. Esses três modos cobrem a grande maioria das questões percentuais do dia a dia.",
+    "about_p2": "As porcentagens aparecem em praticamente todos os domínios da vida cotidiana: descontos no varejo e preços de promoção, cálculos de impostos, taxas de juros, valores de gorjetas, notas escolares, dados estatísticos, margens de lucro empresariais e retornos de investimentos. Saber trabalhar com porcentagens de forma rápida e precisa — em ambas as direções — dá uma vantagem prática em decisões financeiras, compras e interpretação de dados. A capacidade de alternar entre \"encontrar a porcentagem de um número\" e \"encontrar qual porcentagem um número representa\" é especialmente útil para comparações.",
+    "about_p3": "As fórmulas subjacentes são simples: para encontrar X% de Y, calcule Y × (X/100). Para encontrar qual porcentagem X é de Y, calcule (X/Y) × 100. Para aumentar Y em X%, calcule Y × (1 + X/100); para diminuir, calcule Y × (1 − X/100). Esta calculadora realiza essas operações para que você possa se concentrar no resultado. Todos os cálculos são executados localmente no seu navegador — nenhum dado é enviado para qualquer servidor e os resultados ficam disponíveis offline.",
     "title_mode1": "Porcentagem de",
     "title_mode2": "Aumento %",
     "title_mode3": "Diminuição %",
@@ -150,19 +206,37 @@
     "label_result": "Resultado",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como calculo que percentagem um número é de outro?", "a": "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é 15% de 200 porque (30 ÷ 200) × 100 = 15."},
-      {"q": "Como calculo um aumento percentual?", "a": "Insira o valor original e a percentagem, e a calculadora adiciona essa percentagem ao original. Por exemplo, 200 aumentado em 15% é igual a 230."},
-      {"q": "Como calculo um desconto ou diminuição percentual?", "a": "Insira o preço original e a percentagem de desconto. A calculadora subtrai essa percentagem para mostrar o preço final após o desconto."}
+      {
+        "q": "Como calculo que percentagem um número é de outro?",
+        "a": "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é 15% de 200 porque (30 ÷ 200) × 100 = 15."
+      },
+      {
+        "q": "Como calculo um aumento percentual?",
+        "a": "Insira o valor original e a percentagem, e a calculadora adiciona essa percentagem ao original. Por exemplo, 200 aumentado em 15% é igual a 230."
+      },
+      {
+        "q": "Como calculo um desconto ou diminuição percentual?",
+        "a": "Insira o preço original e a percentagem de desconto. A calculadora subtrai essa percentagem para mostrar o preço final após o desconto."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Porcentagem",
+    "how_to_use_steps": [
+      "Selecione o modo de cálculo que corresponde à sua pergunta: \"Porcentagem de um Número\", \"Que Porcentagem é X de Y\" ou \"Aumentar/Diminuir por Porcentagem\".",
+      "Para o Modo 1 (Porcentagem de um Número): insira o valor percentual e o número base para encontrar o resultado.",
+      "Para o Modo 2 (Que Porcentagem): insira os dois números para descobrir qual porcentagem o primeiro número representa do segundo.",
+      "Para o Modo 3 (Aumentar/Diminuir): insira o número original e a porcentagem, depois alterne entre aumento e diminuição.",
+      "Os resultados aparecem instantaneamente conforme você digita — não há botão Calcular para pressionar.",
+      "Clique no ícone de copiar para copiar o resultado para a área de transferência e usar em outros aplicativos."
     ]
-    },
-    "qr_code_generator": {
+  },
+  "qr_code_generator": {
     "title": "Gerador de Código QR",
     "meta_title": "Gerador de Código QR - Criar Códigos QR Online - QuickBestGo",
     "meta_description": "Crie códigos QR de alta qualidade para qualquer texto, URL ou informação de contato com nossa ferramenta online gratuita. Baixe como PNG.",
     "about_title": "Como usar o Gerador de Código QR?",
-    "about_p1": "O Gerador de Código QR do QuickBestGo permite que você crie instantaneamente códigos QR para qualquer texto ou URL fornecido. Basta inserir seu conteúdo e o código QR será gerado em tempo real.",
-    "about_p2": "Você pode usar esses códigos QR para compartilhar links de sites, mensagens de texto ou qualquer outra informação que possa ser digitalizada pela câmera de um smartphone. É uma maneira rápida e eficiente de conectar conteúdo físico e digital.",
-    "about_p3": "Seus dados são processados localmente no seu navegador, garantindo que suas informações nunca sejam enviadas aos nossos servidores. Depois de gerado, você pode baixar o código QR como um arquivo PNG para usar em seus projetos.",
+    "about_p1": "O Gerador de QR Code cria códigos QR instantâneos e escaneáveis a partir de qualquer texto ou URL que você fornecer. QR codes (Quick Response codes) são códigos de barras 2D lidos por qualquer câmera de smartphone moderno — sem necessidade de aplicativo especial no iOS ou Android. O código é atualizado em tempo real enquanto você digita, permitindo visualizar o resultado imediatamente. Quando estiver satisfeito, baixe o QR code como uma imagem PNG de alta resolução adequada para impressão, inserção em documentos ou compartilhamento digital.",
+    "about_p2": "Os QR codes tornaram-se uma ponte universal entre o mundo físico e o digital. Empresas os usam em cartões de visita, embalagens de produtos, cardápios de restaurantes, cartazes de eventos e displays de lojas para direcionar clientes instantaneamente a sites, perfis sociais ou informações de contato. Organizadores de eventos usam QR codes para emissão de ingressos sem papel. Profissionais de marketing os incorporam em anúncios impressos para rastrear engajamento. Educadores os incluem em materiais de aula para vincular a vídeos complementares. Credenciais de Wi-Fi codificadas como QR codes permitem que convidados se conectem sem digitar uma senha.",
+    "about_p3": "A capacidade de dados de um QR code depende do tipo de conteúdo: URLs suportam até aproximadamente 4.000 caracteres, e texto simples uma faixa similar. Para melhor confiabilidade de leitura, mantenha o conteúdo conciso — URLs com muitos parâmetros longos resultam em códigos densos e complexos, mais difíceis de escanear com pouca luz ou quando impressos em tamanho pequeno. Se sua URL for longa, use um encurtador de URL antes de gerar. Toda a geração de QR code acontece localmente no seu navegador; nenhum dado é enviado para qualquer servidor.",
     "label_enter_text": "Digite Texto ou URL",
     "placeholder_text": "https://exemplo.com",
     "btn_download": "Baixar Código QR",
@@ -170,19 +244,44 @@
     "error_dangerous_url": "Este esquema de URL não é permitido por razões de segurança.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como gero um código QR?", "a": "Digite ou cole qualquer URL, texto ou informação de contato, e o código QR é gerado instantaneamente. Pode descarregá-lo como imagem para usar em qualquer lugar."},
-      {"q": "O que posso codificar num código QR?", "a": "Pode codificar URLs, texto simples, endereços de e-mail, números de telefone, credenciais Wi-Fi e muito mais. O código QR pode ser digitalizado por qualquer câmara de smartphone."},
-      {"q": "Os códigos QR gerados são gratuitos?", "a": "Sim, todos os códigos QR gerados no QuickBestGo são completamente gratuitos sem restrições de uso ou validade."}
+      {
+        "q": "Como gero um QR code?",
+        "a": "Digite ou cole qualquer URL, texto ou informação no campo de entrada. O QR code é gerado e pré-visualizado instantaneamente. Clique em Baixar para salvá-lo como um arquivo de imagem PNG."
+      },
+      {
+        "q": "O que posso codificar em um QR code?",
+        "a": "Você pode codificar URLs, texto simples, endereços de e-mail (links mailto:), números de telefone (links tel:), mensagens SMS, credenciais Wi-Fi e informações de contato vCard. Qualquer câmera de smartphone pode escanear o resultado sem um aplicativo especial."
+      },
+      {
+        "q": "Os QR codes gerados são gratuitos para usar?",
+        "a": "Sim. Todos os QR codes criados no QuickBestGo são completamente gratuitos, sem restrições de uso, sem marcas d'água e sem data de expiração."
+      },
+      {
+        "q": "Em qual formato de arquivo o QR code é baixado?",
+        "a": "O QR code é baixado como um arquivo de imagem PNG, compatível com todas as ferramentas de design, documentos e plataformas web. A resolução é suficiente para impressão em cartões de visita e folhetos padrão."
+      },
+      {
+        "q": "Posso imprimir o QR code?",
+        "a": "Sim. Baixe o PNG e insira-o no seu design ou documento. Para leitura confiável ao imprimir, certifique-se de que o código tenha pelo menos 2 cm × 2 cm (cerca de 0,8 polegadas) e alto contraste em relação ao fundo."
+      },
+      {
+        "q": "Por que um QR code pode falhar ao ser escaneado?",
+        "a": "Causas comuns: impresso muito pequeno (abaixo de 2 cm), baixo contraste entre o código e o fundo, imagem desfocada ou danificada, ou uma URL muito longa criando um código excessivamente denso. Simplifique o conteúdo ou aumente o tamanho de impressão."
+      },
+      {
+        "q": "Os QR codes expiram?",
+        "a": "Os QR codes gerados aqui nunca expiram. Eles são códigos estáticos que codificam os dados fornecidos e serão escaneados corretamente enquanto a URL ou os dados de destino permanecerem válidos. Não há servidor que possa desativar o código."
+      }
     ]
-    },
-    "random_number_generator": {
+  },
+  "random_number_generator": {
     "title": "Gerador de Números Aleatórios",
     "meta_title": "Gerador de Números Aleatórios - QuickBestGo",
     "meta_description": "Gere um número aleatório dentro do seu intervalo personalizado de forma rápida e fácil. Ferramenta online gratuita.",
     "about_title": "O que é um Gerador de Números Aleatórios?",
-    "about_p1": "O Gerador de Números Aleatórios da QuickBestGo é uma ferramenta que gera rápida e precisamente números aleatórios entre um valor mínimo e máximo especificado pelo utilizador.",
-    "about_p2": "Esta ferramenta pode ser utilizada para vários fins, tais como seleção simples de números, cálculos de probabilidade complexos, geração de eventos aleatórios em jogos ou sorteios de prémios.",
-    "about_p3": "O nosso gerador de números aleatórios reflete o intervalo introduzido pelo utilizador imediatamente e está concebido para armazenar o histórico dos números gerados até aos últimos 5 para que possa verificar facilmente os resultados anteriores.",
+    "about_p1": "O Gerador de Números Aleatórios produz inteiros aleatórios criptograficamente seguros dentro de qualquer intervalo que você especificar. Defina um mínimo (até qualquer número negativo) e um máximo (até 9.999.999), depois clique em Gerar — o resultado aparece instantaneamente. O gerador usa a API crypto.getRandomValues() integrada do navegador, que fornece verdadeira imprevisibilidade adequada para simulações, jogos, sorteios e qualquer situação que exija seleção aleatória imparcial.",
+    "about_p2": "Geradores de números aleatórios têm inúmeras aplicações práticas. Professores os usam para sorteios justos entre alunos. Mestres de jogo os usam para resolver eventos aleatórios em RPGs de mesa. Desenvolvedores os usam para gerar dados de teste e semear cenários aleatórios em código. Estatísticos geram índices de amostras aleatórias para pesquisas. Tomadores de decisão usam seleção aleatória para desempate sem viés. Qualquer situação que exija um número imprevisível e imparcial — desde escolher um filme para assistir até distribuir tarefas em uma equipe — se beneficia de um gerador verdadeiramente aleatório.",
+    "about_p3": "Os últimos 5 números gerados aparecem em um painel de histórico para que você possa acompanhar os resultados recentes na sua sessão. Se precisar de múltiplos números (por exemplo, 6 números de loteria de 1 a 49), clique em Gerar repetidamente e veja o histórico se preencher. As configurações do mesmo intervalo persistem até você alterá-las, tornando a geração repetida rápida. Toda a geração acontece localmente no seu navegador — nenhum número é enviado para qualquer servidor ou registrado. A ferramenta funciona offline após o carregamento da página.",
     "label_min": "Mínimo",
     "label_max": "Máximo",
     "btn_generate": "Gerar Número Aleatório",
@@ -191,30 +290,80 @@
     "error_min_max": "O máximo deve ser maior que o mínimo",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como gero um número aleatório num intervalo específico?", "a": "Defina os seus valores mínimo e máximo, depois clique em Gerar. A ferramenta produz instantaneamente um número aleatório criptograficamente seguro dentro do intervalo especificado."},
-      {"q": "Este gerador de números aleatórios é verdadeiramente aleatório?", "a": "O gerador usa a API de números aleatórios seguros integrada no browser, produzindo números aleatórios de alta qualidade adequados para jogos, decisões e simulações."},
-      {"q": "Posso ver os números gerados anteriormente?", "a": "Sim, o gerador mantém um histórico de resultados recentes para que possa acompanhar os números gerados na sua sessão atual."}
+      {
+        "q": "Como gero um número aleatório em um intervalo específico?",
+        "a": "Insira seus valores mínimo e máximo e clique em Gerar. A ferramenta produz instantaneamente um inteiro criptograficamente aleatório dentro do intervalo, inclusive os valores mínimo e máximo."
+      },
+      {
+        "q": "Este gerador de números aleatórios é verdadeiramente aleatório?",
+        "a": "Sim. Ele usa a API crypto.getRandomValues() do navegador, um gerador de números pseudoaleatórios criptograficamente seguro (CSPRNG). Ao contrário de Math.random(), sua saída não é previsível ou reproduzível."
+      },
+      {
+        "q": "Posso ver os números gerados anteriormente?",
+        "a": "Sim. O gerador exibe os últimos 5 resultados em um painel de histórico para que você possa revisar números recentes sem precisar gerar novamente. O histórico é redefinido ao recarregar a página."
+      },
+      {
+        "q": "Posso gerar um número aleatório entre 1 e 100?",
+        "a": "Sim. Defina o mínimo como 1 e o máximo como 100, depois clique em Gerar. O resultado será um número inteiro de 1 a 100, com igual probabilidade para cada número."
+      },
+      {
+        "q": "Posso usar números negativos no intervalo?",
+        "a": "Sim. Mínimos negativos são totalmente suportados. Por exemplo, defina o mínimo como -50 e o máximo como 50 para gerar números nesse intervalo, incluindo valores negativos e zero."
+      },
+      {
+        "q": "Qual é o intervalo máximo que posso usar?",
+        "a": "O mínimo pode ser qualquer inteiro (incluindo negativos) e o máximo pode ser até 9.999.999. Isso cobre sorteios estilo loteria (1–49), lançamentos de dados (1–6) e amostragem aleatória de grandes conjuntos de dados."
+      },
+      {
+        "q": "O que é um número aleatório criptograficamente seguro?",
+        "a": "Um CSPRNG produz números que são estatisticamente aleatórios e computacionalmente imprevisíveis — mesmo conhecendo saídas anteriores, o próximo número não pode ser adivinhado. Isso é diferente de Math.random(), que é um algoritmo determinístico."
+      }
     ]
   },
   "password_generator": {
-    "title": "Gerador de Passwords",
-    "meta_title": "Gerador de Passwords - QuickBestGo",
-    "meta_description": "Crie passwords seguras e personalizáveis com a nossa ferramenta online gratuita. Escolha o comprimento e os tipos de caracteres.",
-    "about_title": "Gerador de Passwords Fortes",
-    "about_p1": "Numa era em que a segurança digital é mais importante do que nunca, uma password segura é a primeira linha de defesa para proteger a sua informação pessoal. O Gerador de Passwords da QuickBestGo maximiza a segurança da sua conta gerando passwords imprevisíveis e complexas em segundos.",
-    "about_p2": "A nossa ferramenta oferece opções para selecionar livremente se deseja incluir letras maiúsculas, números e símbolos especiais, e pode definir o comprimento desejado de 8 a 50 caracteres.",
-    "about_p3": "Uma vez que toda a geração de passwords é realizada no motor do seu navegador local, não há preocupação de que a password gerada seja registada no servidor ou filtrada através da rede.",
-    "label_length": "Comprimento da Password",
+    "title": "Gerador de Senhas",
+    "meta_title": "Gerador de Senhas - QuickBestGo",
+    "meta_description": "Crie senhas seguras e personalizáveis com a nossa ferramenta online gratuita. Escolha o comprimento e os tipos de caracteres para máxima segurança.",
+    "about_title": "Gerador de Senhas Fortes",
+    "about_p1": "O Gerador de Senhas cria senhas aleatórias criptograficamente seguras usando a API crypto.getRandomValues() integrada do navegador — a mesma fonte de aleatoriedade usada por ferramentas de segurança profissionais. Defina um comprimento de 8 a 64 caracteres e selecione quais conjuntos de caracteres incluir: letras minúsculas (a–z), letras maiúsculas (A–Z), dígitos (0–9) e símbolos especiais (!@#$%^&*). A senha gerada aparece instantaneamente com um medidor de força em tempo real que a classifica como Fraca, Razoável, Forte ou Muito Forte.",
+    "about_p2": "A segurança das senhas determina diretamente sua proteção contra credential stuffing, ataques de força bruta e invasão de contas. Uma senha de 12 caracteres usando todos os tipos de caracteres tem aproximadamente 475 trilhões de combinações possíveis — decifrá-la levaria séculos com as velocidades de computação atuais. Uma senha de 16 caracteres estende isso a quintilhões. O hábito mais perigoso com senhas é a reutilização: um site comprometido expõe todas as outras contas que usam a mesma senha. Criar uma senha única e forte para cada conta é a medida de segurança pessoal mais eficaz disponível.",
+    "about_p3": "A melhor prática é combinar este gerador com um gerenciador de senhas — 1Password, Bitwarden ou o gerenciador integrado do seu navegador — que armazena senhas criptografadas e as preenche automaticamente. Você só precisa lembrar de uma senha mestre forte. Nunca armazene senhas em notas de texto simples, planilhas ou e-mails. Nunca compartilhe senhas por canais não criptografados. Toda a geração nesta ferramenta acontece localmente no seu navegador — nenhuma senha é jamais transmitida, armazenada ou registrada em lugar algum.",
+    "label_length": "Comprimento da Senha",
     "label_uppercase": "Incluir Maiúsculas",
     "label_numbers": "Incluir Números",
     "label_symbols": "Incluir Símbolos",
-    "btn_generate": "Gerar Password",
+    "btn_generate": "Gerar Senha",
     "tooltip_copy": "Copiar para a área de transferência",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como crio uma password forte?", "a": "Use pelo menos 12 caracteres combinando maiúsculas, minúsculas, números e símbolos. Evite palavras do dicionário e informações pessoais. O nosso gerador cria passwords fortes automaticamente."},
-      {"q": "O que torna uma password segura?", "a": "Uma password segura é longa (12+ caracteres), aleatória e usa uma combinação de tipos de caracteres. Evite reutilizar passwords em diferentes contas."},
-      {"q": "A minha password gerada é armazenada em algum lugar?", "a": "Não. Toda a geração de passwords ocorre inteiramente no seu browser. Nenhum dado é enviado para qualquer servidor e as passwords nunca são armazenadas ou registadas."}
+      {
+        "q": "Como crio uma senha forte?",
+        "a": "Use pelo menos 12 caracteres e inclua letras maiúsculas, minúsculas, números e símbolos. Evite palavras do dicionário, nomes e padrões previsíveis como 123 ou abc. Nosso gerador cuida de tudo isso automaticamente."
+      },
+      {
+        "q": "O que torna uma senha segura?",
+        "a": "A segurança vem do comprimento e da aleatoriedade. Uma senha aleatória de 16 caracteres é muito mais forte do que uma frase previsível de 30 caracteres. Usar os quatro tipos de caracteres (maiúsculas, minúsculas, dígitos, símbolos) maximiza o número de combinações possíveis que um atacante deve adivinhar."
+      },
+      {
+        "q": "Minha senha gerada é armazenada em algum lugar?",
+        "a": "Não. Toda a geração de senhas acontece inteiramente no seu navegador usando a API crypto.getRandomValues(). Nenhuma senha é enviada para um servidor, armazenada em banco de dados ou registrada em lugar algum."
+      },
+      {
+        "q": "Qual deve ser o comprimento da minha senha?",
+        "a": "Para a maioria das contas, 16 caracteres oferece excelente segurança. Para contas de alto valor como banco, e-mail ou a senha mestre do gerenciador de senhas, use 20 caracteres ou mais. O gerador suporta até 64 caracteres."
+      },
+      {
+        "q": "Quais símbolos especiais estão incluídos?",
+        "a": "O conjunto de símbolos especiais inclui símbolos comuns aceitos pela maioria dos sites: !@#$%^&*()-_=+[]{}|;:,./<>? Se um site rejeitar certos símbolos, desmarque essa opção e gere novamente — uma senha alfanumérica mais longa ainda é muito forte."
+      },
+      {
+        "q": "Devo usar um gerenciador de senhas com as senhas geradas?",
+        "a": "Sim. Gerenciadores de senhas como Bitwarden (gratuito e código aberto), 1Password ou o gerenciador integrado do seu navegador armazenam senhas criptografadas e as preenchem automaticamente. Isso permite usar uma senha forte e única para cada site sem precisar memorizá-las."
+      },
+      {
+        "q": "Este gerador de senhas é verdadeiramente aleatório?",
+        "a": "Sim. Ele usa crypto.getRandomValues(), que é o gerador de números pseudoaleatórios criptograficamente seguro (CSPRNG) do navegador. Isso não é previsível nem reproduzível, ao contrário de Math.random()."
+      }
     ]
   },
   "age_calculator": {
@@ -222,9 +371,9 @@
     "meta_title": "Calculadora de Idade - QuickBestGo",
     "meta_description": "Calcule a sua idade exata em anos, meses e dias com a nossa ferramenta online gratuita. Basta introduzir a sua data de nascimento.",
     "about_title": "Como funciona a Calculadora de Idade?",
-    "about_p1": "A Calculadora de Idade da QuickBestGo é uma ferramenta que lhe permite calcular a sua idade exata em anos, meses e dias, bastando introduzir a sua data de nascimento.",
-    "about_p2": "A calculadora tem em conta o diferente número de dias nos meses e os anos bissextos para fornecer resultados altamente precisos.",
-    "about_p3": "Os seus dados não são enviados para nenhum servidor; o cálculo acontece inteiramente no seu navegador.",
+    "about_p1": "A Calculadora de Idade calcula sua idade exata desde a data de nascimento até hoje — ou até qualquer data que você especificar. Ao contrário de uma simples subtração de anos, o resultado mostra sua idade em anos, meses e dias simultaneamente, fornecendo o detalhamento preciso necessário em prontuários médicos, documentos legais, solicitações de seguro ou formulários de imigração, onde o número exato de anos, meses e dias pode ser especificamente exigido.",
+    "about_p2": "O cálculo considera corretamente as durações desiguais dos meses do calendário, anos bissextos e transições entre meses de comprimentos diferentes. Por exemplo, o período de 31 de janeiro a 1 de março é calculado com precisão como 1 mês e 1 dia (ou exatamente 1 mês em um ano bissexto), não simplesmente 29 ou 30 dias. Esses casos especiais são tratados automaticamente por meio de aritmética de calendário precisa, para que você sempre obtenha um resultado correto sem precisar contar dias manualmente.",
+    "about_p3": "Além de calcular a idade atual, esta ferramenta pode determinar o tempo decorrido entre quaisquer duas datas — útil para contagens regressivas de aniversários, verificação de elegibilidade para atividades com restrição de idade (votação, habilitação, aposentadoria), verificação de prazos vencidos ou simplesmente descobrir quantos dias você viveu. Todos os cálculos ocorrem inteiramente no seu navegador via JavaScript; sua data de nascimento e outros dados inseridos nunca são transmitidos para qualquer servidor.",
     "label_birthdate": "Selecionar Data de Nascimento",
     "btn_calculate": "Calcular Idade",
     "label_years": "Anos",
@@ -233,9 +382,27 @@
     "tooltip_reset": "Repor",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como calculo a minha idade exata?", "a": "Insira a sua data de nascimento e clique em Calcular. A ferramenta mostra a sua idade exata em anos, meses e dias com base na data de hoje."},
-      {"q": "Quantos dias de vida tenho?", "a": "A calculadora de idade mostra a sua idade dividida em anos, meses e dias. Para os dias totais, multiplique os anos por 365 e adicione os meses e dias restantes."},
-      {"q": "Posso calcular a idade de outra pessoa?", "a": "Sim, basta inserir qualquer data de nascimento para calcular a idade de qualquer pessoa — um familiar, uma figura histórica ou qualquer data no passado."}
+      {
+        "q": "Como calculo a minha idade exata?",
+        "a": "Insira a sua data de nascimento e clique em Calcular. A ferramenta mostra a sua idade exata em anos, meses e dias com base na data de hoje."
+      },
+      {
+        "q": "Quantos dias de vida tenho?",
+        "a": "A calculadora de idade mostra a sua idade dividida em anos, meses e dias. Para os dias totais, multiplique os anos por 365 e adicione os meses e dias restantes."
+      },
+      {
+        "q": "Posso calcular a idade de outra pessoa?",
+        "a": "Sim, basta inserir qualquer data de nascimento para calcular a idade de qualquer pessoa — um familiar, uma figura histórica ou qualquer data no passado."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Idade",
+    "how_to_use_steps": [
+      "Insira sua Data de Nascimento usando o seletor de data ou digitando a data diretamente — use o formato indicado no campo de entrada.",
+      "A calculadora usa automaticamente a data de hoje como ponto final e exibe sua idade exata instantaneamente.",
+      "Para descobrir sua idade em uma data passada ou futura específica, altere o campo \"Idade em\" ou data final para a data desejada.",
+      "Confira sua idade exata exibida em anos, meses e dias no painel de resultados.",
+      "Observe as informações adicionais exibidas, como o dia da semana em que você nasceu ou a contagem regressiva para o seu próximo aniversário.",
+      "Todo o cálculo é instantâneo e privado — sua data de nascimento nunca é armazenada ou transmitida."
     ]
   },
   "coin_flip": {
@@ -254,9 +421,18 @@
     "label_history": "Histórico (Últimos 10)",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como funciona o lançamento de moeda online?", "a": "Clique no botão de lançar e o simulador usa um algoritmo aleatório seguro para determinar cara ou coroa — cada resultado tem uma probabilidade igual de 50%."},
-      {"q": "O lançamento de moeda online é verdadeiramente justo?", "a": "Sim. O lançamento de moeda usa um gerador de números aleatórios criptograficamente seguro, garantindo que cada lançamento seja completamente independente com uma chance igual de 50/50."},
-      {"q": "Posso usar este lançamento de moeda para tomar decisões?", "a": "Absolutamente. É ótimo para resolver disputas, fazer escolhas aleatórias ou qualquer situação em que precise de uma decisão imparcial de 50/50."}
+      {
+        "q": "Como funciona o lançamento de moeda online?",
+        "a": "Clique no botão de lançar e o simulador usa um algoritmo aleatório seguro para determinar cara ou coroa — cada resultado tem uma probabilidade igual de 50%."
+      },
+      {
+        "q": "O lançamento de moeda online é verdadeiramente justo?",
+        "a": "Sim. O lançamento de moeda usa um gerador de números aleatórios criptograficamente seguro, garantindo que cada lançamento seja completamente independente com uma chance igual de 50/50."
+      },
+      {
+        "q": "Posso usar este lançamento de moeda para tomar decisões?",
+        "a": "Absolutamente. É ótimo para resolver disputas, fazer escolhas aleatórias ou qualquer situação em que precise de uma decisão imparcial de 50/50."
+      }
     ]
   },
   "wheel_spinner": {
@@ -275,9 +451,18 @@
     "error_min_options": "Por favor, introduza pelo menos 2 opções.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como uso a roda da sorte?", "a": "Adicione as suas opções ou nomes personalizados à roda, depois clique em Girar. A roda roda e seleciona aleatoriamente uma opção com probabilidade igual para cada entrada."},
-      {"q": "Posso adicionar opções personalizadas à roda?", "a": "Sim. Pode inserir qualquer lista de itens — nomes, escolhas, prémios — e a roda irá exibir e selecionar aleatoriamente das suas opções personalizadas."},
-      {"q": "A seleção da roda da sorte é aleatória?", "a": "Sim. Cada giro usa um algoritmo aleatório seguro, dando a cada item da roda uma chance igual de ser selecionado."}
+      {
+        "q": "Como uso a roda da sorte?",
+        "a": "Adicione as suas opções ou nomes personalizados à roda, depois clique em Girar. A roda roda e seleciona aleatoriamente uma opção com probabilidade igual para cada entrada."
+      },
+      {
+        "q": "Posso adicionar opções personalizadas à roda?",
+        "a": "Sim. Pode inserir qualquer lista de itens — nomes, escolhas, prémios — e a roda irá exibir e selecionar aleatoriamente das suas opções personalizadas."
+      },
+      {
+        "q": "A seleção da roda da sorte é aleatória?",
+        "a": "Sim. Cada giro usa um algoritmo aleatório seguro, dando a cada item da roda uma chance igual de ser selecionado."
+      }
     ]
   },
   "bmi_calculator": {
@@ -285,9 +470,9 @@
     "meta_title": "Calculadora de IMC - Ferramenta Gratuita de Índice de Massa Corporal - QuickBestGo",
     "meta_description": "Calcule o seu Índice de Massa Corporal (IMC) instantaneamente com a nossa ferramenta gratuita. Suporta unidades métricas (cm/kg) e imperiais (ft/lb).",
     "about_title": "O que é o IMC e como é calculado?",
-    "about_p1": "O Índice de Massa Corporal (IMC) é um valor numérico calculado a partir da altura e do peso de uma pessoa. É amplamente utilizado como ferramenta de rastreio para identificar categorias de peso. A fórmula é: IMC = peso (kg) / altura (m)².",
-    "about_p2": "As categorias de IMC definidas pela OMS são: Abaixo do peso menos de 18.5, Peso normal 18.5–24.9, Sobrepeso 25–29.9, e Obeso 30 ou mais.",
-    "about_p3": "O IMC é uma ferramenta de rastreio útil, mas não mede diretamente a gordura corporal ou a saúde geral. Consulte sempre um profissional de saúde para uma avaliação completa.",
+    "about_p1": "O Índice de Massa Corporal (IMC) é uma ferramenta de triagem amplamente utilizada que estima a gordura corporal com base na altura e no peso. Desenvolvido no início do século XIX pelo matemático belga Adolphe Quetelet e posteriormente adotado pela Organização Mundial da Saúde (OMS), o IMC fornece uma estimativa numérica rápida que se correlaciona com riscos para a saúde em grandes populações. A fórmula divide o peso em quilogramas pelo quadrado da altura em metros (kg/m²), tornando o cálculo simples e comparável entre diferentes tamanhos corporais.",
+    "about_p2": "A OMS define quatro categorias padrão de IMC para adultos com 18 anos ou mais: Abaixo do peso (abaixo de 18,5), que pode indicar desnutrição ou outras condições de saúde subjacentes; Peso normal (18,5–24,9), associado ao menor risco geral para a saúde; Sobrepeso (25–29,9), que aumenta o risco de condições como diabetes tipo 2, hipertensão e doenças cardiovasculares; e Obeso (30 ou acima), subdividido em Classe I (30–34,9), Classe II (35–39,9) e Classe III (40+) para avaliação clínica mais precisa dos riscos.",
+    "about_p3": "Embora o IMC seja uma ferramenta de triagem prática, ele tem limitações reconhecidas. Não distingue entre músculo e gordura — um atleta com muita massa muscular pode ser classificado como sobrepeso apesar de ter baixa gordura corporal. Também não considera as mudanças na composição corporal relacionadas à idade, diferenças de sexo na distribuição de gordura ou variações étnicas nos limiares de risco. Pesquisas mostram que pessoas de ascendência asiática podem enfrentar riscos metabólicos mais elevados em valores de IMC mais baixos. O IMC deve ser um dado entre muitos, e um profissional de saúde qualificado deve sempre ser consultado para uma avaliação completa.",
     "label_unit_metric": "Métrico",
     "label_unit_imperial": "Imperial",
     "label_height": "Altura",
@@ -309,9 +494,27 @@
     "error_invalid": "Por favor, insira valores válidos de altura e peso.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "O que é o IMC e como é calculado?", "a": "O IMC (Índice de Massa Corporal) é calculado dividindo o peso em quilogramas pelo quadrado da altura em metros (kg/m²). Categoriza o peso em abaixo do peso, normal, sobrepeso ou obeso."},
-      {"q": "Qual é o intervalo de IMC saudável?", "a": "Um IMC de 18.5–24.9 é considerado normal/saudável. Abaixo de 18.5 é abaixo do peso, 25–29.9 é sobrepeso e 30 ou acima é classificado como obeso."},
-      {"q": "O IMC é uma medida precisa de saúde?", "a": "O IMC é uma ferramenta de rastreio útil, mas tem limitações — não tem em conta a massa muscular, a densidade óssea, a idade ou a distribuição de gordura corporal. Consulte um profissional de saúde para uma avaliação completa."}
+      {
+        "q": "O que é o IMC e como é calculado?",
+        "a": "O IMC (Índice de Massa Corporal) é calculado dividindo o peso em quilogramas pelo quadrado da altura em metros (kg/m²). Categoriza o peso em abaixo do peso, normal, sobrepeso ou obeso."
+      },
+      {
+        "q": "Qual é o intervalo de IMC saudável?",
+        "a": "Um IMC de 18.5–24.9 é considerado normal/saudável. Abaixo de 18.5 é abaixo do peso, 25–29.9 é sobrepeso e 30 ou acima é classificado como obeso."
+      },
+      {
+        "q": "O IMC é uma medida precisa de saúde?",
+        "a": "O IMC é uma ferramenta de rastreio útil, mas tem limitações — não tem em conta a massa muscular, a densidade óssea, a idade ou a distribuição de gordura corporal. Consulte um profissional de saúde para uma avaliação completa."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de IMC",
+    "how_to_use_steps": [
+      "Selecione o sistema de unidades — Métrico (kg e cm) ou Imperial (lbs e polegadas) — usando o botão de alternância no topo da calculadora.",
+      "Insira seu peso no campo correspondente. Use quilogramas no sistema métrico ou libras no imperial.",
+      "Insira sua altura. No sistema métrico, use centímetros. No imperial, insira pés e polegadas nos campos separados.",
+      "Clique no botão Calcular para ver instantaneamente seu IMC e a categoria de peso.",
+      "Verifique o indicador colorido que mostra onde seu IMC se enquadra — Abaixo do peso, Normal, Sobrepeso ou Obeso.",
+      "Lembre-se: o IMC é apenas uma ferramenta de triagem. Consulte um profissional de saúde para uma avaliação completa."
     ]
   },
   "footer": {
@@ -323,16 +526,32 @@
     "description": "Uma coleção de ferramentas utilitárias online simples, rápidas e gratuitas. Gerador de números aleatórios, gerador de passwords, calculadora de idade e muito mais."
   },
   "about_page": {
-    "meta_title": "Sobre Nós - QuickBestGo",
-    "meta_description": "Conheça a missão do QuickBestGo e as nossas ferramentas utilitárias gratuitas para todos.",
+    "meta_title": "Sobre o QuickBestGo — Ferramentas Utilitárias Gratuitas Online",
+    "meta_description": "Saiba quem criou o QuickBestGo, como as nossas ferramentas funcionam e por que priorizamos privacidade, precisão e acessibilidade.",
     "title": "Sobre o QuickBestGo",
+    "tagline": "Criado por um desenvolvedor. Confiado por utilizadores em todo o mundo.",
+    "stat_tools": "24+ Ferramentas Gratuitas",
+    "stat_languages": "5 Idiomas",
+    "stat_data": "Zero Dados Recolhidos",
+    "story_title": "A Nossa História",
+    "story_p1": "O QuickBestGo começou como um projeto pessoal em 2025. Cansado de sites de ferramentas repletos de anúncios, paywalls e registos forçados, decidi construir o tipo de site de utilidades que eu mesmo queria usar — rápido, focado e privado por design.",
+    "story_p2": "O que começou com algumas calculadoras cresceu para mais de 24 ferramentas cobrindo saúde, finanças, desenvolvimento e matemática do quotidiano. Cada ferramenta é construída com o mesmo princípio: o seu navegador faz o trabalho, os seus dados ficam consigo.",
     "mission_title": "A Nossa Missão",
-    "mission_p1": "O QuickBestGo foi criado com um objetivo simples: fornecer ferramentas utilitárias online rápidas, gratuitas e fáceis de usar para todos, sem registo, sem instalação e sem comprometer a sua privacidade.",
-    "mission_p2": "Acreditamos que as ferramentas digitais do dia a dia devem ser acessíveis a todos, em qualquer lugar. Por isso, todas as nossas ferramentas funcionam diretamente no seu navegador e suportam vários idiomas.",
-    "tools_title": "As Nossas Ferramentas",
-    "tools_p1": "Atualmente oferecemos 7 ferramentas utilitárias gratuitas: Gerador de Números Aleatórios, Gerador de Passwords, Lançamento de Moeda, Roda da Sorte, Calculadora de Idade, Gerador de Código QR e Calculadora de Percentagem.",
-    "privacy_title": "A Sua Privacidade é Importante",
-    "privacy_p1": "Todos os cálculos e operações são realizados localmente no seu navegador. Não recolhemos, armazenamos nem transmitimos nenhum dos dados que introduz nas nossas ferramentas."
+    "mission_p1": "O QuickBestGo existe para tornar as tarefas digitais do dia a dia sem esforço. Seja para calcular juro composto, converter uma unidade, formatar um JSON ou simplesmente lançar uma moeda — não deve ser necessário instalar nada, criar uma conta ou preocupar-se com onde vão os seus dados.",
+    "mission_p2": "Suportamos cinco idiomas — inglês, coreano, espanhol, japonês e português — porque ferramentas úteis devem ser acessíveis independentemente de onde esteja ou que língua fale.",
+    "expertise_title": "Como Construímos as Nossas Ferramentas",
+    "expertise_p1": "Cada calculadora no QuickBestGo baseia-se em fórmulas estabelecidas e verificáveis. A nossa calculadora de IMC usa a fórmula padrão da OMS. A nossa calculadora de calorias aplica a equação de Mifflin-St Jeor, o método mais clinicamente validado para estimar a taxa metabólica basal. A nossa calculadora de empréstimos usa matemática de amortização padrão.",
+    "expertise_p2": "As ferramentas financeiras usam fórmulas transparentes que pode verificar de forma independente. As ferramentas de saúde incluem avisos claros de que os resultados são informativos e não substituem o aconselhamento médico profissional.",
+    "expertise_p3": "Todos os cálculos ocorrem inteiramente dentro do seu navegador usando JavaScript. Não há servidor a processar as suas entradas, nem base de dados a armazenar os seus resultados. Esta arquitetura não é apenas boa para a privacidade — significa que as ferramentas funcionam offline e carregam instantaneamente em qualquer dispositivo.",
+    "tools_title": "24+ Ferramentas Gratuitas",
+    "tools_p1": "O QuickBestGo oferece atualmente 24 ferramentas gratuitas em seis categorias: Calculadoras (IMC, Calorias, Idade, GPA, Empréstimo, Juro Composto, Gorjeta, Percentagem, Reforma), Ferramentas de Desenvolvedor (Formatador JSON, Base64, Codificador de URL, Conversor de Cor), Aleatório e Diversão (Lançamento de Moeda, Gerador de Passwords, Número Aleatório, Roda da Sorte), Conversores (Unidade, Fuso Horário, Moeda), Saúde, e Utilitários (Código QR, Contador de Palavras, Dias Entre Datas).",
+    "transparency_title": "Transparência e Publicidade",
+    "transparency_p1": "O QuickBestGo é um serviço gratuito suportado por publicidade do Google AdSense. Os anúncios ajudam a cobrir os custos de execução e melhoria do site. O Google pode usar cookies para exibir anúncios com base no seu histórico de navegação — pode optar por não participar a qualquer momento através das Definições de Anúncios do Google.",
+    "transparency_p2": "Nunca colocaremos anúncios de forma a obscurecer a funcionalidade das ferramentas ou induzir cliques. O nosso compromisso é manter as ferramentas utilizáveis, rápidas e sem desordem.",
+    "privacy_title": "A Sua Privacidade, Por Design",
+    "privacy_p1": "Sem contas de utilizador. Sem recolha de dados. Sem telemetria. Todas as operações das ferramentas — cálculos, codificações, conversões — são executadas localmente no seu navegador. Os dados que introduz nas nossas ferramentas nunca saem do seu dispositivo. Levamos isto a sério porque nós próprios usamos estas ferramentas.",
+    "contact_title": "Fale Connosco",
+    "contact_p1": "Tem uma sugestão para uma nova ferramenta, encontrou um erro ou tem uma pergunta sobre como algo funciona? Adoraríamos ouvi-lo. Contacte-nos através da nossa página de contacto e responderemos em poucos dias."
   },
   "contact_page": {
     "meta_title": "Contacto - QuickBestGo",
@@ -379,14 +598,37 @@
     "contact_title": "7. Contacto",
     "contact_content": "Se tiver alguma questão sobre esta Política de Privacidade, contacte-nos através da nossa página de contacto."
   },
+  "terms_of_service_page": {
+    "meta_title": "Termos de Serviço - QuickBestGo",
+    "meta_description": "Leia os Termos de Serviço do QuickBestGo para entender as regras e condições de uso das nossas ferramentas online gratuitas.",
+    "title": "Termos de Serviço",
+    "last_updated": "Última atualização: 30 de março de 2026",
+    "intro": "Ao aceder ou usar o QuickBestGo em https://quickbestgo.com, concorda em ficar vinculado a estes Termos de Serviço. Por favor, leia-os atentamente antes de usar as nossas ferramentas.",
+    "s1_title": "1. Aceitação dos Termos",
+    "s1_content": "Ao usar o QuickBestGo, confirma que leu, compreendeu e concorda com estes Termos de Serviço e com a nossa Política de Privacidade. Se não concordar, por favor deixe de usar o nosso website.",
+    "s2_title": "2. Utilização do Serviço",
+    "s2_content": "O QuickBestGo fornece ferramentas de utilidade online gratuitas para uso pessoal e não comercial. Concorda em não fazer uso indevido do serviço, tentar interromper o seu funcionamento, ou utilizá-lo para qualquer propósito ilegal. Todas as ferramentas funcionam inteiramente no seu navegador — nenhum dado é transmitido para os nossos servidores.",
+    "s3_title": "3. Propriedade Intelectual",
+    "s3_content": "Todo o conteúdo do QuickBestGo, incluindo textos, gráficos, logótipos e código, é propriedade do QuickBestGo e está protegido pelas leis de propriedade intelectual aplicáveis. Não pode reproduzir ou redistribuir conteúdo sem permissão prévia por escrito.",
+    "s4_title": "4. Exclusão de Garantias",
+    "s4_content": "O QuickBestGo é fornecido \"tal como está\" sem garantias de qualquer tipo. Não garantimos que as ferramentas estejam isentas de erros, sejam ininterruptas, ou produzam resultados adequados para qualquer propósito específico. Os resultados das calculadoras e conversores são apenas para fins informativos e não devem ser utilizados como aconselhamento profissional.",
+    "s5_title": "5. Limitação de Responsabilidade",
+    "s5_content": "Na máxima extensão permitida por lei, o QuickBestGo não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequentes decorrentes do uso ou da impossibilidade de usar o nosso serviço ou os seus resultados.",
+    "s6_title": "6. Publicidade",
+    "s6_content": "O QuickBestGo exibe anúncios através do Google AdSense. Estes anúncios são fornecidos pelo Google e regidos pelas políticas de publicidade do Google. Não somos responsáveis pelo conteúdo de anúncios de terceiros exibidos no nosso site.",
+    "s7_title": "7. Alterações aos Termos",
+    "s7_content": "Reservamo-nos o direito de atualizar estes Termos de Serviço a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação. O uso continuado do site após as alterações constitui a sua aceitação dos termos revistos.",
+    "contact_title": "8. Contacto",
+    "contact_content": "Se tiver alguma questão sobre estes Termos de Serviço, contacte-nos através da nossa página de contacto."
+  },
   "calorie_calculator": {
     "title": "Calculadora de Calorias",
     "meta_title": "Calculadora de Calorias - Necessidades Calóricas Diárias (BMR & TDEE) - QuickBestGo",
     "meta_description": "Calcule as suas necessidades calóricas diárias com base na idade, altura, peso e nível de atividade. Calculadora gratuita de BMR e TDEE.",
     "about_title": "Como funciona a Calculadora de Calorias?",
-    "about_p1": "A nossa calculadora usa a equação de Mifflin-St Jeor, a fórmula mais precisa para estimar a sua Taxa Metabólica Basal (BMR), as calorias que o seu corpo queima em repouso completo.",
-    "about_p2": "O seu BMR é multiplicado por um fator de atividade para calcular o Gasto Energético Total Diário (TDEE), as calorias necessárias para manter o seu peso atual.",
-    "about_p3": "Para perder peso, reduza 500 kcal/dia. Para ganhar peso, adicione 500 kcal/dia. Todos os cálculos são realizados no seu navegador.",
+    "about_p1": "A Calculadora de Calorias estima suas necessidades energéticas diárias usando a equação de Mifflin-St Jeor, a fórmula mais amplamente recomendada por nutricionistas registrados e pela Academia de Nutrição e Dietética. Publicada em 1990, ela calcula sua Taxa Metabólica Basal (TMB) — o mínimo de calorias que o seu corpo precisa para manter funções vitais em completo repouso, incluindo respiração, circulação, reparo celular e regulação de temperatura. A fórmula usa coeficientes diferentes para homens e mulheres para considerar as diferenças típicas de composição corporal.",
+    "about_p2": "Sua TMB é multiplicada por um Fator de Atividade para estimar seu Gasto Energético Total Diário (GETD) — o total de calorias que você queima por dia, incluindo toda atividade física. Os níveis de atividade variam de Sedentário (fator 1,2, para quem trabalha sentado com pouco exercício) a Extra Ativo (fator 1,9, para pessoas com trabalhos fisicamente exigentes e treinamentos diários intensos). O resultado é o número de calorias necessário para manter seu peso atual. Comer abaixo desse valor cria um déficit calórico; comer acima cria um superávit.",
+    "about_p3": "Para perder peso de forma segura e sustentável, busque um déficit de 300–500 kcal por dia, o que corresponde a aproximadamente 0,3–0,5 kg de gordura perdida por semana. Para ganhar peso ou construir massa muscular, adicione 250–500 kcal acima do seu GETD. Essas são estimativas iniciais baseadas em evidências — resultados individuais variam de acordo com genética, fatores hormonais, qualidade do sono, níveis de estresse e medicação. A melhor abordagem é usar esta calculadora como linha de base, acompanhar seu peso corporal real ao longo de 2–3 semanas e ajustar sua ingestão com base nos resultados reais.",
     "label_gender": "Género",
     "label_male": "Masculino",
     "label_female": "Feminino",
@@ -411,9 +653,27 @@
     "error_invalid": "Por favor insira valores válidos em todos os campos.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Quantas calorias devo comer por dia?", "a": "As necessidades calóricas diárias dependem da sua idade, género, altura, peso e nível de atividade. A calculadora usa a fórmula Mifflin-St Jeor para estimar o seu BMR e TDEE."},
-      {"q": "Qual é a diferença entre BMR e TDEE?", "a": "BMR (Taxa Metabólica Basal) são as calorias que o seu corpo precisa em repouso completo. TDEE (Gasto Energético Total Diário) tem em conta o seu nível de atividade e mostra as necessidades calóricas diárias totais."},
-      {"q": "Quantas calorias preciso para perder peso?", "a": "Um défice de 500 calorias por dia geralmente leva a uma perda de peso de cerca de 0.5 kg (1 lb) por semana. A calculadora mostra as suas calorias de manutenção para o ajudar a planear."}
+      {
+        "q": "Quantas calorias devo comer por dia?",
+        "a": "As necessidades calóricas diárias dependem da sua idade, género, altura, peso e nível de atividade. A calculadora usa a fórmula Mifflin-St Jeor para estimar o seu BMR e TDEE."
+      },
+      {
+        "q": "Qual é a diferença entre BMR e TDEE?",
+        "a": "BMR (Taxa Metabólica Basal) são as calorias que o seu corpo precisa em repouso completo. TDEE (Gasto Energético Total Diário) tem em conta o seu nível de atividade e mostra as necessidades calóricas diárias totais."
+      },
+      {
+        "q": "Quantas calorias preciso para perder peso?",
+        "a": "Um défice de 500 calorias por dia geralmente leva a uma perda de peso de cerca de 0.5 kg (1 lb) por semana. A calculadora mostra as suas calorias de manutenção para o ajudar a planear."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Calorias",
+    "how_to_use_steps": [
+      "Selecione seu sexo biológico (Masculino ou Feminino). A fórmula de Mifflin-St Jeor usa coeficientes diferentes para homens e mulheres.",
+      "Insira sua idade em anos. O metabolismo desacelera naturalmente com a idade, e a fórmula considera essa mudança.",
+      "Insira sua altura em centímetros e seu peso atual em quilogramas.",
+      "Selecione o nível de atividade que melhor representa sua rotina semanal típica — seja honesto e conservador; a maioria das pessoas superestima sua atividade.",
+      "Clique em Calcular para ver sua TMB (calorias em repouso completo) e seu GETD (calorias diárias totais necessárias).",
+      "Use seu GETD como meta calórica: coma no GETD para manter o peso, abaixo para perder ou acima para ganhar."
     ]
   },
   "compound_interest_calculator": {
@@ -421,9 +681,9 @@
     "meta_title": "Calculadora de Juros Compostos - Ferramenta Gratuita de Crescimento de Investimentos - QuickBestGo",
     "meta_description": "Calcule o valor futuro do seu investimento com a nossa calculadora de juros compostos gratuita. Veja como o seu dinheiro cresce ao longo do tempo com diferentes frequências de capitalização.",
     "about_title": "O que são Juros Compostos?",
-    "about_p1": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores. Ao contrário dos juros simples, os juros compostos crescem exponencialmente ao longo do tempo, razão pela qual são muitas vezes chamados de 'a oitava maravilha do mundo'.",
-    "about_p2": "A fórmula é: A = P(1 + r/n)^(nt), onde P é o capital, r é a taxa de juros anual, n é o número de vezes que os juros são capitalizados por ano e t é o tempo em anos. Quanto mais frequentemente os juros são capitalizados, maior será o montante final.",
-    "about_p3": "Esta calculadora destina-se apenas a fins informativos e educativos. Os resultados são estimativas baseadas nos dados fornecidos e não constituem aconselhamento financeiro.",
+    "about_p1": "Os juros compostos são o processo de ganhar juros não apenas sobre o capital original, mas também sobre os juros já acumulados. Ao contrário dos juros simples — que crescem em linha reta — os juros compostos crescem exponencialmente. A diferença se torna dramática ao longo do tempo: R$10.000 investidos a 7% de juros compostos anuais por 30 anos crescem para aproximadamente R$76.000, enquanto os juros simples renderiam apenas R$31.000. Esse crescimento exponencial é o princípio fundamental por trás dos investimentos de longo prazo, da poupança para aposentadoria e do motivo pelo qual começar cedo faz uma diferença tão grande.",
+    "about_p2": "A fórmula padrão de juros compostos é: A = P(1 + r/n)^(nt), onde A é o valor final, P é o principal (investimento inicial), r é a taxa de juros anual em decimal, n é o número de vezes que os juros são compostos por ano (1 = anual, 4 = trimestral, 12 = mensal, 365 = diário) e t é o tempo em anos. Nossa calculadora também suporta aportes mensais, permitindo modelar planos de poupança reais, contribuições para a previdência privada ou depósitos de investimento recorrentes junto com um valor inicial.",
+    "about_p3": "A frequência de capitalização afeta significativamente o resultado final. A capitalização mensal rende mais do que a anual porque os juros são adicionados ao principal com mais frequência. Por exemplo, R$10.000 investidos por 10 anos a 8% crescem para R$21.589 com capitalização anual e R$22.196 com capitalização mensal. A calculadora também oferece uma opção de ajuste pela inflação — essencial para projeções de longo prazo — pois R$1 milhão daqui a 30 anos não comprará o mesmo que R$1 milhão compra hoje. Os retornos ajustados pela inflação fornecem uma visão mais realista do seu poder de compra futuro.",
     "label_principal": "Capital Inicial",
     "label_rate": "Taxa de Juros Anual (%)",
     "label_frequency": "Frequência de Capitalização",
@@ -461,11 +721,35 @@
     "error_invalid": "Por favor insira números positivos válidos em todos os campos.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "O que são juros compostos?", "a": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores, fazendo com que os investimentos cresçam exponencialmente ao longo do tempo."},
-      {"q": "Com que frequência devo capitalizar os juros?", "a": "Mais frequência = mais rendimento (diário > mensal > anual). No entanto, a diferença é menor do que se espera. Comparar o APY entre contas dá a comparação mais precisa."},
-      {"q": "O que é a Regra dos 72?", "a": "Divida 72 pela taxa de juro anual para estimar quantos anos levará para duplicar o dinheiro. Exemplo: com 6% de juro, 72 ÷ 6 = 12 anos para duplicar."},
-      {"q": "Como as contribuições mensais afetam a poupança?", "a": "As contribuições mensais amplificam enormemente o crescimento composto. Mesmo pequenas quantias regulares podem superar largamente um investimento único a longo prazo."},
-      {"q": "O que é o retorno ajustado à inflação?", "a": "O valor real mostra o montante futuro em termos do poder de compra atual. Subtraia a taxa de inflação do retorno nominal para obter o retorno real."}
+      {
+        "q": "O que são juros compostos?",
+        "a": "Os juros compostos são calculados sobre o capital inicial e os juros acumulados de períodos anteriores, fazendo com que os investimentos cresçam exponencialmente ao longo do tempo."
+      },
+      {
+        "q": "Com que frequência devo capitalizar os juros?",
+        "a": "Mais frequência = mais rendimento (diário > mensal > anual). No entanto, a diferença é menor do que se espera. Comparar o APY entre contas dá a comparação mais precisa."
+      },
+      {
+        "q": "O que é a Regra dos 72?",
+        "a": "Divida 72 pela taxa de juro anual para estimar quantos anos levará para duplicar o dinheiro. Exemplo: com 6% de juro, 72 ÷ 6 = 12 anos para duplicar."
+      },
+      {
+        "q": "Como as contribuições mensais afetam a poupança?",
+        "a": "As contribuições mensais amplificam enormemente o crescimento composto. Mesmo pequenas quantias regulares podem superar largamente um investimento único a longo prazo."
+      },
+      {
+        "q": "O que é o retorno ajustado à inflação?",
+        "a": "O valor real mostra o montante futuro em termos do poder de compra atual. Subtraia a taxa de inflação do retorno nominal para obter o retorno real."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Juros Compostos",
+    "how_to_use_steps": [
+      "Insira o Capital Inicial — o valor total em que você está começando (ex.: seu saldo de poupança atual).",
+      "Defina a Taxa de Juros Anual (%) — experimente a média histórica do mercado de ações de aproximadamente 7% de retorno real ou a taxa da sua conta poupança.",
+      "Escolha a Frequência de Capitalização — Mensal é a mais comum para contas de poupança e investimento.",
+      "Defina o Período em anos — experimente 10, 20 e 30 anos para ver o quanto o tempo afeta o resultado.",
+      "Opcionalmente, insira um Aporte Mensal para simular depósitos regulares, como um plano de poupança mensal ou contribuição para previdência privada.",
+      "Analise o gráfico anual para ver exatamente quando e com que velocidade seu patrimônio acelera ano a ano."
     ]
   },
   "tip_calculator": {
@@ -473,9 +757,9 @@
     "meta_title": "Calculadora de Gorjeta - Dividir Conta e Calcular Gorjeta - QuickBestGo",
     "meta_description": "Calcule a gorjeta e divida a sua conta facilmente com a nossa calculadora gratuita. Escolha a percentagem de gorjeta e divida por qualquer número de pessoas.",
     "about_title": "Como usar a Calculadora de Gorjeta?",
-    "about_p1": "A nossa Calculadora de Gorjeta facilita o cálculo da gorjeta e a divisão de uma conta entre várias pessoas. Basta inserir o valor total da conta, selecionar ou inserir a percentagem de gorjeta desejada e escolher quantas pessoas vão dividir a conta.",
-    "about_p2": "Os costumes de gorjeta variam por país e cultura. Nos Estados Unidos, 15–20% é padrão para serviço em restaurantes. Em outros países, dar gorjeta pode não ser habitual ou uma taxa de serviço já pode estar incluída.",
-    "about_p3": "Todos os cálculos são realizados instantaneamente no seu navegador. Nenhum dado é enviado para qualquer servidor.",
+    "about_p1": "A Calculadora de Gorjeta torna rápido e justo o cálculo de uma gorjeta e a divisão de uma conta de restaurante entre várias pessoas. Insira o valor total da conta, selecione o percentual de gorjeta desejado e especifique quantas pessoas vão dividir o custo. A calculadora mostra instantaneamente o valor da gorjeta, o total com gorjeta e a parte individual de cada pessoa — eliminando o cálculo mental e as complicações do fim da refeição.",
+    "about_p2": "Os costumes de gorjeta variam significativamente por país e cultura. Nos Estados Unidos, 15% é o mínimo para um serviço adequado, 18–20% é o padrão para bom serviço e 20–25% é apropriado para serviço excepcional. No Brasil, uma taxa de serviço de 10% é geralmente incluída na conta — verifique antes de adicionar mais. No Reino Unido e na maior parte da Europa, 10–15% é comum e uma taxa de serviço de 12,5% frequentemente já está incluída. No Japão, gorjetas geralmente não são praticadas e podem até ser consideradas desrespeitosas. Sempre verifique sua conta antes de adicionar uma gorjeta extra, especialmente em grupos grandes.",
+    "about_p3": "Ao dividir a conta, pequenas diferenças de arredondamento podem gerar fricção. Esta calculadora mostra o valor exato por pessoa até o centavo, para que o grupo possa decidir como lidar com o arredondamento de forma justa. Muitos grupos preferem arredondar levemente para cima, garantindo que sempre haja o suficiente para cobrir impostos e diferenças de arredondamento. Para ocasiões em que diferentes pessoas pediram valores bem diferentes, considere calcular a parte de cada pessoa individualmente antes de aplicar o percentual de gorjeta, que é a abordagem mais justa.",
     "label_bill": "Valor da Conta",
     "label_tip_percent": "Percentagem de Gorjeta",
     "label_people": "Número de Pessoas",
@@ -488,9 +772,27 @@
     "no_tip_culture": "A gorjeta não é comum nesta região.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como calculo uma gorjeta?", "a": "Insira o valor da sua conta, selecione uma percentagem de gorjeta (10–25% é comum) e a calculadora mostra instantaneamente o valor da gorjeta, o total e a parte de cada pessoa se dividir."},
-      {"q": "Que percentagem devo deixar de gorjeta num restaurante?", "a": "Nos EUA, 15–20% é padrão para serviço em restaurante. 10% é considerado baixo, enquanto 25%+ é para serviço excecional. Os costumes de gorjeta variam por país."},
-      {"q": "Como divido uma conta entre várias pessoas?", "a": "Insira o valor da conta e a percentagem de gorjeta, depois defina o número de pessoas. A calculadora divide o total igualmente e mostra a parte de cada pessoa."}
+      {
+        "q": "Como calculo uma gorjeta?",
+        "a": "Insira o valor da sua conta, selecione uma percentagem de gorjeta (10–25% é comum) e a calculadora mostra instantaneamente o valor da gorjeta, o total e a parte de cada pessoa se dividir."
+      },
+      {
+        "q": "Que percentagem devo deixar de gorjeta num restaurante?",
+        "a": "Nos EUA, 15–20% é padrão para serviço em restaurante. 10% é considerado baixo, enquanto 25%+ é para serviço excecional. Os costumes de gorjeta variam por país."
+      },
+      {
+        "q": "Como divido uma conta entre várias pessoas?",
+        "a": "Insira o valor da conta e a percentagem de gorjeta, depois defina o número de pessoas. A calculadora divide o total igualmente e mostra a parte de cada pessoa."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Gorjeta",
+    "how_to_use_steps": [
+      "Insira o Valor Total da Conta — este é o subtotal do seu recibo, antes de qualquer gorjeta, com ou sem impostos.",
+      "Selecione um Percentual de Gorjeta usando os botões predefinidos (10%, 15%, 18%, 20%, 25%) ou insira um percentual personalizado no campo.",
+      "Insira o Número de Pessoas que vão dividir a conta — insira 1 se você está pagando sozinho.",
+      "A calculadora mostra instantaneamente o valor da gorjeta, o total da conta com gorjeta e a parte de cada pessoa.",
+      "Se sua conta já inclui uma taxa de serviço, insira 0% como gorjeta ou aplique a gorjeta apenas sobre o valor restante.",
+      "Para ocasiões especiais ou para arredondar para um total redondo, use o campo de gorjeta personalizada para inserir qualquer valor específico."
     ]
   },
   "unit_converter": {
@@ -498,9 +800,9 @@
     "meta_title": "Conversor de Unidades - Comprimento, Peso, Temperatura e Volume - QuickBestGo",
     "meta_description": "Converta entre unidades métricas e imperiais instantaneamente. Conversor gratuito online para comprimento (km/mi), peso (kg/lb), temperatura (°C/°F) e volume (L/gal).",
     "about_title": "Como usar o Conversor de Unidades?",
-    "about_p1": "O nosso Conversor de Unidades suporta quatro categorias: Comprimento (quilômetros, milhas, metros, pés, centímetros, polegadas), Peso (quilogramas, libras, gramas, onças), Temperatura (Celsius, Fahrenheit, Kelvin) e Volume (litros, galões, mililitros, onças líquidas).",
-    "about_p2": "Selecione uma categoria, insira o seu valor, escolha as unidades de origem e destino, e o resultado é calculado instantaneamente. Também pode trocar as unidades com um único clique.",
-    "about_p3": "Todas as conversões usam fatores de conversão internacionalmente aceites. Os resultados são arredondados para 4 casas decimais para maior precisão.",
+    "about_p1": "O Conversor de Unidades suporta quatro categorias essenciais para o dia a dia: Comprimento (quilômetros, milhas, metros, pés, centímetros, polegadas, jardas), Peso (quilogramas, libras, gramas, onças, toneladas métricas), Temperatura (Celsius, Fahrenheit, Kelvin) e Volume (litros, galões americanos, galões britânicos, mililitros, onças líquidas, xícaras). Com mais de 30 pares de unidades cobertos, a ferramenta lida tanto com o sistema métrico usado pela maior parte do mundo quanto com o sistema imperial comum nos Estados Unidos.",
+    "about_p2": "Converter unidades é uma necessidade cotidiana em ciências, culinária, academia, viagens e engenharia. Saber o seu peso em libras quando o aplicativo de academia usa quilogramas, entender uma receita que pede xícaras quando você mede em mililitros, ou calcular o consumo de combustível em sistemas diferentes são situações comuns do dia a dia. O conversor realiza a conversão bidirecional instantaneamente — insira um valor e o resultado aparece sem precisar pressionar nenhum botão. O botão de troca inverte a direção com um clique.",
+    "about_p3": "Todas as conversões usam fatores de conversão SI (Système International) padronizados internacionalmente pelo NIST (National Institute of Standards and Technology). A temperatura usa fórmulas exatas: Celsius para Fahrenheit = (C × 9/5) + 32, e Kelvin = C + 273,15. Os resultados são exibidos com quatro casas decimais para maior precisão. Todos os cálculos são feitos localmente no seu navegador — nenhum dado é enviado para qualquer servidor e a ferramenta funciona offline após o carregamento da página.",
     "tab_length": "Comprimento",
     "tab_weight": "Peso",
     "tab_temperature": "Temperatura",
@@ -513,9 +815,34 @@
     "error_invalid": "Por favor insira um número válido.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Que unidades posso converter?", "a": "O conversor suporta comprimento, peso, temperatura e volume — cobrindo dezenas de pares de unidades incluindo sistemas métrico e imperial."},
-      {"q": "Quão preciso é o conversor de unidades?", "a": "O conversor usa fatores de conversão precisos e trata os pares de unidades comuns com exatidão. Os resultados são apresentados com quatro casas decimais."},
-      {"q": "Posso converter Celsius para Fahrenheit?", "a": "Sim. Selecione Temperatura como categoria, escolha Celsius como unidade de entrada e Fahrenheit como saída, depois insira o seu valor."}
+      {
+        "q": "Que unidades posso converter?",
+        "a": "O conversor suporta comprimento (km, milhas, metros, pés, cm, polegadas, jardas), peso (kg, lbs, gramas, onças), temperatura (Celsius, Fahrenheit, Kelvin) e volume (litros, galões, ml, onças líquidas, xícaras) — mais de 30 pares de unidades no total."
+      },
+      {
+        "q": "Qual é a precisão do conversor de unidades?",
+        "a": "Os resultados são precisos com quatro casas decimais, usando fatores de conversão SI padronizados. Para temperatura, são aplicadas fórmulas matemáticas exatas, não aproximações."
+      },
+      {
+        "q": "Posso converter Celsius para Fahrenheit?",
+        "a": "Sim. Selecione Temperatura como categoria, escolha Celsius como unidade de entrada e Fahrenheit como saída, depois insira o valor. A fórmula (C × 9/5) + 32 é aplicada automaticamente."
+      },
+      {
+        "q": "Como converto milhas para quilômetros?",
+        "a": "Selecione Comprimento, defina milhas como unidade de origem e quilômetros como destino. Uma milha equivale a exatamente 1,60934 km. Insira a distância e o resultado aparece instantaneamente."
+      },
+      {
+        "q": "Qual é a diferença entre unidades métricas e imperiais?",
+        "a": "O sistema métrico (SI) é baseado em potências de 10 e usado pela maioria dos países do mundo. O sistema imperial usa unidades como milhas, libras e galões, sendo utilizado principalmente nos Estados Unidos."
+      },
+      {
+        "q": "Posso usar este conversor de unidades no celular?",
+        "a": "Sim. O conversor é totalmente otimizado para dispositivos móveis, com uma interface amigável ao toque. Todos os recursos funcionam em smartphones e tablets sem necessidade de instalar nenhum aplicativo."
+      },
+      {
+        "q": "Qual é a fórmula para converter Fahrenheit para Celsius?",
+        "a": "Subtraia 32 do valor em Fahrenheit e multiplique por 5/9. Fórmula: C = (F − 32) × 5/9. Por exemplo, 98,6°F = (98,6 − 32) × 5/9 = 37°C."
+      }
     ]
   },
   "base64": {
@@ -523,9 +850,9 @@
     "meta_title": "Codificador e Descodificador Base64 - Ferramenta Gratuita - QuickBestGo",
     "meta_description": "Codifique texto em Base64 ou descodifique strings Base64 para texto simples instantaneamente. Conversor Base64 gratuito para desenvolvedores.",
     "about_title": "O que é a codificação Base64?",
-    "about_p1": "Base64 é um esquema de codificação que converte dados binários em formato de texto usando 64 caracteres ASCII (A–Z, a–z, 0–9, +, /). É amplamente utilizado no desenvolvimento web para incorporar imagens em CSS, codificar anexos de e-mail e transmitir dados em JSON.",
-    "about_p2": "A codificação aumenta o tamanho dos dados em aproximadamente 33%, mas garante uma transmissão segura através de protocolos baseados em texto. Base64 não é criptografia — é puramente um esquema de codificação e pode ser descodificado por qualquer pessoa.",
-    "about_p3": "Toda a codificação e descodificação é realizada localmente no seu navegador. Nenhum dado é enviado para os nossos servidores.",
+    "about_p1": "Base64 é um esquema de codificação binário-para-texto que representa dados binários usando 64 caracteres ASCII imprimíveis: maiúsculas A–Z (26), minúsculas a–z (26), dígitos 0–9 (10), mais (+) e barra (/), com o sinal de igual (=) usado como preenchimento. Foi projetado para transmitir dados binários com segurança por protocolos baseados em texto que poderiam corromper bytes binários brutos. Hoje ele aparece em todo o desenvolvimento web: imagens data URI incorporadas em CSS, cabeçalhos de Basic Auth, tokens JWT, anexos de e-mail MIME e payloads de API contendo conteúdo binário.",
+    "about_p2": "O uso mais visível do Base64 no desenvolvimento web moderno é o formato data URI: data:image/png;base64,... — incorporando uma imagem diretamente em HTML ou CSS sem uma requisição HTTP adicional, útil para ícones pequenos e fundos inline. JWTs (JSON Web Tokens) usam a codificação Base64url (uma variante que usa - e _ em vez de + e /) para suas seções de cabeçalho e payload. A autenticação HTTP Basic envia credenciais codificadas em Base64 no cabeçalho Authorization. Reconhecer e decodificar Base64 em respostas de API é uma habilidade fundamental de depuração para desenvolvedores.",
+    "about_p3": "Importante: Base64 é codificação, não criptografia. Qualquer pessoa pode decodificar Base64 sem chave ou senha — ele não oferece nenhuma confidencialidade. Nunca use Base64 para proteger dados sensíveis. Base64 aumenta o tamanho dos dados em aproximadamente 33%: cada 3 bytes binários se tornam 4 caracteres Base64. Essa troca de tamanho é aceitável porque os dados codificados são seguros para transmissão por qualquer canal baseado em texto. Esta ferramenta suporta o Base64 padrão (RFC 4648). Toda a codificação e decodificação é feita localmente no seu navegador — nada é enviado para qualquer servidor.",
     "label_input": "Entrada",
     "label_output": "Saída",
     "btn_encode": "Codificar",
@@ -538,9 +865,34 @@
     "error_decode": "String Base64 inválida.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "O que é a codificação Base64?", "a": "Base64 é um método que converte dados binários em texto ASCII usando 64 caracteres (A-Z, a-z, 0-9, +, /). É comumente usado para incorporar dados em HTML, CSS ou APIs."},
-      {"q": "Como codifico texto em Base64?", "a": "Cole o seu texto no campo de entrada e selecione Codificar. O equivalente em Base64 é mostrado instantaneamente e pode ser copiado para a área de transferência."},
-      {"q": "Para que é usado o Base64?", "a": "O Base64 é usado para incorporar imagens em CSS, enviar dados binários em APIs JSON, codificar anexos de e-mail e transmitir dados de forma segura em URLs."}
+      {
+        "q": "O que é a codificação Base64?",
+        "a": "Base64 converte dados binários em uma string de 64 caracteres ASCII imprimíveis (A-Z, a-z, 0-9, +, /). Permite que dados binários trafeguem com segurança por sistemas baseados em texto como cabeçalhos HTTP, e-mail ou JSON sem corrupção."
+      },
+      {
+        "q": "Como codifico texto em Base64?",
+        "a": "Cole o seu texto na área de entrada, selecione Codificar e o resultado em Base64 aparece instantaneamente. Clique no botão copiar para usar o resultado em código ou configuração."
+      },
+      {
+        "q": "Para que o Base64 é mais usado?",
+        "a": "Base64 é usado para incorporar imagens em CSS como data URIs, codificar payloads de tokens JWT, transmitir anexos de e-mail via MIME, codificar dados binários em respostas de API JSON e em credenciais de autenticação HTTP Basic."
+      },
+      {
+        "q": "Base64 é uma forma de criptografia?",
+        "a": "Não. Base64 é puramente um esquema de codificação — é completamente reversível sem nenhuma chave. Qualquer pessoa que receba dados codificados em Base64 pode decodificá-los imediatamente. Nunca use Base64 para proteger informações sensíveis como senhas ou dados privados."
+      },
+      {
+        "q": "Por que a saída Base64 às vezes termina com == ou =?",
+        "a": "Os caracteres = são preenchimento. Base64 codifica 3 bytes de cada vez em 4 caracteres. Se o comprimento da entrada não for múltiplo de 3, um ou dois caracteres de preenchimento = são adicionados para completar o grupo final."
+      },
+      {
+        "q": "Quanto maior é a saída Base64 em relação ao original?",
+        "a": "A saída Base64 é aproximadamente 33% maior que os dados originais. Cada 3 bytes de entrada produzem 4 caracteres de saída — portanto, um arquivo binário de 1 MB se torna cerca de 1,33 MB quando codificado em Base64."
+      },
+      {
+        "q": "Qual é a diferença entre Base64 padrão e Base64url?",
+        "a": "O Base64 padrão usa os caracteres + e /, que têm significado especial em URLs. O Base64url substitui + por - e / por _, tornando-o seguro para uso direto em URLs e nomes de arquivo. JWTs usam Base64url para suas seções de cabeçalho e payload."
+      }
     ]
   },
   "url_encoder": {
@@ -548,9 +900,9 @@
     "meta_title": "Codificador e Descodificador URL - Ferramenta Gratuita - QuickBestGo",
     "meta_description": "Codifique ou descodifique URLs e parâmetros de consulta instantaneamente. Ferramenta gratuita de codificação URL para desenvolvedores.",
     "about_title": "O que é a codificação URL?",
-    "about_p1": "A codificação URL (codificação percentual) substitui caracteres especiais pelo sinal % seguido de dois dígitos hexadecimais. Por exemplo, um espaço torna-se %20 e & torna-se %26. Isto garante que os URLs sejam válidos e possam ser transmitidos de forma segura.",
-    "about_p2": "A descodificação URL inverte este processo, convertendo sequências codificadas percentualmente de volta aos seus caracteres originais. É comumente usada ao analisar strings de consulta, processar envios de formulários ou depurar pedidos de API.",
-    "about_p3": "Esta ferramenta usa as funções padrão encodeURIComponent / decodeURIComponent, que codificam todos os caracteres exceto letras, dígitos, -, _, ., e ~.",
+    "about_p1": "A codificação URL (oficialmente percent-encoding, definida no RFC 3986) converte caracteres que são inseguros ou reservados em URLs em um % seguido de dois dígitos hexadecimais. Um espaço se torna %20, & se torna %26, = se torna %3D e ? se torna %3F. Isso garante que as URLs permaneçam estruturalmente válidas quando contêm caracteres especiais em parâmetros de consulta, segmentos de caminho ou identificadores de fragmento. Todos os caracteres exceto os não-reservados (letras, dígitos, -, _, ., ~) devem ser percent-encoded em URLs padrão.",
+    "about_p2": "A codificação URL é essencial ao construir requisições de API, analisar query strings, criar URLs de redirecionamento e tratar conteúdo enviado por usuários em aplicações web. Um erro comum é incorporar caracteres especiais brutos em URLs: um & dentro do valor de um parâmetro de consulta é interpretado como separador de parâmetros, corrompendo a estrutura da URL. Consultas de busca, tokens, nomes de arquivo com espaços e qualquer texto gerado pelo usuário devem ser codificados corretamente antes de serem inseridos em uma URL. A decodificação URL é igualmente útil ao ler valores codificados em arquivos de log ou respostas de API.",
+    "about_p3": "Esta ferramenta usa as funções compatíveis com RFC 3986 encodeURIComponent / decodeURIComponent, que codificam todos os caracteres exceto A–Z, a–z, 0–9, -, _, ., e ~. Observação: encodeURIComponent também codifica barras (/), portanto é projetado para codificar valores individuais de parâmetros de consulta, não URLs inteiras. Para codificar uma URL completa preservando sua estrutura, use encodeURI — que preserva caracteres estruturais como :, /, ? e #. Todo o processamento é feito localmente no seu navegador.",
     "label_input": "Entrada",
     "label_output": "Saída",
     "btn_encode": "Codificar",
@@ -563,9 +915,34 @@
     "error_decode": "String URL codificada inválida.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "O que é a codificação URL?", "a": "A codificação URL converte caracteres especiais num formato que pode ser transmitido de forma segura numa URL. Por exemplo, espaços tornam-se %20 e & torna-se %26."},
-      {"q": "Por que preciso de codificar uma URL?", "a": "As URLs só podem conter um conjunto limitado de caracteres. A codificação garante que caracteres especiais como espaços, aspas e símbolos sejam incluídos de forma segura sem quebrar a estrutura da URL."},
-      {"q": "Como descodifico uma URL?", "a": "Cole a URL codificada e selecione Descodificar. A ferramenta converte os caracteres codificados percentualmente de volta à sua forma original legível."}
+      {
+        "q": "O que é a codificação URL?",
+        "a": "A codificação URL (percent-encoding) converte caracteres inseguros em um % seguido de dois dígitos hexadecimais. Por exemplo, um espaço se torna %20, & se torna %26 e = se torna %3D, mantendo as URLs estruturalmente válidas."
+      },
+      {
+        "q": "Por que preciso codificar um valor de URL?",
+        "a": "URLs permitem apenas um conjunto limitado de caracteres. Se um parâmetro de consulta contém &, =, ?, # ou espaços, esses caracteres precisam ser codificados antes de serem inseridos na URL — caso contrário quebram a estrutura da URL e corrompem os dados."
+      },
+      {
+        "q": "Como decodifico uma URL percent-encoded?",
+        "a": "Cole a URL ou o valor codificado no campo de entrada e selecione Descodificar. A ferramenta converte todas as sequências %XX de volta aos seus caracteres originais legíveis."
+      },
+      {
+        "q": "Quais caracteres são codificados por esta ferramenta?",
+        "a": "Todos os caracteres exceto letras (A–Z, a–z), dígitos (0–9), hífen (-), sublinhado (_), ponto (.) e til (~) são codificados. Esses são os caracteres não-reservados definidos no RFC 3986 que são sempre seguros em URLs."
+      },
+      {
+        "q": "Qual é a diferença entre %20 e + para espaços?",
+        "a": "%20 é a codificação percentual padrão para um espaço (RFC 3986). O sinal + representa um espaço apenas no formato application/x-www-form-urlencoded (envios de formulários HTML). Em URLs e APIs modernas, %20 é preferido e não ambíguo."
+      },
+      {
+        "q": "Como codifico o valor de um parâmetro de URL?",
+        "a": "Codifique apenas o valor do parâmetro, não a URL inteira. Por exemplo, se o valor é \"olá mundo\", codifique para \"ol%C3%A1%20mundo\" e adicione à URL. Codificar a URL completa também codificaria o :// e as barras estruturais."
+      },
+      {
+        "q": "O que significa %3D em uma URL?",
+        "a": "%3D é a forma percent-encoded do caractere =. Como = separa nomes de parâmetros de valores em query strings (chave=valor), qualquer = que apareça dentro do valor de um parâmetro deve ser codificado como %3D para evitar ambiguidade."
+      }
     ]
   },
   "json_formatter": {
@@ -573,9 +950,9 @@
     "meta_title": "Formatador e Validador JSON - Ferramenta Gratuita - QuickBestGo",
     "meta_description": "Formate, embeleze, valide e minifique JSON instantaneamente. Formatador JSON gratuito com realce de erros para desenvolvedores.",
     "about_title": "Como usar o Formatador JSON?",
-    "about_p1": "Cole o seu JSON na área de entrada e clique em Formatar para embelezar com indentação adequada, ou Minificar para comprimir numa única linha. O validador irá realçar quaisquer erros de sintaxe e mostrar-lhe exatamente onde está o problema.",
-    "about_p2": "JSON válido usa aspas duplas para chaves e valores de string, suporta números, booleanos (true/false), null, arrays ([]) e objetos ({}). Erros comuns incluem vírgulas finais, aspas simples e chaves sem aspas.",
-    "about_p3": "Todo o processamento é feito localmente no seu navegador. Ficheiros JSON grandes são suportados e nenhum dado é enviado para qualquer servidor.",
+    "about_p1": "O Formatador e Validador JSON embeleza instantaneamente JSON minificado ou comprimido em formato legível com indentação consistente, ou minifica JSON formatado em uma única linha compacta. Ao colar ou digitar, a ferramenta valida o JSON em tempo real e destaca erros de sintaxe — mostrando a linha e a posição exata do problema. O realce de sintaxe colore chaves, strings, números, booleanos e valores null, facilitando a navegação em estruturas aninhadas complexas.",
+    "about_p2": "JSON (JavaScript Object Notation) é o formato dominante de troca de dados para APIs web, arquivos de configuração e bancos de dados modernos. Ao trabalhar com APIs, as respostas frequentemente chegam como strings planas e não formatadas — colar no formatador revela imediatamente a estrutura. Ao depurar payloads de webhook, entradas de log ou exportações de banco de dados, um JSON devidamente formatado expõe relações aninhadas invisíveis na saída minificada. Desenvolvedores também usam o minificador para reduzir o tamanho dos payloads JSON em produção, melhorando tempos de carregamento e reduzindo custos de bandwidth.",
+    "about_p3": "A sintaxe JSON é rigorosa: chaves devem ser strings com aspas duplas, valores devem usar aspas duplas (não simples), vírgulas finais após o último elemento são proibidas, e os valores undefined, NaN, Infinity e function não são JSON válido. Erros comuns incluem vírgulas finais copiadas do JavaScript, strings com aspas simples, chaves sem aspas de literais de objeto JavaScript e comentários inline — que o JSON não suporta. O validador detecta todos esses erros e mostra precisamente onde ocorrem.",
     "label_input": "JSON de Entrada",
     "label_output": "Saída",
     "btn_format": "Formatar",
@@ -589,9 +966,34 @@
     "label_indent": "Indentação",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "O que faz um formatador JSON?", "a": "Recebe texto JSON bruto ou minificado e reformata-o com indentação e quebras de linha adequadas, tornando-o fácil de ler e depurar."},
-      {"q": "Como valido JSON online?", "a": "Cole o seu JSON no formatador. Se for válido, será formatado de forma limpa. Se houver um erro de sintaxe, a ferramenta irá realçar o problema."},
-      {"q": "O formatador JSON comprime dados?", "a": "Sim. Pode tanto formatar (prettify) JSON para legibilidade como minificá-lo para remover espaços em branco para ficheiros de menor tamanho."}
+      {
+        "q": "O que faz um formatador JSON?",
+        "a": "Recebe texto JSON bruto ou minificado e o reformata com indentação e quebras de linha adequadas, tornando objetos e arrays aninhados fáceis de ler e navegar. Também valida a sintaxe e destaca quaisquer erros."
+      },
+      {
+        "q": "Como valido JSON online?",
+        "a": "Cole o seu JSON na área de entrada. Se for válido, é formatado de forma limpa. Se houver um erro de sintaxe, a ferramenta destaca o problema e mostra a linha e a posição do caractere para que você possa corrigi-lo imediatamente."
+      },
+      {
+        "q": "O formatador JSON também comprime JSON?",
+        "a": "Sim. A função Minificar remove todos os espaços em branco e quebras de linha para produzir uma string compacta de linha única. Isso reduz o tamanho do arquivo para uso em produção ou ao enviar JSON em requisições de API."
+      },
+      {
+        "q": "Quais são os erros de sintaxe JSON mais comuns?",
+        "a": "Os erros mais comuns são vírgulas finais após o último item de um array ou objeto, strings com aspas simples (JSON exige aspas duplas), chaves sem aspas (válidas em JavaScript mas não em JSON) e comentários (JSON não suporta // ou comentários em bloco)."
+      },
+      {
+        "q": "Qual é a diferença entre JSON e um objeto JavaScript?",
+        "a": "Literais de objetos JavaScript permitem aspas simples, chaves sem aspas, vírgulas finais e comentários. JSON exige chaves e valores string com aspas duplas, sem vírgulas finais e sem comentários. JSON é um formato de texto estrito, não código executável."
+      },
+      {
+        "q": "Posso formatar arquivos JSON grandes?",
+        "a": "Sim. O formatador suporta entradas JSON de até 500KB. Para arquivos muito grandes, o processamento pode levar um momento. Se você estiver trabalhando com arquivos maiores que 500KB, considere dividi-los em seções menores."
+      },
+      {
+        "q": "Por que o meu JSON mostra um erro de sintaxe?",
+        "a": "As causas mais prováveis são uma vírgula final após a última propriedade em um objeto ou array, aspas simples em vez de aspas duplas ao redor de chaves ou valores, ou uma chave que não está entre aspas. Verifique o número de linha indicado na mensagem de erro."
+      }
     ]
   },
   "color_converter": {
@@ -599,9 +1001,9 @@
     "meta_title": "Conversor de Cores - HEX, RGB e HSL - QuickBestGo",
     "meta_description": "Converta cores entre os formatos HEX, RGB e HSL instantaneamente. Conversor de cores gratuito para designers e desenvolvedores.",
     "about_title": "Como usar o Conversor de Cores?",
-    "about_p1": "Insira uma cor em qualquer formato — HEX (#RRGGBB), RGB (rgb(r, g, b)) ou HSL (hsl(h, s%, l%)) — e os outros formatos são calculados instantaneamente. Também pode usar o seletor de cores para selecionar qualquer cor visualmente.",
-    "about_p2": "HEX é o formato mais comum no desenvolvimento web (CSS, HTML). RGB define cores por canais vermelho, verde e azul (0–255 cada). HSL representa cores por matiz (0–360°), saturação (0–100%) e luminosidade (0–100%), o que é mais intuitivo para ajustar cores.",
-    "about_p3": "Todas as conversões usam fórmulas padrão de espaço de cores e são realizadas localmente no seu navegador.",
+    "about_p1": "O Conversor de Cores suporta conversão instantânea entre os três formatos de cor web mais comuns: HEX (#RRGGBB ou a forma abreviada #RGB), RGB (Vermelho, Verde, Azul — cada um de 0 a 255) e HSL (Matiz 0–360°, Saturação 0–100%, Luminosidade 0–100%). Insira um valor em qualquer formato ou use o seletor de cores visual — as três representações são atualizadas simultaneamente. Uma amostra de pré-visualização ao vivo mostra exatamente como a cor fica conforme você ajusta os valores.",
+    "about_p2": "Cada formato de cor tem seu uso ideal em design e desenvolvimento. HEX é o formato dominante em HTML, folhas de estilo CSS e ferramentas de exportação de design como Figma e Sketch. RGB é preferido em operações de canvas JavaScript e processamento de imagens onde a manipulação individual de canais é necessária programaticamente. HSL é o formato mais legível para humanos: ajustar apenas a Luminosidade cria escalas de cores para componentes de UI, e modificar apenas o Matiz rotaciona entre cores complementares sem alterar saturação ou brilho.",
+    "about_p3": "As fórmulas de conversão seguem o padrão de espaço de cor sRGB usado por todos os principais navegadores e sistemas de exibição. HEX para RGB converte cada par de dígitos hexadecimais em um número decimal (0–255). RGB para HSL normaliza os valores dos canais para 0–1, depois calcula o matiz a partir do canal dominante, a saturação a partir do intervalo min-máx e a luminosidade como a média de mín e máx. Todas as conversões são feitas localmente no seu navegador — nenhum dado de cor é transmitido para lugar algum.",
     "label_hex": "HEX",
     "label_rgb": "RGB",
     "label_hsl": "HSL",
@@ -611,9 +1013,34 @@
     "copied": "Copiado!",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como converto HEX para RGB?", "a": "Insira um código de cor HEX (ex.: #2563eb) e o conversor mostra instantaneamente os valores equivalentes em RGB, HSL e outros formatos de cor."},
-      {"q": "Qual é a diferença entre cores HEX e RGB?", "a": "HEX é um código hexadecimal de 6 dígitos usado no design web. RGB representa a mesma cor como três valores (0–255) para os componentes Vermelho, Verde e Azul."},
-      {"q": "Como encontro o formato de cor que preciso para CSS?", "a": "O conversor mostra os formatos HEX, RGB e HSL simultaneamente, para que possa copiar o formato exato necessário para o seu CSS ou ferramenta de design."}
+      {
+        "q": "Como converto HEX para RGB?",
+        "a": "Insira um código de cor HEX (ex.: #2563eb) no campo de entrada e o conversor mostra instantaneamente os valores equivalentes em RGB e HSL. Você também pode digitar diretamente nos campos RGB ou HSL para converter em qualquer direção."
+      },
+      {
+        "q": "Qual é a diferença entre cores HEX e RGB?",
+        "a": "HEX é um código hexadecimal de 6 dígitos (ex.: #FF5500) usado em HTML e CSS. RGB representa a mesma cor como três valores decimais 0–255 (ex.: rgb(255, 85, 0)). Ambos descrevem a mesma cor — são notações diferentes para valores idênticos."
+      },
+      {
+        "q": "Como encontro o formato de cor CSS que preciso?",
+        "a": "O conversor mostra os formatos HEX, RGB e HSL simultaneamente. Copie o formato necessário para sua regra CSS — os três são válidos no CSS moderno e produzem resultados visuais idênticos."
+      },
+      {
+        "q": "O que é HSL e quando devo usá-lo?",
+        "a": "HSL significa Matiz (Hue), Saturação e Luminosidade. É mais intuitivo que HEX ou RGB para ajustar cores: altere apenas a Luminosidade para deixar uma cor mais clara ou mais escura, ou mude o Matiz para obter uma cor relacionada. É popular em temas CSS e sistemas de design."
+      },
+      {
+        "q": "Posso usar o seletor de cores em vez de digitar valores?",
+        "a": "Sim. Clique na amostra de cor ou no ícone do seletor para abrir um seletor de cores visual. Arraste para selecionar qualquer cor e os três valores de formato são atualizados automaticamente."
+      },
+      {
+        "q": "Os códigos de cor HEX diferenciam maiúsculas de minúsculas?",
+        "a": "Não. #FF5500 e #ff5500 são idênticos. CSS aceita códigos HEX tanto em maiúsculas quanto em minúsculas. O conversor aceita qualquer um e normaliza a saída para maiúsculas."
+      },
+      {
+        "q": "O que significa o símbolo # em uma cor HEX?",
+        "a": "O # é um prefixo que indica ao CSS que se trata de um código de cor hexadecimal. Ele não faz parte do valor da cor em si. Algumas ferramentas como Figma ou Photoshop podem exibir o código de 6 dígitos sem o prefixo #."
+      }
     ]
   },
   "gpa_calculator": {
@@ -621,9 +1048,9 @@
     "meta_title": "Calculadora de GPA - Calcule a Sua Média de Notas - QuickBestGo",
     "meta_description": "Calcule o seu GPA na escala de 4.0 com a nossa calculadora gratuita online. Adicione disciplinas com notas e horas de crédito para um GPA acumulado preciso.",
     "about_title": "Como é calculado o GPA?",
-    "about_p1": "O GPA (Média de Pontos de Nota) é calculado multiplicando os pontos de nota de cada disciplina pelas suas horas de crédito, somando esses valores e dividindo pelo total de horas de crédito. Por exemplo: A (4.0) × 3 créditos + B (3.0) × 4 créditos = 24 pontos ÷ 7 créditos = 3.43 GPA.",
-    "about_p2": "Esta calculadora usa a escala padrão de 4.0: A+/A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, D- = 0.7, F = 0.0.",
-    "about_p3": "As escalas de GPA e os sistemas de classificação variam por instituição e país. Esta calculadora usa a escala americana comum de 4.0 como referência geral.",
+    "about_p1": "A Média Ponderada Acumulada (GPA, do inglês Grade Point Average) é uma medida numérica padronizada de desempenho acadêmico usada pelas instituições de ensino para avaliar e comparar alunos. Ela é calculada multiplicando-se o valor em pontos de cada nota pelo número de créditos da disciplina (produzindo pontos de qualidade), somando todos os pontos de qualidade e dividindo pelo total de créditos cursados. Por exemplo: tirar A (4,0) em uma disciplina de 3 créditos e B (3,0) em uma de 4 créditos resulta em 24 pontos de qualidade divididos por 7 créditos totais, gerando um GPA de 3,43.",
+    "about_p2": "Esta calculadora usa a escala de notas padrão dos EUA de 4,0: A+ e A = 4,0; A− = 3,7; B+ = 3,3; B = 3,0; B− = 2,7; C+ = 2,3; C = 2,0; C− = 1,7; D+ = 1,3; D = 1,0; D− = 0,7; e F = 0,0. Você pode adicionar quantas disciplinas precisar, com pesos de créditos diferentes, para calcular tanto o GPA do semestre quanto o GPA acumulado. A calculadora é atualizada instantaneamente conforme você adiciona ou modifica as disciplinas, permitindo simular diferentes cenários de notas rapidamente.",
+    "about_p3": "Os limites de GPA são importantes para muitas etapas acadêmicas e profissionais. A maioria das universidades exige um GPA mínimo de 2,0 para manter a situação acadêmica regular. O reconhecimento na lista de honra (Dean's List) geralmente requer 3,5 ou mais. As admissões em programas de pós-graduação normalmente exigem mínimo de 3,0, com programas competitivos preferindo 3,5 ou mais. Bolsas de estudo, sociedades honorárias e alguns empregadores também usam cortes de GPA. Note que os sistemas de avaliação variam por instituição e país — esta calculadora usa a escala americana padrão de 4,0 como referência geral.",
     "label_course": "Disciplina",
     "label_grade": "Nota",
     "label_credits": "Créditos",
@@ -638,9 +1065,27 @@
     "error_invalid_credits": "Por favor insira horas de crédito válidas para todas as disciplinas.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como é calculado o GPA?", "a": "O GPA é calculado multiplicando os pontos de nota de cada disciplina pelas suas horas de crédito, somando esses valores e dividindo pelo total de horas de crédito."},
-      {"q": "O que é um bom GPA?", "a": "Na escala de 4.0, 3.5–4.0 é excelente (Lista do Reitor), 3.0–3.5 é bom, 2.0–3.0 é médio e abaixo de 2.0 pode indicar dificuldades académicas."},
-      {"q": "Como converto notas em letras para pontos de nota?", "a": "Conversões comuns: A/A+ = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, D = 1.0, F = 0.0."}
+      {
+        "q": "Como é calculado o GPA?",
+        "a": "O GPA é calculado multiplicando os pontos de nota de cada disciplina pelas suas horas de crédito, somando esses valores e dividindo pelo total de horas de crédito."
+      },
+      {
+        "q": "O que é um bom GPA?",
+        "a": "Na escala de 4.0, 3.5–4.0 é excelente (Lista do Reitor), 3.0–3.5 é bom, 2.0–3.0 é médio e abaixo de 2.0 pode indicar dificuldades académicas."
+      },
+      {
+        "q": "Como converto notas em letras para pontos de nota?",
+        "a": "Conversões comuns: A/A+ = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, D = 1.0, F = 0.0."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de GPA",
+    "how_to_use_steps": [
+      "Adicione cada disciplina inserindo o nome (opcional), selecionando a nota obtida no menu suspenso e inserindo a carga horária em créditos.",
+      "Clique em Adicionar Disciplina para incluir mais matérias — adicione quantas forem necessárias para o seu semestre ou histórico.",
+      "Seu GPA é atualizado automaticamente conforme você adiciona ou altera qualquer disciplina — não é necessário clicar em Calcular.",
+      "Para remover uma disciplina do cálculo, clique no ícone de exclusão ao lado da linha correspondente.",
+      "Revise o GPA calculado, o total de créditos e o total de pontos de qualidade no painel de resultados.",
+      "Use os resultados para verificar seu desempenho em relação às exigências acadêmicas ou para planejar quais notas você precisa nas disciplinas restantes para atingir um GPA-alvo."
     ]
   },
   "word_counter": {
@@ -648,9 +1093,9 @@
     "meta_title": "Contador de Palavras - Ferramenta Gratuita de Contagem de Palavras e Caracteres - QuickBestGo",
     "meta_description": "Conte palavras, caracteres, frases, parágrafos e tempo de leitura instantaneamente. Contador de palavras gratuito para escritores, estudantes e profissionais de SEO.",
     "about_title": "Por que usar um Contador de Palavras?",
-    "about_p1": "O nosso Contador de Palavras analisa instantaneamente o seu texto e fornece uma análise completa: contagem total de palavras, contagem de caracteres (com e sem espaços), contagem de frases, contagem de parágrafos e tempo de leitura estimado com base numa velocidade média de leitura de 200 palavras por minuto.",
-    "about_p2": "Os escritores usam contadores de palavras para cumprir os requisitos das tarefas, manter-se dentro dos limites de caracteres das redes sociais (Twitter: 280, Instagram: 2.200) e acompanhar o progresso. Os profissionais de SEO usam-no para otimizar meta descrições (150–160 caracteres) e títulos (50–60 caracteres).",
-    "about_p3": "A secção de densidade de palavras-chave mostra as 5 palavras significativas mais frequentes no seu texto, ajudando-o a identificar palavras sobreutilizadas e melhorar a legibilidade.",
+    "about_p1": "O Contador de Palavras analisa seu texto instantaneamente e exibe sete métricas principais: contagem total de palavras, contagem de caracteres com espaços, contagem de caracteres sem espaços, contagem de frases, contagem de parágrafos, tempo de leitura estimado (baseado em 200 palavras por minuto — a velocidade média de leitura de um adulto) e uma tabela de densidade de palavras-chave mostrando as 10 palavras mais usadas. Todas as métricas são atualizadas em tempo real conforme você digita ou cola, sendo ideal para sessões de edição ao vivo.",
+    "about_p2": "Escritores e criadores de conteúdo dependem de contagens específicas para atender a requisitos e metas de plataformas. Posts de blog voltados para SEO geralmente precisam de 800–2.000 palavras. Ensaios acadêmicos têm limites rígidos de tarefa. O Twitter impõe 280 caracteres, artigos do LinkedIn têm limite de 125.000 caracteres e meta descriptions devem ficar abaixo de 160 caracteres para exibição ideal nos resultados de busca. Descrições do YouTube são mais eficazes com menos de 300 caracteres antes do corte. Saber sua contagem exata enquanto escreve elimina suposições e economiza revisões demoradas no momento de envio.",
+    "about_p3": "O recurso de densidade de palavras-chave ajuda escritores a identificar palavras usadas em excesso e diversificar o vocabulário — um problema comum em primeiras versões. Palavras de parada comuns (o, e, é, a, de, para, em) são filtradas para que apenas palavras de conteúdo significativas apareçam na tabela de densidade. O tempo de leitura a 200 WPM se aplica a prosa padrão; documentação técnica geralmente é consumida a cerca de 150 WPM. Todo o processamento de texto é feito localmente no seu navegador — nenhum texto que você inserir é jamais transmitido ou armazenado.",
     "label_input": "Insira ou cole o seu texto aqui",
     "placeholder": "Comece a escrever ou cole o seu texto aqui para analisar...",
     "btn_clear": "Limpar",
@@ -664,9 +1109,34 @@
     "keyword_title": "Palavras-chave Principais",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como conto as palavras num texto?", "a": "Cole ou escreva o seu texto na área de entrada. A contagem de palavras, caracteres, frases e o tempo de leitura são atualizados instantaneamente."},
-      {"q": "O contador de palavras inclui espaços na contagem de caracteres?", "a": "A ferramenta mostra tanto a contagem de caracteres com espaços como sem espaços, para que possa usar a métrica de que necessita."},
-      {"q": "Existe um limite de comprimento de texto?", "a": "A ferramenta suporta até 100.000 caracteres. Para a maioria dos documentos, ensaios e artigos, isto é mais do que suficiente."}
+      {
+        "q": "Como conto as palavras no meu texto?",
+        "a": "Cole ou digite o seu texto na área de entrada. A contagem de palavras, caracteres, frases, parágrafos e o tempo de leitura são atualizados instantaneamente em tempo real — sem precisar pressionar nenhum botão."
+      },
+      {
+        "q": "O contador de palavras inclui espaços na contagem de caracteres?",
+        "a": "A ferramenta mostra ambas as contagens: caracteres incluindo espaços e caracteres excluindo espaços. Use a que corresponde à plataforma para a qual você está escrevendo — o Twitter conta espaços como caracteres, por exemplo."
+      },
+      {
+        "q": "Há um limite de tamanho de texto?",
+        "a": "A ferramenta suporta até 100.000 caracteres. Isso é mais que suficiente para romances, relatórios longos ou qualquer documento típico. Para textos maiores, divida em seções."
+      },
+      {
+        "q": "Como o tempo de leitura é calculado?",
+        "a": "O tempo de leitura é estimado a 200 palavras por minuto, que é a velocidade média de leitura silenciosa de um adulto para prosa padrão. Conteúdo técnico ou acadêmico pode levar 30–50% mais tempo."
+      },
+      {
+        "q": "Posso usar isso para verificar minha contagem de caracteres no Twitter ou Instagram?",
+        "a": "Sim. O Twitter permite 280 caracteres por post e legendas do Instagram podem ter até 2.200 caracteres. Use a contagem de caracteres com espaços para verificar esses limites."
+      },
+      {
+        "q": "O que é densidade de palavras-chave?",
+        "a": "A densidade de palavras-chave mostra com que frequência cada palavra significativa aparece em relação à contagem total de palavras, expressa como porcentagem. Ajuda a identificar palavras usadas em excesso e garante vocabulário equilibrado e variado."
+      },
+      {
+        "q": "O contador de palavras conta números como palavras?",
+        "a": "Sim. Qualquer sequência de caracteres não-espaço separada por espaços conta como uma palavra, incluindo números, termos hifenizados e abreviações como Dr. ou ex."
+      }
     ]
   },
   "days_between_dates": {
@@ -674,9 +1144,9 @@
     "meta_title": "Calculadora de Dias Entre Datas - Ferramenta Gratuita - QuickBestGo",
     "meta_description": "Calcule o número exato de dias, semanas, meses e dias úteis entre duas datas. Calculadora de diferença de datas gratuita.",
     "about_title": "Como calcular os dias entre datas?",
-    "about_p1": "A nossa Calculadora de Dias Entre Datas fornece a diferença exata entre quaisquer duas datas em múltiplas unidades: dias totais, semanas completas, meses aproximados, anos e dias úteis (segunda a sexta-feira).",
-    "about_p2": "Use os botões de predefinição rápida para calcular instantaneamente intervalos de datas comuns — os próximos 7 dias, 30 dias, 100 dias ou um ano completo a partir de hoje. Também pode inserir quaisquer datas de início e fim personalizadas.",
-    "about_p3": "Usos comuns incluem calcular prazos, cronogramas de projetos, contagens regressivas para eventos (feriados, aniversários, comemorações) e determinar há quanto tempo algo aconteceu.",
+    "about_p1": "A Calculadora de Dias Entre Datas calcula a diferença exata entre quaisquer duas datas do calendário em múltiplas unidades simultaneamente: total de dias corridos, semanas completas (com dias restantes), meses aproximados, anos aproximados e dias úteis (segunda a sexta-feira, excluindo fins de semana). Todos os cálculos tratam anos bissextos e meses de comprimentos diferentes automaticamente, garantindo resultados sempre precisos independentemente do intervalo de datas selecionado.",
+    "about_p2": "Cálculos de datas são essenciais em gestão de projetos, contratos legais, folha de pagamento, prazos de empréstimos e planejamento de eventos. Saber o número exato de dias úteis em um período contratual afeta estimativas de custo e faturamento. Calcular os dias restantes até um prazo cria urgência e apoia a priorização. Contar dias úteis entre marcos importa para cronogramas de integração e conformidade de RH. Contagens regressivas de aniversários e datas especiais são usos pessoais populares. Os atalhos rápidos (7, 30, 100 dias, 1 ano a partir de hoje) evitam entrada manual para os cenários mais comuns.",
+    "about_p3": "O cálculo usa o calendário Gregoriano proléptico — o calendário civil global utilizado em praticamente todos os países. Os cálculos de dias úteis excluem sábados e domingos, mas não subtraem feriados, que variam por país e região. Para fins comerciais onde feriados são relevantes, ajuste o resultado manualmente. Todos os cálculos são feitos localmente no seu navegador, portanto a ferramenta funciona offline após o carregamento da página.",
     "label_start": "Data de Início",
     "label_end": "Data de Fim",
     "btn_calculate": "Calcular",
@@ -694,9 +1164,34 @@
     "error_invalid": "Por favor selecione datas de início e fim válidas.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como calculo o número de dias entre duas datas?", "a": "Selecione uma data de início e uma data de fim, depois clique em Calcular. A ferramenta mostra a diferença exata em dias, semanas, meses e anos."},
-      {"q": "Quantos dias úteis existem entre duas datas?", "a": "A calculadora inclui um resultado de dias úteis que exclui fins de semana, útil para planeamento de projetos e prazos de negócios."},
-      {"q": "Posso calcular quantos dias faltam para uma data futura?", "a": "Sim. Defina hoje como data de início e a sua data futura como data de fim para ver exatamente quantos dias restam."}
+      {
+        "q": "Como calculo o número de dias entre duas datas?",
+        "a": "Selecione uma data de início e uma data de fim usando os seletores de data e clique em Calcular. A diferença exata em dias totais, semanas completas, meses, anos e dias úteis é mostrada simultaneamente."
+      },
+      {
+        "q": "Quantos dias úteis há entre duas datas?",
+        "a": "A calculadora mostra os dias úteis separadamente, contando apenas segunda a sexta-feira e excluindo fins de semana. Isso é útil para planejamento de projetos, ciclos de faturamento e prazos de contratos comerciais."
+      },
+      {
+        "q": "Posso calcular quantos dias faltam para uma data futura?",
+        "a": "Sim. Defina hoje como data de início e sua data futura como data de fim. O resultado mostra a contagem regressiva exata em dias, semanas, meses e outras unidades."
+      },
+      {
+        "q": "A calculadora considera anos bissextos?",
+        "a": "Sim. Anos bissextos (a cada 4 anos, com exceções para anos centenários) são tratados automaticamente. O dia 29 de fevereiro é corretamente incluído quando cair dentro do intervalo de datas."
+      },
+      {
+        "q": "Qual é a diferença entre dias corridos e dias úteis?",
+        "a": "Dias corridos contam todos os dias incluindo fins de semana e feriados. Dias úteis contam apenas segunda a sexta-feira, excluindo sábados e domingos — mas feriados públicos não são excluídos automaticamente."
+      },
+      {
+        "q": "Como calculo os dias de hoje até uma data específica?",
+        "a": "Use os botões de atalho rápido (7 dias, 30 dias, 1 ano a partir de hoje) para intervalos comuns, ou defina manualmente hoje como data de início e insira sua data alvo como data de fim."
+      },
+      {
+        "q": "Posso usar isso para calcular prazos de contratos comerciais?",
+        "a": "Sim. O recurso de dias úteis é especialmente útil para prazos comerciais. Insira as datas de início e término do contrato para ver exatamente quantos dias úteis caem dentro do período."
+      }
     ]
   },
   "timezone_converter": {
@@ -704,9 +1199,9 @@
     "meta_title": "Conversor de Fusos Horários - Relógio Mundial e Ferramenta de Fuso Horário - QuickBestGo",
     "meta_description": "Converta horas entre fusos horários instantaneamente. Conversor de fusos horários gratuito com relógio mundial ao vivo para cidades de todo o mundo.",
     "about_title": "Como usar o Conversor de Fusos Horários?",
-    "about_p1": "Selecione o seu fuso horário de origem e insira uma hora, depois escolha um fuso horário de destino para ver a hora convertida instantaneamente. Use o botão de troca para inverter a direção de conversão.",
-    "about_p2": "O relógio mundial ao vivo na parte inferior mostra a hora atual em 6 cidades principais simultaneamente — Nova Iorque, Londres, Paris, Dubai, Tóquio e Sydney — atualizado a cada segundo.",
-    "about_p3": "Todas as conversões de fuso horário usam a API Intl.DateTimeFormat integrada do seu browser com dados de fuso horário IANA, garantindo precisão para as transições de horário de verão.",
+    "about_p1": "O Conversor de Fusos Horários suporta mais de 400 fusos horários padrão IANA de todos os países e regiões. Selecione um fuso horário de origem no menu suspenso com busca, insira a data e a hora que deseja converter, depois escolha um fuso horário de destino — o resultado aparece instantaneamente. O botão de troca inverte a direção com um clique. Cruzamentos de limite de dia são tratados corretamente: converter 23h em Nova York para Tóquio mostra a hora correta no dia seguinte do calendário.",
+    "about_p2": "Com o trabalho remoto, viagens internacionais e equipes distribuídas globalmente tornando-se padrão, conversões de fuso horário são uma necessidade diária. Agendar uma videochamada entre Nova York (EDT), Londres (BST) e Seul (KST) requer entender sobreposições de horário em três fusos. Assistir a um evento ao vivo transmitido em um horário UTC específico significa converter para o seu fuso local. Errar uma conversão de fuso pode resultar em uma reunião perdida, um voo atrasado ou uma transação fora do prazo — o custo de errar é real.",
+    "about_p3": "Todas as conversões usam a API Intl.DateTimeFormat integrada do navegador com o banco de dados completo de fusos horários IANA, portanto as transições de horário de verão (DST) são tratadas automaticamente para todas as regiões. Os cronogramas de DST diferem por país: os EUA mudam em março e novembro, a Europa em março e outubro, e países próximos ao equador geralmente não observam DST. O relógio mundial ao vivo mostra as horas atuais em 6 cidades principais — Nova York, Londres, Paris, Dubai, Tóquio e Sydney — atualizado a cada segundo.",
     "label_from": "Fuso Horário de Origem",
     "label_to": "Fuso Horário de Destino",
     "label_time": "Hora",
@@ -717,9 +1212,34 @@
     "error_invalid": "Por favor selecione fusos horários válidos.",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Como converto a hora entre fusos horários?", "a": "Selecione o seu fuso horário de origem, insira a hora e escolha um fuso horário de destino. A hora convertida é mostrada instantaneamente com o horário de verão considerado."},
-      {"q": "O que é o UTC?", "a": "UTC (Tempo Universal Coordenado) é o padrão global de tempo. Todos os fusos horários são definidos como deslocamentos do UTC — por exemplo, UTC+9 é a Hora Padrão do Japão."},
-      {"q": "Como encontro a hora atual noutro país?", "a": "Selecione o fuso horário do país de destino e a ferramenta mostra a hora local atual, automaticamente ajustada para o horário de verão."}
+      {
+        "q": "Como converto a hora entre fusos horários?",
+        "a": "Selecione o seu fuso horário de origem, insira a data e a hora e escolha o fuso horário de destino. A hora convertida aparece instantaneamente com o horário de verão automaticamente considerado."
+      },
+      {
+        "q": "O que é UTC?",
+        "a": "UTC (Tempo Universal Coordenado) é o padrão global de tempo. Todos os fusos horários são definidos como deslocamentos do UTC — por exemplo, UTC+9 é o Horário Padrão do Japão (JST) e UTC-5 é o Horário Padrão do Leste (EST) nos EUA."
+      },
+      {
+        "q": "Como encontro a hora atual em outro país?",
+        "a": "Selecione o fuso horário do país de destino e o conversor mostra a hora local atual, ajustada automaticamente para indicar se aquela localidade observa horário de verão."
+      },
+      {
+        "q": "O que é horário de verão (DST)?",
+        "a": "Horário de verão é a prática de adiantar os relógios em uma hora durante os meses de verão para estender a claridade à noite. Nem todos os países observam o DST. O conversor trata todas as transições de DST automaticamente usando dados de fuso horário IANA."
+      },
+      {
+        "q": "Por que a data às vezes muda quando converto fusos horários?",
+        "a": "Ao converter além da linha internacional de data ou horários noturnos para fusos orientais, a data do calendário pode avançar um dia ou retroceder. Esse é o comportamento correto — o conversor considera todas as mudanças de data."
+      },
+      {
+        "q": "Quantos fusos horários são suportados?",
+        "a": "Mais de 400 fusos horários padrão IANA são suportados, cobrindo todos os países, territórios e regiões. Você pode buscar por nome de cidade ou identificador de fuso como America/New_York ou Asia/Tokyo."
+      },
+      {
+        "q": "Qual é a diferença entre GMT e UTC?",
+        "a": "GMT (Greenwich Mean Time) e UTC são efetivamente equivalentes para uso cotidiano. UTC é o padrão científico moderno, enquanto GMT é um fuso horário geográfico em UTC+0. Ambos mostram o mesmo horário, mas UTC é a referência técnica preferida."
+      }
     ]
   },
   "currency_exchange_calculator": {
@@ -727,9 +1247,9 @@
     "meta_title": "Calculadora de Câmbio - Taxas em Tempo Real - QuickBestGo",
     "meta_description": "Conversor de moedas gratuito com taxas em tempo real. Converta USD, EUR, KRW, JPY e mais de 160 moedas instantaneamente. Sem cadastro.",
     "about_title": "Como usar a Calculadora de Câmbio?",
-    "about_p1": "Selecione as moedas nos campos De e Para, insira o valor e o resultado é calculado instantaneamente com taxas em tempo real do Open Exchange Rates. Use o botão de troca para inverter a conversão.",
-    "about_p2": "Clique em qualquer cartão de Taxas Principais para carregar esse par de moedas automaticamente. A Tabela de Conversão Rápida mostra valores comuns pré-calculados — clique em uma linha para definir esse valor.",
-    "about_p3": "Todos os cálculos são feitos no seu navegador. As taxas são armazenadas em cache por 60 minutos para desempenho rápido.",
+    "about_p1": "A Calculadora de Câmbio converte entre 16 moedas principais do mundo usando taxas de câmbio em tempo real obtidas do Open Exchange Rates. Insira um valor, selecione as moedas de origem e destino nos menus suspensos e o resultado aparece instantaneamente. O botão de troca inverte a direção com um clique. Uma tabela de conversão rápida abaixo pré-calcula valores comuns (1, 5, 10, 25, 50, 100, 500, 1.000, 5.000) para o par de moedas atual, permitindo comparar valores de relance sem precisar reinserir quantias.",
+    "about_p2": "As taxas de câmbio flutuam 24 horas por dia com base na atividade do mercado global, notícias econômicas, decisões de bancos centrais e eventos geopolíticos. Nossa calculadora atualiza as taxas a cada 60 minutos do Open Exchange Rates, que agrega dados de instituições financeiras globais. O carimbo de hora abaixo do resultado mostra exatamente quando as taxas foram obtidas. A seção Taxas Principais exibe as taxas atuais dos 15 pares de moedas mais negociados em relação ao USD, oferecendo um instantâneo em tempo real do mercado global de câmbio.",
+    "about_p3": "As 16 moedas suportadas abrangem as maiores economias do mundo: USD (Dólar Americano), EUR (Euro), GBP (Libra Esterlina), JPY (Iene Japonês), KRW (Won Coreano), CNY (Yuan Chinês), CAD (Dólar Canadense), AUD (Dólar Australiano), HKD (Dólar de Hong Kong), SGD (Dólar de Singapura), CHF (Franco Suíço), MXN (Peso Mexicano), BRL (Real Brasileiro), INR (Rúpia Indiana), THB (Baht Tailandês) e VND (Dong Vietnamita). As taxas são adequadas para consulta e planejamento de viagens; sempre verifique com seu banco antes de realizar transações financeiras.",
     "label_from": "De",
     "label_to": "Para",
     "btn_swap": "Trocar moedas",
@@ -745,11 +1265,38 @@
     "label_result_eq": "=",
     "faq_title": "Perguntas Frequentes",
     "faq": [
-      {"q": "Com que frequência as taxas de câmbio são atualizadas?", "a": "As taxas são obtidas do Open Exchange Rates e atualizadas a cada 60 minutos. O horário abaixo do resultado mostra quando foram atualizadas pela última vez."},
-      {"q": "Quantas moedas são suportadas?", "a": "Suportamos 16 moedas principais: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB e VND."},
-      {"q": "Como compartilho uma conversão específica?", "a": "Clique em Copiar link. O URL inclui automaticamente as moedas e o valor selecionados como parâmetros, para que qualquer pessoa que abra o link veja a mesma conversão."},
-      {"q": "As taxas de câmbio são precisas?", "a": "As taxas vêm do Open Exchange Rates, que agrega dados de fontes financeiras globais. São adequadas para fins informativos. Para transações, sempre verifique com seu banco."},
-      {"q": "Esta calculadora é gratuita?", "a": "Completamente gratuita. Sem assinatura, sem cadastro, sem taxas ocultas. Todas as ferramentas do QuickBestGo são gratuitas para sempre."}
+      {
+        "q": "Com que frequência as taxas de câmbio são atualizadas?",
+        "a": "As taxas são obtidas do Open Exchange Rates e atualizadas a cada 60 minutos. O carimbo de hora exibido abaixo do resultado indica exatamente quando as taxas foram atualizadas pela última vez."
+      },
+      {
+        "q": "Quantas moedas são suportadas?",
+        "a": "Suportamos 16 moedas principais: USD, KRW, JPY, EUR, GBP, CNY, CAD, AUD, HKD, SGD, CHF, MXN, BRL, INR, THB e VND — cobrindo as moedas mais negociadas do mundo."
+      },
+      {
+        "q": "Como compartilho uma conversão específica?",
+        "a": "Clique no botão Copiar link. O URL inclui automaticamente as moedas e o valor selecionados como parâmetros (?from=USD&to=BRL&amount=1000), para que qualquer pessoa que abra o link veja a mesma conversão imediatamente."
+      },
+      {
+        "q": "As taxas de câmbio são precisas?",
+        "a": "As taxas vêm do Open Exchange Rates, que agrega dados de fontes financeiras globais. São adequadas para fins informativos e de planejamento de viagens. Para transações financeiras, sempre verifique com seu banco ou instituição financeira."
+      },
+      {
+        "q": "Esta calculadora é gratuita?",
+        "a": "Completamente gratuita. Sem assinatura, sem cadastro, sem taxas ocultas. Todas as ferramentas do QuickBestGo são gratuitas para sempre."
+      },
+      {
+        "q": "Posso usar esta calculadora offline?",
+        "a": "A interface do conversor carrega sem internet, mas as taxas em tempo real exigem conexão. Se estiver offline, as taxas em cache mais recentes (até 60 minutos anteriores) podem ser usadas se disponíveis de uma sessão anterior."
+      },
+      {
+        "q": "O que a seção Taxas Principais mostra?",
+        "a": "Taxas Principais exibe as taxas de câmbio atuais dos 15 pares de moedas mais negociados, todos relativos ao USD. Clique em qualquer cartão de taxa para carregar automaticamente esse par de moedas no conversor."
+      },
+      {
+        "q": "Por que as taxas do banco diferem da calculadora?",
+        "a": "Bancos e serviços de câmbio adicionam um spread (margem) sobre a taxa de mercado para gerar lucro. A calculadora mostra a taxa interbancária — o ponto médio entre as taxas de compra e venda — que é a referência mais justa, mas não a taxa que você recebe no balcão de um banco."
+      }
     ]
   },
   "categories": {
@@ -825,9 +1372,9 @@
     "meta_title": "Calculadora de Empréstimos - Prestação Mensal e Amortização - QuickBestGo",
     "meta_description": "Calcule a sua prestação mensal, juros totais e tabela de amortização completa. Calculadora gratuita de hipotecas e empréstimos para qualquer montante, taxa e prazo.",
     "about_title": "Como utilizar a Calculadora de Empréstimos",
-    "about_p1": "Introduza o montante do empréstimo, a taxa de juro anual e o prazo em anos. A calculadora mostrará a sua prestação mensal, o total a pagar e os juros totais ao longo da vida do empréstimo.",
-    "about_p2": "A tabela de amortização decompõe cada ano em capital amortizado, juros pagos e saldo em dívida. A fórmula utilizada é o método de prestação constante: M = P × r(1+r)^n / ((1+r)^n − 1).",
-    "about_p3": "Esta calculadora funciona para qualquer tipo de empréstimo a prestações — hipotecas, crédito automóvel, empréstimos pessoais e estudantis. Os resultados são estimativas de referência e não constituem aconselhamento financeiro.",
+    "about_p1": "A Calculadora de Empréstimos ajuda você a entender o custo total de qualquer empréstimo parcelado antes de contratar. Insira o valor do empréstimo, a taxa de juros anual e o prazo de pagamento para ver instantaneamente sua parcela mensal, o valor total pago ao longo do empréstimo e o custo total de juros. Essa transparência é essencial para comparar propostas, negociar melhores condições ou decidir se um empréstimo cabe no seu orçamento antes de assinar qualquer contrato.",
+    "about_p2": "A calculadora usa a fórmula padrão de amortização em parcelas iguais (SAC): M = P × [r(1+r)^n] / [(1+r)^n − 1], onde M é a parcela mensal, P é o principal do empréstimo, r é a taxa de juros mensal (taxa anual dividida por 12) e n é o número total de parcelas mensais. Cada pagamento cobre juros (predominantes nas primeiras parcelas) e principal (que aumenta à medida que o saldo diminui). A tabela de amortização mostra essa divisão ano a ano, revelando exatamente quanto de cada parcela reduz seu saldo versus paga encargos de juros.",
+    "about_p3": "Esta calculadora se aplica a qualquer empréstimo parcelado de taxa fixa: financiamentos imobiliários, empréstimos de veículos, empréstimos pessoais, empréstimos estudantis e crédito consignado. Empréstimos de taxa variável terão pagamentos reais diferentes dos projetados aqui. Os resultados são estimativas para fins de planejamento e não constituem oferta de empréstimo nem aconselhamento financeiro. Confirme sempre as condições reais com seu banco ou instituição financeira, incluindo tarifas de contratação, multas por quitação antecipada e outros custos não capturados na taxa de juros base.",
     "label_loan_amount": "Montante do empréstimo",
     "label_annual_rate": "Taxa de juro anual (%)",
     "label_loan_term": "Prazo do empréstimo (anos)",
@@ -852,10 +1399,31 @@
     "error_invalid": "Por favor, introduza valores positivos válidos.",
     "faq_title": "Perguntas frequentes",
     "faq": [
-      {"q": "Como é calculada a minha prestação mensal?", "a": "Utiliza-se a fórmula de amortização padrão: M = P × r(1+r)^n / ((1+r)^n − 1), onde P é o montante do empréstimo, r é a taxa mensal (taxa anual ÷ 12) e n é o número total de prestações mensais. Isto garante prestações iguais ao longo de todo o prazo."},
-      {"q": "O que é uma tabela de amortização?", "a": "É uma tabela que mostra cada pagamento decomposto em capital e juros, juntamente com o saldo em dívida. Nos primeiros anos, a maior parte da prestação corresponde a juros; com o tempo, uma maior proporção vai para o capital."},
-      {"q": "Como afeta a taxa de juro o total a pagar?", "a": "Mesmo uma pequena diferença na taxa tem um grande impacto em empréstimos de longo prazo. Por exemplo, numa hipoteca de €300.000 a 30 anos, a diferença entre 3% e 4% pode representar dezenas de milhares de euros em juros totais."},
-      {"q": "Qual é a diferença entre taxa fixa e variável?", "a": "Uma taxa fixa mantém o mesmo juro durante todo o prazo, tornando a prestação mensal previsível. Uma taxa variável pode mudar com o mercado, podendo ter prestações iniciais mais baixas mas com maior risco. Esta calculadora assume taxa fixa."}
+      {
+        "q": "Como é calculada a minha prestação mensal?",
+        "a": "Utiliza-se a fórmula de amortização padrão: M = P × r(1+r)^n / ((1+r)^n − 1), onde P é o montante do empréstimo, r é a taxa mensal (taxa anual ÷ 12) e n é o número total de prestações mensais. Isto garante prestações iguais ao longo de todo o prazo."
+      },
+      {
+        "q": "O que é uma tabela de amortização?",
+        "a": "É uma tabela que mostra cada pagamento decomposto em capital e juros, juntamente com o saldo em dívida. Nos primeiros anos, a maior parte da prestação corresponde a juros; com o tempo, uma maior proporção vai para o capital."
+      },
+      {
+        "q": "Como afeta a taxa de juro o total a pagar?",
+        "a": "Mesmo uma pequena diferença na taxa tem um grande impacto em empréstimos de longo prazo. Por exemplo, numa hipoteca de €300.000 a 30 anos, a diferença entre 3% e 4% pode representar dezenas de milhares de euros em juros totais."
+      },
+      {
+        "q": "Qual é a diferença entre taxa fixa e variável?",
+        "a": "Uma taxa fixa mantém o mesmo juro durante todo o prazo, tornando a prestação mensal previsível. Uma taxa variável pode mudar com o mercado, podendo ter prestações iniciais mais baixas mas com maior risco. Esta calculadora assume taxa fixa."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Empréstimos",
+    "how_to_use_steps": [
+      "Insira o Valor do Empréstimo — o principal total que você planeja tomar emprestado, sem incluir tarifas ou custos de contratação.",
+      "Insira a Taxa de Juros Anual (%) — use o CET (Custo Efetivo Total) da sua proposta para uma comparação mais precisa.",
+      "Defina o Prazo do Empréstimo em anos — prazos comuns são 5 anos para veículos, 15 ou 30 anos para imóveis e 2–7 anos para empréstimos pessoais.",
+      "Clique em Calcular para ver sua parcela mensal, o valor total pago e o custo total de juros.",
+      "Analise a tabela de amortização para entender como cada parcela é dividida entre principal e juros ao longo do tempo.",
+      "Compare múltiplos cenários alterando a taxa de juros ou o prazo para identificar a opção de crédito mais acessível."
     ]
   },
   "retirement_calculator": {
@@ -863,9 +1431,9 @@
     "meta_title": "Calculadora de Reforma - Poupança e Rendimento na Reforma - QuickBestGo",
     "meta_description": "Calcule quanto terá na reforma. Projete o crescimento das suas poupanças com contribuições mensais, rendimento esperado e ajuste de inflação.",
     "about_title": "Como utilizar a Calculadora de Reforma",
-    "about_p1": "Introduza a sua idade atual, a idade alvo de reforma, poupanças atuais e contribuição mensal. Defina o rendimento anual esperado e a inflação para ver como as suas poupanças crescerão ano a ano.",
-    "about_p2": "Utiliza-se a fórmula de valor futuro: FV = P(1+r)^n + PMT × ((1+r)^n − 1) / r, onde P são as poupanças atuais, r a taxa mensal, n os meses totais e PMT a contribuição mensal.",
-    "about_p3": "O rendimento mensal estimado baseia-se num período de levantamento de 20 anos (240 meses). Os resultados são projeções informativas e não constituem aconselhamento financeiro.",
+    "about_p1": "A Calculadora de Poupança para Aposentadoria projeta o quanto suas economias vão crescer até a sua idade-alvo de aposentadoria, com base nas suas economias atuais, aportes mensais, retorno anual esperado e taxa de inflação. Planejar a aposentadoria requer entender o efeito combinado do crescimento composto ao longo de décadas — mesmo aportes mensais modestos iniciados cedo podem crescer até se tornar um patrimônio significativo. Esta calculadora torna essa trajetória de longo prazo visível para que você possa agir agora, enquanto o tempo ainda está a seu favor.",
+    "about_p2": "O cálculo usa a fórmula de valor futuro de uma anuidade crescente: FV = P(1+r)^n + PMT × [(1+r)^n − 1] / r, onde P são suas economias atuais, r é a taxa de retorno mensal (taxa anual dividida por 12), n é o total de meses até a aposentadoria e PMT é seu aporte mensal. O ajuste pela inflação converte o valor nominal projetado em poder de compra de hoje, dando a você uma noção realista do que suas economias realmente vão comprar no futuro.",
+    "about_p3": "A renda mensal estimada na aposentadoria pressupõe um período de retirada de 20 anos (240 meses). Este é um pressuposto conservador e amplamente utilizado no planejamento, embora a duração real da aposentadoria varie. Os resultados são projeções apenas para fins de planejamento e não consideram benefícios da Previdência Social ou INSS, impostos sobre saques, mudanças nos níveis de contribuição, custos com saúde ou despesas inesperadas. Trabalhar com um planejador financeiro certificado (CFP) para um plano de aposentadoria abrangente é altamente recomendado para decisões que envolvam grandes somas.",
     "label_current_age": "Idade atual",
     "label_retirement_age": "Idade de reforma",
     "label_current_savings": "Poupanças atuais",
@@ -895,11 +1463,31 @@
     "error_age": "A idade de reforma deve ser superior à idade atual.",
     "faq_title": "Perguntas frequentes",
     "faq": [
-      {"q": "Quanto devo poupar mensalmente para a reforma?", "a": "Uma orientação comum é poupar 15% dos rendimentos brutos para a reforma, incluindo qualquer contribuição do empregador. O valor correto depende da sua idade atual, poupanças existentes, estilo de vida desejado na reforma e idade alvo."},
-      {"q": "Que taxa de rendimento devo usar?", "a": "Historicamente, uma carteira diversificada de ações tem rendido aproximadamente 7–10% ao ano antes da inflação. Para planeamento a longo prazo, utiliza-se frequentemente uma estimativa conservadora de 5–7%. O valor predefinido nesta calculadora é 7%."},
-      {"q": "Como afeta a inflação as minhas poupanças para a reforma?", "a": "A inflação reduz o poder de compra do dinheiro ao longo do tempo. Por exemplo, €1.000.000 daqui a 30 anos terá o poder de compra de cerca de €412.000 hoje com 3% de inflação anual. O 'Valor real' nesta calculadora ajusta a sua projeção pela inflação."},
-      {"q": "O que é a regra dos 4%?", "a": "A regra dos 4% sugere que pode levantar 4% das suas poupanças anualmente sem ficar sem dinheiro durante 30 anos de reforma. Por exemplo, €1.000.000 em poupanças permite um levantamento de €40.000 anuais (€3.333/mês). Esta calculadora usa um período de levantamento de 20 anos como alternativa conservadora."}
+      {
+        "q": "Quanto devo poupar mensalmente para a reforma?",
+        "a": "Uma orientação comum é poupar 15% dos rendimentos brutos para a reforma, incluindo qualquer contribuição do empregador. O valor correto depende da sua idade atual, poupanças existentes, estilo de vida desejado na reforma e idade alvo."
+      },
+      {
+        "q": "Que taxa de rendimento devo usar?",
+        "a": "Historicamente, uma carteira diversificada de ações tem rendido aproximadamente 7–10% ao ano antes da inflação. Para planeamento a longo prazo, utiliza-se frequentemente uma estimativa conservadora de 5–7%. O valor predefinido nesta calculadora é 7%."
+      },
+      {
+        "q": "Como afeta a inflação as minhas poupanças para a reforma?",
+        "a": "A inflação reduz o poder de compra do dinheiro ao longo do tempo. Por exemplo, €1.000.000 daqui a 30 anos terá o poder de compra de cerca de €412.000 hoje com 3% de inflação anual. O 'Valor real' nesta calculadora ajusta a sua projeção pela inflação."
+      },
+      {
+        "q": "O que é a regra dos 4%?",
+        "a": "A regra dos 4% sugere que pode levantar 4% das suas poupanças anualmente sem ficar sem dinheiro durante 30 anos de reforma. Por exemplo, €1.000.000 em poupanças permite um levantamento de €40.000 anuais (€3.333/mês). Esta calculadora usa um período de levantamento de 20 anos como alternativa conservadora."
+      }
+    ],
+    "how_to_use_title": "Como usar a Calculadora de Aposentadoria",
+    "how_to_use_steps": [
+      "Insira sua Idade Atual e a Idade-Alvo de Aposentadoria — a diferença entre elas determina por quantos anos suas economias têm para crescer com juros compostos.",
+      "Insira suas Economias Atuais — o valor total que você já separou para a aposentadoria em todas as contas.",
+      "Defina seu Aporte Mensal — o valor que você planeja adicionar às suas economias de aposentadoria a cada mês daqui para frente.",
+      "Defina o Retorno Anual Esperado (%) — 6–7% é uma estimativa comum para uma carteira de ações diversificada; use uma taxa menor para alocações conservadoras.",
+      "Defina a Taxa de Inflação (%) — 2–3% é a média histórica; isso converte valores nominais futuros em poder de compra de hoje.",
+      "Revise o total projetado, o saldo ajustado pela inflação e a renda mensal estimada na aposentadoria no painel de resultados."
     ]
   }
 }
-
