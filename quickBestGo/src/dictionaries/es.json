@@ -464,6 +464,22 @@
       {
         "q": "¿Puedo usar este lanzamiento de moneda para tomar decisiones?",
         "a": "Absolutamente. Es excelente para resolver disputas, hacer elecciones aleatorias o cualquier situación donde necesites una decisión imparcial 50/50."
+      },
+      {
+        "q": "¿La función de historial registra mis lanzamientos?",
+        "a": "El panel de historial muestra solo los últimos 10 resultados de la sesión actual. No se guarda ningún dato en ningún servidor ni se almacena al salir de la página."
+      },
+      {
+        "q": "¿Cuál es la probabilidad de obtener cara 5 veces seguidas?",
+        "a": "La probabilidad de obtener cara 5 veces consecutivas es (1/2)^5 = 1/32, o aproximadamente 3.125%. Cada lanzamiento es independiente — los resultados anteriores no tienen influencia en el siguiente."
+      },
+      {
+        "q": "¿Puedo usar el lanzamiento de moneda para juegos de mesa?",
+        "a": "Sí. Un lanzamiento de moneda digital es un sustituto conveniente de una moneda física en cualquier juego de mesa, juego de cartas o RPG de mesa que requiera un resultado aleatorio 50/50."
+      },
+      {
+        "q": "¿Se almacenan mis datos de lanzamiento de moneda en algún lugar?",
+        "a": "No. Todo el procesamiento ocurre localmente en tu navegador usando JavaScript. Ningún resultado de lanzamiento, dato de sesión o información de usuario se envía jamás a un servidor."
       }
     ]
   },
@@ -494,6 +510,22 @@
       {
         "q": "¿Es aleatoria la selección de la ruleta?",
         "a": "Sí. Cada giro usa un algoritmo aleatorio seguro, dando a cada elemento de la rueda igual probabilidad de ser seleccionado."
+      },
+      {
+        "q": "¿Cuántas opciones puedo agregar a la rueda?",
+        "a": "Puedes agregar tantas opciones como quieras. La rueda ajusta el tamaño de los segmentos automáticamente. Para mayor claridad visual, se recomienda entre 2 y 20 opciones, aunque se admiten más."
+      },
+      {
+        "q": "¿Las entradas duplicadas afectan las probabilidades?",
+        "a": "Sí, intencionalmente. Si agregas la misma opción varias veces, aparece varias veces en la rueda, aumentando proporcionalmente su probabilidad de ser seleccionada."
+      },
+      {
+        "q": "¿Se guarda la configuración de la ruleta entre sesiones?",
+        "a": "No. Las opciones que ingresas existen solo en tu sesión de navegador actual. Actualizar o cerrar la página las borra. Copia tu lista en otro lugar si deseas reutilizarla."
+      },
+      {
+        "q": "¿Puedo usar la ruleta para actividades en el aula?",
+        "a": "Por supuesto. Los profesores usan habitualmente las ruletas para llamar aleatoriamente a los alumnos, asignar tareas o seleccionar temas de debate. Ingresa el nombre de cada alumno como una opción separada y gira."
       }
     ]
   },

@@ -36,6 +36,17 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
         </h1>
         <p className="text-center text-gray-500 dark:text-gray-400 mb-10">{p.subtitle}</p>
 
+        {/* Email card */}
+        <div className="flex items-start gap-4 bg-gray-50 dark:bg-[#1a1a1a] p-5 rounded-2xl border dark:border-gray-800 mb-4">
+          <div className="p-2.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-xl shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <h2 className="font-bold text-gray-900 dark:text-white mb-0.5 text-sm">{p.email_title}</h2>
+            <a href={`mailto:${p.email}`} className="text-blue-600 dark:text-blue-400 text-sm hover:underline">{p.email}</a>
+          </div>
+        </div>
+
         {/* Response time card */}
         <div className="flex items-start gap-4 bg-gray-50 dark:bg-[#1a1a1a] p-5 rounded-2xl border dark:border-gray-800 mb-10">
           <div className="p-2.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-xl shrink-0">

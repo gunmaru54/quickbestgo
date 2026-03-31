@@ -464,6 +464,22 @@
       {
         "q": "Can I use this coin flip to make decisions?",
         "a": "Absolutely. It's great for settling disputes, making random choices, or any situation where you need an unbiased 50/50 decision."
+      },
+      {
+        "q": "Does the history feature track my flips?",
+        "a": "The history panel shows the last 10 flip results in your current session only. No data is saved to any server or stored after you leave the page."
+      },
+      {
+        "q": "What is the probability of getting heads 5 times in a row?",
+        "a": "The probability of flipping heads 5 consecutive times is (1/2)^5 = 1/32, or about 3.125%. Each flip is independent — previous results have no influence on the next flip."
+      },
+      {
+        "q": "Can I use the coin flip for board games?",
+        "a": "Yes. A digital coin flip is a convenient substitute for a physical coin in any board game, card game, or tabletop RPG that requires a 50/50 random outcome."
+      },
+      {
+        "q": "Is my coin flip data stored anywhere?",
+        "a": "No. All processing happens locally in your browser using JavaScript. No flip results, session data, or any user information is ever sent to a server."
       }
     ]
   },
@@ -494,6 +510,22 @@
       {
         "q": "Is the wheel spinner selection random?",
         "a": "Yes. Each spin uses a secure random algorithm, giving every item on the wheel an equal chance of being selected."
+      },
+      {
+        "q": "How many options can I add to the wheel?",
+        "a": "You can add as many options as you like. The wheel adjusts its segment sizes automatically. For best visual clarity, 2 to 20 options is recommended, though more are supported."
+      },
+      {
+        "q": "Can duplicate entries affect the odds?",
+        "a": "Yes, intentionally. If you add the same option multiple times, it appears multiple times on the wheel, increasing its probability of being selected proportionally."
+      },
+      {
+        "q": "Is the wheel spinner saved between sessions?",
+        "a": "No. The options you enter exist only in your current browser session. Refreshing or closing the page clears them. Copy your list elsewhere if you want to reuse it."
+      },
+      {
+        "q": "Can I use the wheel spinner for classroom activities?",
+        "a": "Absolutely. Teachers commonly use wheel spinners to randomly call on students, assign tasks, or select discussion topics. Enter each student's name as a separate option and spin."
       }
     ]
   },

@@ -432,6 +432,22 @@
       {
         "q": "Posso usar este lançamento de moeda para tomar decisões?",
         "a": "Absolutamente. É ótimo para resolver disputas, fazer escolhas aleatórias ou qualquer situação em que precise de uma decisão imparcial de 50/50."
+      },
+      {
+        "q": "A função de histórico regista os meus lançamentos?",
+        "a": "O painel de histórico mostra apenas os últimos 10 resultados da sessão atual. Nenhum dado é guardado em qualquer servidor nem fica armazenado após sair da página."
+      },
+      {
+        "q": "Qual é a probabilidade de obter cara 5 vezes seguidas?",
+        "a": "A probabilidade de obter cara 5 vezes consecutivas é (1/2)^5 = 1/32, ou aproximadamente 3,125%. Cada lançamento é independente — os resultados anteriores não têm influência no próximo lançamento."
+      },
+      {
+        "q": "Posso usar o lançamento de moeda em jogos de tabuleiro?",
+        "a": "Sim. Um lançamento de moeda digital é um substituto conveniente de uma moeda física em qualquer jogo de tabuleiro, jogo de cartas ou RPG de mesa que exija um resultado aleatório de 50/50."
+      },
+      {
+        "q": "Os meus dados de lançamento de moeda são armazenados em algum lugar?",
+        "a": "Não. Todo o processamento acontece localmente no seu navegador usando JavaScript. Nenhum resultado de lançamento, dado de sessão ou informação de utilizador é enviado para um servidor."
       }
     ]
   },
@@ -462,6 +478,22 @@
       {
         "q": "A seleção da roda da sorte é aleatória?",
         "a": "Sim. Cada giro usa um algoritmo aleatório seguro, dando a cada item da roda uma chance igual de ser selecionado."
+      },
+      {
+        "q": "Quantas opções posso adicionar à roda?",
+        "a": "Pode adicionar tantas opções quantas quiser. A roda ajusta automaticamente o tamanho dos segmentos. Para maior clareza visual, recomenda-se entre 2 e 20 opções, embora mais sejam suportadas."
+      },
+      {
+        "q": "As entradas duplicadas afetam as probabilidades?",
+        "a": "Sim, intencionalmente. Se adicionar a mesma opção várias vezes, ela aparece várias vezes na roda, aumentando proporcionalmente a sua probabilidade de ser selecionada."
+      },
+      {
+        "q": "As definições da roda da sorte são guardadas entre sessões?",
+        "a": "Não. As opções que introduz existem apenas na sua sessão atual do navegador. Atualizar ou fechar a página apaga-as. Copie a sua lista noutro local se quiser reutilizá-la."
+      },
+      {
+        "q": "Posso usar a roda da sorte em atividades na sala de aula?",
+        "a": "Com certeza. Os professores utilizam frequentemente rodas da sorte para chamar alunos aleatoriamente, atribuir tarefas ou selecionar tópicos de discussão. Introduza o nome de cada aluno como uma opção separada e gire."
       }
     ]
   },
